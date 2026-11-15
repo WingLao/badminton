@@ -53,7 +53,7 @@
     const key = button.dataset.complete;
     if (done.has(key)) done.delete(key); else done.add(key);
     saveProgress();
-    status.textContent = done.size === 5 ? '五項都試練過了！下次挑一項，用同樣條件再試。' : `已試練 ${done.size} 項。下次再挑一招就好。`;
+    status.textContent = done.size === 5 ? '五項都試練過了！下次用同樣條件重測，再挑一項放進回合。' : `已試練 ${done.size} 項。下次用同樣條件再磨細一點。`;
   }));
   document.getElementById('reset-progress').addEventListener('click', () => {
     done.clear(); saveProgress(); status.textContent = '試練標記已清除，可以重新開始。';
