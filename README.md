@@ -2,6 +2,8 @@
 
 羽球教學月報與學習精華，透過 GitHub Pages 發佈。
 
+學習頁採手機優先排版，文字面向 F1–F3 中學生：以五個球場問題選題，每次顯示一句提示、三步練習與原片定位。試練標記只保存在裝置瀏覽器，不會上傳，也不表示技能已掌握。
+
 - [線上學習精華](https://winglao.github.io/badminton/Learn/Badminton-2026-11-15/)
 - [網站首頁](https://winglao.github.io/badminton/)
 
