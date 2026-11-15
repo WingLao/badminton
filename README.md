@@ -1,9 +1,9 @@
-# Badmionton
+# badminton
 
 羽球教學月報與學習精華，透過 GitHub Pages 發佈。
 
-- [線上學習精華](https://winglao.github.io/Badmionton/Learn/Badminton-2026-11-15/)
-- [網站首頁](https://winglao.github.io/Badmionton/)
+- [線上學習精華](https://winglao.github.io/badminton/Learn/Badminton-2026-11-15/)
+- [網站首頁](https://winglao.github.io/badminton/)
 
 ## 資料夾
 
