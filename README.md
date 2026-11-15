@@ -1,0 +1,30 @@
+# Badmionton
+
+羽球教學月報與學習精華，透過 GitHub Pages 發佈。
+
+- [線上學習精華](https://winglao.github.io/Badmionton/Learn/Badminton-2026-11-15/)
+- [網站首頁](https://winglao.github.io/Badmionton/)
+
+## 資料夾
+
+```text
+Learn/
+  Badminton-2026-11-15/
+    index.html                    # 精華版入口
+    學習精華_瀏覽版.html
+    月報_瀏覽版.html
+    羽球教學_高效學習精華版.md
+    羽球YouTube教學月報_20261016-20261115.md
+    圖片/
+    資料/                         # 報告引用的公開來源與整理紀錄
+```
+
+日期採澳門時間。2026-11-15 是整理／發佈日期，影片收錄期間為 2026/10/16–11/15。
+
+精華版由既有月報整理：V01 已讀取可用字幕，其他指定片段依發布者簡介及章節定位，並非逐支完整觀看。練習建議由報告編製，來源與限制詳見月報。
+
+原影片與縮圖權利屬原創作者；本庫保留原 YouTube 連結，不提供影片本體。
+
+## 更新
+
+將新一期資料新增到 `Learn/Badminton-YYYY-MM-DD/`，並更新首頁與 `Learn/index.html` 的連結。GitHub Pages 從 `main` 分支根目錄發佈。

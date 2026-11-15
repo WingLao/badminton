@@ -1,0 +1,760 @@
+[
+  {
+    "id": "8GAmxmLXc70",
+    "zh": "單打與雙打：十項差異",
+    "skill": "選球、站位與搭檔配合",
+    "tags": [
+      "戰術",
+      "輪轉",
+      "步法"
+    ],
+    "summary": "影片從策略、站位和球路比較單雙打。單打利用大範圍空檔；雙打也要找兩人之間及輪轉中的責任模糊區。雙打站位隨搭檔移動而調整，沒有固定中央基地。",
+    "observe": "重點不是記住十句口訣，而是判斷同一球路在不同項目是否仍有效。留意雙打未接球時仍要調整位置，以及防守準備拍位的情境差異。",
+    "drill": "雙打只打前四拍：發球、接發、第三拍、第四拍後停止。每輪先約定第三拍由誰處理，再以不同接發方向重做。這是報告建議的改編練習。",
+    "metric": "記錄 10 輪中責任不清次數、第四拍後是否仍有明顯空檔；與自己的第一週基線比較。",
+    "chapters": "0:42 策略差異；2:38 前四拍；4:18 站位；6:59 網前；8:44 防守；9:25 後場",
+    "level": "A",
+    "kind": "教學",
+    "code": "V01",
+    "meta": {
+      "id": "8GAmxmLXc70",
+      "title": "Singles vs Doubles: 10 Differences You NEED To Know",
+      "url": "https://www.youtube.com/watch?v=8GAmxmLXc70",
+      "webpage_url": "https://www.youtube.com/watch?v=8GAmxmLXc70",
+      "publish_date": "2026-10-25T03:00:06-07:00",
+      "date_macau": "2026-10-25",
+      "author": "Badminton Insight",
+      "duration": 652,
+      "lengthSeconds": "651",
+      "duration_string": "10:52"
+    }
+  },
+  {
+    "id": "A-fGBSWH4tY",
+    "zh": "雙打輪轉：三種基本模式",
+    "skill": "進攻、防守與轉換",
+    "tags": [
+      "輪轉",
+      "戰術"
+    ],
+    "summary": "發布者簡介明確列出後場進攻、後場放吊球、防守轉換三種情境，並說明以場上 2 對 2 示範與球場圖講解兩人的位置。",
+    "observe": "看片時先追蹤沒有擊球的那位搭檔：他為何移動、填補哪個空間？未取得字幕，不能把具體每一步路徑視為已核實。",
+    "drill": "兩人先以半速模擬進攻前後站位、防守左右站位，再由餵球者改變來球，練習共同調整。不要預設每打一拍都必須換位。",
+    "metric": "每 10 次轉換記錄同搶、同讓及空檔各幾次。",
+    "chapters": "",
+    "level": "B",
+    "kind": "教學",
+    "code": "V02",
+    "meta": {
+      "id": "A-fGBSWH4tY",
+      "title": "Badminton Doubles Rotation Explained (3 Essential Patterns)",
+      "url": "https://www.youtube.com/watch?v=A-fGBSWH4tY",
+      "webpage_url": "https://www.youtube.com/watch?v=A-fGBSWH4tY",
+      "publish_date": "2026-10-16T04:17:49-07:00",
+      "date_macau": "2026-10-16",
+      "author": "Badminton Famly",
+      "duration": 438,
+      "lengthSeconds": "437",
+      "duration_string": "7:18"
+    }
+  },
+  {
+    "id": "uuGSSD1usG0",
+    "zh": "五種步法節奏練習",
+    "skill": "移動節奏與平衡",
+    "tags": [
+      "步法",
+      "時機"
+    ],
+    "summary": "簡介強調先慢而準確地移動，讓腿部較放鬆、節奏連貫，再建立速度；全片主題是五種節奏練習。",
+    "observe": "先觀察落地、推蹬及回位是否連續。簡介沒有逐項列出五種練習，本報不臆造其名稱或次序。",
+    "drill": "選片中一種已看懂的模式，以慢速做 3 組，每組 30 秒、休息 30 秒；再加入不固定方向的口令。組數為本報建議。",
+    "metric": "比較同一速度下的停頓、失衡及多餘小步數，先改善品質再加快。",
+    "chapters": "",
+    "level": "B",
+    "kind": "教學",
+    "code": "V03",
+    "meta": {
+      "id": "uuGSSD1usG0",
+      "title": "Master Badminton Footwork: 5 Rhythm Exercises for Smooth Movement",
+      "url": "https://www.youtube.com/watch?v=uuGSSD1usG0",
+      "webpage_url": "https://www.youtube.com/watch?v=uuGSSD1usG0",
+      "publish_date": "2026-10-27T05:00:25-07:00",
+      "date_macau": "2026-10-27",
+      "author": "Badminton Famly",
+      "duration": 621,
+      "lengthSeconds": "620",
+      "duration_string": "10:21"
+    }
+  },
+  {
+    "id": "fNSZDm1B-PA",
+    "zh": "九種可獨自練習的花式球",
+    "skill": "反手前場控拍與變化",
+    "tags": [
+      "手指",
+      "網前"
+    ],
+    "summary": "簡介說明在反手前場角落，自行餵球練習九種變化；用途偏趣味與控拍挑戰。",
+    "observe": "先看自餵球方式、拍面及落點是否可重複；沒有字幕和完整觀看證據，因此不列九種球的詳細名稱，也不聲稱它們都是比賽最佳選擇。",
+    "drill": "先挑一種能穩定自餵的變化，分別記錄自餵成功及回球入區；基本網前球穩定後再增加花式。",
+    "metric": "每種 10 球，分開記錄自餵成功率和目標區命中率。",
+    "chapters": "",
+    "level": "B",
+    "kind": "教學",
+    "code": "V04",
+    "meta": {
+      "id": "fNSZDm1B-PA",
+      "title": "9 Badminton Trick Shots You Can Train ALONE! 🤯",
+      "url": "https://www.youtube.com/watch?v=fNSZDm1B-PA",
+      "webpage_url": "https://www.youtube.com/watch?v=fNSZDm1B-PA",
+      "publish_date": "2026-11-07T07:23:55-08:00",
+      "date_macau": "2026-11-07",
+      "author": "Badminton Famly",
+      "duration": 275,
+      "lengthSeconds": "274",
+      "duration_string": "4:35"
+    }
+  },
+  {
+    "id": "XGVuaQWXvIA",
+    "zh": "握拍：為何不應一直握緊",
+    "skill": "握拍空間與手指控制",
+    "tags": [
+      "手指",
+      "時機"
+    ],
+    "summary": "簡介把握拍空間、中指運用與來球速度判斷連結，並比較快速拉動與緩慢跟隨的揮拍。",
+    "observe": "6:56 章節聚焦「不是手腕」。把這當作檢查過度緊握的線索；片中等待及較低擊球點的提示有其練習情境，不是所有球都要等低。",
+    "drill": "短距離輕送球，準備時讓手指可調整握柄，擊球後恢復較鬆的握拍；用相同落點比較是否更容易微調拍面。",
+    "metric": "20 球目標區命中數，並記錄是否能在兩拍之間恢復放鬆。",
+    "chapters": "0:00 等待來球；2:57 決策；6:56 手腕與握拍",
+    "level": "B",
+    "kind": "教學",
+    "code": "V05",
+    "meta": {
+      "id": "XGVuaQWXvIA",
+      "title": "Badminton Grip: Why You Shouldn’t Squeeze the Racket",
+      "url": "https://www.youtube.com/watch?v=XGVuaQWXvIA",
+      "webpage_url": "https://www.youtube.com/watch?v=XGVuaQWXvIA",
+      "publish_date": "2026-11-01T21:11:12-08:00",
+      "date_macau": "2026-11-02",
+      "author": "full-swing",
+      "duration": 622,
+      "lengthSeconds": "622",
+      "duration_string": "10:22"
+    }
+  },
+  {
+    "id": "jwKZsDfNR6E",
+    "zh": "用手指形成自然揮拍",
+    "skill": "手指分工與拍面控制",
+    "tags": [
+      "手指",
+      "揮拍"
+    ],
+    "summary": "簡介分配拇指、食指的方向控制與其餘手指的輔助出力，並討論前後手的手臂轉動，避免刻意折腕。",
+    "observe": "注意「手指分工」如何隨正反手與球路變化。這是教學提示，不是本報以影像量測得到的手指受力數據。",
+    "drill": "先做慢速正反手換拍面，再做短距離平抽，保持小幅度並比較方向控制；一次只修正一個握拍問題。",
+    "metric": "連續 20 球的拍面失控次數及成功換握次數。",
+    "chapters": "1:33 拇指與食指；4:42 握拍時機；7:24 正反手控制；9:42 初學修正",
+    "level": "B",
+    "kind": "教學",
+    "code": "V06",
+    "meta": {
+      "id": "jwKZsDfNR6E",
+      "title": "🏸 Creating a Natural Swing with Your Fingers, Not Your Wrist",
+      "url": "https://www.youtube.com/watch?v=jwKZsDfNR6E",
+      "webpage_url": "https://www.youtube.com/watch?v=jwKZsDfNR6E",
+      "publish_date": "2026-11-05T20:18:04-08:00",
+      "date_macau": "2026-11-06",
+      "author": "full-swing",
+      "duration": 770,
+      "lengthSeconds": "770",
+      "duration_string": "12:50"
+    }
+  },
+  {
+    "id": "wdDBn1ZqOOs",
+    "zh": "讓球拍運動：減少肩膀先推",
+    "skill": "揮拍順序與拍頭運動",
+    "tags": [
+      "揮拍",
+      "手指"
+    ],
+    "summary": "簡介強調放鬆握拍、手指控制及身體先轉、球拍隨行，並建議在網前以慢速重複觀察球拍運動。",
+    "observe": "片名的「不要用肩膀」應理解為減少僵硬先推的教學提示，不能推論肩關節在揮拍中完全不參與。",
+    "drill": "側面錄影 10 次慢揮拍，比較身體轉動、手臂與拍頭的先後；再加入輕餵球，觀察順序是否仍保留。",
+    "metric": "10 次中動作順序可辨識的次數，以及加入球後是否變回只用手臂。",
+    "chapters": "0:00 球拍；3:35 揮拍一致性；9:55 手肘",
+    "level": "B",
+    "kind": "教學",
+    "code": "V07",
+    "meta": {
+      "id": "wdDBn1ZqOOs",
+      "title": "Racket Swing: Let the Racket Move, Not the Shoulder",
+      "url": "https://www.youtube.com/watch?v=wdDBn1ZqOOs",
+      "webpage_url": "https://www.youtube.com/watch?v=wdDBn1ZqOOs",
+      "publish_date": "2026-10-29T22:11:16-07:00",
+      "date_macau": "2026-10-30",
+      "author": "full-swing",
+      "duration": 863,
+      "lengthSeconds": "863",
+      "duration_string": "14:23"
+    }
+  },
+  {
+    "id": "pzpyti1sS-I",
+    "zh": "身體轉動與放鬆握拍修正",
+    "skill": "軀幹先行、連貫加速",
+    "tags": [
+      "揮拍",
+      "手指"
+    ],
+    "summary": "簡介討論手臂與肩膀過早向前推，如何改為身體轉動帶動球拍；亦提到放鬆握拍和減少重複引拍。",
+    "observe": "先找自己的揮拍是否有「準備完成後又再引拍一次」的中斷。不要單憑某一準備姿勢的外觀判斷整個動作。",
+    "drill": "無球慢揮 5 次加輕餵 5 球為一組；每組只看身體先行或重複引拍其中一項，再回看錄影。",
+    "metric": "20 球中重複引拍次數、擊球是否在可控制的身前區域。",
+    "chapters": "2:21 放鬆握拍；6:29 身體轉動；12:34 擊球前加速；16:37 重複引拍",
+    "level": "B",
+    "kind": "教學",
+    "code": "V08",
+    "meta": {
+      "id": "pzpyti1sS-I",
+      "title": "🏸 Badminton Swing Correction: Torso Rotation and Relaxing Your Grip",
+      "url": "https://www.youtube.com/watch?v=pzpyti1sS-I",
+      "webpage_url": "https://www.youtube.com/watch?v=pzpyti1sS-I",
+      "publish_date": "2026-10-24T22:11:23-07:00",
+      "date_macau": "2026-10-25",
+      "author": "full-swing",
+      "duration": 1116,
+      "lengthSeconds": "1116",
+      "duration_string": "18:36"
+    }
+  },
+  {
+    "id": "7CjvrPwg2Uk",
+    "zh": "身體轉動：讓球拍完整通過",
+    "skill": "放鬆與揮拍完成",
+    "tags": [
+      "揮拍",
+      "手指"
+    ],
+    "summary": "發布者章節包括手肘、較高與較低擊球點、放鬆握拍、先轉身體及揮拍完成檢查。",
+    "observe": "本片取得的是章節而非全文字幕；可據此確定主題，但不能確定每個修正口令的完整前提。",
+    "drill": "慢揮與正常節奏各錄 5 次，對照準備、擊球、完成三個位置；檢查是否為了打得重而突然收緊或截斷。",
+    "metric": "完成動作後是否仍平衡，以及同一目標區的命中數。",
+    "chapters": "4:18 握拍與拍速；6:04 身體先轉；7:07 完整通過；10:00 完成檢查",
+    "level": "B",
+    "kind": "教學",
+    "code": "V09",
+    "meta": {
+      "id": "7CjvrPwg2Uk",
+      "title": "Body Rotation: Let the Racket Swing Through",
+      "url": "https://www.youtube.com/watch?v=7CjvrPwg2Uk",
+      "webpage_url": "https://www.youtube.com/watch?v=7CjvrPwg2Uk",
+      "publish_date": "2026-11-10T21:11:39-08:00",
+      "date_macau": "2026-11-11",
+      "author": "full-swing",
+      "duration": 649,
+      "lengthSeconds": "648",
+      "duration_string": "10:49"
+    }
+  },
+  {
+    "id": "Qk8SNvKcX0Q",
+    "zh": "殺球修正：軀幹轉動與拍頭",
+    "skill": "殺球協調與擊球感",
+    "tags": [
+      "揮拍",
+      "時機",
+      "手指"
+    ],
+    "summary": "簡介以身體先轉、拍頭自然通過及握拍調整，修正肩臂用力推球；章節亦討論不刻意扭腕與輕觸下的準確擊球。",
+    "observe": "別把「省力」理解為完全不用力；先觀察是否能減少多餘緊張，再比較相同主觀用力下的落點和出球品質。",
+    "drill": "以中等力度打固定區 3 組，每組 10 球；每組只修正握拍、身體順序或拍頭路徑其中一項。",
+    "metric": "固定區命中數、下網數及每組主觀用力感；不以聲音代替球速。",
+    "chapters": "0:00 軀幹帶動；7:07 握拍；9:53 避免刻意轉腕；11:14 準確擊球",
+    "level": "B",
+    "kind": "教學",
+    "code": "V10",
+    "meta": {
+      "id": "Qk8SNvKcX0Q",
+      "title": "🏸 Fix Your Smash: Effortless Power Through Core Rotation and the Racket Head",
+      "url": "https://www.youtube.com/watch?v=Qk8SNvKcX0Q",
+      "webpage_url": "https://www.youtube.com/watch?v=Qk8SNvKcX0Q",
+      "publish_date": "2026-11-05T01:47:11-08:00",
+      "date_macau": "2026-11-05",
+      "author": "full-swing",
+      "duration": 728,
+      "lengthSeconds": "727",
+      "duration_string": "12:08"
+    }
+  },
+  {
+    "id": "Ia7ufTADsW8",
+    "zh": "等待合適位置，再連貫釋放",
+    "skill": "擊球距離與出手時機",
+    "tags": [
+      "時機",
+      "揮拍"
+    ],
+    "summary": "簡介說明過遠或過高的擊球位置可能中斷此練習的揮拍，並以拍面方向、身體轉動及放鬆連接動作。",
+    "observe": "這是特定修正情境；不能因此得出羽球都應低點擊球。先確認示範的來球、距離與球路，再套用等待提示。",
+    "drill": "餵球者固定落點，練習者比較過早揮、過度伸手及舒適距離三種情況；用輕球建立可重複的接觸位置。",
+    "metric": "20 球中擊球位置穩定次數與偏離目標區次數。",
+    "chapters": "0:00 太高；3:17 超出範圍；8:14 球拍方向；10:41 如何加快",
+    "level": "B",
+    "kind": "教學",
+    "code": "V11",
+    "meta": {
+      "id": "Ia7ufTADsW8",
+      "title": "Full Swing: Hold the Power, Release It Once",
+      "url": "https://www.youtube.com/watch?v=Ia7ufTADsW8",
+      "webpage_url": "https://www.youtube.com/watch?v=Ia7ufTADsW8",
+      "publish_date": "2026-11-12T21:11:00-08:00",
+      "date_macau": "2026-11-13",
+      "author": "full-swing",
+      "duration": 825,
+      "lengthSeconds": "825",
+      "duration_string": "13:45"
+    }
+  },
+  {
+    "id": "qzUQ_x-QClo",
+    "zh": "別在方向未明時搶動",
+    "skill": "讀球、踩步與揮拍同步",
+    "tags": [
+      "時機",
+      "步法"
+    ],
+    "summary": "簡介將過早移動與擊球點、揮拍時機失配連結，強調看清來球速度與長度，按情境調整節奏。",
+    "observe": "「等待」是避免過早猜定方向的提示；不應延伸成等到球飛近才準備，或站著不做任何調整。",
+    "drill": "兩個落點隨機餵球，先判斷方向再移動；錄影比較猜錯方向與已看清仍遲到的兩種情況。",
+    "metric": "每 20 球猜錯方向次數、到位但出手失配次數分開記。",
+    "chapters": "0:00／2:35／7:58／11:31 為發布者分段，未提供細題名",
+    "level": "B",
+    "kind": "教學",
+    "code": "V12",
+    "meta": {
+      "id": "qzUQ_x-QClo",
+      "title": "Badminton Timing: Don't Move Before the Shuttle",
+      "url": "https://www.youtube.com/watch?v=qzUQ_x-QClo",
+      "webpage_url": "https://www.youtube.com/watch?v=qzUQ_x-QClo",
+      "publish_date": "2026-10-26T22:11:18-07:00",
+      "date_macau": "2026-10-27",
+      "author": "full-swing",
+      "duration": 795,
+      "lengthSeconds": "794",
+      "duration_string": "13:15"
+    }
+  },
+  {
+    "id": "rIuPBhoVbm4",
+    "zh": "步法從正確判斷開始",
+    "skill": "讀球距離與步數選擇",
+    "tags": [
+      "步法",
+      "時機"
+    ],
+    "summary": "簡介聚焦腳步混亂及人球距離，提出先確認方向與距離，保持準備狀態，按情境選一步、兩步或三步。",
+    "observe": "腳步快不等於到位快；觀察是否多走一步、過度衝近或來不及引拍。不要把所有來球硬套同一節奏。",
+    "drill": "由近、中、遠三個餵球距離開始，先固定再隨機；每球後說出自己用了幾步及距離是否合適。",
+    "metric": "三種距離各 10 球，分別記錄多餘調整步及失衡次數。",
+    "chapters": "1:55 步法；4:40 引拍；8:36 一、二、三步",
+    "level": "B",
+    "kind": "教學",
+    "code": "V13",
+    "meta": {
+      "id": "rIuPBhoVbm4",
+      "title": "Footwork Begins with the Right Decision",
+      "url": "https://www.youtube.com/watch?v=rIuPBhoVbm4",
+      "webpage_url": "https://www.youtube.com/watch?v=rIuPBhoVbm4",
+      "publish_date": "2026-11-08T21:11:36-08:00",
+      "date_macau": "2026-11-09",
+      "author": "full-swing",
+      "duration": 687,
+      "lengthSeconds": "687",
+      "duration_string": "11:27"
+    }
+  },
+  {
+    "id": "1U4Wtnk4pT8",
+    "zh": "殺球步法與時機修正",
+    "skill": "後退平衡、步幅與轉身",
+    "tags": [
+      "步法",
+      "時機",
+      "揮拍"
+    ],
+    "summary": "簡介包含先準備肩身、後移時保留重心、最後一步步幅及轉身，並依來球高度與速度選擇移動方式。",
+    "observe": "留意最後一步如何把移動接到擊球，而非單獨模仿起跳。左右腳口令與示範者持拍側有關，左手者需鏡像理解。",
+    "drill": "先不用跳殺：中心出發接固定後場高球，中速擊球後回位；穩定後才加入不同深度。",
+    "metric": "每 10 球記錄擊後可平衡回位、向後倒及最後多補一步的次數。",
+    "chapters": "0:58 後移重心；2:20 最後步幅；6:46 看球移動；10:42 重心轉移",
+    "level": "B",
+    "kind": "教學",
+    "code": "V14",
+    "meta": {
+      "id": "1U4Wtnk4pT8",
+      "title": "🏸 Footwork and Timing Corrections to Transform Your Smash",
+      "url": "https://www.youtube.com/watch?v=1U4Wtnk4pT8",
+      "webpage_url": "https://www.youtube.com/watch?v=1U4Wtnk4pT8",
+      "publish_date": "2026-11-05T02:05:50-08:00",
+      "date_macau": "2026-11-05",
+      "author": "full-swing",
+      "duration": 770,
+      "lengthSeconds": "769",
+      "duration_string": "12:50"
+    }
+  },
+  {
+    "id": "vOlRQx3qF5Q",
+    "zh": "殺球時機：從對方出球便開始觀察",
+    "skill": "來球速度與引拍節奏",
+    "tags": [
+      "時機",
+      "揮拍"
+    ],
+    "summary": "簡介把殺球出手拖延與拍身動作順序連結，強調從球的出發位置觀察速度，調整揮拍起始。",
+    "observe": "先分清「準備太遲」和「準備很早但過早揮完」。兩者結果都可能打不好，修正方向卻不同。",
+    "drill": "相同落點交替較快與較慢餵球，維持同一目標區；比較引拍開始時間，而非只盯最後接觸一刻。",
+    "metric": "每種速度 10 球，記錄過早、合適、過遲三類接觸。",
+    "chapters": "0:00 延遲；2:38 時機；3:28 細節；9:07 拍面方向",
+    "level": "B",
+    "kind": "教學",
+    "code": "V15",
+    "meta": {
+      "id": "vOlRQx3qF5Q",
+      "title": "Smash Timing Starts at the Shuttle’s Release",
+      "url": "https://www.youtube.com/watch?v=vOlRQx3qF5Q",
+      "webpage_url": "https://www.youtube.com/watch?v=vOlRQx3qF5Q",
+      "publish_date": "2026-11-04T21:11:23-08:00",
+      "date_macau": "2026-11-05",
+      "author": "full-swing",
+      "duration": 999,
+      "lengthSeconds": "998",
+      "duration_string": "16:39"
+    }
+  },
+  {
+    "id": "EU7zW_yTElc",
+    "zh": "等待擊球點：同步揮拍與步法",
+    "skill": "人球距離、身體與手臂順序",
+    "tags": [
+      "時機",
+      "揮拍",
+      "步法"
+    ],
+    "summary": "簡介說明過早抬肘或出手會令擊球點偏離身體，主張按軌跡與速度等到合適範圍，再連接轉身與手臂動作。",
+    "observe": "優先找可控制的接觸區域，不要只模仿「等久一點」。本片與等待主題重疊，可作對照修正而非全部連續看。",
+    "drill": "固定短距離輕餵，先讓腳步到位再做連貫揮拍；由側面看有沒有伸手追球及身體失衡。",
+    "metric": "20 球中過度伸手、腳步未穩及目標區命中各幾次。",
+    "chapters": "2:27 等擊球點；6:15 看球踩步；9:04 確定擊球點；10:38 身體轉動",
+    "level": "B",
+    "kind": "教學",
+    "code": "V16",
+    "meta": {
+      "id": "EU7zW_yTElc",
+      "title": "🏸 Wait for the Shuttlecock to Create Precise Contact and Swing Timing",
+      "url": "https://www.youtube.com/watch?v=EU7zW_yTElc",
+      "webpage_url": "https://www.youtube.com/watch?v=EU7zW_yTElc",
+      "publish_date": "2026-11-05T01:28:23-08:00",
+      "date_macau": "2026-11-05",
+      "author": "full-swing",
+      "duration": 749,
+      "lengthSeconds": "748",
+      "duration_string": "12:29"
+    }
+  },
+  {
+    "id": "Rh0hy-ToyeU",
+    "zh": "等待、引拍與步法綜合修正",
+    "skill": "依來球調整整體節奏",
+    "tags": [
+      "時機",
+      "步法",
+      "揮拍"
+    ],
+    "summary": "長篇簡介與章節整合來球速度、引拍、身體轉動、擊球距離及不同步數；主題是修正過早搶動和僵硬固定步法。",
+    "observe": "39 分鐘內容宜按問題選段。先用短片建立一項修正，再用本片核對其在不同來球下是否仍成立。",
+    "drill": "只選「引拍時機」一題，固定餵球做 10 球、變速餵球做 10 球；下次再處理步數，避免同時改所有動作。",
+    "metric": "固定和變速條件分開記成功數，檢查技術能否轉移。",
+    "chapters": "2:27 引拍時機；13:59 擊球加速；23:35 調整引拍；30:04 非固定兩步；31:20 步數選擇",
+    "level": "B",
+    "kind": "教學",
+    "code": "V17",
+    "meta": {
+      "id": "Rh0hy-ToyeU",
+      "title": "🏸 Wait for the Shuttle: Fixing Timing, Backswing, and Footwork",
+      "url": "https://www.youtube.com/watch?v=Rh0hy-ToyeU",
+      "webpage_url": "https://www.youtube.com/watch?v=Rh0hy-ToyeU",
+      "publish_date": "2026-11-03T03:48:27-08:00",
+      "date_macau": "2026-11-03",
+      "author": "full-swing",
+      "duration": 2383,
+      "lengthSeconds": "2382",
+      "duration_string": "39:43"
+    }
+  },
+  {
+    "id": "bQ6ns6Ychoo",
+    "zh": "揮拍與步法：讀取並建立擊球時機",
+    "skill": "讀球、準備與連續回位",
+    "tags": [
+      "時機",
+      "步法",
+      "揮拍"
+    ],
+    "summary": "簡介把對手揮拍、來球高低快慢與自己的引拍、步法及回位連接，亦列出防守、跳躍時機與減少多餘動作。",
+    "observe": "這是跨主題長片，適合先有明確問題再找章節。章節存在不等於每種球路的完整技術已由本報核實。",
+    "drill": "一人餵、一人練、一人觀察；每輪只看準備是否跟來球同步，以及擊後是否立即建立下一拍準備。",
+    "metric": "每 20 球記「擊球成功但未回位」與「已回位但讀錯方向」兩類。",
+    "chapters": "7:53 回位節奏；11:10 對方揮拍與引拍；20:29 接殺準備；35:04 情境步法",
+    "level": "B",
+    "kind": "教學",
+    "code": "V18",
+    "meta": {
+      "id": "bQ6ns6Ychoo",
+      "title": "🏸 Badminton Swings and Footwork: Reading and Creating Shuttle Timing",
+      "url": "https://www.youtube.com/watch?v=bQ6ns6Ychoo",
+      "webpage_url": "https://www.youtube.com/watch?v=bQ6ns6Ychoo",
+      "publish_date": "2026-11-01T04:03:22-08:00",
+      "date_macau": "2026-11-01",
+      "author": "full-swing",
+      "duration": 2271,
+      "lengthSeconds": "2271",
+      "duration_string": "37:51"
+    }
+  },
+  {
+    "id": "lA6RTlaN5Os",
+    "zh": "網前控制、殺球變化與進攻輪轉",
+    "skill": "前後場銜接與變速",
+    "tags": [
+      "網前",
+      "戰術",
+      "輪轉",
+      "揮拍"
+    ],
+    "summary": "簡介與章節由網前拍頭和揮速調整，延伸至平抽、防守拍位、殺球強弱及擊後進攻輪轉。",
+    "observe": "把技術放回下一拍：網前處理是否迫使對手挑球，殺球後誰補網？同準備動作下的吊殺變化，比單純求大力更值得比較。",
+    "drill": "先做網前控制到對方挑球，再由後場進攻，前場搭檔按回球補位；固定球路熟悉後才加入自由防守。",
+    "metric": "10 輪記成功形成後場進攻次數，以及進攻後失去前場覆蓋次數。",
+    "chapters": "2:24 網前引出挑球；5:18 殺球強弱；8:48 進攻輪轉；9:56 同動作吊殺",
+    "level": "B",
+    "kind": "教學",
+    "code": "V19",
+    "meta": {
+      "id": "lA6RTlaN5Os",
+      "title": "🏸 Badminton Lesson: From Net Control to Smashes and Attacking Rotation",
+      "url": "https://www.youtube.com/watch?v=lA6RTlaN5Os",
+      "webpage_url": "https://www.youtube.com/watch?v=lA6RTlaN5Os",
+      "publish_date": "2026-11-05T06:04:30-08:00",
+      "date_macau": "2026-11-05",
+      "author": "full-swing",
+      "duration": 773,
+      "lengthSeconds": "773",
+      "duration_string": "12:53"
+    }
+  },
+  {
+    "id": "tEfgBcpmznA",
+    "zh": "關鍵分如何控制失誤（待補內容）",
+    "skill": "單打風險選擇（僅標題確認）",
+    "tags": [
+      "戰術"
+    ],
+    "summary": "已核實標題、發布日期、頻道及時長。簡介只是重複標題，未取得可用字幕或完整影片內容，不能確認教練實際提出的低失誤打法。",
+    "observe": "待看時請記錄：所指失誤是選球還是執行？有哪些前提？有沒有示範落點與回位？暫不轉述具體口令。",
+    "drill": "可先建立自己的關鍵分紀錄：分開標記出界、下網、選球後失位；此為本報獨立建議，並非影片摘要。",
+    "metric": "先收集自己的 20 個回合，再計算各類失誤次數；不假定任何打法能保證失誤最低。",
+    "chapters": "",
+    "level": "C",
+    "kind": "待補分析",
+    "code": "V20",
+    "meta": {
+      "id": "tEfgBcpmznA",
+      "title": "比赛关键分如何控制失误？刘辉教练教你羽毛球单打比赛失误率最低的打法#羽毛球教学",
+      "url": "https://www.youtube.com/watch?v=tEfgBcpmznA",
+      "webpage_url": "https://www.youtube.com/watch?v=tEfgBcpmznA",
+      "publish_date": "2026-11-14T21:00:27-08:00",
+      "date_macau": "2026-11-15",
+      "author": "大G羽毛球",
+      "channel": "大G羽毛球",
+      "channel_id": "UCyvPv6rxmPHLc00RfXeTt2w",
+      "channel_url": "https://www.youtube.com/channel/UCyvPv6rxmPHLc00RfXeTt2w",
+      "duration": 210,
+      "lengthSeconds": "210",
+      "duration_string": "3:30"
+    }
+  },
+  {
+    "id": "37zufC7qBQs",
+    "zh": "與鄭思維的訓練營紀錄",
+    "skill": "訓練觀摩",
+    "tags": [
+      "觀摩"
+    ],
+    "summary": "標題確認與鄭思維相關的訓練營紀錄；簡介主要是課程連結。缺少可核對內容，不能把片中訓練方法、負荷或口令當作已分析。",
+    "observe": "觀察時可暫停記錄：擊球者位置、搭檔位置、來球及下一拍；先完成樣本才歸納。",
+    "drill": "自行挑 10 個完整回合，畫出擊球前後站位，與雙打輪轉教學對照。這是觀摩任務，不是已完成的比賽結果。",
+    "metric": "記錄樣本回合及時間碼，避免只以精彩球代表全場。",
+    "chapters": "",
+    "level": "C",
+    "kind": "觀摩",
+    "code": "V21",
+    "meta": {
+      "id": "37zufC7qBQs",
+      "title": "We Ran A Training Camp With Olympic Champion, Zheng Siwei!",
+      "url": "https://www.youtube.com/watch?v=37zufC7qBQs",
+      "webpage_url": "https://www.youtube.com/watch?v=37zufC7qBQs",
+      "publish_date": "2026-11-01T02:00:37-08:00",
+      "date_macau": "2026-11-01",
+      "author": "Badminton Insight",
+      "duration": 649,
+      "lengthSeconds": "649",
+      "duration_string": "10:49"
+    }
+  },
+  {
+    "id": "6_8Widm99cE",
+    "zh": "挑戰中國兩位教練",
+    "skill": "對戰觀摩",
+    "tags": [
+      "觀摩"
+    ],
+    "summary": "標題確認是對戰挑戰；不應因簡介有教學課程廣告就歸為正式教學。未做逐球影像分析。",
+    "observe": "觀察時可暫停記錄：擊球者位置、搭檔位置、來球及下一拍；先完成樣本才歸納。",
+    "drill": "自行挑 10 個完整回合，畫出擊球前後站位，與雙打輪轉教學對照。這是觀摩任務，不是已完成的比賽結果。",
+    "metric": "記錄樣本回合及時間碼，避免只以精彩球代表全場。",
+    "chapters": "",
+    "level": "C",
+    "kind": "觀摩",
+    "code": "V22",
+    "meta": {
+      "id": "6_8Widm99cE",
+      "title": "Can We Beat 2 Coaches In China?",
+      "url": "https://www.youtube.com/watch?v=6_8Widm99cE",
+      "webpage_url": "https://www.youtube.com/watch?v=6_8Widm99cE",
+      "publish_date": "2026-11-08T02:00:16-08:00",
+      "date_macau": "2026-11-08",
+      "author": "Badminton Insight",
+      "duration": 615,
+      "lengthSeconds": "614",
+      "duration_string": "10:15"
+    }
+  },
+  {
+    "id": "OusC2RPJDQE",
+    "zh": "殺球對決：高陽市廳對 Yonex",
+    "skill": "比賽觀摩",
+    "tags": [
+      "觀摩"
+    ],
+    "summary": "簡介列出兩隊及三段比賽，屬對局觀摩。未取得逐球資料，不能斷定球員使用某模式的頻率或成效。",
+    "observe": "觀察時可暫停記錄：擊球者位置、搭檔位置、來球及下一拍；先完成樣本才歸納。",
+    "drill": "自行挑 10 個完整回合，畫出擊球前後站位，與雙打輪轉教學對照。這是觀摩任務，不是已完成的比賽結果。",
+    "metric": "記錄樣本回合及時間碼，避免只以精彩球代表全場。",
+    "chapters": "",
+    "level": "C",
+    "kind": "觀摩",
+    "code": "V23",
+    "meta": {
+      "id": "OusC2RPJDQE",
+      "title": "Final Showdown: The War of the Smash (feat. Lee Yong-Dae)",
+      "url": "https://www.youtube.com/watch?v=OusC2RPJDQE",
+      "webpage_url": "https://www.youtube.com/watch?v=OusC2RPJDQE",
+      "publish_date": "2026-11-03T21:11:01-08:00",
+      "date_macau": "2026-11-04",
+      "author": "full-swing",
+      "duration": 751,
+      "lengthSeconds": "750",
+      "duration_string": "12:31"
+    }
+  },
+  {
+    "id": "xj1kb8F33Rg",
+    "zh": "四支進攻拍力量比較",
+    "skill": "器材／訓練工具",
+    "tags": [
+      "器材"
+    ],
+    "summary": "簡介列出 Victor Thruster Ryuga 3、Li-Ning Axforce 90、Hundred Nitrix 80 Bullet、Yonex Astrox 77 PRO，比較力量、速度與控制。未核實測試結果，不列勝負或購買建議。",
+    "observe": "把設備與技能分開：比較前先問來球是否可重複、條件是否一致；本報不把器材測試當作技術提升證據。",
+    "drill": "球拍比較可固定球、線、場地與目標；發球機可記錄設定與實際落點。這些是本報建議的比較條件。",
+    "metric": "記錄相同條件下的命中與偏差；本片無已核實的客觀結果可轉錄。",
+    "chapters": "",
+    "level": "B",
+    "kind": "器材",
+    "code": "V24",
+    "meta": {
+      "id": "xj1kb8F33Rg",
+      "title": "Which Badminton Racket Is BEST for Power? 4 Rackets Tested!",
+      "url": "https://www.youtube.com/watch?v=xj1kb8F33Rg",
+      "webpage_url": "https://www.youtube.com/watch?v=xj1kb8F33Rg",
+      "publish_date": "2026-11-13T04:00:15-08:00",
+      "date_macau": "2026-11-13",
+      "author": "Badminton Famly",
+      "duration": 645,
+      "lengthSeconds": "645",
+      "duration_string": "10:45"
+    }
+  },
+  {
+    "id": "Cavxva8xHEQ",
+    "zh": "與丹麥選手測試 Thruster Ryuga 3",
+    "skill": "器材／訓練工具",
+    "tags": [
+      "器材"
+    ],
+    "summary": "簡介提及與 Mads Vestergaard、Daniel Lundgaard 討論器材選擇並測試球拍；屬器材內容。個別選手偏好不能直接代表你的適用性。",
+    "observe": "把設備與技能分開：比較前先問來球是否可重複、條件是否一致；本報不把器材測試當作技術提升證據。",
+    "drill": "球拍比較可固定球、線、場地與目標；發球機可記錄設定與實際落點。這些是本報建議的比較條件。",
+    "metric": "記錄相同條件下的命中與偏差；本片無已核實的客觀結果可轉錄。",
+    "chapters": "",
+    "level": "B",
+    "kind": "器材",
+    "code": "V25",
+    "meta": {
+      "id": "Cavxva8xHEQ",
+      "title": "We Tested the NEW Victor Thruster Ryuga 3 With World-Class Players!",
+      "url": "https://www.youtube.com/watch?v=Cavxva8xHEQ",
+      "webpage_url": "https://www.youtube.com/watch?v=Cavxva8xHEQ",
+      "publish_date": "2026-10-23T04:00:24-07:00",
+      "date_macau": "2026-10-23",
+      "author": "Badminton Famly",
+      "duration": 603,
+      "lengthSeconds": "603",
+      "duration_string": "10:03"
+    }
+  },
+  {
+    "id": "cx_L7zdAeAE",
+    "zh": "TrainBot 發球機測試",
+    "skill": "器材／訓練工具",
+    "tags": [
+      "器材"
+    ],
+    "summary": "簡介說明於丹麥公開賽期間測試發球機，以三種練習挑戰準確性等表現；沒有足夠內容核實各項實際成績。",
+    "observe": "把設備與技能分開：比較前先問來球是否可重複、條件是否一致；本報不把器材測試當作技術提升證據。",
+    "drill": "球拍比較可固定球、線、場地與目標；發球機可記錄設定與實際落點。這些是本報建議的比較條件。",
+    "metric": "記錄相同條件下的命中與偏差；本片無已核實的客觀結果可轉錄。",
+    "chapters": "",
+    "level": "B",
+    "kind": "器材",
+    "code": "V26",
+    "meta": {
+      "id": "cx_L7zdAeAE",
+      "title": "We Tested the Future of Badminton Training! 🤖 | TrainBot",
+      "url": "https://www.youtube.com/watch?v=cx_L7zdAeAE",
+      "webpage_url": "https://www.youtube.com/watch?v=cx_L7zdAeAE",
+      "publish_date": "2026-10-31T02:00:12-07:00",
+      "date_macau": "2026-10-31",
+      "author": "Badminton Famly",
+      "duration": 407,
+      "lengthSeconds": "406",
+      "duration_string": "6:47"
+    }
+  }
+]
