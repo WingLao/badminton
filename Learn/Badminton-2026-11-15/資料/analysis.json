@@ -27,7 +27,10 @@
       "duration": 652,
       "lengthSeconds": "651",
       "duration_string": "10:52"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "A-fGBSWH4tY",
@@ -56,7 +59,10 @@
       "duration": 438,
       "lengthSeconds": "437",
       "duration_string": "7:18"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "uuGSSD1usG0",
@@ -85,7 +91,10 @@
       "duration": 621,
       "lengthSeconds": "620",
       "duration_string": "10:21"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "fNSZDm1B-PA",
@@ -114,7 +123,10 @@
       "duration": 275,
       "lengthSeconds": "274",
       "duration_string": "4:35"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "XGVuaQWXvIA",
@@ -143,7 +155,10 @@
       "duration": 622,
       "lengthSeconds": "622",
       "duration_string": "10:22"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "jwKZsDfNR6E",
@@ -172,7 +187,10 @@
       "duration": 770,
       "lengthSeconds": "770",
       "duration_string": "12:50"
-    }
+    },
+    "access_status": "members_only",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": false
   },
   {
     "id": "wdDBn1ZqOOs",
@@ -201,7 +219,10 @@
       "duration": 863,
       "lengthSeconds": "863",
       "duration_string": "14:23"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "pzpyti1sS-I",
@@ -230,7 +251,10 @@
       "duration": 1116,
       "lengthSeconds": "1116",
       "duration_string": "18:36"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "7CjvrPwg2Uk",
@@ -259,7 +283,10 @@
       "duration": 649,
       "lengthSeconds": "648",
       "duration_string": "10:49"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "Qk8SNvKcX0Q",
@@ -289,7 +316,10 @@
       "duration": 728,
       "lengthSeconds": "727",
       "duration_string": "12:08"
-    }
+    },
+    "access_status": "members_only",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": false
   },
   {
     "id": "Ia7ufTADsW8",
@@ -318,7 +348,10 @@
       "duration": 825,
       "lengthSeconds": "825",
       "duration_string": "13:45"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "qzUQ_x-QClo",
@@ -347,7 +380,10 @@
       "duration": 795,
       "lengthSeconds": "794",
       "duration_string": "13:15"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "rIuPBhoVbm4",
@@ -376,7 +412,10 @@
       "duration": 687,
       "lengthSeconds": "687",
       "duration_string": "11:27"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "1U4Wtnk4pT8",
@@ -406,7 +445,10 @@
       "duration": 770,
       "lengthSeconds": "769",
       "duration_string": "12:50"
-    }
+    },
+    "access_status": "members_only",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": false
   },
   {
     "id": "vOlRQx3qF5Q",
@@ -435,7 +477,10 @@
       "duration": 999,
       "lengthSeconds": "998",
       "duration_string": "16:39"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "EU7zW_yTElc",
@@ -465,7 +510,10 @@
       "duration": 749,
       "lengthSeconds": "748",
       "duration_string": "12:29"
-    }
+    },
+    "access_status": "members_only",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": false
   },
   {
     "id": "Rh0hy-ToyeU",
@@ -495,7 +543,10 @@
       "duration": 2383,
       "lengthSeconds": "2382",
       "duration_string": "39:43"
-    }
+    },
+    "access_status": "members_only",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": false
   },
   {
     "id": "bQ6ns6Ychoo",
@@ -525,7 +576,10 @@
       "duration": 2271,
       "lengthSeconds": "2271",
       "duration_string": "37:51"
-    }
+    },
+    "access_status": "members_only",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": false
   },
   {
     "id": "lA6RTlaN5Os",
@@ -556,7 +610,10 @@
       "duration": 773,
       "lengthSeconds": "773",
       "duration_string": "12:53"
-    }
+    },
+    "access_status": "members_only",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": false
   },
   {
     "id": "tEfgBcpmznA",
@@ -587,7 +644,10 @@
       "duration": 210,
       "lengthSeconds": "210",
       "duration_string": "3:30"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "37zufC7qBQs",
@@ -615,7 +675,10 @@
       "duration": 649,
       "lengthSeconds": "649",
       "duration_string": "10:49"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "6_8Widm99cE",
@@ -643,7 +706,10 @@
       "duration": 615,
       "lengthSeconds": "614",
       "duration_string": "10:15"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "OusC2RPJDQE",
@@ -671,7 +737,10 @@
       "duration": 751,
       "lengthSeconds": "750",
       "duration_string": "12:31"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "xj1kb8F33Rg",
@@ -699,7 +768,10 @@
       "duration": 645,
       "lengthSeconds": "645",
       "duration_string": "10:45"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "Cavxva8xHEQ",
@@ -727,7 +799,10 @@
       "duration": 603,
       "lengthSeconds": "603",
       "duration_string": "10:03"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   },
   {
     "id": "cx_L7zdAeAE",
@@ -755,6 +830,9 @@
       "duration": 407,
       "lengthSeconds": "406",
       "duration_string": "6:47"
-    }
+    },
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15",
+    "student_recommendation": true
   }
 ]

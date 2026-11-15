@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const storageKey = 'badminton-practice-2026-11-15-v1';
+  const storageKey = 'badminton-practice-2026-11-15-free-v2';
   const topics = [...document.querySelectorAll('[data-topic]')];
   const lessons = [...document.querySelectorAll('[data-panel]')];
   const allowed = new Set(topics.map(button => button.dataset.topic));
@@ -10,8 +10,11 @@
   let done = new Set();
   let canSave = true;
   try {
-    const saved = JSON.parse(localStorage.getItem(storageKey) || '[]');
-    if (Array.isArray(saved)) done = new Set(saved.filter(key => allowed.has(key)));
+    let raw = localStorage.getItem(storageKey);
+    const migrating = raw === null;
+    if (migrating) raw = localStorage.getItem('badminton-practice-2026-11-15-v1') || '[]';
+    const saved = JSON.parse(raw);
+    if (Array.isArray(saved)) done = new Set(saved.filter(key => allowed.has(key) && (!migrating || !['grip', 'footwork'].includes(key))));
   } catch (_) { canSave = false; }
   const renderProgress = () => {
     document.getElementById('progress-count').textContent = `${done.size} / 5`;
@@ -42,7 +45,7 @@
     const panel = lessons.find(panel => panel.dataset.panel === key);
     document.getElementById('bottom-topic').textContent = panel.dataset.label;
     document.getElementById('bottom-watch').href = panel.dataset.video;
-    document.getElementById('bottom-seconds').textContent = `看 ${panel.dataset.seconds} 秒重點`;
+    document.getElementById('bottom-seconds').textContent = `免費看 ${panel.dataset.seconds} 秒重點`;
     if (scroll && window.matchMedia('(max-width: 759px)').matches) {
       mission.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
       panel.querySelector('h2').focus({preventScroll:true});

@@ -1,0 +1,72 @@
+[
+  {
+    "key": "grip",
+    "video": "toQ7tOx7Tvs",
+    "code": "S01",
+    "start": 22,
+    "end": 100,
+    "seconds": 78,
+    "segment": "0:22–1:40｜正手與反手握拍",
+    "url": "https://www.youtube.com/watch?v=toQ7tOx7Tvs&t=22s",
+    "level": "A（選段）",
+    "source_scope": "免費基礎補充；2021 年影片，不計入本月新片",
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15"
+  },
+  {
+    "key": "swing",
+    "video": "pzpyti1sS-I",
+    "code": "V08",
+    "start": 389,
+    "end": 474,
+    "seconds": 85,
+    "segment": "6:29–7:54｜身體轉動帶動球拍",
+    "url": "https://www.youtube.com/watch?v=pzpyti1sS-I&t=389s",
+    "level": "B",
+    "source_scope": "原月報期間內影片",
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15"
+  },
+  {
+    "key": "timing",
+    "video": "vOlRQx3qF5Q",
+    "code": "V15",
+    "start": 158,
+    "end": 208,
+    "seconds": 50,
+    "segment": "2:38–3:28｜揮拍時機",
+    "url": "https://www.youtube.com/watch?v=vOlRQx3qF5Q&t=158s",
+    "level": "B",
+    "source_scope": "原月報期間內影片",
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15"
+  },
+  {
+    "key": "footwork",
+    "video": "fBa08o5GEqw",
+    "code": "S02",
+    "start": 267,
+    "end": 364,
+    "seconds": 97,
+    "segment": "4:27–6:04｜正手後場步法",
+    "url": "https://www.youtube.com/watch?v=fBa08o5GEqw&t=267s",
+    "level": "A（選段）",
+    "source_scope": "免費基礎補充；2021 年影片，不計入本月新片",
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15"
+  },
+  {
+    "key": "doubles",
+    "video": "8GAmxmLXc70",
+    "code": "V01",
+    "start": 258,
+    "end": 321,
+    "seconds": 63,
+    "segment": "4:18–5:21｜單雙打站位差異",
+    "url": "https://www.youtube.com/watch?v=8GAmxmLXc70&t=258s",
+    "level": "A",
+    "source_scope": "原月報期間內影片",
+    "access_status": "free_public",
+    "access_checked_on": "2026-11-15"
+  }
+]
