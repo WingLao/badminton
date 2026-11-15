@@ -107,6 +107,28 @@ dl.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100
 dl.gloss div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 dl.gloss dt{font-weight:700}dl.gloss dd{margin:2px 0 0;color:var(--muted);font-size:14.5px}
 ol.steps{padding-left:20px;margin:0}ol.steps li{margin:4px 0}
+.flow{display:none}
+@media (max-width:640px){
+  .figure svg{display:none}
+  .flow{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .flow .box{border:2px solid var(--c);border-radius:12px;padding:10px 12px;background:var(--surface2)}
+  .flow .box b{color:var(--c);font-size:16px}
+  .flow .box div{font-size:14px;color:var(--muted)}
+  .flow .arr{text-align:center;color:var(--muted);font-size:13px;padding:4px 0}
+  .flow .side{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+  table.cards thead{display:none}
+  table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+  table.cards tr{padding:10px 12px;border-bottom:1px solid var(--line)}
+  table.cards tr:last-child{border-bottom:0}
+  table.cards td{border:0;padding:2px 0;font-size:14.5px}
+  table.cards td::before{content:attr(data-label)"：";color:var(--muted);font-size:12.5px;font-weight:600;margin-right:4px}
+  table.cards td:first-child{font-weight:700;font-size:16px}
+  table.cards td:first-child::before{content:none}
+  .tbl{overflow-x:visible}
+  #index table.cards td:first-child{display:inline-block;width:auto;margin-right:8px}
+  #index table.cards td:nth-child(2){display:inline-block;width:auto;color:var(--muted)}
+  #index table.cards td:nth-child(2)::before{content:none}
+}
 .themebtn{margin-left:auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;padding:3px 10px;font-size:13px;cursor:pointer}
 </style>
 </head>
@@ -231,11 +253,26 @@ ol.steps{padding-left:20px;margin:0}ol.steps li{margin:4px 0}
 <path d="M274 455 H324" class="arrow"/>
 <path d="M811 410 V306" class="arrow" style="stroke-dasharray:4 4"/><text x="818" y="364" class="lbl">同源技術</text>
 </svg>
+<div class="flow" aria-label="羽球科技關聯流程">
+<div class="box" style="--c:var(--e)"><b>器材新科技（E）</b><div>合成球、合金碳纖球拍、碳板球鞋、AI 穿線機</div></div>
+<div class="arr">↓ 影響手感、耐用、成本</div>
+<div class="box" style="--c:var(--m)"><b>① 供球（M）</b><div>發球機：App／遙控／程式；機器人陪練</div></div>
+<div class="arr">↓ 穩定來球</div>
+<div class="box" style="--c:#7d9a12;background:color-mix(in srgb,var(--lime) 35%,transparent)"><b>② 球員</b><div>擊球 · 步法 · 決策</div></div>
+<div class="arr">↓ 產生數據</div>
+<div class="box" style="--c:var(--a)"><b>③ 量測（A）</b><div>握柄感測器：球速、評分；AI 影像：骨架、球路、熱區</div></div>
+<div class="arr">↓ 分析結果</div>
+<div class="box" style="--c:var(--accent)"><b>④ 回饋</b><div>教練／AI 教練 → 每週訓練計劃</div></div>
+<div class="arr">↺ 修正重點交回球員；再設定下一組發球機程式</div>
+<div class="side">
+<div class="box" style="--c:var(--t)"><b>自主訓練（T）</b><div>影子步法、牆練、揮拍器</div></div>
+<div class="box" style="--c:var(--warn)"><b>賽事科技</b><div>AI 即時重播、合成球試用</div></div>
+</div></div>
 <figcaption>圖：本報整理的關聯模型。M/A/E/T 對應下方影片分類代號；「同源技術」指賽事判線與訓練分析都用高速攝影＋電腦視覺。</figcaption>
 </figure>
 
 <h3>發球機與陪練機器人：一表比較</h3>
-<div class="tbl"><table>
+<div class="tbl"><table class="cards">
 <thead><tr><th>類型</th><th>代表（影片）</th><th>控制方式</th><th>強項</th><th>限制</th><th>適合誰</th></tr></thead>
 <tbody>
 <tr><td>電池便攜發球機</td><td>網購 B3 類電池機（本次未收錄專門影片）</td><td>按鍵／LCD</td><td>便宜、可戶外</td><td>球路少、速度低</td><td>初學、家長</td></tr>
@@ -457,7 +494,7 @@ ol.steps{padding-left:20px;margin:0}ol.steps li{margin:4px 0}
 <section id="teach">
 <div class="kicker">07 / 教學與訓練</div>
 <h2>怎樣把科技用在教學上</h2>
-<div class="tbl"><table>
+<div class="tbl"><table class="cards">
 <thead><tr><th>教學目標</th><th>建議科技</th><th>成本</th><th>課堂做法</th><th>注意</th></tr></thead>
 <tbody>
 <tr><td>動作檢討</td><td>手機／360° 相機錄影（<a href="#A10">A10</a>、<a href="#T1">T1</a> 手機夾）</td><td>$</td><td>每人錄 10 球，慢速重播對照示範</td><td>先定 1 個觀察點，不要一次改太多</td></tr>
@@ -481,7 +518,7 @@ ol.steps{padding-left:20px;margin:0}ol.steps li{margin:4px 0}
 <section id="index">
 <div class="kicker">09 / 全部影片</div>
 <h2>影片索引 <small>33 支，日期為澳門時間</small></h2>
-<div class="tbl"><table>
+<div class="tbl"><table class="cards">
 <thead><tr><th>代號</th><th>日期</th><th>影片</th><th>頻道</th><th>原音</th><th>長度</th><th>觀看</th><th>依據</th></tr></thead>
 <tbody><tr><td><a href="#M1">M1</a></td><td>2026-10-31</td><td><a href="https://www.youtube.com/watch?v=cx_L7zdAeAE" target="_blank" rel="noopener">實測 TrainBot 自動供球機（丹麥公開賽）</a><div class="one-s">高階發球機可「預設訓練程式」，教練專心看動作。</div></td><td>Badminton Famly</td><td>英文</td><td>6:46</td><td>6.7K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#M2">M2</a></td><td>2026-10-05</td><td><a href="https://www.youtube.com/watch?v=ijFSEb2W6_8" target="_blank" rel="noopener">Linus 買了等了十年的羽球機器人</a><div class="one-s">科技網紅自買羽球機器人，等了一年；職業球員示範可怎樣用。</div></td><td>Linus Tech Tips</td><td>英文</td><td>13:52</td><td>1.87M</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#M3">M3</a></td><td>2026-01-20</td><td><a href="https://www.youtube.com/watch?v=X-RN7XA9ex0" target="_blank" rel="noopener">SIBOASI B7 發球機：遙控與 App 操作示範</a><div class="one-s">中價位發球機已可用手機 App 設定落點。</div></td><td>Livia SIBOASI</td><td>英文／示範</td><td>3:38</td><td>239</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#M4">M4</a></td><td>2026-08-28</td><td><a href="https://www.youtube.com/watch?v=Ji_T5MAKGRw" target="_blank" rel="noopener">DIY：工業機械臂改造成羽球發球機</a><div class="one-s">用工業機械臂自製發球機——STEM 專題好例子。</div></td><td>Travis Mitchell</td><td>英文</td><td>20:29</td><td>43K</td><td><span class="b bA">A</span></td></tr><tr><td><a href="#M5">M5</a></td><td>2026-04-15</td><td><a href="https://www.youtube.com/watch?v=Dje93KqOGoI" target="_blank" rel="noopener">廣交會：人形機器人與觀眾對打羽球</a><div class="one-s">人形機器人能和人對打羽球，但目前只有約 25–30 拍。</div></td><td>中国新闻社</td><td>中文</td><td>0:38</td><td>879</td><td><span class="b bC">C</span></td></tr><tr><td><a href="#M6">M6</a></td><td>2026-11-05</td><td><a href="https://www.youtube.com/watch?v=WvZ6PS_mV3k" target="_blank" rel="noopener">烏鎮世界互聯網大會：羽球機器人搭檔</a><div class="one-s">2026 年 11 月最新展會：羽球機器人搭檔。</div></td><td>China Everything</td><td>英文</td><td>3:39</td><td>17</td><td><span class="b bC">C</span></td></tr><tr><td><a href="#M7">M7</a></td><td>2026-10-08</td><td><a href="https://www.youtube.com/watch?v=wLdJTHkmwfY" target="_blank" rel="noopener">職業球員破解機器人的網前球</a><div class="one-s">機器節奏固定，人可以「讀節奏」打敗它。</div></td><td>Discover China Daily</td><td>畫面為主</td><td>0:24</td><td>356</td><td><span class="b bC">C</span></td></tr><tr><td><a href="#M8">M8</a></td><td>2026-08-03</td><td><a href="https://www.youtube.com/watch?v=v29z22PBRLo" target="_blank" rel="noopener">前 NASA 工程師做「電動旋轉球拍」</a><div class="one-s">馬達驅動旋轉球拍：好玩的工程實驗，不是正式器材。</div></td><td>Jack Saito</td><td>英文</td><td>13:26</td><td>3.8K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#A1">A1</a></td><td>2026-04-05</td><td><a href="https://www.youtube.com/watch?v=fioHQbU0Quo" target="_blank" rel="noopener">到南京看 VICTOR 最新科技（VICTOR Intelligence）</a><div class="one-s">VICTOR 推出「VICTOR Intelligence」球拍感測器。</div></td><td>Badminton Insight</td><td>英文</td><td>10:51</td><td>262K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#A2">A2</a></td><td>2026-09-16</td><td><a href="https://www.youtube.com/watch?v=9xTk3asveA8" target="_blank" rel="noopener">VICTOR 智聯球拍感測器實測：用數據看穿盲點</a><div class="one-s">感測器裝入握柄，不用換拍；量球速、評分、分析比賽。</div></td><td>KT 羽球</td><td>中文</td><td>12:32</td><td>60K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#A3">A3</a></td><td>2026-09-24</td><td><a href="https://www.youtube.com/watch?v=IFyW4Re5Ly0" target="_blank" rel="noopener">VICTOR AI 智聯感測器 VI-01 開箱與 Q&amp;A</a><div class="one-s">買感測器前必看：配重、相容、保固、適合誰。</div></td><td>凱將開講</td><td>中文</td><td>22:14</td><td>16K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#A4">A4</a></td><td>2026-01-06</td><td><a href="https://www.youtube.com/watch?v=umnbihuV05E" target="_blank" rel="noopener">Qualcomm × 耀迅：CES 2026 智慧羽球感測模組</a><div class="one-s">晶片大廠 Qualcomm 也做羽球感測 → 會更小更便宜。</div></td><td>耀迅科技 Unus Tech</td><td>中文</td><td>2:09</td><td>27</td><td><span class="b bC">C</span></td></tr><tr><td><a href="#A5">A5</a></td><td>2026-07-11</td><td><a href="https://www.youtube.com/watch?v=TqsBKdfh7cQ" target="_blank" rel="noopener">goSmash：上傳比賽影片的 AI 教練</a><div class="one-s">上傳比賽影片，AI 幫每一拍打分並排練習計劃。</div></td><td>goSmash</td><td>英文</td><td>1:00</td><td>237</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#A6">A6</a></td><td>2026-04-16</td><td><a href="https://www.youtube.com/watch?v=fKwac0CsBLc" target="_blank" rel="noopener">RallyLens：開源 AI 追蹤（球員姿態＋球路＋俯視圖）</a><div class="one-s">免費開源：AI 追蹤球員骨架、球路、俯視圖。</div></td><td>yeonseong</td><td>無旁白</td><td>0:17</td><td>1.4K</td><td><span class="b bA">A</span></td></tr><tr><td><a href="#A7">A7</a></td><td>2026-05-03</td><td><a href="https://www.youtube.com/watch?v=iZ1TOrRurbE" target="_blank" rel="noopener">MatchMotion：手機 App 自動分析羽球影片（論文）</a><div class="one-s">研究顯示 AI 認羽球只有 37.6% 準 → 結果要人手核對。</div></td><td>CS &amp; IT 研討會</td><td>英文</td><td>12:28</td><td>451</td><td><span class="b bA">A</span></td></tr><tr><td><a href="#A8">A8</a></td><td>2026-05-19</td><td><a href="https://www.youtube.com/watch?v=1BJQiRuJN5o" target="_blank" rel="noopener">教練用 AI 分析學生動作（宣稱 3 週進步 60%）</a><div class="one-s">誇大宣稱，沒有方法說明，不要相信。</div></td><td>Smash Smart</td><td>英文</td><td>2:01</td><td>424</td><td><span class="b bC">C</span></td></tr><tr><td><a href="#A9">A9</a></td><td>2026-06-30</td><td><a href="https://www.youtube.com/watch?v=SCXvnzgJCIM" target="_blank" rel="noopener">Revealtek：BWF 認可的 AI 即時重播（IRS）</a><div class="one-s">平價版「鷹眼」：AI 數秒內判界內／界外。</div></td><td>Revealtek</td><td>英文</td><td>2:33</td><td>737</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#A10">A10</a></td><td>2026-09-06</td><td><a href="https://www.youtube.com/watch?v=EblAE68bPmI" target="_blank" rel="noopener">Insta360 X6 全景相機拍羽球比賽</a><div class="one-s">一台 360° 相機就能拍下全場雙方。</div></td><td>udn科技玩家</td><td>中文</td><td>0:37</td><td>877</td><td><span class="b bC">C</span></td></tr><tr><td><a href="#E1">E1</a></td><td>2026-05-24</td><td><a href="https://www.youtube.com/watch?v=PNAzKH8a8J0" target="_blank" rel="noopener">用新合成球 NCS MAX 打了 120 場，結果如何？</a><div class="one-s">合成球打了 120 場的長期實測。</div></td><td>Badminton Insight</td><td>英文</td><td>11:20</td><td>214K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#E2">E2</a></td><td>2026-04-04</td><td><a href="https://www.youtube.com/watch?v=ZtwqancFTBA" target="_blank" rel="noopener">YONEX Crosswind 70 vs VICTOR NCS Max：一顆撐了 2.5 局</a><div class="one-s">兩款 BWF 試用合成球大比拼，一顆撐了 2.5 局。</div></td><td>CK Yew</td><td>英文</td><td>9:37</td><td>95K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#E3">E3</a></td><td>2026-06-04</td><td><a href="https://www.youtube.com/watch?v=3TFKd0UTdZE" target="_blank" rel="noopener">Crosswind 70 vs AS30：耐打測試</a><div class="one-s">合成球 vs 羽毛球：誰更耐打？</div></td><td>The Badminton Zone</td><td>英文</td><td>9:18</td><td>19K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#E4">E4</a></td><td>2026-01-07</td><td><a href="https://www.youtube.com/watch?v=vY4mm1esKiw" target="_blank" rel="noopener">羽毛球的終結？VICTOR NCS Pro 實測</a><div class="one-s">合成球 NCS Pro 能取代羽毛球嗎？</div></td><td>An Badminton</td><td>印地語</td><td>14:40</td><td>158K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#E5">E5</a></td><td>2026-08-21</td><td><a href="https://www.youtube.com/watch?v=oXltycYHXM4" target="_blank" rel="noopener">合成球在 2026 新德里世錦賽引發分歧</a><div class="one-s">合成球在世錦賽引起爭議，BWF 未定全面使用時間。</div></td><td>The Star</td><td>英文</td><td>4:22</td><td>2.3K</td><td><span class="b bC">C</span></td></tr><tr><td><a href="#E6">E6</a></td><td>2026-11-07</td><td><a href="https://www.youtube.com/watch?v=YEXbRLHkuvM" target="_blank" rel="noopener">為甚麼羽球能飛 565 km/h，然後幾乎停下？</a><div class="one-s">羽球殺球 565 km/h，但約每 3.35 米速度就減半。</div></td><td>Pingbot</td><td>英文</td><td>2:41</td><td>1.4K</td><td><span class="b bA">A</span></td></tr><tr><td><a href="#E7">E7</a></td><td>2026-03-12</td><td><a href="https://www.youtube.com/watch?v=Bh4kKJVjDT4" target="_blank" rel="noopener">VICTOR ARS-99：首支全拍合金碳纖維</a><div class="one-s">VICTOR 首支全拍合金碳纖維球拍，殺球強但偏硬。</div></td><td>安東羽球</td><td>中文</td><td>8:46</td><td>23K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#E8">E8</a></td><td>2026-11-13</td><td><a href="https://www.youtube.com/watch?v=xj1kb8F33Rg" target="_blank" rel="noopener">4 支 2026 熱門攻擊拍對比</a><div class="one-s">攻擊拍更有力，但可能犧牲速度與控制。</div></td><td>Badminton Famly</td><td>英文</td><td>10:45</td><td>10K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#E9">E9</a></td><td>2026-03-26</td><td><a href="https://www.youtube.com/watch?v=pVi68NJLj18" target="_blank" rel="noopener">VICTOR 2026 新品預報：球拍也能「充電」？</a><div class="one-s">VICTOR 2026 新品一覽，還談到「球拍充電」。</div></td><td>凱將開講</td><td>中文</td><td>10:01</td><td>16K</td><td><span class="b bC">C</span></td></tr><tr><td><a href="#E10">E10</a></td><td>2026-04-03</td><td><a href="https://www.youtube.com/watch?v=xHtOTuVCwfE" target="_blank" rel="noopener">YONEX Subaxia GT 球鞋：新科技實測</a><div class="one-s">YONEX 球鞋加入碳板，像跑鞋一樣有彈性。</div></td><td>Badminton Famly</td><td>英文</td><td>11:05</td><td>16K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#E11">E11</a></td><td>2026-10-12</td><td><a href="https://www.youtube.com/watch?v=-W-T5M2BZ_Q" target="_blank" rel="noopener">SIBOASI H7 穿線機（2026）</a><div class="one-s">穿線機加入恆拉、預拉、AI 自動調高度。</div></td><td>Livia SIBOASI</td><td>示範</td><td>1:47</td><td>48</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#E12">E12</a></td><td>2026-07-21</td><td><a href="https://www.youtube.com/watch?v=3mGQopV8RbU" target="_blank" rel="noopener">SIBOASI S7 穿線機開箱</a><div class="one-s">家用電子穿線機，個人也買得起。</div></td><td>擎天柱在德国</td><td>中文</td><td>6:44</td><td>49</td><td><span class="b bC">C</span></td></tr><tr><td><a href="#T1">T1</a></td><td>2026-05-24</td><td><a href="https://www.youtube.com/watch?v=k7TrtphoW3o" target="_blank" rel="noopener">網紅羽球小物全部試一次</a><div class="one-s">網上熱賣羽球小物，哪些真的有用。</div></td><td>An Badminton</td><td>印地語</td><td>11:39</td><td>312K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#T2">T2</a></td><td>2026-02-20</td><td><a href="https://www.youtube.com/watch?v=_HfPR7lSpwQ" target="_blank" rel="noopener">車上也能練：磁吸式「擊球感」揮拍器</a><div class="one-s">磁吸揮拍器：聽「喀」一聲練發力時機。</div></td><td>로케주앙 Like ROKA</td><td>韓文</td><td>7:32</td><td>9.3K</td><td><span class="b bB">B</span></td></tr><tr><td><a href="#T3">T3</a></td><td>2026-09-16</td><td><a href="https://www.youtube.com/watch?v=twvfm3yaUcY" target="_blank" rel="noopener">為甚麼獨自訓練比你想像更有效</a><div class="one-s">每天 20 分鐘專注獨練，比亂打比賽更有效。</div></td><td>Badminton Stick Guy</td><td>英文</td><td>7:43</td><td>86K</td><td><span class="b bB">B</span></td></tr></tbody></table></div>
 <div class="two" style="margin-top:18px">
@@ -508,6 +545,9 @@ ol.steps{padding-left:20px;margin:0}ol.steps li{margin:4px 0}
 (function(){var b=document.getElementById('themebtn'),r=document.documentElement;
 try{var s=localStorage.getItem('bt-theme');if(s)r.setAttribute('data-theme',s);}catch(e){}
 b.addEventListener('click',function(){var cur=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var n=cur==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('bt-theme',n);}catch(e){}});})();
+</script>
+<script>
+document.querySelectorAll('table.cards').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent});t.querySelectorAll('tbody tr').forEach(function(r){[].forEach.call(r.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i]);});});});
 </script>
 </body>
 </html>
