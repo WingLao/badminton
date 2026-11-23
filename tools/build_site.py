@@ -39,6 +39,7 @@ EXTRA_DOCS = ['學術/男子雙打認知教學運用.md', '學術/羽毛球近�
               '學術/羽球研究筆記/課堂延伸研究原文/00_原文索引_*.md', '學術/羽球研究筆記/文獻候選索引/*.md']
 MATCH_XLSX = SRC / '學術/鄭任佑'
 NEWS_SRC = SRC / '學術/每週新文獻'      # badminton-weekly-papers skill 每週五產生
+VIDEO_SRC = SRC / '每週影片'            # badminton-weekly-videos skill 每週五產生
 LEARN_SRC = SRC / '教學'
 TECH_SRC = SRC / '科技/2026羽球科技速覽.html'
 SKILLS_SRC = SRC.parent / 'AVANCO_html/.codex/skills'
@@ -645,6 +646,152 @@ def build_news(cfg: dict) -> list[str]:
     return notes
 
 
+# ---------------------------------------------------------------- 每週影片：學生學習與教練科技
+
+WEEKLY_MARK = '<!--weekly-videos-->'
+
+
+def secs(t: str) -> int:
+    n = 0
+    for part in t.split(':'):
+        n = n * 60 + int(part)
+    return n
+
+
+def fmt_len(sec: int) -> str:
+    return f'{sec // 60}:{sec % 60:02d}'
+
+
+BASIS = {'A': '已讀字幕', 'B': '依影片簡介與章節整理，不是逐字稿', 'C': '只依標題或很短的簡介，細節待看片確認'}
+
+
+def weekly_target(cat: str, date: str, default_name: str) -> tuple[Path, str]:
+    d = ROOT / f'{cat}/badminton-{date}'
+    idx = d / 'index.html'
+    if idx.exists() and WEEKLY_MARK not in idx.read_text(encoding='utf-8'):
+        return d / default_name, f'{cat}/badminton-{date}/{default_name}'   # 同一天已有手寫的一期 → 另開一頁
+    return idx, f'{cat}/badminton-{date}/'
+
+
+def write_audit(folder: Path, date: str, items: list[dict]):
+    (folder / '資料').mkdir(parents=True, exist_ok=True)
+    vids = [{k: x.get(k) for k in ('id', 'url', 'method', 'checked_date_macau', 'player_status', 'reason', 'has_streams', 'channel',
+                                    'duration_seconds', 'publish_date_raw', 'caption_languages', 'access')} | {'original_title': x.get('title')} for x in items]
+    data = {'checked_date_macau': date, 'method': 'anonymous YouTube watch-page player response; no account or cookies supplied', 'videos': vids}
+    (folder / f'資料/影片觀看權限核對_{date.replace("-", "")}.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+LEARN_CSS = '''<style>
+.picker{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.picker button{flex:1 1 auto;min-height:44px;padding:8px 14px;border-radius:999px;border:2px solid var(--brand);background:var(--card);color:var(--ink);font:inherit;font-size:15px;cursor:pointer}
+.picker button.on{background:var(--brand);color:var(--brand-ink)}
+.hint{font-size:17px}.check{font-weight:600;background:var(--code);padding:10px 12px;border-radius:10px}
+.tried{display:flex;gap:8px;align-items:center;min-height:44px}.tried input{width:22px;height:22px}
+.vid{border:1px dashed var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}
+</style>'''
+LEARN_JS = '''<script>
+(function(){var bs=document.querySelectorAll('.picker button'),ds=document.querySelectorAll('.detail');
+bs.forEach(function(b){b.onclick=function(){bs.forEach(function(x){x.classList.toggle('on',x===b)});ds.forEach(function(d){d.hidden=d.dataset.d!==b.dataset.d})}});
+document.querySelectorAll('.tried input').forEach(function(c){var k='weekly-'+location.pathname+'-'+c.dataset.k;try{c.checked=localStorage.getItem(k)==='1'}catch(e){}c.onchange=function(){try{localStorage.setItem(k,c.checked?'1':'0')}catch(e){}}});
+})();
+</script>'''
+
+
+def learn_page(date: str, items: list[dict]) -> str:
+    items = sorted(items, key=lambda x: x['zh'].get('order', 9))
+    btns = ''.join(f'<button type="button" data-d="{i}"{" class=on" if i == 0 else ""}>{i + 1} {esc(x["zh"]["title"].split("：")[0])}</button>' for i, x in enumerate(items))
+    secs_html = ''
+    for i, x in enumerate(items):
+        z = x['zh']
+        seg = z.get('seg')
+        start = secs(seg[0]) if seg else 0
+        link = x['url'] + (f'&t={start}s' if start else '')
+        seg_txt = (f'{esc(seg[0])} 起（{esc(seg[2])}）' if seg else f'全片 {fmt_len(x["duration_seconds"])}（影片沒有章節，從頭看）')
+        look = ''.join(f'<li>{esc(t)}</li>' for t in z['look'])
+        steps = ''.join(f'<li>{esc(t)}</li>' for t in z['steps'])
+        warn = f'<p class="check" style="background:#fde8e8;color:#7a1d1d">⚠️ {esc(z["warn"])}</p>' if z.get('warn') else ''
+        secs_html += f'''<section class="detail card" data-d="{i}"{" hidden" if i else ""}>
+<h3>細節 {i + 1}｜{esc(z["title"])}</h3>
+<p class="hint">💡 一句提示：<mark>{esc(z["hint"])}</mark></p>
+<p class="muted">{esc(z["facts"])}</p>
+<p><b>看甚麼</b></p><ul>{look}</ul>
+<p><b>怎樣練</b> <small class="muted">（{esc(z["steps_src"])}）</small></p><ol>{steps}</ol>
+<p class="check">✅ 只記一項：{esc(z["record"])}</p>{warn}
+<div class="vid"><p><b>看影片</b>：<a href="{esc(link)}" target="_blank" rel="noopener">{esc(x["title"])}</a></p>
+<p class="muted" style="font-size:14px">{esc(x["channel"])} · {esc((x.get("publish_date_raw") or "")[:10])} 發佈 · 片長 {fmt_len(x["duration_seconds"])} · 先看：{seg_txt}<br>
+原音：{esc(z["lang"])} · {esc(BASIS[z["basis"]])} · {esc(x["checked_date_macau"])} 以未登入狀態核對可免費觀看；影片簡介中的課程或商品不用購買</p></div>
+<label class="tried"><input type="checkbox" data-k="{esc(x["id"])}"> 我這週試過這個細節</label>
+</section>'''
+    return f'''{LEARN_CSS}<p class="crumb"><a href="../">學生學習</a> › {zh_date(date)}</p>
+<h1>本週影片精華：{len(items)} 個細節</h1>
+<p class="meta">{zh_date(date)} · 影片都是本週新發佈、已核對免費觀看 · 每次只練一個細節</p>
+<div class="card"><p>按下面的數字按鈕換細節。每個細節都有：一句提示 → 看甚麼 → 怎樣練 → 只記一項結果。影片只看標示的那一段就可以。</p>
+<p class="muted">練法來源寫在「怎樣練」旁邊；「本頁編製」代表影片沒有列出練法，是本頁依影片重點設計的。</p></div>
+<div class="picker">{btns}</div>{secs_html}
+<p class="muted" style="font-size:14px">「我這週試過」只存在這部裝置的瀏覽器，不會上傳；勾了只代表試過，不代表學會。</p>{LEARN_JS}'''
+
+
+def tech_page(date: str, items: list[dict]) -> str:
+    items = sorted(items, key=lambda x: x['zh'].get('order', 9))
+    rows = ''.join(f'<tr><td>{i + 1}</td><td>{esc(x["zh"]["title"])}</td><td>{esc(x["zh"]["basis"])}</td><td>{esc(x["zh"]["lang"])}</td></tr>' for i, x in enumerate(items))
+    cards = ''
+    for i, x in enumerate(items):
+        z = x['zh']
+        cards += f'''<article class="card"><small>T{i + 1} · {esc(x["channel"])} · {esc((x.get("publish_date_raw") or "")[:10])} · 片長 {fmt_len(x["duration_seconds"])} · 依據 {esc(z["basis"])}</small>
+<h3 style="margin:.3em 0"><a href="{esc(x["url"])}" target="_blank" rel="noopener">{esc(z["title"])}</a></h3>
+<p>💡 <mark>{esc(z["point"])}</mark></p>
+<table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody>
+<tr><td>訓練用途</td><td>{esc(z["use"])}</td></tr><tr><td>使用條件與成本</td><td>{esc(z["cond"])}</td></tr>
+<tr><td>原音／字幕</td><td>{esc(z["lang"])}</td></tr><tr><td>依據</td><td>{esc(BASIS[z["basis"]])}</td></tr></tbody></table>
+<p class="muted" style="font-size:14px">原標題：{esc(x["title"])} · {esc(x["checked_date_macau"])} 以未登入狀態核對可免費觀看（影片免費不代表產品免費）</p></article>'''
+    return f'''<p class="crumb"><a href="../">教練科技</a> › {zh_date(date)}</p>
+<h1>本週羽球科技：{len(items)} 支新影片</h1>
+<p class="meta">{zh_date(date)} · 給教練 · 本週新發佈、已核對免費觀看</p>
+<div class="card"><p>本週新的發球機、感測器、AI 分析類影片不多；以下是與器材和訓練工具有關、內容足以整理的影片。依據標記：<b>A</b> 已讀字幕、<b>B</b> 依簡介與章節、<b>C</b> 只依標題。</p>
+<p class="muted">器材效果、價格與行銷說法都<mark>未驗證</mark>，採購前請小規模試用。</p></div>
+<table><thead><tr><th>編號</th><th>主題</th><th>依據</th><th>原音</th></tr></thead><tbody>{rows}</tbody></table>{cards}'''
+
+
+def build_weekly_videos(cfg: dict) -> list[str]:
+    notes = []
+    files = sorted(VIDEO_SRC.glob('影片候選_*.json')) if VIDEO_SRC.exists() else []
+    for f in files:
+        try:
+            d = json.loads(f.read_text(encoding='utf-8'))
+        except ValueError:
+            continue
+        if not d.get('reviewed'):
+            notes.append(f'待整理：{f.name} 還沒完成篩選（reviewed=false），本週影片不放上網站')
+            continue
+        date = d['date']
+        for cat, name, maker, title_fmt, summ_fmt in (
+                ('learn', '本週影片精華.html', learn_page, '本週影片精華：{n} 個細節', '本週新發佈、已核對免費觀看的教學影片，每支練一個細節：{t}。'),
+                ('technology', '本週科技.html', tech_page, '本週羽球科技：{n} 支新影片', '{t}。')):
+            items = [x for x in d['items'] if x.get('keep') and x.get('section') == ('learn' if cat == 'learn' else 'tech')
+                     and x.get('access') == 'free_public']
+            if not items:
+                notes.append(f'{"學生學習" if cat == "learn" else "教練科技"} {date}：本週沒有合適的免費新影片，不出新一期')
+                continue
+            target, path = weekly_target(cat, date, name)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            up = 2
+            html_ = page(title_fmt.format(n=len(items)) + ('｜學生學習' if cat == 'learn' else '｜教練科技'),
+                         WEEKLY_MARK + maker(date, items), up, f'{cat}/', summ_fmt.format(n=len(items), t='、'.join(x['zh']['title'].split('：')[0] for x in sorted(items, key=lambda x: x['zh'].get('order', 9)))))
+            old = target.read_text(encoding='utf-8') if target.exists() else None
+            if old != html_:
+                target.write_text(html_, encoding='utf-8')
+                if old is None:
+                    notes.append(f'{"學生學習" if cat == "learn" else "教練科技"}新增一期：{title_fmt.format(n=len(items))}（{path}）')
+            write_audit(target.parent, date, items)
+            issue = {'date': date, 'path': path, 'title': title_fmt.format(n=len(items)),
+                     'summary': summ_fmt.format(n=len(items), t='、'.join(x['zh']['title'].split('：')[0] for x in sorted(items, key=lambda x: x['zh'].get('order', 9)))), 'auto': True}
+            lst = [i for i in cfg['categories'][cat]['issues'] if i.get('path') != path]
+            lst.append(issue)
+            lst.sort(key=lambda i: (i['date'], bool(i.get('auto'))), reverse=True)
+            cfg['categories'][cat]['issues'] = lst
+    return notes
+
+
 # ---------------------------------------------------------------- 目錄頁
 
 def build_indexes(cfg: dict, log: list[dict]):
@@ -723,6 +870,7 @@ def main():
     items += sync_sources()
     cfg = json.loads(CONFIG.read_text(encoding='utf-8'))
     items += build_news(cfg)
+    items += build_weekly_videos(cfg)
     tidy_hand_pages()
     log = json.loads(LOG.read_text(encoding='utf-8')) if LOG.exists() else []
     # 同一天重跑：保留之前寫入的項目，再加上新項目（不重複）

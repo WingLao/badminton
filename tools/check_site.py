@@ -15,6 +15,12 @@ files = {p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file() 
 audit_path = ROOT / 'learn/badminton-2026-11-15/資料/影片觀看權限核對_20261115.json'
 audit = json.loads(audit_path.read_text(encoding='utf-8'))
 videos = {v['id']: v for v in audit['videos']}
+# 每週影片頁各有自己的核對紀錄（資料/影片觀看權限核對_YYYYMMDD.json）
+for extra in sorted(ROOT.glob('*/badminton-*/資料/影片觀看權限核對_*.json')):
+    if extra == audit_path:
+        continue
+    for v in json.loads(extra.read_text(encoding='utf-8')).get('videos', []):
+        videos.setdefault(v['id'], v)
 errors = []
 checked = 0
 public_videos = set()
