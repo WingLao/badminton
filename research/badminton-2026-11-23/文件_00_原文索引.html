@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>課堂延伸研究原文索引｜教練研究</title>
+<meta name="description" content="第七章 16 篇研究的原文取得狀態與本機檔案。">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.hero.band{min-height:clamp(230px,32vh,280px)}
+.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="課堂延伸研究原文索引">課堂延伸研究原文索引</h1><p class="meta">研究文件 · 來源資料夾：學術/羽球研究筆記/課堂延伸研究原文 · 論文 PDF 不上傳，請用原出處連結</p>
+<p>返回 <a href="07_動作發展_動作控制與筋膜_近五年研究.html">07_動作發展_動作控制與筋膜_近五年研究</a>；課堂 <a href="2026-10-02_課堂筆記_筋膜訓練與運動行為.html">2026-10-02_課堂筆記_筋膜訓練與運動行為</a>。</p>
+<p>取得日期：2026-10-02。16 篇研究中，9 份期刊 PDF、1 份開放全文轉文字、1 篇可讀線上全文、5 篇只核對期刊／官方摘要。未取得本機全文的條目保留來源，不以摘要冒充全文。研究的納入範圍、方法與結論見第七章。</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>年份</th>
+<th>文獻簡稱</th>
+<th>DOI／來源入口</th>
+<th>本機原文與核對層級</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01</td>
+<td>2022</td>
+<td>Lin 等：兒童整合神經肌肉訓練</td>
+<td><a href="https://doi.org/10.7717/peerj.13726">DOI</a></td>
+<td>全文文字</td>
+</tr>
+<tr>
+<td>R02</td>
+<td>2023</td>
+<td>Tseng 等：台灣兒童桌球感覺動作訓練</td>
+<td><a href="https://doi.org/10.1123/mc.2021-0123">DOI</a></td>
+<td>官方摘要；未下載全文</td>
+</tr>
+<tr>
+<td>R03</td>
+<td>2025</td>
+<td>Cruz 等：腦性麻痺治療衣與功能練習</td>
+<td><a href="https://doi.org/10.3389/fped.2025.1459839">DOI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>R04</td>
+<td>2022</td>
+<td>Suarez-Rodriguez 等：筋膜神經分布</td>
+<td><a href="https://doi.org/10.3390/ijms23105674">DOI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>2022</td>
+<td>Winter 等：本體感覺與動作功能</td>
+<td><a href="https://doi.org/10.3389/fresc.2022.830166">DOI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>2024</td>
+<td>Yılmaz 等：運動員本體感覺訓練</td>
+<td><a href="https://doi.org/10.1186/s13102-024-00936-z">DOI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>R07</td>
+<td>2023</td>
+<td>Güneş、Yana：胸腰筋膜手法</td>
+<td><a href="https://doi.org/10.1016/j.jbmt.2023.04.063">DOI</a></td>
+<td>官方摘要；未下載全文</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>2025</td>
+<td>Safran、Kaya：筋膜手法與輕觸對照</td>
+<td><a href="https://doi.org/10.1186/s12891-025-08741-6">DOI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>2022</td>
+<td>Hong 等：台灣壓力衣與恢復</td>
+<td><a href="https://doi.org/10.1371/journal.pone.0264569">DOI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>2023</td>
+<td>Seo 等：本體感覺學習動態</td>
+<td><a href="https://doi.org/10.1177/15459683231207354">DOI</a></td>
+<td>線上全文；未下載全文</td>
+</tr>
+<tr>
+<td>R11</td>
+<td>2022</td>
+<td>Berland 等：費登奎斯回顧</td>
+<td><a href="https://doi.org/10.3390/ijerph192113734">DOI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>R12</td>
+<td>2023卷期／2022線上</td>
+<td>Horváth 等：本體感覺測量</td>
+<td><a href="https://doi.org/10.1016/j.jshs.2022.04.001">DOI</a></td>
+<td>期刊摘要；未下載全文</td>
+</tr>
+<tr>
+<td>R13</td>
+<td>2022</td>
+<td>Ramírez-delaCruz 等：增強式與肌腱</td>
+<td><a href="https://doi.org/10.1186/s40798-022-00431-0">DOI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>R14</td>
+<td>2023</td>
+<td>Muller 等：青年少器材訓練</td>
+<td><a href="https://doi.org/10.1016/j.ptsp.2023.09.010">DOI</a></td>
+<td>官方摘要；未下載全文</td>
+</tr>
+<tr>
+<td>R15</td>
+<td>2023</td>
+<td>Currier 等：阻力訓練處方</td>
+<td><a href="https://doi.org/10.1136/bjsports-2023-106807">DOI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>R16</td>
+<td>2026</td>
+<td>Lin 等：台灣遠端筋膜手法回顧</td>
+<td><a href="https://doi.org/10.1177/10538127261428186">DOI</a></td>
+<td>官方摘要；未下載全文</td>
+</tr>
+</tbody>
+</table>
+<p>分享討論另存 2026-10-02_課堂分享對話.txt。此文件是課堂素材，未計入 16 篇研究。</p>
+<p>R01 的出版社 PDF 請求被拒絕，改從 Europe PMC 公開 XML 取得完整文字。PDF 皆確認檔頭為有效 PDF；本機全文轉文字不保留原排版，圖像及版面請用 DOI 入口查看。</p>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

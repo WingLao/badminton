@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
 <title>工具說明｜badminton</title>
 <meta name="description" content="AVANCO 報名後台的兩個開發工具（skill）說明：用途、甚麼時候用、做事步驟。只介紹做法，不公開任何網址、帳號或密碼設定。">
 <style>
@@ -62,6 +63,7 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 .hero-tip{font-size:13px;color:var(--muted)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
 :root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
 @media (max-width:640px){
  table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
  table.cards thead{display:none}
@@ -73,7 +75,7 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 </style>
 </head>
 <body>
-<nav class="top" aria-label="網站導覽"><a class="brand" href="../">badminton</a><a href="../learn/">學生學習</a><a href="../technology/">教練科技</a><a href="../research/">教練研究</a><a href="../skills/" class="on">工具說明</a><a href="../guide/">閱讀方法</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../">badminton</a><a href="../learn/">學生學習</a><a href="../technology/">教練科技</a><a href="../research/">教練研究</a><a href="../skills/" class="on">工具說明</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
 <p class="crumb"><a href="../">首頁</a> › 工具說明</p><section class="hero band" data-court="mono" data-hue="25"><div class="hero-text"><h1>工具說明</h1><p><span class="tag">AVANCO 後台維護者</span></p></div></section><p>AVANCO 報名後台的兩個開發工具（skill）說明：用途、甚麼時候用、做事步驟。只介紹做法，不公開任何網址、帳號或密碼設定。</p><p class="muted">每一期按日期排列，最新的在最上面。</p><article class="card cat" style="--h:25"><small>2026 年 11 月 23 日 · 最新</small><h3><a href="badminton-2026-11-23/">AVANCO 兩個 skill 說明</a></h3><p>avanco-cross-computer（換電腦架設系統）與 avanco-activity-admin-template（後台新增活動頁）的用途與步驟。</p><p><a href="badminton-2026-11-23/">打開這一期 →</a></p></article>
 <footer>badminton · 小選手，大目標 · <a href="../">回首頁</a></footer>
@@ -84,7 +86,7 @@ function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)
 try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
 function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
 label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
-document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
 if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
 })();
 </script>

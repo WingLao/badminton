@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>多球訓練研究統整：多球練習與模擬比賽的負荷比較｜教練研究</title>
+<meta name="description" content="多球訓練研究統整：多球練習與模擬比賽的負荷比較｜教練研究">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.hero.band{min-height:clamp(230px,32vh,280px)}
+.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="多球訓練研究統整多球練習與模擬比賽的負荷比較">多球訓練研究統整：多球練習與模擬比賽的負荷比較</h1><p class="meta">研究文件 · 來源資料夾：學術/近五年羽毛球文獻_2021-2026 · 論文 PDF 不上傳，請用原出處連結</p>
+<h2 id="一研究是什麼">一、研究是什麼</h2>
+<p>Alvarez-Dacal 等人（2025）研究高水準青少年羽球選手進行<strong>多球餵球訓練</strong>（multi-feeding, MF）時，身體承受的負荷是否與<strong>模擬比賽</strong>（simulated match play, SMP）不同，並檢查男女選手的反應。這是一項<strong>單次訓練負荷比較研究</strong>，不是數週訓練成效試驗。</p>
+<p><strong>原文：</strong> Alvarez-Dacal, F., Rodríguez-Fernández, A., Herrero-Molleda, A., Gil-Calvo, M., Baiget, E., Seguí-Urbaneja, J., &amp; Fernández-Fernández, J. (2025). <em>Training vs. competition: Load and intensity differences between multi-feeding and simulated match play in high-level youth badminton players</em>. <em>Applied Sciences, 15</em>(13), 7451. <a href="https://doi.org/10.3390/app15137451">https://doi.org/10.3390/app15137451</a></p>
+<p><strong>本機 PDF：</strong> <code>開放取用原文PDF/2025_W4412008559_Training_vs_Competition_Multi_Feeding_and_Simulated_Match_Play.pdf</code></p>
+<h2 id="二研究方法">二、研究方法</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>研究對象</td>
+<td>42 名國家級或國際級青少年選手：男 24 人，平均 17.4 歲；女 18 人，平均 16.9 歲。</td>
+</tr>
+<tr>
+<td>設計</td>
+<td>重複測量、交叉比較：每人於同一週分別完成多球訓練與模擬比賽；兩次間隔至少 48 小時，順序經平衡安排。</td>
+</tr>
+<tr>
+<td>多球內容</td>
+<td>6 組、每組 5 分鐘；組內以 10 秒動作、7 秒休息交替。包含全場單打攻防、後場進攻接中場移動、後場進攻接上網，以及自由攻防等情境。</td>
+</tr>
+<tr>
+<td>比賽條件</td>
+<td>與能力相近、同性別選手進行模擬比賽，依羽球規則計分。</td>
+</tr>
+<tr>
+<td>測量</td>
+<td>穿戴式慣性感測器記錄移動距離、爆發性移動距離及跳躍次數；心率帶記錄平均與最高心率；另計算主觀用力程度與時間合成的單次訓練負荷。</td>
+</tr>
+<tr>
+<td>分析</td>
+<td>比較訓練形式、性別及兩者交互作用，使用雙因子變異數分析。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="三主要結果">三、主要結果</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th style="text-align: right;">多球訓練</th>
+<th style="text-align: right;">模擬比賽</th>
+<th>判讀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每分鐘移動距離，女生</td>
+<td style="text-align: right;">61.3 m</td>
+<td style="text-align: right;">41.0 m</td>
+<td>多球較高</td>
+</tr>
+<tr>
+<td>每分鐘移動距離，男生</td>
+<td style="text-align: right;">60.3 m</td>
+<td style="text-align: right;">51.2 m</td>
+<td>多球較高</td>
+</tr>
+<tr>
+<td>平均心率，女生</td>
+<td style="text-align: right;">184 bpm</td>
+<td style="text-align: right;">154 bpm</td>
+<td>多球較高</td>
+</tr>
+<tr>
+<td>平均心率，男生</td>
+<td style="text-align: right;">185 bpm</td>
+<td style="text-align: right;">152 bpm</td>
+<td>多球較高</td>
+</tr>
+<tr>
+<td>每分鐘跳躍次數，女生</td>
+<td style="text-align: right;">0.80 次</td>
+<td style="text-align: right;">0.34 次</td>
+<td>多球較高</td>
+</tr>
+<tr>
+<td>每分鐘跳躍次數，男生</td>
+<td style="text-align: right;">1.60 次</td>
+<td style="text-align: right;">0.52 次</td>
+<td>多球較高</td>
+</tr>
+</tbody>
+</table>
+<p>整體而言，多球訓練的每分鐘移動距離、爆發性移動距離、跳躍次數、平均與最高心率，以及單次訓練負荷，都高於模擬比賽。每分鐘移動距離與平均心率的訓練形式差異皆達 <strong>p &lt; .001</strong>。男女的心率反應相近，但男生的跳躍次數較多。跳躍次數的「性別 × 訓練形式」交互作用 <strong>p = .069</strong>，依研究預設的 .05 門檻並未達顯著；最高速度的交互作用達顯著（p = .019）。</p>
+<h2 id="四作者結論與可用說法">四、作者結論與可用說法</h2>
+<p><strong>作者結論：</strong> 此種設計的多球訓練可在可控制的場上情境中，產生高於模擬比賽的心肺與移動負荷。教練可用它安排高強度、重複移動與跳躍刺激，但應依個人負荷與恢復能力調整；模擬比賽仍有戰術判斷與比賽情境的訓練價值。</p>
+<p><strong>可寫進報告的摘要：</strong> Alvarez-Dacal 等人（2025）以 42 名高水準青少年羽球選手比較多球餵球訓練與模擬比賽的單次負荷。研究採交叉重複測量設計，發現多球訓練的移動密度、跳躍頻率與心率反應普遍較高，顯示多球可作為控制高強度身體負荷的訓練方式。然而，本研究僅觀察單次訓練，未測量數週後的技術進步、戰術決策或正式比賽表現，因此不能據此認定多球訓練比實戰更能提升競技成績。</p>
+<h2 id="五閱讀這篇研究時要注意">五、閱讀這篇研究時要注意</h2>
+<ol type="1">
+<li><strong>研究問題是負荷，不是訓練效果。</strong> 它不能回答「做八週多球後，殺球或步法會進步多少」。</li>
+<li><strong>結論適用對象有限。</strong> 受試者是高水準青少年，不能直接套用到初學者或成人休閒球員。</li>
+<li><strong>多球負荷會隨設計改變。</strong> 這篇採 10 秒動作、7 秒休息及六種情境；換成不同餵球速度、路線或休息時間，結果可能不同。</li>
+<li><strong>比較了身體負荷，未直接測量技戰術品質。</strong> 比賽中的選擇、預判、對手互動與心理壓力，不能只用心率和移動距離代表。</li>
+</ol>
+<p><strong>資料來源：</strong> <a href="https://www.mdpi.com/2076-3417/15/13/7451">期刊原文</a>／<a href="https://mdpi-res.com/d_attachment/applsci/applsci-15-07451/article_deploy/applsci-15-07451.pdf">開放取用 PDF</a>。數字取自原文第 7 頁表 1；方法與限制見第 3–9 頁。</p>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex, nofollow, noarchive"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>羽毛球手指發力｜肢段圖解有聲教材</title>
+<link rel="stylesheet" href="lesson_202610151603.css">
+<style>/* 網站版：窄螢幕不溢出 */#localFile,input[type=file]{max-width:100%;box-sizing:border-box}img,svg,video{max-width:100%}</style>
+<script src="lesson_202610151603.js" defer></script>
+</head>
+<body><!--site:start--><div style="background:#11241f;padding:6px 10px;display:flex;gap:2px;overflow-x:auto;white-space:nowrap;font:14px/1.4 -apple-system,BlinkMacSystemFont,'PingFang TC',sans-serif;position:relative;z-index:50" aria-label="網站導覽"><span style="color:#d7f24b;font-weight:800;padding:6px 10px 6px 4px">badminton</span><a href="../../../" style="color:#e8f2ec;text-decoration:none;padding:6px 10px;border-radius:999px;">首頁</a><a href="../../../learn/" style="color:#e8f2ec;text-decoration:none;padding:6px 10px;border-radius:999px;background:#d7f24b;color:#16302a;">學生學習</a><a href="../../../technology/" style="color:#e8f2ec;text-decoration:none;padding:6px 10px;border-radius:999px;">教練科技</a><a href="../../../research/" style="color:#e8f2ec;text-decoration:none;padding:6px 10px;border-radius:999px;">教練研究</a><a href="../../../skills/" style="color:#e8f2ec;text-decoration:none;padding:6px 10px;border-radius:999px;">工具說明</a></div><!--site:end-->
+<header><small>進階技術學習 · 運動生物力學圖解</small><h1>手指發力的生物力學</h1>
+<p class="note">適合已有 2–3 年訓練基礎的球員。每章：肢段圖＋受力／向量圖＋同一時間軸的曲線（0 ms＝觸球）。藍＝放鬆，紅＝發力。</p></header>
+<div class="layout">
+<aside><nav id="chapters" aria-label="教學章節"></nav></aside>
+<main>
+  <section class="card" aria-labelledby="chapterTitle">
+    <div class="eyebrow" id="chapterTag"></div><h2 id="chapterTitle"></h2><p class="goal" id="goal"></p>
+    <div id="stageWrap"><svg id="stage" viewBox="0 0 960 540" role="img" aria-label="肢段動作動畫"></svg><div id="phase"><div id="phaseBar"></div></div></div>
+    <div class="controls">
+      <div class="grp"><button id="playBtn">播放講解</button><button id="replayBtn">重播</button><button id="pauseBtn">暫停動畫</button></div>
+      <div class="grp"><label>速度</label><button data-speed="0.25">0.25x</button><button data-speed="0.5">0.5x</button><button data-speed="1" class="on">1.0x</button></div>
+      <div class="grp"><button id="fxBtn" class="on">動作音效：開</button><button id="bgmBtn">背景音樂：關</button><label for="vol">音量</label><input id="vol" type="range" min="0" max="1" step="0.05" value="0.4"></div>
+    </div>
+    <div id="subs" aria-live="polite"></div><div id="lineDots"></div>
+  </section>
+
+  <section class="card"><h3>看這裡</h3><ol id="look"></ol></section>
+
+  <section class="card" id="photoCard"><h3>實拍參考</h3>
+    <p class="note">紅＝峰值受力點，藍＝輕接觸／支撐點；點圖可放大。照片為示意參考，不是實測壓力分佈。</p>
+    <div id="photos"></div>
+  </section>
+
+  <section class="card" id="compare"><h3>動作對照</h3>
+    <div class="cmp">
+      <figure class="good"><figcaption>正確</figcaption><svg id="cmpGood" viewBox="0 0 480 300"></svg><p id="fix"></p></figure>
+      <figure class="bad"><figcaption>常見錯誤</figcaption><svg id="cmpBad" viewBox="0 0 480 300"></svg><p id="wrong"></p></figure>
+    </div>
+    <p class="question" id="question"></p>
+  </section>
+
+  <section class="card"><h3>真人影片｜公開示範</h3>
+    <div class="toolbar"><select id="videoSelect" aria-label="選擇影片"></select><button id="loadPublic">載入影片</button><a id="externalVideo" target="_blank" rel="noopener">到 YouTube 觀看</a></div>
+    <p class="note" id="videoSource"></p>
+    <iframe id="publicFrame" title="公開羽毛球教學影片" allow="fullscreen; picture-in-picture" allowfullscreen hidden></iframe>
+  </section>
+
+  <section class="card"><h3>真人影片｜Wing 示範</h3>
+    <div class="toolbar"><input id="localFile" type="file" accept="video/*" aria-label="選取本機影片"><label for="localSpeed" class="note">播放速度</label>
+      <select id="localSpeed"><option value="1">1.0 倍</option><option value="0.5">0.5 倍</option><option value="0.25">0.25 倍</option></select></div>
+    <p class="note" id="ownStatus">選取你的示範影片，和上方肢段圖對照（只在本機播放，不會上傳）。</p>
+    <video id="ownVideo" controls playsinline preload="metadata" hidden></video>
+  </section>
+
+  <div class="nav"><button id="prev">上一章</button><span id="count"></span><button id="next">下一章</button></div>
+
+  <details class="card"><summary>資料來源與說明</summary>
+    <p class="note">肢段圖、角度、力、力矩、角速度與時序曲線皆為教學示意（相對值或示意值），用來說明動作原理，不是實測數據，也不是學生必須達到的角度或力量標準。研究數字來自特定樣本。</p>
+    <ul>
+      <li><a href="https://efsupit.ro/images/stories/septembrie2024/Art%20247.pdf" target="_blank" rel="noopener">Pan、Kao 與 Tsai（2024）：三種正手過頂擊球的握力與壓力分佈</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12876968/" target="_blank" rel="noopener">Liu 等（2026）：實際擊球情境的握力研究</a></li>
+      <li><a href="https://shuttletime.bwfbadminton.com/activity-of-the-month/june-backhand-short-serve" target="_blank" rel="noopener">BWF Shuttle Time：反手短發球</a></li>
+    </ul>
+  </details>
+</main></div>
+<footer>羽毛球手指發力教學 · 肢段圖解有聲版</footer>
+</body>
+</html>

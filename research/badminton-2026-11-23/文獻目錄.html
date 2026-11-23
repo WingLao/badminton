@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
 <title>近五年羽毛球文獻目錄｜教練研究</title>
 <meta name="description" content="近五年羽毛球文獻目錄｜教練研究">
 <style>
@@ -62,6 +63,7 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 .hero-tip{font-size:13px;color:var(--muted)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
 :root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
 @media (max-width:640px){
  table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
  table.cards thead{display:none}
@@ -73,7 +75,7 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 </style>
 </head>
 <body>
-<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../guide/">閱讀方法</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
 <p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a> › 文獻目錄</p>
 <h1>近五年羽毛球文獻目錄</h1>
@@ -108,7 +110,7 @@ function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)
 try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
 function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
 label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
-document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
 if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
 })();
 </script>

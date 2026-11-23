@@ -1,0 +1,54 @@
+:root{color-scheme:dark;--bg:#0b1220;--panel:#141f2e;--panel2:#101a28;--muted:#9fb0c3;--ink:#e8eef5;--cool:#38bdf8;--warm:#ff5a1f;--amber:#fbbf24;--line:#2a3b50}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "PingFang TC","Microsoft JhengHei",sans-serif}
+a{color:var(--cool)}button,select,input{font:inherit}
+button,select{border:1px solid var(--line);border-radius:9px;background:#1b2a3d;color:var(--ink);padding:7px 13px;font-size:14px}
+button{cursor:pointer}button:hover{border-color:var(--cool)}button:disabled{opacity:.4;cursor:default}button.on{background:var(--cool);color:#04121f;border-color:var(--cool);font-weight:700}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+header{max-width:1320px;margin:auto;padding:30px 24px 14px}header small,.eyebrow{color:var(--cool);letter-spacing:.14em;font-size:13px}
+h1{font-size:clamp(26px,3.6vw,40px);margin:6px 0}h2{font-size:28px;margin:4px 0}h3{font-size:18px;margin:0 0 10px}
+.layout{max-width:1320px;margin:auto;padding:0 24px 40px;display:grid;grid-template-columns:210px minmax(0,1fr);gap:24px}
+aside{align-self:start;position:sticky;top:16px}#chapters{display:grid;gap:8px}#chapters button{text-align:left;padding:11px 13px;font-size:15px}
+#chapters span{display:block;color:var(--muted);font-size:12px}#chapters .active{border-color:var(--cool);background:#12324a}
+main{min-width:0}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:18px}
+.goal{color:var(--cool);font-size:18px;margin:4px 0 12px}
+#stageWrap{position:relative;background:var(--panel2);border-radius:12px;overflow:hidden;transition:opacity .3s}
+#stageWrap.dimmed{opacity:.35}
+#stage{width:100%;aspect-ratio:16/9;display:block}
+#phase{height:4px;background:#1e293b}#phaseBar{height:100%;width:0;background:linear-gradient(90deg,var(--cool),var(--warm))}
+svg .lbl{font:600 19px "PingFang TC",sans-serif;fill:#e2e8f0}svg .small{font:14px "PingFang TC",sans-serif;fill:#9fb0c3}
+svg .val{font:700 17px "PingFang TC",sans-serif;fill:#e2e8f0}svg .big{font:800 28px "PingFang TC",sans-serif;fill:#fff}
+svg .warm{fill:var(--warm)}svg .warn{fill:var(--amber)}svg .bad{fill:#ef4444}
+svg .arc{fill:none;stroke:var(--amber);stroke-width:3}svg .axis{stroke:#475569;stroke-width:2}
+svg g.dim{opacity:.18;transition:opacity .35s}svg g.hi{opacity:1;filter:drop-shadow(0 0 6px rgba(251,191,36,.55));transition:opacity .35s}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.controls .grp{display:flex;gap:6px;align-items:center;padding-right:10px;border-right:1px solid var(--line)}
+.controls .grp:last-child{border:0}.controls label{font-size:13px;color:var(--muted)}
+#playBtn{background:var(--warm);border-color:var(--warm);color:#fff;font-weight:700;padding:8px 18px}
+#subs{margin-top:12px;background:#0f1a29;border:1px solid var(--line);border-radius:10px;padding:12px 16px;font-size:18px;min-height:56px}
+#subs mark{background:none;color:var(--warm);font-weight:700}
+#lineDots{display:flex;gap:6px;margin-top:8px}#lineDots i{width:22px;height:5px;border-radius:3px;background:#1e293b}#lineDots i.on{background:var(--cool)}
+#look{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#look li{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
+#look b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--amber);color:#111;display:grid;place-items:center;font-size:15px}
+#compare{transition:box-shadow .3s}#compare.hi{box-shadow:0 0 0 3px var(--amber)}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px}.cmp figure{margin:0;background:var(--panel2);border-radius:12px;padding:10px;border:2px solid transparent}
+.cmp figure.good{border-color:#34d399}.cmp figure.bad{border-color:#ef4444}.cmp figcaption{font-weight:700;margin-bottom:4px}
+.cmp figure.good figcaption{color:#34d399}.cmp figure.bad figcaption{color:#ef4444}.cmp svg{width:100%;display:block;aspect-ratio:16/10}
+.cmp p{margin:6px 2px 0;font-size:15px;color:var(--muted)}
+.question{background:#12324a;padding:14px 16px;border-radius:10px;font-size:17px}
+.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0}
+iframe,video{width:100%;aspect-ratio:16/9;border:1px solid var(--line);border-radius:10px;background:#060b13}[hidden]{display:none!important}
+.note{font-size:13px;color:var(--muted)}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+details summary{cursor:pointer;color:var(--cool)}footer{max-width:1320px;margin:auto;padding:0 24px 36px;color:var(--muted);font-size:13px}
+@media(max-width:860px){.layout{display:block;padding:0 14px 30px}aside{position:static;margin-bottom:14px}#chapters{grid-template-columns:repeat(2,minmax(0,1fr))}
+#look{grid-template-columns:1fr}.cmp{grid-template-columns:1fr}.card{padding:14px}#subs{font-size:16px}}
+svg .tick{font:12px "PingFang TC",sans-serif;fill:#7b8ba0}svg .sub{font-size:.7em;baseline-shift:sub}
+
+#photoCard[hidden]{display:none!important}
+#photos{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+#photos figure{margin:0;background:#f6f8fa;border:1px solid var(--line);border-radius:12px;padding:8px}
+#photos img{width:100%;display:block;border-radius:8px;cursor:zoom-in}
+#photos figcaption{margin-top:8px;font-size:14px;color:#1f2b3a;padding:0 4px 4px}
+#lightbox{position:fixed;inset:0;background:rgba(4,8,14,.92);display:grid;place-items:center;padding:24px;z-index:50;cursor:zoom-out}
+#lightbox img{max-width:100%;max-height:100%;border-radius:10px}
+@media(max-width:860px){#photos{grid-template-columns:1fr}}

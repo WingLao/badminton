@@ -1,0 +1,2388 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>其他訓練法｜候選文獻索引｜教練研究</title>
+<meta name="description" content="其他訓練法｜候選文獻索引｜教練研究">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.hero.band{min-height:clamp(230px,32vh,280px)}
+.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="其他訓練法候選文獻索引">其他訓練法｜候選文獻索引</h1><p class="meta">研究文件 · 來源資料夾：學術/羽球研究筆記/文獻候選索引 · 論文 PDF 不上傳，請用原出處連結</p>
+<div class="callout warning">
+<p class="callout-title">⚠️ 題名自動初篩</p>
+
+<p>除五章已評讀的 DOI 文獻外，這份清單依題名關鍵詞自動分配，每篇只列在一個主題；可能漏收、誤收。正式研究摘要請讀 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a> 的五章。</p>
+</div>
+
+<p>共 <strong>455 筆</strong>。完整欄位與全部 3,080 筆紀錄見 <code>五主題分類總表.csv</code>。</p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th>文獻／來源</th>
+<th>原文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.22799058">IMPACT: An Integrated Muscle-Posture Augmented Reality Coaching Tool for Static-Stance Badminton Practice</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.22799059">IMPACT: An Integrated Muscle-Posture Augmented Reality Coaching Tool for Static-Stance Badminton Practice</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.21203/rs.3.rs-10663436/v1">Gamified Teaching Mode to Enhance Learning Interest and Specific Skills in University Badminton Courses: An Educational Intervention Study</a> · Research Square</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1249/01.mss.0001259788.79150.27">Examine The Potential Effects Of Green Tea During Practices In Badminton Players: Pilot Study</a> · Medicine &amp; Science in Sports &amp; Exercise</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1080/15438627.2026.2729034">Efficacy of Advanced Throwers Ten Exercise Program for overuse shoulder injury prevention in badminton players: a narrative review</a> · Research in Sports Medicine</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.62225/2583049x.2026.6.5.6831">Effectiveness of a Sports-Specific Warm-Up Protocol versus a Conventional Training Program in Badminton Players: A Quasi-Experimental Study</a> · International Journal of Advanced Multidisciplinary Research and Studies</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.58524/jcss.v5i3.1310">Associations of shoulder rotational range of motion and isokinetic peak torque with shuttlecock velocity during the forehand jump smash in trained male badminton players</a> · Journal of Coaching and Sports Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.51574/ijrer.v6i1.4764">Effects of Repetitive, Varied Training, and Mental Visualization on High Schoolers' Badminton Service Accuracy</a> · ETDC Indonesian Journal of Research and Educational Review</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.3390/nu18172861">Effects of Hyperbaric Oxygen Combined with Lycopene on Oxidative Stress and Inflammation in Collegiate Badminton Players After High-Intensity Training</a> · Nutrients</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.61132/jupendir.v3i3.1246">Peningkatan Keterampilan Pukulan Forehand Bulu Tangkis Melalui Metode Drill pada Siswa Kelas VIII MTs Miftahul Ulum Greged</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.47191/ijmra/v9-i8-33">Smash to Success: Assessing The Role of Badminton in Enhancing Cognitive Function and Well-Being of Grade 8 Students: Basis for Grassroots Training Program</a> · INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY RESEARCH AND ANALYSIS</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.15294/inapes.v7i2.57413">Survey of Training Equipment Standards for Beginner Badminton Athletes in Semarang City Badminton Clubs</a> · Indonesian Journal for Physical Education and Sport</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.15294/inapes.v7i2.50900">Literature Review: The Effect of Drill Training on Improving the Backhand Serve in Badminton</a> · Indonesian Journal for Physical Education and Sport</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.22076860">Smash to Success: Assessing The Role of Badminton in Enhancing Cognitive Function and Well-Being of Grade 8 Students: Basis for Grassroots Training Program</a> · INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY RESEARCH AND ANALYSIS</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.56003/pessr.v5i2.756">Functional movement patterns and bilateral asymmetry in badminton athletes: A Functional Movement Screen analysis at the Malang Regional Training Center</a> · Physical Education and Sports Studies and Research</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.67322/cpjok.v18i3.1083">Development of a Basic Badminton Service Training Model</a> · COMPETITOR Jurnal Pendidikan Kepelatihan Olahraga</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.7716/aem.v15i3.3822">Construction and Validation of a Multidimensional Evaluation Index System for Badminton-Specific Physical Training Effects</a> · Advanced Electromagnetics</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.7716/aem.v15i3.3661">An Empirical Study of a Differentiated Training Model for Badminton Teaching Based on the Concept of Learning Through Competition</a> · Advanced Electromagnetics</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1177/20556683261464489">Breathing less to win Paris 2024 gold: A case study using voluntary hypoventilation at low lung volume-based training in a para-badminton athlete</a> · Journal of Rehabilitation and Assistive Technologies Engineering</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.36283/pjr.zu.15.2/005">Effect of Badminton Sporting Activity on Complete Blood Count Parameters in Untrained University Students: A Pre-Post Tria</a> · Pakistan Journal of Rehabilitation</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.29210/30036889000">Effects of structed drill practice on the precision of overhead clears: a quasi-experiential research study in collegiate badminton players</a> · JRTI (Jurnal Riset Tindakan Indonesia)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.3389/fpsyg.2026.1881972">Cross-sectional differences in inhibitory control between adolescent badminton trainees and age-matched non-athletes: a Flanker task study</a> · Frontiers in Psychology</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1007/s12144-026-09807-x">The effects of attentional focus feedback-based badminton training on performance, physical activity levels, and enjoyment</a> · Current Psychology</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.33545/26647281.2026.v8.i7a.464">The effect of using the train bot body bot pro device with auditory and visual stimuli on learning the forehand and backhand strokes in badminton among students</a> · International Journal of Sports Exercise and Physical Education</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.61798/alaina.v3i2.817">PELATIHAN BERBASIS SPORT SCIENCE DAN COACHING DALAM MENINGKATKAN PRESTASI ATLET BULU TANGKIS PADA USIA DINI</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.22271/kheljournal.2026.v13.i7c.4688">Efficacy of a six-week SAQ training and game specific training on motor fitness and skill performance variables among badminton players</a> · International Journal of Physical Education Sports and Health</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.22271/kheljournal.2026.v13.i7a.4678">Effect of integrated relaxation training on stress among junior badminton players</a> · International Journal of Physical Education Sports and Health</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.65161/recbyx0xtxgiipzqz">Data-Driven Analysis of Training Load and Perceived Performance in Adolescent Badminton Players</a> · Oxford Journal of Student Scholarship</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1109/icce-taiwan71481.2026.11652850">A Lightweight Deep Learning Framework for Solo Badminton Training</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.35159/kjss.2026.6.35.3.642">The Effects of a 12 Week of Badminton Exercise on Concentration, Brain Stress, and Brain Activity Levels in Female College Students</a> · Korean Journal of Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.46506/jica.2026.7.2.379">The Effects of Badminton Club Members’ Lifestyle on Sports Values and Exercise Adherence</a> · Journal of International Culture &amp; Arts</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.31539/2skef858">Pengaruh Status Hidrasi dan Desaturasi yang Diinduksi Latihan Terhadap Performa Fisik Atlet Klub Bulu Tangkis</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.52188/ijpess.v6i2.2059">Determinants of Badminton Technical Skills: Integrating Physical Conditioning and Motor Skills Through Structural Equation Modeling</a> · Indonesian Journal of Physical Education and Sport Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.55377/jurutera.v13i01.14699">Design and Performance Evaluation of an IoT-Based Teleoperated Shuttlecock Launcher for Dynamic Badminton Training</a> · JURUTERA - Jurnal Umum Teknik Terapan</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.23947/2658-7165-2026-9-3-9-20">Psychological Determinants of the Badminton Training Process for Hard-Of-Hearing Children at The Initial Training Stage</a> · Innovative science psychology pedagogy defectology</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.32682/bravos.v14i2/340">Improving Students’ Movement Activeness through Game Modification in Junior High School Badminton Training</a> · Bravo’s Jurnal Program Studi Pendidikan Jasmani dan Kesehatan</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1201/9781042004607-83">The Integration of AI-Powered Tools in Sub-Junior Badminton Training: A Comprehensive Review</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.64339/usfd-dpmdcn61">Examining the Relationship of Physical Exercise Peer Support, Physical Activity, and Perceived Instructional Quality with Badminton Playing Skill</a> · USFD Journal of Physical Education Pedagogy &amp; Sports Performance</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.23969/jp.v11i02.51271">ANALISIS LITERATUR TENTANG PENINGKATAN KETERAMPILAN PUKULAN LOB BULU TANGKIS MELALUI PENERAPAN VARIASI LATIHAN BERPASANGAN PADA SISWA SEKOLAH MENENGAH ATAS</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20664383">Effects of Mindfulness-Based Training on Emotional Regulation, and Resilience in College-Level Female Badminton Players</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20664384">Effects of Mindfulness-Based Training on Emotional Regulation, and Resilience in College-Level Female Badminton Players</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.47191/ijmra/v9-i6-41">Coach‒Athlete Communication in Elite Badminton: Exploring Interpersonal Dynamics in an Indonesian High-Performance Training Environment at Djarum Badminton Club</a> · INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY RESEARCH AND ANALYSIS</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1016/j.humov.2026.103499">Shoulder-elbow coordination in the transverse plane during badminton forehand drive depending on training status using vector coding analysis</a> · Human Movement Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.65102/is20261111">Research on the Current Situation and Countermeasures of Amateur Badminton Training Market for Youth and Children in the Central Urban Area of Yichun under the Background of "Double Reduction"</a> · Ingegneria Sismica</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20640748">Coach‒Athlete Communication in Elite Badminton: Exploring Interpersonal Dynamics in an Indonesian High-Performance Training Environment at Djarum Badminton Club</a> · INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY RESEARCH AND ANALYSIS</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20640749">Coach‒Athlete Communication in Elite Badminton: Exploring Interpersonal Dynamics in an Indonesian High-Performance Training Environment at Djarum Badminton Club</a> · INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY RESEARCH AND ANALYSIS</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.3390/diagnostics16121769">Wearable Sports Vision Training May Improve Selected Visuomotor Outcomes and Hitting Precision in Collegiate Badminton Athletes: A Randomized Controlled Trial</a> · Diagnostics</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1016/j.ijadr.2026.06.002">Designing a wearable motion capture system for sports training: Sensor–garment integration principles from a badminton case study</a> · Advanced Design Research</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.36706/altius.v15i1.264">Effect of Repetitive Target Drill Training on Long Forehand Serve Ability in Badminton Extracurricular Students at Nurul Hilal Senuro Madrasah</a> · Altius Jurnal Ilmu Olahraga dan Kesehatan</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20470806">The use of fitness equipment in the training of badminton players with hearing impairments: a review of research</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20470805">The use of fitness equipment in the training of badminton players with hearing impairments: a review of research</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1186/s13102-026-01767-w">The effect of badminton training on the attention and motor skills performance of integrated students: a study including children with specific learning disorders (SLD)</a> · BMC Sports Science Medicine and Rehabilitation</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="http://digilib.unila.ac.id/101209/1/ABSTRAK.pdf">PERBANDINGAN LATIHAN VISUALISASI DRILL DAN LATIHAN INTERAKTIF DRILL TERHADAP KETEPATAN SMASH BULU TANGKIS PADA PB SONE LAMPUNG SELATAN</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.20338/bjmb.v20i1.532">Manipulating task constraints in children’s badminton: How equipment and rule modifications shape skill acquisition and game performance</a> · Brazilian Journal of Motor Behavior</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.58578/mikailalsys.v4i2.10195">The Effect of Fixed Target and Moving Target Training Methods on Badminton Smash Performance at PB Muda Mandiri</a> · Journal of Multidisciplinary Science MIKAILALSYS</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.3390/life16050836">Life Kinetics Training as a Multimodal Neurocognitive Intervention: Enhances Cognitive and Motor Performance in Badminton Athletes</a> · Life</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1038/s41598-026-51687-5">Effect of dual task ladder training on physical function among badminton players</a> · Scientific Reports</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.15294/inapes.v7i1.47703">Development and Effectiveness of a Reaction Light-Based Hand-Eye Coordination Training Module in Badminton Athletes</a> · Indonesian Journal for Physical Education and Sport</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.15294/inapes.v7i1.47702">Development and Effectiveness of a Reaction Light-Based Eye-Foot Coordination Training Module in Badminton Athletes</a> · Indonesian Journal for Physical Education and Sport</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20181708">Impact of Badminton-Specific Physical Education Intervention on Gross Motor Skills in Children: A Pre–Post Controlled Study</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20181709">Impact of Badminton-Specific Physical Education Intervention on Gross Motor Skills in Children: A Pre–Post Controlled Study</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.37742/jmpo.v7i1.198">The Effect of Shuttlecock Throwing Training on the Clear Shot Ability of Badminton Players at the UNP Badminton Academy</a> · Jurnal Master Penjas &amp; Olahraga</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.18130/wb82-p489">Flying Birdies - Badminton Racket Sensor; When Metrics Become the Coach: How UTR Reshapes Junior Tennis Players’ Experience of Training and Competition</a> · Libra</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20131853">The Effectiveness of an Interactive Exercise System on the Development of Coordination Abilities in Young Badminton Players</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20131854">The Effectiveness of an Interactive Exercise System on the Development of Coordination Abilities in Young Badminton Players</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.55041/ijsrem64332">SERVICE QUALITY AND ITS INFLUENCE ON CUSTOMER SATISFACTION AND RETENTION: EMPIRICAL EVIDENCE FROM A BADMINTON TRAINING ACADEMY</a> · INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.22271/kheljournal.2026.v13.i5e.4550">Impact of specific badminton training on motor fitness variables among senior secondary school boys</a> · International Journal of Physical Education Sports and Health</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.22271/kheljournal.2026.v13.i5d.4538">An Analysis of Common Technical Errors and Effectiveness of Corrective Training among Beginner Badminton Players</a> · International Journal of Physical Education Sports and Health</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.35159/kjss.2026.4.35.2.272">Relationships among Leisure Constraints, Leisure Constraint Negotiation, and Intention to Continue Participation among Badminton Club Members</a> · Korean Journal of Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.51979/kssls.2026.04.104.253">Differences in Training Engagement According to the Latent Profile of 2×2 Goal Orientation of Badminton Players</a> · Journal of Sport and Leisure Studies</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.3233/faia260450">Research on Optimization of Personalized Training Program for Badminton Teaching Based on Data Analysis</a> · Frontiers in artificial intelligence and applications</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.55014/pij.v9i2.975">Mental Training Interventions and Pre-Match Preparation Effectiveness Among Badminton Athletes in a Sports Institute in Wuhan, China</a> · Pacific International Journal</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.37547/ijp/volume06issue04-82">Methods of Developing Coordination Abilities in Young Badminton Players Through Special Physical Exercises</a> · International Journal of Pedagogics</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.3389/fpubh.2026.1792830">The intensity, cardiorespiratory fitness and mental health benefits of integrated badminton teaching of “learning, practice and competition”: a quasi-experimental in university</a> · Frontiers in Public Health</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.31004/jerkin.v4i4.6041">Pengaruh Model Latihan Shuttle Run terhadap Peningkatan Kelincahan Atlet Bulu Tangkis pada Usia 9-11 Tahun di Club Talenta Kebumen</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.31004/jptam.v10i1.37395">Pengaruh Model Latihan Forehand Overhead Drop Shoot Bulu Tangkis Pada Siswa Tingkat SMA</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.33503/jp.jok.v9i2.3030">Interaction between Practice Distribution and VO₂max in Improving Technical Skills of Junior Badminton Players</a> · JP JOK (Jurnal Pendidikan Jasmani Olahraga dan Kesehatan)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.25258/ijddt.16.6s.71">Effect Of Integrative Neuromuscular Training Vs Hop Stabilization Training ON Injury Risk and Performance in Female Badminton Players</a> · International Journal of Drug Delivery Technology</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.37506/p5b2da05">IMPACT OF AN EXERCISE TRAINING PROGRAM ON HAND–EYE COORDINATION IN COLLEGE BADMINTON PLAYERS: EVIDENCE FROM THE RULER DROP TEST.</a> · Indian Journal of Physiotherapy and Occupational Therapy - An International Journal</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.59992/ijsr.2026.v5n4p4">The effect of SAQ exercises on developing some physical attributes and motor learning of badminton skills: An experimental study on female students at Ashur University</a> · International Journal for Scientific Research</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.46669/kss.2026.24.1.019">Verification of the Mediating Effect of Exercise Outcome Expectation in the Relationship between Exercise Flow and Exercise Addiction Among Badminton Club Sports Participants</a> · The Korea Journal of Sport</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.3390/healthcare14070864">Acute Effects of Intermittent High-Intensity Exercise on Cardiac Autonomic Regulation in Male Non-Elite Badminton Players: A Multi-Point Time Series Analysis</a> · Healthcare</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1016/j.enbuild.2026.117373">Thermal comfort model for exercisers that uses Machine learning with integrated Bayesian optimization and SHAP: A case study of badminton players</a> · Energy and Buildings</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.31004/jkt.v7i1.55545">PENGARUH LATIHAN SEBELUM DAN SESUDAH 1 DAN 2 JAM PADA PEMAIN BADMINTON TERHADAP KADAR TRIGLISERIDA DENGAN METODE POINT OF CARE TESTING (POCT)</a> · Jurnal Kesehatan Tambusai</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.52188/ijpess.v6i1.1972">Content Validation of Badminton Training Program Model for Young Athletes</a> · Indonesian Journal of Physical Education and Sport Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1007/s00500-026-11260-8">Retraction Note: Designing a training assistant system for badminton using artificial intelligence</a> · Soft Computing</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1016/j.isci.2026.115261">Exercise-induced fatigue affects lower limb biomechanics in high-risk backhand smash landings among female badminton players</a> · iScience</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1016/j.mlwa.2026.100884">CourtKeyNet: A novel octave-based architecture for precision badminton court detection with geometric constraints</a> · Machine Learning with Applications</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.37676/mj.v3i1.1072">Contribution Of Arm Muscle Training To Smashing Ability In Badminton At Negeri 17 Bengkulu Utara Junior High School</a> · Multidisciplinary Journals</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1038/s41598-026-42661-2">Impact of exercise-induced fatigue on the risk of stress fractures in the tibia during smash landing in female badminton players</a> · Scientific Reports</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.18861414">ASSESSMENT OF THE EFFECTIVENESS OF TECHNICAL-REPETITIVE TRAINING IN 8–10-YEAR-OLD BADMINTON PLAYERS</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.18861413">ASSESSMENT OF THE EFFECTIVENESS OF TECHNICAL-REPETITIVE TRAINING IN 8–10-YEAR-OLD BADMINTON PLAYERS</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1002/eng2.70718">Wearable Data‐Driven Transformer Model for Physical Load Assessment in Badminton Training</a> · Engineering Reports</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.58962/ht.295">The Effect Of Drilling Exercises Using A Racket Weight On The Long Backhand Shot Ability Of Badminton In Beginner Athletes</a> · Health Technologies</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.55081/joki.v6i3.4410">Perbandingan Kontribusi Metode Blocked Practice dan Random Practice terhadap Keterampilan Teknik Dasar Permainan Bulu Tangkis</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.55379/sjs.v5i2.185">Improving smash accuracy in badminton through progressive drill training: sports action research</a> · Sriwijaya Journal of Sport</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.33024/jikk.v13i2.21521">Pengaruh Pemberian Air Zamzam Setelah Latihan Fisik Terhadap Status Hidrasi Pemain Bulu Tangkis Fakultas Kedokteran Universitas Muslim Indonesia</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.3389/fphys.2026.1734224">Effects of the modified field test on exercise-induced peripheral fatigue in non-elite badminton players</a> · Frontiers in Physiology</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.46827/ejpe.v13i2.6524">SELECTING PHYSICAL DEVELOPMENT EXERCISES FOR FEMALE STUDENTS ENROLLED IN THE BADMINTON ELECTIVE COURSE AT HO CHI MINH CITY UNIVERSITY OF INDUSTRY AND TRADE</a> · European Journal of Physical Education and Sport Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.58962/hstpt.291">Effects of smash drill training and arm power on smash accuracy and skill among badminton athletes</a> · Health-saving technologies rehabilitation and physical therapy</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1051/bioconf/202621701003/pdf">Smart badminton coaching: Development machine learning-based training system for basic badminton technique</a> · Springer Link (Chiba Institute of Technology)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.22271/kheljournal.2026.v13.i2d.4275">The impact of a 16-week psychological skills training (PST) intervention on technical skill proficiency in male badminton players</a> · International Journal of Physical Education Sports and Health</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.22271/kheljournal.2026.v13.i2c.4267">Effect of jump rope training and kettlebell exercise on playing ability among school badminton players</a> · International Journal of Physical Education Sports and Health</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.37630/jpo.v16i1.3601">The Effect of the Drill Method in Improving Smash Accuracy in Badminton Games</a> · JURNAL PENDIDIKAN OLAHRAGA</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.70767/jmec.v2i9.822">The Influence of Simulated Competition Scenario Training on the On-the-Spot Decision-Making Ability of College Badminton Players</a> · Journal of modern education and culture.</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.70767/jsscd.v2i9.830">A Longitudinal Study on the Role of Long-Term Badminton Training in Shaping the Willpower of Adolescents</a> · Journal of social science and cultural development.</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.36678/ijmaes.2026.v12i01.02">ULTRASOUND THERAPY COMBINED WITH WRIST FLEXIBILITY TRAINING FOR WRIST TENDONITIS IN CLUB LEVEL BADMINTON PLAYERS: A STUDY ON PAIN AND FUNCTION</a> · International Journal of Medical and Exercise Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.2139/ssrn.6806926">Tell Me When It Feels Right: LLM-Mediated Challenge Regulation for Physical Self-Training in Badminton</a> · SSRN Electronic Journal</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://avesis.atauni.edu.tr/publication/details/7fea658d-fa72-4c7d-859b-2f3727d543af/oai">THE EFFECT OF VIDEO TRAINING ON THE DEVELOPMENT OF TECHNICAL SKILLS IN BADMINTON PLAYERS</a> · Ataturk University - AVESIS</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1051/bioconf/202621701003">Smart badminton coaching: Development machine learning-based training system for basic badminton technique</a> · BIO Web of Conferences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.22271/allresearch.2026.v12.i4b.13530">Management of scapular dyskinesis with closed kinetic chain and scapular stabilization exercises in badminton players</a> · International journal of applied research</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.2139/ssrn.6076155">IMPACT: Exploring Integrated Muscle-Posture AR Coaching in Static-Stance Badminton Training</a> · SSRN Electronic Journal</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.21352857">Heart Rate Recovery Kinetics Following Submaximal Treadmill Exercise in Male University-Level Badminton Players: Implications for Cardiovascular Fitness and Athletic Recovery</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.21352858">Heart Rate Recovery Kinetics Following Submaximal Treadmill Exercise in Male University-Level Badminton Players: Implications for Cardiovascular Fitness and Athletic Recovery</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1007/978-3-032-19672-9_28">Gamified Computer Vision System for Personal Badminton Training: A Hybrid Approach Based on YOLOv8 and Pose Estimation</a> · Lecture notes in networks and systems</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.12677/aps.2026.144091">Flipped Classroom Teaching Practice of Public Physical Education Courses in Local Universities under the Background of Digital Intelligence—Taking “College Badminton” as an Example</a> · Advances in Physical Sciences</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1007/978-981-95-9474-0_5">Essential Competitional and Training Psychological Skills Determining Winner and Loser in Senior Young Badminton Players</a> · SpringerBriefs in applied sciences and technology</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="http://hdl.handle.net/11012/256170">Design of the air conditioning system in a badminton center</a> · Brno University of Technology Digital Library (Brno University of Technology)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.3934/bioeng.2026020">Biomechanical analysis of lower limb movements of badminton players before and after intense exercise</a> · AIMS bioengineering</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1007/978-981-92-1200-2_5">Biomechanical Analysis of Badminton Stroke and Lunge in Trained and Untrained Players</a> · Lecture notes in mechanical engineering</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1007/978-3-032-09605-0_6">Badminton Special Skills Training Based on Action Recognition Technology</a> · Smart innovation, systems and technologies</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.35534/lsh.0601020">An Experimental Study on the Effects of Integrated Neuromuscular Training on the Fundamental Movement Skills and Coordination Abilities of Children Aged 6-7 in Badminton</a> · Leisure Sports and Health</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.52731/liir.v007.564">A Support System for Improving Practice Swing Form in Badminton</a> · IIAI Letters on Informatics and Interdisciplinary Research</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.24853/jsi.4.2.39-48">IMPACT OF USING TRAINING ASSISTIVE DEVICES TO DEVELOP PHYSICAL ATTRIBUTES AND BASIC SKILLS OF BADMINTON PLAYERS</a> · JOURNAL SPORTINDO</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.46394/iss.43.3.4">Exploring Perceptions of Residential Training Among Prospective National Badminton Athletes</a> · Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.58524/jcss.v4i2.905">Game-Based Training Model: Does It Improve Fundamental Badminton Young Athletes' Skills?</a> · Journal of Coaching and Sports Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.54082/ijpm.1006">Pelatihan dan Sosialisi Sport Science Analisis Mekanika Gerak kepada Klub Badminton di Jawa Barat untuk Meningkatkan Kompetensi Pelatih dan Atlet</a> · Inovasi Jurnal Pengabdian Masyarakat</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.18500/2782-4594-2025-4-4-408-413">The influence of training methodologies on reaction time and hand-eye coordination: A study of professional male and female badminton players</a> · Physical Education and University Sport</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1145/3796028.3796075">An Empirical Study on the Synergy of an Intelligent Badminton Training System and Athlete Performance Feedback System Based on Multi-Technology Integration</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1038/s41598-025-28743-7">A pilot study investigating immediate effects of vergence training on binocular function and reaction time in youth badminton athletes</a> · Scientific Reports</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.61882/aassjournal.1569">The Effect of PETTLEP Imagery Training on Competitive Anxiety and Self-Confidence in Badminton Athletes</a> · Annals of Applied Sport Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.34283/ksgs.2025.19.special2.7">The Effect of Different Types of Visual Cues during Action Observation Training on the Visual Search and Cognitive Performance in Novice Badminton Players</a> · Journal of Golf Studies</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.3389/fspor.2025.1713157">Do anthropometric characteristics and physical capacities of highly trained junior badminton players differ according to age and sex?</a> · Frontiers in Sports and Active Living</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.46827/ejpe.v12i11.6396">THE IMPORTANCE OF PSYCHOLOGICAL PREPARATION FOR COMPETITION DURING THE TRAINING PROCESS OF TABLE TENNIS, BADMINTON AND PICKLEBALL FOR VIETNAMESE STUDENTS</a> · European Journal of Physical Education and Sport Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.36706/altius.v14i2.181">The Role of Classical Music Application in the Regulation of Badminton Athletes’ Emotions in The Training</a> · Altius Jurnal Ilmu Olahraga dan Kesehatan</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1080/17518423.2025.2597765">The effects of moderate to high intensity badminton exercise on sleep quality in children with autism</a> · Developmental Neurorehabilitation</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1109/ccnis69465.2025.00037">Construction of a Badminton Training Data Acquisition and Intelligent Analysis Platform Integrating Multiple Sensors</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1123/ijspp.2025-0234">Comparison of Sex-Related Activity Profile and Neuromuscular Fatigue After a Badminton-Specific Training Session</a> · International Journal of Sports Physiology and Performance</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.3389/fpsyt.2025.1625301">BMI-stratified outcomes of a badminton training program on health-related fitness in adults with mild to moderate intellectual disabilities</a> · Frontiers in Psychiatry</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.22271/kheljournal.2025.v12.i6i.4155">Effects of selected yoga practice on motor fitness variables on badminton player’s</a> · International Journal of Physical Education Sports and Health</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.15391/prrht.2025-10(5).02">Efficacy of Blood Flow Restriction Training (BFRT) in Alleviating Chronic Wrist Pain and Enhancing Forearm Function among Badminton Players: A Pilot Study</a> · Physical rehabilitation and recreational health technologies</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.36713/epra24493">EFFECT OF NORDIC HAMSTRING EXERCISE VERSUS RETROWALKING ON HAMSTRING FLEXIBILITY AND FUNCTIONAL PERFORMANCE IN RECREATIONAL BADMINTON PLAYERS</a> · EPRA International Journal of Multidisciplinary Research (IJMR)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1109/jiot.2025.3624224">Badminton Wrist Training Data Collection and Analysis</a> · IEEE Internet of Things Journal</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.55081/joki.v6i1.4490">Tantangan Guru dalam Pelaksanaan Latihan Ekstrakurikuler Bulu Tangkis pada Anak Berkebutuhan Khusus</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.18282/po4494">Effects of basic badminton training on psychological recovery and sense of social belonging in female cancer survivors during rehabilitation</a> · Psycho-Oncologie</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.62852/css/2025/188">Research on badminton players' specialized fitness training</a> · Cambridge sport science.</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1101/2025.09.14.676105">Do anthropometric characteristics and physical capacities of highly trained junior badminton players differ according to age and sex?</a> · bioRxiv (Cold Spring Harbor Laboratory)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.3389/fspor.2025.1634656">Neuromechanical adaptations to EMG-guided SSC training in elite badminton players: a predictive multivariate approach</a> · Frontiers in Sports and Active Living</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.47197/retos.v71.117465">Multivariate analysis of anthropometric determinants of training load in youth badminton</a> · Retos</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.5507/ag.2025.011">A randomized controlled study on the effect of 8-week integrative neuromuscular training on physical performance and technical proficiency in prepubertal badminton players</a> · Acta Gymnica</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.35159/kjss.2025.8.34.4.781">The Effects of Badminton Exercise Program on Concentration, Brain Stress, and Brain Activity in Male University Students</a> · Korean Journal of Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.36312/dpe.v4i2.3649">Efektivitas Latihan Taktis Six-Shot Rallies terhadap Ketepatan Smash pada Peserta Ekstrakurikuler Bulu Tangkis Tingkat SMP: Studi Pra-Eksperimen Satu Kelompok</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.46838/spr.v6i2.795">The Influence of Drill Method and Audio Visual Media on Badminton Short Service Strokes at SMPN 1 Tembelang Jombang</a> · SPRINTER Jurnal Ilmu Olahraga</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1177/14727978251362614">Study on optimal control of visual machine for special training before badminton match</a> · Journal of Computational Methods in Sciences and Engineering</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1186/s13102-025-01199-y">Effects of physical training programs on healthy badminton players’ performance: a systematic review and meta-analysis</a> · BMC Sports Science Medicine and Rehabilitation</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1038/s41598-025-06910-0">Influence of gender, limb dominance, training experience, and loading conditions on arch characteristics in badminton players</a> · Scientific Reports</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.33545/27077012.2025.v6.i2a.329">Effect of technique training on forehand long serve of novice badminton players</a> · Journal of Sports Science and Nutrition</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.60027/ijsasr.2025.6106">The Effect of Cognitive Training Program on Badminton Skills and Cognitive Ability in Secondary School Students</a> · International Journal of Sociologies and Anthropologies Science Reviews</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.55081/joki.v5i2.3979">Pengaruh Latihan Depth Jump Over Hurdle terhadap Kemampuan Smash Bulu Tangkis</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.47197/retos.v68.116394">Improving physical condition of badminton athletes aged 10-12 through circuit body weight training</a> · Retos</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.67108/jmhrs138">Enhancing Mental Flow and Reflex Respense Through Muscle Memory Training in Boxing and Badminton Athletes</a> · Journal of Modern Health and Rehabilitation Sciences</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1123/ijspp.2024-0554">Effect of a High-Heat-Capacity Mattress Topper on Sleep in Elite Badminton Players During a Summer Training Period: Does 1 Size Fit All?</a> · International Journal of Sports Physiology and Performance</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.47197/retos.v68.115437">Fixed and moving target drilling methods: effects on smash results in badminton players aged 14-16 years</a> · Retos</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.3390/children12070830">Effects of Integrated Neuromuscular Training on Physical Fitness in Badminton Athletes of Different Maturity Statuses</a> · Children</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.62051/ijsspa.v7n2.11">Influence of Unsteady Training on the Changing Ability of Adolescent Badminton Players</a> · International Journal of Social Sciences and Public Administration</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.26740/abisatya.v3i1.39609">Pelatihan Evaluasi Kepelatihan dan Analisis Performa Pada Pelatih Badminton Kota Damansara Selangor Malaysia</a> · ABISATYA Journal of Community Engagement</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.31258/jassi.4.2.186-194">Pengaruh Latihan Continuous Running terhadap Daya Tahan Kardiovaskuler pada Tim Ekstrakurikuler Badminton di SMP Negeri 48 Pekanbaru</a> · Journal Sport Science Indonesia</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1016/j.entcom.2025.100975">Optimization study of badminton sports training system based on MoileNet OpenPose lightweight human posture estimation model</a> · Entertainment Computing</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1097/01.yco.0001119248.84351.f7">40 Study on the effect of badminton training on social anxiety disorder</a> · Current Opinion in Psychiatry</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.31004/jerkin.v3i4.921">Pengaruh Teknik Keterampilan Long Service Bulu Tangkis dengan Metode Service Challenge Drill pada Atlet PB. Mezaluna Kebumen Usia 9 – 12 Tahun</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.56984/8zg00e16qt7">Benefits of shadow training in badminton: a systematic literature review</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.3389/fspor.2025.1514596">Rope skipping or badminton? exercise reduced sleep onset latency in university students</a> · Frontiers in Sports and Active Living</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.36728/jis.v25i2.4902">PENGARUH LATIHAN DRILL SHORT SERVICE TERHADAP KETEPATAN SHORT SERVICE PEMAIN BULU TANGKIS PB ORGIPP</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.33687/jhssr.004.02.0465">The effect of (SA) training on developing some biomotor abilities and the accuracy of the forehand shot skill among badminton players</a> · Journal of Humanities and Social Sciences Research</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.59584/jurnalpjkr.v3i1.93">PENGARUH LATIHAN KNEE TUCK JUMP TERHADAP JUMP SMASH PADA PEMAIN BULU TANGKIS</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.35706/joker.v5i1.13388">Pengaruh Latihan Hiit Terhadap Peningkatan Vo2max Pada Atlet Badminton</a> · Jurnal Olahraga Kebugaran dan Rehabilitasi (JOKER)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.56910/jispendiora.v4i1.2137">Pengaruh Latihan Fisik dan Keterampilan Motorik terhadap Performa Atlet Badminton Pemula</a> · JISPENDIORA Jurnal Ilmu Sosial Pendidikan Dan Humaniora</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.35706/joker.v5i1.13392">Latihan Intensif Tangan Demi Performa Yang Lebih Maksimal Pada Olahraga Badminton</a> · Jurnal Olahraga Kebugaran dan Rehabilitasi (JOKER)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.63163/jpehss.v3i2.283">Effectiveness of Morning versus Evening High-Intensity Interval Training on Selected Performance Parameters of Badminton Players: An Experimental Study</a> · Physical Education Health and Social Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.33438/ijdshs.1582630">Exploring the Impact of Shuttlecock Feeder-Based Training on Biomechanical Characteristics in Para-badminton Athletes</a> · International Journal of Disabilities Sports &amp; Health Sciences</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.7860/jcdr/2025/71068.20864">Effects of Ankle Proprioceptive Training on Ankle Functionality and Performance of Recreational Badminton Players with Pronated Feet: A Quasi-experimental Study</a> · JOURNAL OF CLINICAL AND DIAGNOSTIC RESEARCH</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.55248/gengpi.6.0425.15167">Effect Of Modern Gadgets Training On Selected Skill Performance And Performance Releated Fitness Variables Of College Men Badminton Players</a> · International Journal of Research Publication and Reviews</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.17309/tmfv.2025.2.13">Developing a Target Games-Based Long Service Training Model in Badminton for Beginner Athletes</a> · Physical Education Theory and Methodology</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://tede.ufam.edu.br/handle/tede/10957">Educational practices of badminton and the human development of students in sports projects in Manaus/AM</a> · LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.20527/multilateral.v23i4.22037">Model inovasi latihan meningkatkan keterampilan smash badminton</a> · Multilateral Jurnal Pendidikan Jasmani dan Olahraga</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1109/nsens65807.2025.11427970">Flexible Electronic Sensing Systems for Motion Recognition in Sports Training: A Badminton Application</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1038/s41598-025-93475-7">Multisensory training enhances anticipation skills in badminton novices</a> · Scientific Reports</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1109/aaicv66571.2025.00013">Badminton Technical Training Analysis System Based on Intelligent Motion Tracking Decomposition Model</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.60027/ijsasr.2025.5659">Comprehensive Training Program in Badminton for Students Majoring in Sports Training Program of College</a> · International Journal of Sociologies and Anthropologies Science Reviews</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1186/isrctn12712929">Effects of Gua Sha intervention on sports performance in badminton players</a> · <a href="http://isrctn.com/">http://isrctn.com/</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.31539/jpjo.v8i2.12059">Pengembangan Variasi Latihan Pukulan Forehand Overhead Clear Bulutangkis Menggunakan Media Tutorial Atlet Pemula Badminton Teratai Club Medan</a> · Gelanggang Olahraga Jurnal Pendidikan Jasmani dan Olahraga (JPJO)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.3389/fpsyg.2025.1445620">Physical-intellectual badminton teaching intervention for children with intellectual disabilities</a> · Frontiers in Psychology</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.33687/jhssr.004.01.0439">A proposed educational approach using the intensive training method to develop some motor abilities according to bio kinematic variables and the performance of the badminton serve skill</a> · Journal of Humanities and Social Sciences Research</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.47197/retos.v66.113338">The effect of combined skipping and smash drill training on smash accuracy of PB Garuda badminton players</a> · Retos</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.60027/ijsasr.2025.5619">Development of Badminton High Clear Shot Training Program of Students Aged Between 8-10 Years</a> · International Journal of Sociologies and Anthropologies Science Reviews</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.53106/207332672025032201003">羽球視覺訓練裝置對青少年視覺訓練效果之研究</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.26858/cpjok.v17i1.221">Training Intervention Using Sit-Up and Bent Arm Full Over Methods to Improve Lob Shot Execution in Badminton Athletes</a> · COMPETITOR Jurnal Pendidikan Kepelatihan Olahraga</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.20961/paedagogia.v28i1.99077">The Effectiveness of the Drill Method in Improving Short-Serve of Young Badminton Athletes</a> · PAEDAGOGIA</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.15294/active.v14i1.22917">The Effect of Target Pattern Training on Smash Accuracy in Badminton Sports</a> · ACTIVE Journal of Physical Education Sport Health and Recreation</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.15391/prrht.2025-10(1).01">Protein supplementation on muscle recovery and soreness after intense badminton training sessions</a> · Physical rehabilitation and recreational health technologies</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.59810/greenplexresearch.v2i2.146">Arsitektur Tropis Berkelanjutan untuk Infrastruktur Olahraga: Desain yang Tanggap Iklim untuk Pusat Pelatihan Bulu Tangkis di Polewali Mandar</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="http://eprints.uny.ac.id/90400/1/fulltext_eviana%20ahyani%20kumalasari_21602241026.pdf">Perbedaan Motivasi Latihan Atlet Usia Dini dan Atlet Usia Remaja Pada Cabang Olahraga Bulu Tangkis di Kabupaten Bantul</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.52783/jns.v14.1684">Impact Of High-Intensity Interval Training on Specific Physical Factors Among College Men Ball Badminton Players</a> · Journal of Neonatal Surgery</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.61798/pok.v1i2.212">Pengaruh Metode Latihan Ladder Drill Terhadap Kelincahan Shuttle Run Pada Permainan Bulu Tangkis Siswa SMP</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.24826/kscs.14.1.8">Validation of Structural Relationships Between Exercise Continuation Intention, Participation Level, and Basic Psychological Needs of Recreational Badminton Participants</a> · Korean Journal of Security Convergence Management</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.51979/kssls.2025.01.99.235">The Role of the Coach-Athlete Relationship in the Relationship between Exercise Stress and Athlete Exhaustion Among Adolescent Badminton Players</a> · Journal of Sport and Leisure Studies</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.54082/jamsi.1591">Edukasi dan Pelayanan Fisioterapi Berbasis Latihan dan Elektroterapi untuk Mengurangi Nyeri Lutut pada Pemain Bulu Tangkis di Klub Suryanaga, Surabaya - Jawa Timur</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.54254/2753-8818/2025.20311">Common Knee Injuries and Preventive Measures for Adolescent Badminton Players During Training</a> · Theoretical and Natural Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.24294/jipd6956">Green practices as an antecedent of intention to attend again as a spectator: A case study at the Badminton World Championship</a> · Journal of Infrastructure Policy and Development</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.33545/26647249.2025.v7.i2b.205">Yogic practices as a non-pharmacological approach to cardiopulmonary function and body composition among badminton players</a> · International Journal of Physiology Exercise and Physical Education</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://elib.gsu.by/handle123456789/76383">The importance of emotional education in the education system of “badminton youth training camp – sports college – professional badminton club”</a> · Репозиторий УО "Гомельский государственный университет имени Франциска Скорины"</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.35266/2949-3463-2025-2-6">Students’ physical education comprehensive methodology in pedagogical university using badminton and breathing practices</a> · Severny region nauka obrazovanie cultura</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.25236/fer.2025.081113">Research on the Adaptability and Intervention of Layered Badminton Teaching in Colleges and Universities for Students with Different Psychological Characteristics</a> · Frontiers in Educational Research</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.1080/02640414.2024.2448358">Individual sex-based variability to altitude training in elite badminton players</a> · Journal of Sports Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.25236/fsr.2025.070516">Impact of Badminton Training on Adolescents' Social and Emotional Regulation Ability</a> · Frontiers in Sport Research</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.16926/par.2025.13.03">Effect of visual feedback on the badminton serve accuracy in training and match conditions</a> · Physical Activity Review</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.22271/kheljournal.2025.v12.i1d.3661">Effect of high-intensity interval training and interval training on the vital capacity of badminton players</a> · International Journal of Physical Education Sports and Health</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://irlib.pccu.edu.tw//handle/987654321/54783">Effect of Acute Relaxation Training on State-Trait Anxiety, Athletic Mental Energy and Sport Performance in General Adult Badminton Players</a> · Chinese Culture University Repository</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.4236/oalib.1114644">Effect of 6-Week Functional Training on Smash Performance and Nervous System Function in Badminton Players: A Pilot Study</a> · OALib</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.17192/openumr/978">Do anthropometric characteristics and physical capacities of highly trained junior badminton players differ according to age and sex?</a> · open_UMR Marburg DSpace 10.0 (Philipps-Universität Marburg)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.4108/eai.17-9-2024.2352830">Development of a Target Games-Based Badminton Dropshot Training Model for Beginner Players</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.25236/fsr.2025.070416">Correlation between Badminton Training Intensity and the Preventive Effect on Social Anxiety in College Students</a> · Frontiers in Sport Research</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.5281/zenodo.22779914">Badminton Training Guide</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.5281/zenodo.22779915">Badminton Training Guide</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.22271/23957476.2025.v11.i2d.1870">Assessment of dietary habits, nutritional profile and behavioral practices of district level Badminton player</a> · International Journal of Home Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://doi.org/10.23977/appep.2025.060212">An Experimental Study on the Improvement of Attention by Badminton Training in Secondary School Students</a> · Applied &amp; Educational Psychology</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.35159/kjss.2024.12.33.6.703">The Effects of Badminton Exercise and Feldenkrais Training on Changes of Concentration, Brain Activity Level and Brain Stress in University Students</a> · Korean Journal of Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1016/j.tsep.2024.103200">RETRACTED: Analysis of metabolic rate heat transfer mechanism based on thermal radiation images in badminton training process: Motion heat transfer model</a> · Thermal Science and Engineering Progress</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.31602/rjpo.v7i2.17287">THE EFFECT OF HANDGRIP TRAINING AND RACKET MODIFICATION TRAINING ON SHORT SERVICE ABILITY IN BADMINTON GAMES ON PANRITA CLUB AND SAMUDRA CLUB ATHLETES</a> · Riyadhoh Jurnal Pendidikan Olahraga</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.62617/mcb719">Research on mechanism and prevention path of athletes’ lower limb injury in badminton teaching and training</a> · Molecular &amp; cellular biomechanics</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.47197/retos.v62.109429">Effect of skipping and box jump exercises on leg muscle explosiveness: badminton amateur athletes</a> · Retos</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.24114/jgk.v9i1.64248">PENINGKATAN TEKNIK SERVIS PENDEK, SERVIS PANJANG DAN SMASH DALAM BULU TANGKIS MELALUI METODE LATIHAN DRILL : SUATU STUDI LITERATUR PERMAINAN BULU TANGKIS</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.61186/shefa.13.1.27">The Effects of Transcranial Direct Current Stimulation and Badminton Training on Motor Coordination in Children with Developmental Coordination Disorder</a> · The Neuroscience Journal of Shefaye Khatam</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.58962/hstrpt.2024.5.1.27-36">Basic approaches to sports training of athletes in para-badminton: a review article</a> · Health-saving technologies rehabilitation and physical therapy</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.62617/mcb476">Optimizing badminton training plan with artificial intelligence assisted system: A preliminary study</a> · Molecular &amp; cellular biomechanics</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.47197/retos.v61.109873">Training model for basic badminton techniques using sport integrated circuit for student athletes aged 12-15 Years</a> · Retos</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.13189/saj.2024.120614">Machine Learning-Based Badminton Basic Technique Training Model</a> · International journal of human movement and sports sciences</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1080/07448481.2024.2418533">The effects of university badminton class on health and well-being in untrained college students</a> · Journal of American College Health</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.47197/retos.v62.108852">Article RETRACTED due to manipulation by the authors The effect of special exercises using some auxiliary tools to develop some bio-kinetic abilities and the accuracy of the crushing and snatch forehand strikes among badminton players</a> · Retos</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1016/j.nanoen.2024.110377">Self-powered intelligent badminton racket for machine learning-enhanced real-time training monitoring</a> · Nano Energy</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1177/2325967124s00409">Ankle Subluxation and Associated Ruptures: A Case Report on Surgical Intervention in a 47- year-old Male Badminton Military Athlete</a> · Orthopaedic Journal of Sports Medicine</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.56238/arev6n1-029">SIGNIFICANCE OF MOVEMENT IN THE CONDUCT OF LEARNING BADMINTON IN BASIC TRAINING</a> · Aracê.</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.32682/bravos.v12i3/56">Efforts To Overcome Training Burnout Among Badminton Athletes: A Quantitative Analysis</a> · Bravo’s Jurnal Program Studi Pendidikan Jasmani dan Kesehatan</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.35870/jimik.v5i3.1027">Teknologi Artificial Intelligence (AI) Vision Swift dalam Sistem Pemantauan Latihan Bulu Tangkis dengan Algoritma Optical Flow</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.54097/jwpn8p49">Skills Acquisition and Student Motivation in Badminton Training Towards Enhanced Sports Educational Program</a> · International Journal of Education and Humanities</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.53106/240996512024091102003">羽球競賽資料文獻分析與實務訓練應用</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.60027/ijsasr.2024.4371">Construction of an Intensive Training Program for Badminton Reserve Players Before Team Selection Match</a> · International Journal of Sociologies and Anthropologies Science Reviews</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.33503/jp.jok.v7i2.2389">The Effect of Arm Muscle Training Variations and Flexibility on Forehand Clear Ability of Extracurricular Badminton Members At SMPN 1 Adonara Barat</a> · JP JOK (Jurnal Pendidikan Jasmani Olahraga dan Kesehatan)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1186/s13102-024-00962-x">Enhancing physical attributes and performance in badminton players: efficacy of backward walking training on treadmill</a> · BMC Sports Science Medicine and Rehabilitation</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.61186/jrsm.14.27.47">The Effect of Vision Trainings on the Vision Skills and Performance of Badminton Backhand Short Serve</a> · ایران نو.</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.7575/10.7575/aiac.ijkss.v.12n.3p.44">The Effect of the “Shuttle Time” Program on the Physical and Technical Training of Badminton Athletes</a> · International Journal of Kinesiology and Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1109/icdsns62112.2024.10691044">Designing Badminton Training System Using Improved Apriori Association Rule Algorithm</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.18311/dsuphy/9788195874873/2024/027">Effectiveness of Proprioceptive Neuromuscular Facilitation Technique and Blackburn Exercises on Type 1 Scapular Dyskinesia in Recreational Badminton Players: A Non-Randomised Comparative Study</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.2174/011875399x298138240508062203">Immediate Effects of Pencil Push-Up Exercise on Visual Accommodation Skills in Amateur Badminton Players: A Randomized Controlled Trial</a> · The Open Sports Sciences Journal</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.22271/kheljournal.2024.v11.i4a.3389">Effect of exercise training program on hand and eye coordination in college going badminton players using ruler dropping test</a> · International Journal of Physical Education Sports and Health</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.55081/jopei.v1i1.2645">The Effect of Drill Training Method on Badminton Backhand Hit Skills at PB Club. Sarma Pangkalpinang</a> · Journal of Physical Education Innovation</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.24985/kjss.2024.35.2.219">Preventing Sports Injuries in Korean National Badminton Team Candidates: A Field Investigation of Exercise-Related Injuries, Focused on National Team Candidate Training Camps</a> · Korean Journal of Sport Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.30827/ijrss.33205">Perception Training Approach for Elite Badminton Players Using Visual Obstacle</a> · International Journal of Racket Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.29408/porkes.v7i1.25493">Pengaruh latihan medicine ball dan latihan shoulder press terhadap kemampuan smash dalam permainan bulu tangkis</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.29408/porkes.v7i1.26044">Pengaruh latihan intensive interval terhadap daya tahan kardiovaskular pada atlet bulu tangkis tunggal putra usia 15 Tahun</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.46827/ejpe.v11i3.5451">THE EFFECTIVENESS OF TECHNICAL DEVELOPMENT EXERCISES FOR MALE BADMINTON ATHLETES AT SOC TRANG COMMUNITY COLLEGE, VIETNAM</a> · European Journal of Physical Education and Sport Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.62051/ijsspa.v3n2.09">The Role of Information Technology in Enhancing Badminton Training</a> · International Journal of Social Sciences and Public Administration</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.26858/cjpko.v16i2.62450">Mental Toughness Profile of Adult Badminton Athletes in the Training Phase</a> · COMPETITOR Jurnal Pendidikan Kepelatihan Olahraga</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.26858/cjpko.v16i2.63256">Life Kinetic Training And Accuracy Of Overhead Lob Strokes Of Badminton Athletes</a> · COMPETITOR Jurnal Pendidikan Kepelatihan Olahraga</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.38048/jor.v4i2.2260">PENGEMBANGAN PROGRAM LATIHAN PERTAHANAN PADA PERMAINAN BULU TANGKIS TUNGGAL SISWA SMA</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1109/jcsse61278.2024.10613652">The Effects of Mixed Reality-Based Badminton Training System on the Hitting Accuracy of Badminton and Cybersickness</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.46827/ejpe.v11i2.5425">SELECTION OF TECHNICAL DEVELOPMENT EXERCISES FOR MALE BADMINTON ATHLETES AT TRA VINH UNIVERSITY</a> · European Journal of Physical Education and Sport Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.46838/spr.v5i1.498">Pengaruh Latihan Skipping Double Step terhadap Peningkatan Daya Ledak Power Otot Tungkai untuk Jumping Smash Atlet Remaja PB. Jhonlin Badminton Club</a> · SPRINTER Jurnal Ilmu Olahraga</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.24114/isj.v7i1.58220">PENGEMBANGAN PELONTAR SHUTTLECOCK SEBAGAI ALAT LATIHAN NETTING DALAM BADMINTON</a> · Indonesia Sport Journal</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.52188/ijpess.v4i2.710">Effectiveness of Training Variations in Improving Forehand Smash Ability in Badminton Game</a> · Indonesian Journal of Physical Education and Sport Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.17509/jopes.v4i1.69773">The Effect of Dumbbell Training and Rubber Weight Training on Badminton Smash Shots</a> · Journal of Physical Education and Sport Pedagogy</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.54097/ppccwq49">The Application of Functional Training in Badminton Teaching: Basis for Induction Program for Beginners</a> · International Journal of Education and Humanities</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.31599/bgqrx654">Forehand Smash Badminton Training Models For U-13 And U-15 Athletes</a> · Journal Coaching Education Sports</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.32682/bravos.v12i1/15">Analisis Manajemen Industri Pelatihan Bulu Tangkis di Kabupaten Ngawi</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.24853/jsi.2.2.30-40">UPAYA MENINGKATKAN TEKNIK DASAR SERVIS PANJANG BULU TANGKIS DENGAN METODE DRILL PADA PESERTA DIDIK (STUDI KASUS DI KELAS IX SMP PGRI 32 JAKARTA)</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.53555/kuey.v30i5.3521">The Effect Of 8 Weeks Of Visual Reaction Trainings On Recognition Time In Badminton Athletes Between 10-12 Years Of Age</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1123/japa.2023-0279">Shuttle Time for Seniors: The Impact of 8-Week Structured Badminton Training on Markers of Healthy Aging and Evaluation of Lived Experiences—A Quasi-Experimental Study</a> · Journal of Aging and Physical Activity</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.59734/ijpa.v4i1.51">The Effect Of Basic Movement Training Methods On Increasing Badminton Forehand Long Service Hitting Ability In PB Children FIK</a> · Indonesian Journal of Physical Activity</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.36312/nuras.v4i2.266">Pelatihan Keterampilan Teknik Dasar Permainan Bulu Tangkis di Desa Pandan Wangi Kabupaten Lombok Timur</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.47390/spr1342v4i4y2024n70">IMPROVING THE TECHNIQUE OF BADMINTON SPORTS TRAINING</a> · Ижтимоий-гуманитар фанларнинг долзарб муаммолари / Актуальные проблемы социально-гуманитарных наук / Actual Problems of Humanities and Social Sciences</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.55860/wvm7n911">Dynamic levels of hormonal, oxidants, insomnia, and stress in badminton athletes who practice morning and evening</a> · Journal of Human Sport and Exercise</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.32682/bravos.v12i1/18">Badminton smashing punch training method junior high school athletes eternal badminton association</a> · Bravo’s Jurnal Program Studi Pendidikan Jasmani dan Kesehatan</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.17977/um062v6i32024p259-265">Latihan Bulgarian Split Squat dan Knee Tuck Jump Dapat Mempengaruhi Daya Ledak Otot Tungkai Atlet Bulu Tangkis Pusat Latihan Kota Malang untuk Porprov Jawa Timur Tahun 2022</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.7759/cureus.56942">Integrated Rehabilitation Approach Utilizing Swiss Ball Training, Mulligan Taping, and Mobilization With Movement for Simultaneous Management of Sacroiliac Joint Dysfunction and Lateral Ankle Sprain in a Badminton Athlete: A Case Study</a> · Cureus</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.56984/8zg2ef8ef8">The role of perception-action coupling in badminton-specific vision training: A narrative review</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.36456/adiraga.v10i01.8790">Pengaruh Latihan Two Foot Sideways dan Icky Shuffle Terhadap Kelincahan Kaki Pada Atlet Tunggal Putra Bulu tangkis</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.54097/s0epqm22">Internet + Badminton Training in the New Context</a> · Journal of Education and Educational Research</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.22146/jkesvo.88362">High Intensity Interval Training (HIIT) dalam Meningkatkan Daya Tahan dan Mencegah Cedera pada Pemain Bulu Tangkis</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.17977/um065.v4.i2.2024.14">UPAYA MENINGKATKAN KETERAMPILAN PUKULAN DRIVE BULUTANGKIS MENGGUNAKAN METODE DRILL PADA SISWA EKSTRAKURIKULER BADMINTON SMK NEGERI 1 MALANG</a> · Jurnal Pembelajaran Bimbingan dan Pengelolaan Pendidikan</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.21203/rs.3.rs-3444784/v2">Rope Skipping or Badminton? The Effect of Exercise on Sleep Quality in University Students</a> · Research Square</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.56397/ssspe.2024.03.02">Utilizing Wearable Technology to Enhance Training and Performance Monitoring in Indonesian Badminton Players</a> · Studies in Sports Science and Physical Education</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.62540/mjss.2020.02.04.04">The effect of photoreceptor technology training on kinematic response time and forward pitch accuracy of badminton initiators</a> · Mustansiriyah Journal of Sports Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.47197/retos.v53.102455">Glutamine Accelerates Post-Exercise Recovery of Arms Power, Leg Power, and Smash Velocity at 48 Hours for Non-Elite Badminton Athletes</a> · Retos</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.47684/jcd.2024.01.26.1.66">The Effectiveness of Cognitive Behavioral Training-Based Online Psychological Skill Training for Emotional Regulation in Female High School Badminton Players</a> · Journal of Coaching Development</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.17977/um062v6i12024p31-37">Latihan Bulgarian Split Squat dan Knee Tuck Jump Dapat Mempengaruhi Daya Ledak Otot Tungkai Atlet Bulu Tangkis Pusat Latihan Kota Malang untuk Porprov Jawa Timur Tahun 2022</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.23917/iseth.4029">Drill Training Program to Improve Badminton Forehand Smash Skills</a> · Proceeding ISETH (International Summit on Science Technology and Humanity)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.31258/jassi.3.1.233-242">Pengaruh Latihan Skipping dan Shuttle Run terhadap Kelincahan pada Atlet UKM Badminton Universitas Negeri Malang</a> · Journal Sport Science Indonesia</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.37676/jdun.v3i1.5584">Pelatihan Pembelajaran Cabang Olahraga Bulu Tangkis Pada Siswa Kelas Viii Di Smp Negeri 12 Kota Bengkulu</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.37506/ybwez228">Effect of Task Oriented Exercise with Wrist Flexibility Training among Badminton Players to Improve Wrist Mobility and to Prevent Wrist Injury: Comparative Study</a> · Indian Journal of Physiotherapy and Occupational Therapy - An International Journal</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.33545/26647281.2024.v6.i1c.89">The effect of special exercises on developing kinetic flexibility and backhand strike skill for badminton players under 19 years old</a> · International Journal of Sports Exercise and Physical Education</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.35534/lsh.0402009">The Status Quo, Influencing Factors and Improvement Path of College Students’ Badminton Exercise Behavior Under Social Ecology Model</a> · Leisure Sports and Health</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.2478/amns-2024-1597">The Role of Cloud Computing Platform in Improving Resource Allocation Efficiency of Training for Male Badminton Players</a> · Applied Mathematics and Nonlinear Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.2991/978-94-6463-593-5_16">The Effectiveness of Accuracy Training to Improve Badminton Athletes’ Service Skills</a> · Advances in health sciences research/Advances in Health Sciences Research</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.2139/ssrn.4944533">Self-Powered Intelligent Badminton Racket for Machine Learning-Enhanced Real-Time Training Monitoring</a> · SSRN Electronic Journal</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.30525/978-9934-26-403-0-30">Pedagogical components of badminton teacher training according to the international program BWF “Shuttle time”</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.30525/978-9934-26-415-3-16">MODERN PEDAGOGICAL TECHNOLOGIES IN BADMINTON TEACHER TRAINING UNDER THE BWF SHUTTLE TIME PROGRAM</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1155/2024/2953220">Is It Time to Step outside the Laboratory? The Feasibility of Field‐Based Examination of Exercise‐Induced Hypoalgesia in Elite Badminton Athletes with and without Knee Pain</a> · Translational Sports Medicine</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.23977/jhms.2024.050104">Innovation and Effectiveness Evaluation of University Badminton Training Model under the "Dual-channel" Approach</a> · Journal of Human Movement Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="http://www.nusl.cz/ntk/nusl-694737">Elaboration of the theory and didactics of badminton and the methodology of its training in primary schools in the form of an instructional DVD</a> · Digital Repository (National Repository of Grey Literature)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.22271/yogic.2024.v9.i1b.1538">Effects of a moderate intensity circuit training on selected motor fitness variables of college level men badminton players</a> · International Journal of Yogic Human Movement and Sports Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.5958/2278-795x.2024.00020.5">Effects of Meditation Practices on Selected Psychological Variables of Badminton Players</a> · International Journal of Physical Education Sports Management and Yogic Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.57239/pjlss-2024-22.2.000175">Effectiveness of Training Programme Models and Hand-Eye Coordination on the Skills of Children's Badminton Players</a> · Pakistan Journal of Life and Social Sciences (PJLSS)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.4108/eai.24-10-2023.2342117">Development of a Target Games-Based Badminton Smash Training Model for Beginner Players</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1299/jsmermd.2024.1p2-j02">Development of VR badminton training system using Stretch-Shortening Cycle</a> · The Proceedings of JSME annual Conference on Robotics and Mechatronics (Robomec)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.2147/nss.s432475">Associations of Training and Academic Stress with Sleep in Dual-Career Collegiate Badminton Athletes: A Preliminary Study</a> · Nature and Science of Sleep</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.2478/amns-2024-1150">Application and Practice of Motion Capture Technology in Badminton Teaching</a> · Applied Mathematics and Nonlinear Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1007/978-981-97-4228-8_16">An AI-Powered Personalised Badminton Training System with Frame-by-Frame Correction</a> · Lecture notes in networks and systems</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.57239/pjlss-2024-22.2.001431">"Optimizing Smash Techniques: A Novel Training Model for Badminton Athletes"</a> · Pakistan Journal of Life and Social Sciences (PJLSS)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&amp;s=id%3D%22112NTHU5650040%22.&amp;searchmode=basic">羽球揮拍關鍵畫面偵測及其在體育教學中的應用</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&amp;s=id%3D%22113NTNU5419020%22.&amp;searchmode=basic">國中羽球教練訓練行為及知覺之個案研究</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.53905/jiojurnal.v2i03.50">Pengembangan Model Latihan Netting Berbasis Visualisasi atau Imagery pada Olahraga Bulu Tangkis di PB Kartini</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.46669/kss.2023.21.4.084">Junior Badminton National Team Players’ Changes in Competitive Anxiety, Psychological Skills and Brain Activity with Image Training Application Method</a> · The Korea Journal of Sport</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.30827/ijrss.33234">Mechanical load differences between practice and match play in badminton</a> · International Journal of Racket Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.30827/ijrss.33237">Inter-and intra-individual differences in landing impacts during badminton match-play versus a feeding drill</a> · International Journal of Racket Sports Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.52633/ssper.v2i1.25">COMPARISON OF MORNING AND EVENING HIGH-INTENSITY INTERVAL TRAINING (HIIT) ON SELECTED PARAMETERS IN BADMINTON PLAYERS</a> · Sports Sciences and Physical Education Review</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.37216/tarbawi.v8i2.1116">Pengaruh Metode Drill Terhadap Kemampuan Servis Pendek Permainan Bulu Tangkis Putra Ekstrakurikuler Smp Negeri 19 Palembang</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1109/icacrs58579.2023.10404566">The Evolution of AI in Sports Training: A Literature Review with Emphasis on Badminton</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.58258/abdi.v5i2.6009">Training on Preparing Physical Condition Test Instruments for Pb Badminton Athletes. Brilliant</a> · Abdi Masyarakat</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.61186/jrsm.13.26.1">Effect Of Practice Of Differential Learning And Contextual Interference On Badminton Backhand Short Serve Retention And Transfer</a> · ایران نو.</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.17509/jko-upi.v15i2.58121">Pengaruh Latihan Box Jump, Box Shuffle, dan Squat Jump Terhadap Kekuatan Otot Tungkai Pada Atlet Ukm Badminton Universitas Negeri Malang</a> · Jurnal Kepelatihan Olahraga</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.3390/app132212488">Biomechanical Insights for Developing Evidence-Based Training Programs: Unveiling the Kinematic Secrets of the Overhead Forehand Smash in Badminton through Novice-Skilled Player Comparison</a> · Applied Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.35159/kjss.2023.10.32.5.79">The Relationship between Participation Motivation, Exercise Commitment, Physical Self-Efficacy and Quality of Life of Chinese Amateur Badminton Participants</a> · Korean Journal of Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1109/apsipaasc58517.2023.10317490">Badminton Self-Training System Based on Virtual Reality</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.61132/ardhi.v1i5.230">Implementasi Sport Science Melalui Pelatihan Badminton Di Desa Rawaapu Tahun 2023</a> · ARDHI Jurnal Pengabdian Dalam Negri</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.26858/cjpko.v15i3.53427">The Effect of Drill Serve Forehand Training on Badminton Forehand Serve Accuracy Results</a> · COMPETITOR Jurnal Pendidikan Kepelatihan Olahraga</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.58962/ht.2023.1.4.17-30">Innovative technique of combined use of tennis balls, rubber bands and jumping exercises in the training process of badminton players aged 14-15</a> · Health Technologies</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.21203/rs.3.rs-3444784/v1">Rope Skipping or Badminton? The Effect of Exercise on Sleep Quality and Fatigue in University Students</a> · Research Square</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.31392/npu-nc.series15.2023.10(170).28">The results of implementation of the methodology of teaching physical exercises by means of badminton to students of pedagogical profile with impaired health</a> · Scientific Journal of National Pedagogical Dragomanov University Series 15 Scientific and pedagogical problems of physical culture (physical culture and sports)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.24294/ijmss.v6i3.2780">On the Innovation Theory and Practice of Badminton Teaching in Universities——Taking Guizhou University of Finance and Economics as an Example</a> · International Journal of Mathematics and Systems Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.24114/jik.v22i2.51433">PENGARUH LATIHAN SHUTTLE RUN TERHADAP HASIL KELINCAHAN DAN DAYA TAHAN PESERTA KLUB BURNEH BADMINTON ACADEMY (BBA)</a> · JURNAL ILMU KEOLAHRAGAAN</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.33487/edumaspul.v7i2.6071">Effort to Improve Backhand Service Using Drill Variation Method in Extracellular Badminton at SMA Negeri 28 Tangerang District</a> · Edumaspul - Jurnal Pendidikan</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.52188/ijpess.v3i2.1788">The Effect of the Application of the Drill Method on the Ability of Badminton Forehand Short Service for Grade VII Students of Tunas Bangsa Mundu Junior High School, Cirebon Regency</a> · Indonesian Journal of Physical Education and Sport Science</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.47191/ijmra/v6-i8-61">Effect of Massed Practice and Distributed Practice Methods on the Accuracy of Backhand Short Service and Forehand Short Service in Badminton Games for the Students of Victory Badminton School Yogyakarta</a> · INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY RESEARCH AND ANALYSIS</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.5281/zenodo.8286882">Effect of Massed Practice and Distributed Practice Methods on the Accuracy of Backhand Short Service and Forehand Short Service in Badminton Games for the Students of Victory Badminton School Yogyakarta</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.26877/jo.v8i2.14877">Pengaruh Metode Drill Terhadap Peningkatan Keterampilan Servis Panjang Bulu Tangkis Pada Atlet PB Macan Tunggal</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.53067/ije2.v3i2.119">TRAINING TO IMPROVE THE PHYSICAL CONDITION OF INDONESIA BADMINTON ELITE ATHLETES</a> · International Journal of Engagement and Empowerment (IJE2)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1155/2023/9878632">Retracted: Optimization of Artificial Intelligence Model for Badminton Teaching and Training with Wireless Network Support</a> · Security and Communication Networks</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.33140/jrar.04.02.05">AI-powered Badminton Video Detection: Enhancing Gameplay Analysis and Training</a> · Journal of Robotics and Automation Research</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.47116/apjcri.2023.07.31">A Study on the Relationship between Participation Motivation, Exercise Commitment, Leisure Satisfaction, and Psychological Well-being of Badminton Club Members</a> · Asia-pacific Journal of Convergent Research Interchange</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.61445/tofedu.v2i3.92">The Effect of Strokemash Training Method with Play Training Method on the Smash Ability of Badminton Players of SMPN 4 Koto Baru</a> · TOFEDU The Future of Education Journal</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.38035/sijse.v1i1.19">The Effect of Physical Training and Shuttlecock Shot Practice on Smash Power in Badminton</a> · Siber International Journal of Sport Education (SIJSE)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.31258/jassi.2.2.201-209">PENGARUH LATIHAN BOX JUMP, BOX SHUFFLE, DAN SQUAT JUMP TERHADAP KEKUATAN OTOT TUNGKAI PADA ATLET UKM BADMINTON UNIVERSITAS NEGERI MALANG</a> · Journal Sport Science Indonesia</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.36227/techrxiv.23708325.v2">AI-powered Badminton Video Detection: Enhancing Gameplay Analysis and Training</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.36227/techrxiv.23708325.v1">AI-powered Badminton Video Detection: Enhancing Gameplay Analysis and Training</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.36227/techrxiv.23708325">AI-powered Badminton Video Detection: Enhancing Gameplay Analysis and Training</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.3233/jifs-231731">A decision-making framework for classroom teaching quality evaluation of college badminton training with 2-tuple linguistic neutrosophic numbers</a> · Journal of Intelligent &amp; Fuzzy Systems</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1007/s00500-023-08961-9">RETRACTED ARTICLE: Designing a training assistant system for badminton using artificial intelligence</a> · Soft Computing</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.3390/sports11070132">A 6-Week Badminton-Based Movement Intervention Enhances Fundamental Movement Skills and Physical Fitness in Saudi Boys and Girls</a> · Sports</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.36526/gandrung.v4i2.2816">Badminton Sports Injury Management Training</a> · GANDRUNG Jurnal Pengabdian Kepada Masyarakat</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.29408/porkes.v6i1.11654">Peningkatan ketepatan smash forehand badminton melalui media latihan beban botol berpasir pada pergelangan tangan</a> · Jurnal Porkes</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.53905/jiojurnal.v2i02.39">Pengembangan Model Latihan Netting Berbasis Visualisasi Atau Imagery Pada Olahraga Bulu Tangkis Di Pb Kartini</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.52690/jswse.v4i3.594">The Effect of Wrist Flexibility Exercise Using a Bottle on the Ability of Smash Badminton at the Extracurricular of SMK Negeri 2 Palembang</a> · Journal of Social Work and Science Education</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.17977/um062v5i62023p631-639">Pengembangan Variasi Latihan Kelincahan Bulutangkis Untuk Anak Usia Dini Di Klub Badminton Academy And Training Malang</a> · Sport Science and Health</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.30630/joiv.7.2.1166">Improving Badminton Player Detection Using YOLOv3 with Different Training Heuristic</a> · JOIV International Journal on Informatics Visualization</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.36028/2308-8826-2023-11-2-85-95">PHYSICAL TRAINING OF BADMINTON PLAYERS: ANALYTICAL REVIEW OF DOMESTIC AND FOREIGN LITERATURE</a> · SCIENCE AND SPORT current trends</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.47191/ijmra/v6-i5-54">The Effect of Farlek Training on Increasing VO 2 Max of Badminton Athletes</a> · INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY RESEARCH AND ANALYSIS</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.5281/zenodo.7985527">The Effect of Farlek Training on Increasing VO2Max of Badminton Athletes</a> · Zenodo (CERN European Organization for Nuclear Research)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.17509/jpjo.v8i1.54168">Effects of Training Methods and Achievement Motivation on Badminton Skills</a> · JURNAL PENDIDIKAN JASMANI DAN OLAHRAGA</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.13189/saj.2023.110315">Badminton: An Attempt to Improve Playing Skills by Utilizing Training Media</a> · International journal of human movement and sports sciences</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.46394/iss.41.1.13">The effectiveness of untact psychological skills training for youth badminton athletes</a> · Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.51979/kssls.2023.04.92.267">The Effects of Social Exchange Relationships (LMX-TMX) of Badminton Club Members on Exercise Commitment and Exercise Continuation Intention</a> · Journal of Sport and Leisure Studies</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.17309/tmfv.2023.2.13">Changes in Indicators of Special Physical Preparedness in Badminton Players Aged 10–11 under the Influence of Specially Selected Exercises</a> · Physical Education Theory and Methodology</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.47684/jcd.2023.03.25.2.112">The Effectiveness of Mental Training for Youth Badminton Players</a> · Journal of Coaching Development</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.17977/um062v5i32023p290-299">Level Kemampuan Fisik Atlet Pb. Bat (Badminton Academy Training) Under 15 Tahun Kota Malang</a> · Sport Science and Health</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.24018/ejmed.2023.5.2.1637">Comparison of Training and Competition to the Incidence of Overuse Injury in Elite Badminton Athletes: A Systematic Review and Meta-analysis</a> · European Journal of Medical and Health Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.52403/ijrr.20230265">Differences in Drills and Stroke Exercises on the Accuracy of Badminton Smash in Class V Students of Ganungkidul 1 Public Elementary School, Nganjuk Regency</a> · International Journal of Research and Review</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.21203/rs.3.rs-2487634/v1">Physical Activity intervention using Badminton sports - A study protocol for Cardiovascular and Neuromuscular function among older adults in UAE</a> · Research Square</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.46827/ejfnsm.v3i1.139">THE EFFECT OF 12-WEEK DIFFERENT TRAINING METHODS APPLIED TO BADMINTON ATHLETES ON SOME BASIC MOTORIC PROPERTIES</a> · European Journal of Fitness Nutrition and Sport Medicine Studies</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="http://www.nusl.cz/ntk/nusl-532345">Visual constrains and feedback in the badminton serve</a> · Digital Repository (National Repository of Grey Literature)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.22271/yogic.2023.v8.i2d.1466">The effect of imagery training on the acquisition of selected skills in shuttle badminton</a> · International Journal of Yogic Human Movement and Sports Sciences</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1007/978-981-19-8159-3_13">The Effects of PETTLEP Imagery Intervention on Learning of Badminton Skill for Beginners</a> · Lecture notes in bioengineering</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1590/1517-8692202329012022_0702">IMPACTS OF LOWER LIMB TRAINING IN BADMINTON</a> · Revista Brasileira de Medicina do Esporte</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1590/1517-8692202329012022_0742">EFFECT OF WEIGHT TRAINING ON THE TRAINING OF BADMINTON ATHLETES</a> · Revista Brasileira de Medicina do Esporte</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1590/1517-8692202329012022_0616">EFFECT OF FUNCTIONAL TRAINING ON HITTING QUALITY IN BADMINTON PLAYERS</a> · Revista Brasileira de Medicina do Esporte</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1299/jsmermd.2023.1a1-f06">Analysis of badminton/receiving skills using a real-time three-dimensional center-of-gravity measurement system without spatial constraints</a> · The Proceedings of JSME annual Conference on Robotics and Mechatronics (Robomec)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&amp;s=id%3D%22111NTNT1567010%22.&amp;searchmode=basic">蜂巢式訓練梯對國小羽球選手運動能力的影響</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.46669/kss.2022.20.4.004">Exploring the Relationships between Goal Orientation, Commitment, and Exercise Adherence among Amateur Badminton Participants</a> · The Korea Journal of Sport</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.36312/sj.v2i2.5628">The Influence Badminton Athlete Content on Social Media Youth Training Motivation Palopo City</a> · Sportify Journal</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.29408/porkes.v5i2.6760">Pengaruh Mental Training dan Konsentrasi Terhadap Ketepatan Pukulan Overhead Smash dalam Permainan Bulu Tangkis</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.12775/qs.2022.08.04.006">Analysis Dumbbell Wrist Exercise Against Backhand Overhead Lob Badminton Players</a> · Quality in Sport</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.33369/dr.v20i2.23663">Pendampingan Dan Pelatihan Kondisi Fisik Atlet Bulu Tangkis Kota Bekasi</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.32528/sport-mu.v3i2.9013">Pengaruh Latihan Skipping dan Push Up Terhadap Ketepatan smash Bulu Tangkis di PB TJ Prestasi</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.2991/978-2-494069-33-6_25">The Influence of Exercise Media and Hand Eye Coordination on Badminton Playing Skills</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.36836/2022/2/04">HEART RATE INDICATORS WITHIN TRAINING EXERCISES OF UKRAINIAN AND CHINESE BADMINTON PLAYERS AGED 10-12 YEARS</a> · SPORT AND SOCIETY</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.15294/ajpesh.v2i2.64811">Effects of Visual Training on the Reaction Time among Badminton Athletes</a> · ACPES Journal of Physical Education Sport and Health (AJPESH)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.55681/devote.v1i2.371">PELATIHAN CABANG OLAHRAGA BULU TANGKIS PADA PB DAREK</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.32682/bravos.v10i4.2778">Pengembangan Alat Latihan Smash Bulu Tangkis Berbasis Teknologi Pitcher Machine</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.53905/inspiree.v4i01.112">Differences Between Drill Training and Play Training Methods Towards Badminton Skills</a> · INSPIREE Indonesian Sport Innovation Review</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.52547/jrsm.12.24.76">The Effect of Mental Practice with Dominant and Non-Dominant Hand on Immediate and Delayed Retention of Badminton Backhand Short Service</a> · Research in Sport Management &amp; Motor Behavior</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1109/icdi57181.2022.10007137">DL-Shuttle: Badminton Coaching Training Assistance System Using Deep Learning Approach</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.47684/jcd.2022.11.24.5.183">Observation and Analysis of Conditioning Factors according to the Performance Level of the National Team Players who participating in the 2019 World Badminton Championships</a> · Journal of Coaching Development</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1155/2022/9825250">Retracted: Research on Badminton Player’s Step Training Model Based on Big Data and IoT Networks</a> · Security and Communication Networks</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.36706/altius.v11i2.18439">Latihan drilling smash terhadap ketepatan smash bulu tangkis</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.38048/jor.v2i3.1088">PENGEMBANGAN MODEL LATIHAN SMASH PADA PERMAINAN BADMINTON SISWA SMP</a> · Jurnal Edukasi Citra Olahraga</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.26858/cjpko.v14i3.36391">The Effect Of Smash Training With The Drill Smash Method On Accuracy Of Badminton Smash At UPTD Elementary School Lombang Dajah 1 Blega</a> · COMPETITOR Jurnal Pendidikan Kepelatihan Olahraga</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.58962/hstrpt.2022.3.1.168-172">Control of the level of technical training of badminton players at the stage of initial and basic training</a> · Health-saving technologies rehabilitation and physical therapy</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.31392/npu-nc.series15.2022.9(154).22">Methods of teaching physical exercises by means of playing badminton for the students with pedagogical profile with poor health</a> · Scientific Journal of National Pedagogical Dragomanov University Series 15 Scientific and pedagogical problems of physical culture (physical culture and sports)</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.46669/kss.2022.20.3.070">Mediating Effect of Athletic Emotions on the Relationship between Leader's Autonomy Support and Exercise Exhaustion in Badminton Players</a> · The Korea Journal of Sport</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.18176/archmeddeporte.00090">Effect of 3-week progressive overloading and 1-week tapering on performance, internal training load, stress tolerance and heart rate variability in under-19 Brazilian badminton players</a> · Archivos de medicina del deporte: revista de la Federación Española de Medicina del Deporte y de la Confederación Iberoamericana de Medicina del Deporte</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.33689/spormetre.1132471">INVESTIGATION OF THE EFFECTS OF BADMINTON BASIC TRAINING PROGRAM APPLIED IN 11-12 YEARS OLD CHILDREN ON MOTOR DEVELOPMENT</a> · Ankara Üniversitesi Beden Eğitimi ve Spor Yüksekokulu SPORMETRE Beden Eğitimi ve Spor Bilimleri Dergisi</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.5296/ije.v14i3.20207">Quality Assessment of Badminton Skills Training (BST) Module: Aspects of Validity and Reliability among Secondary School Students</a> · International Journal of Education</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.51612/teunuleh.v3i3.112">MOTIVATION OF BADMINTON ATHLETES EARLY AGE GROUP PRACTICE BADMINTON IN THE PBSI MERAUKE REGENCY</a> · Jurnal Ilmiah Teunuleh</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1038/s41598-022-19591-w">Exercise training-induced changes in immunometabolic markers in youth badminton athletes</a> · Scientific Reports</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1249/01.mss.0000881580.62238.10">Is Training Or Academic Stress Related To Sleep Quality In Collegiate Badminton Athletes? A Correlation Study</a> · Medicine &amp; Science in Sports &amp; Exercise</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.36312/sasambo.v4i3.830">Pelatihan Atlet Bulu Tangkis Koni Kota Mataram</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1007/s00590-022-03372-2">Acute injuries in Badminton from 10 to 66 years of age: an epidemiological study of 140 cases among all types of practice</a> · European Journal of Orthopaedic Surgery &amp; Traumatology</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.11606/issn.1981-4690.2022e36172061">Effects of training in the preparatory phase on amateur badminton players’ performance</a> · Revista Brasileira de Educação Física e Esporte</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.25299/sportarea.2022.vol7(2).9423">Continuous and competitive circuit training: Methods to increase vo2max on young badminton player</a> · JOURNAL SPORT AREA</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.33365/jae.v2i2.92">PENERAPAN METODE DRILL UNTUK MENGETAHUI TINGKAT KETERAMPILAN SERVIS PANJANG BULU TANGKIS PADA ANGGOTA CLUB PB MACAN TUNGGAL</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.3390/healthcare10081454">Improving Special Ability Performance of Badminton Players through a Visual Reaction Training System</a> · Healthcare</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.31851/hon.v5i2.8181">Effect of Drill Method Application on Short Serving Accuracy and Eye-Hand Coordination in Badminton Game</a> · Halaman Olahraga Nusantara (Jurnal Ilmu Keolahragaan)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.29408/porkes.v5i1.5374">Perbedaan Pengaruh Latihan Handgrip &amp; Dumbell Terhadap Peningkatan Kekuatan Genggaman Jari Pada Pemain Bulu Tangkis</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.30827/digibug.77205">Evaluation of a Freely Available Sensor Racket as a Diagnostic and Training Tool in Elite Badminton</a> · International Journal of Racket Sports Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.26858/cjpko.v14i2.33185">Motivation to Train East Java Badminton Athletes When Covid-19 Cases are High (The Year 2021) and When Covid-19 Cases Are Low (The Year 2022)</a> · COMPETITOR Jurnal Pendidikan Kepelatihan Olahraga</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.54783/ijsoc.v4i2.463">Smash Training Model in Badminton Game in College Students of the Faculty of Sports Science, Makassar State University</a> · International Journal of Science and Society</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1155/2022/8925907">Optimization of Artificial Intelligence Model for Badminton Teaching and Training with Wireless Network Support</a> · Security and Communication Networks</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1155/2022/3910307">The Application of Wireless Network-Based Artificial Intelligence Robots in Badminton Teaching and Training</a> · Computational Intelligence and Neuroscience</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1080/17408989.2020.1834509">The “Badminton for all” project: a curriculum training to promote participation of people with disabilities in European clubs</a> · Comillas Repository (Comillas Pontifical University)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="http://hdl.handle.net/11531/75897">Análisis de la implicación que tienen los progenitores sobre sus hijos en el bádminton=Analysis of parental involvement on their children in the badminton practice</a> · Comillas Repository (Comillas Pontifical University)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.35706/joker.v2i1.6777">PENERAPAN LATIHAN BEBAN PERGELANGAN TANGAN UNTUK MENINGKATKAN KEMAMPUAN FOREHAND BULU TANGKIS PADA SISWA KELAS VIII SMP NEGERI 24 PALEMBANG</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1109/iccre55123.2022.9770263">Design of Badminton Training Robot with Athlete Detection</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.26446/kjlrp.2022.3.46.1.27">The effect of exercise addiction factors on Self-determination Theory’s amotivation state among Badminton participants</a> · Korean Journal of Leisure, Recreation &amp; Park</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.15561/20755279.2022.0102">Investigation of the effect of acute badminton training on selected biomotoric parameters</a> · Physical Education of Students</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1155/2022/1972389">Research on Badminton Player’s Step Training Model Based on Big Data and IoT Networks</a> · Security and Communication Networks</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1155/2022/5295881">Analysis of Winning Experience and Technical Training Effect of Badminton Match Based on BP Neural Network</a> · Journal of Healthcare Engineering</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.17977/um062v4i22022p119-130">Upaya Meningkatkan Keterampilan Pukulan Forehand Smash Bulutangkis Menggunakan Metode Drill Variasi Bagi Atlet PB. Malang Badminton Club Kota Malang</a> · Sport Science and Health</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.36728/jis.v22i1.1823">PERBEDAAN PENGARUH LATIHAN DRILL DAN POLA PUKULAN TERHADAP KETERAMPILAN LOB BULU TANGKIS PADA SISWA EXTRAKURIKULER BULU TANGKIS</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1016/j.rineng.2022.100344">A prototype of auto badminton training robot</a> · Results in Engineering</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.21831/jorpres.v18i1.48381">Pengaruh Latihan Basic Movement Berpindah Tempat Terhadap Kelincahan Atlet Bulu Tangkis</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.3390/ijerph19010468">Training-Associated Superior Visuomotor Integration Performance in Elite Badminton Players after Adjusting for Cardiovascular Fitness</a> · International Journal of Environmental Research and Public Health</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.71008/ebyu.thesis.2022.103">The effect of life kinetic training on some coordinative and cognitive abilities in badminton players</a></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.33545/27077012.2022.v3.i1a.82">The effect of a proposed training curriculum for the transitional period on some physical, motor and skill abilities of badminton players</a> · Journal of Sports Science and Nutrition</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.52547/jrsm.11.22.40">The Effect of Visual Training on the Visual Skills of Skilled Badminton Athletes</a> · Research in Sport Management &amp; Motor Behavior</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.12677/aps.2022.102033">On Teaching and Training Methods of Youth Badminton in Changji City</a> · Advances in Physical Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.12677/ass.2022.1111637">Investigation and Analysis of Badminton Training for the Young Children in Tianfu New District in Chengdu</a> · Advances in Social Sciences</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.2991/ahsr.k.220108.006">Game-Based Badminton Smash Training Model for Beginner</a> · Advances in health sciences research/Advances in Health Sciences Research</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2021</td>
+<td><a href="https://doi.org/10.46669/kss.2021.19.4.076">The Effects of Worry Dolls Psychological Skills Training to Control on Competitive State Anxiety of Female Badminton Players</a> · The Korea Journal of Sport</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2021</td>
+<td><a href="https://doi.org/10.17977/um057v11i2p66-73">PENGARUH LATIHAN SHUTTLE RUN DAN SKIPPING ROPE TERHADAP KELINCAHAN SHADOW 6 TITIK CABOR BULUTANGKIS UKM BADMINTON UM</a> · Jurnal Sport Science</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2021</td>
+<td><a href="https://doi.org/10.33503/jp.jok.v5i1.1211">Implementation of Fullover training towards the improvement of badminton smash corresponding with the Covid 19 health protocol</a> · JP JOK (Jurnal Pendidikan Jasmani Olahraga dan Kesehatan)</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2021</td>
+<td><a href="https://doi.org/10.38007/ijst.2021.020401">Impact of Technical Characteristics Statistics and Pace Training of Badminton in Colleges and Universities under the 5G Environment</a> · International Journal of Sports Technology</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2021</td>
+<td><a href="https://doi.org/10.53350/pjmhs2115113181">Examination of the Effects of Autogenic Training on the Reaction Time Performance of the National Badminton Athletes</a> · Pakistan Journal of Medical and Health Sciences</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>2021</td>
+<td><a href="http://www.clg-daguerre-cormeilles.ac-versailles.fr/article1598.html">Début des entrainements d'AS Badminton, Volley-ball et Natation – Collège Jacques Daguerre - Cormeilles-en-Parisis (95) - Collège numérique</a></td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2021</td>
+<td><a href="https://doi.org/10.9734/jpri/2021/v33i49a33331">Determination of Ballistic Six Exercises and Theraband Exercises on Physical Performance in Badminton Players: A Randomized Controlled Clinical Trial</a> · Journal of Pharmaceutical Research International</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2021</td>
+<td><a href="https://doi.org/10.37506/ijphrd.v13i1.17317">Influence of Badminton Skills Training on Selected Bio-Motor and Skill Performance Variables of College-Level Students with Hearing Impairment</a> · Indian Journal of Public Health Research &amp; Development</td>
+<td>來源頁</td>
+</tr>
+<tr>
+<td>2021</td>
+<td><a href="https://doi.org/10.1201/9781003217152-20">Analysis of induced vibrations to the hand-arm system during badminton practice</a></td>
+<td>來源頁</td>
+</tr>
+</tbody>
+</table>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

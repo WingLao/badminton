@@ -154,7 +154,7 @@ def strip(text: str) -> str:
 
 
 def site_strip(up: str, here: str) -> str:
-    links = [('首頁', ''), ('學生學習', 'learn/'), ('教練科技', 'technology/'), ('教練研究', 'research/'), ('閱讀方法', 'guide/')]
+    links = [('首頁', ''), ('學生學習', 'learn/'), ('教練科技', 'technology/'), ('教練研究', 'research/'), ('工具說明', 'skills/')]
     a = ''.join(f'<a href="{up}{h}" style="color:#e8f2ec;text-decoration:none;padding:6px 10px;border-radius:999px;{"background:#d7f24b;color:#16302a;" if h == here else ""}">{n}</a>' for n, h in links)
     return (f'{SITE_START}<div style="background:#11241f;padding:6px 10px;display:flex;gap:2px;overflow-x:auto;white-space:nowrap;'
             f'font:14px/1.4 -apple-system,BlinkMacSystemFont,\'PingFang TC\',sans-serif;position:relative;z-index:50" aria-label="網站導覽">'
@@ -174,3 +174,8 @@ def insert(text: str, blk: str) -> str:
     if m:
         pos += m.end()
     return text[:pos] + blk + text[pos:]
+
+
+def strip_cards(text: str) -> str:
+    """只移除閱讀卡（網站已不顯示閱讀卡；四欄筆記改為整理文章時另外交給使用者）。"""
+    return re.sub(re.escape(START) + r'.*?' + re.escape(END), '', text, flags=re.S)

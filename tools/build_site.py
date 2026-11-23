@@ -33,13 +33,16 @@ ROOT = Path(__file__).resolve().parents[1]          # 網站 Git 儲存庫（~/P
 SRC = Path(os.environ.get('BADMINTON_SRC', Path.home() / 'Desktop/Badminton/網站資料')).expanduser()
 NOTES = SRC / '學術/羽球研究筆記'
 CATALOG_CSV = SRC / '學術/近五年羽毛球文獻_2021-2026/文獻總目錄.csv'
+# 學術資料夾中其他研究文件（P39：要放進網站）；PDF 原文不上傳，只保留題名與原出處
+EXTRA_DOCS = ['學術/男子雙打認知教學運用.md', '學術/羽毛球近五年文獻整理.md', '學術/研究紀錄.md',
+              '學術/近五年羽毛球文獻_2021-2026/請先閱讀.md', '學術/近五年羽毛球文獻_2021-2026/多球訓練研究統整_2025.md',
+              '學術/羽球研究筆記/課堂延伸研究原文/00_原文索引_*.md', '學術/羽球研究筆記/文獻候選索引/*.md']
+MATCH_XLSX = SRC / '學術/鄭任佑'
 LEARN_SRC = SRC / '教學'
 TECH_SRC = SRC / '科技/2026羽球科技速覽.html'
 SKILLS_SRC = SRC.parent / 'AVANCO_html/.codex/skills'
 CONFIG = ROOT / 'tools/site_config.json'
 LOG = ROOT / 'tools/updates_log.json'
-CARDS = ROOT / 'tools/reading_cards.json'
-WORKFLOW_SRC = SRC.parent.parent / 'AI瓦基第二大腦_專案包全集/E-學習筆記'
 TZ = ZoneInfo('Asia/Macau')
 
 # ---------------------------------------------------------------- 共用樣式
@@ -101,6 +104,7 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 .hero-tip{font-size:13px;color:var(--muted)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
 :root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
 @media (max-width:640px){
  table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
  table.cards thead{display:none}
@@ -117,7 +121,7 @@ function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)
 try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
 function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
 label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
-document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
 if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
 })();
 </script>"""
@@ -125,7 +129,7 @@ if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forE
 CAT_HUE = {'learn': 150, 'technology': 215, 'research': 270, 'skills': 25}   # 分類色：墨綠、藍、紫、橙
 
 NAV = [('首頁', ''), ('學生學習', 'learn/'), ('教練科技', 'technology/'), ('教練研究', 'research/'),
-       ('工具說明', 'skills/'), ('閱讀方法', 'guide/'), ('更新紀錄', 'updates/')]
+       ('工具說明', 'skills/'), ('更新紀錄', 'updates/')]
 
 
 def page(title: str, body: str, depth: int, active: str = '', desc: str = '') -> str:
@@ -138,6 +142,7 @@ def page(title: str, body: str, depth: int, active: str = '', desc: str = '') ->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc or title)}">
 <style>{CSS}</style>
@@ -271,7 +276,9 @@ def note_group(b: str) -> str:
 def build_research(date: str, force: bool) -> list[str]:
     notes = latest_notes()
     images = [p for p in NOTES.glob('圖_*/*') if p.is_file()]
-    digest = sha(list(notes.values()) + images + [NOTES / 'index.md', CATALOG_CSV])
+    extras = extra_docs()
+    xlsx = sorted(MATCH_XLSX.glob('*.xlsx')) if MATCH_XLSX.exists() else []
+    digest = sha(list(notes.values()) + images + [NOTES / 'index.md', CATALOG_CSV] + [p for p, _ in extras] + xlsx)
     cfg = json.loads(CONFIG.read_text(encoding='utf-8'))
     issues = cfg['categories']['research']['issues']
     if issues and issues[0].get('source_hash') == digest and not force:
@@ -295,7 +302,9 @@ def build_research(date: str, force: bool) -> list[str]:
         md_text = convert_wikilinks(md_text, slugs)
         md_text = re.sub(r'\]\((圖_[^)]+)\)', r'](圖片/\1)', md_text)
         md_text = re.sub(r'\]\(([^)/#]+?)\.md(#[^)]*)?\)', lambda m: f'](' + slugs.get(base_name(m.group(1)), '00_羽球研究總覽.html') + (m.group(2) or '') + ')', md_text)
-        md_text = md_text.replace('(Europe/Rome)', '').replace('/Users/', '')
+        md_text = md_text.replace('(Europe/Rome)', '')
+        md_text = re.sub(r'`?/Users/[^`\s)）]*`?', '（本機資料夾）', md_text)   # 不公開本機路徑與帳號名稱
+        md_text = re.sub(r'\[([^\]]+)\]\((?!https?:|#|mailto:)[^)]+\.(?:pdf|PDF|csv|xlsx|jsonl|txt)\)', r'\1', md_text)   # 本機檔案連結改成純文字
         return md_to_html(md_text)
 
     for b, p in sorted(notes.items()):
@@ -310,18 +319,33 @@ def build_research(date: str, force: bool) -> list[str]:
                 + note_html +
                 '<p class="big"><a href="index.html">回本期目錄</a></p>')
         (out / slugs[b]).write_text(page(f'{title}｜教練研究', body, 2, 'research/', desc), encoding='utf-8')
-        q = (load_cards().get('research:' + b) or {}).get('question', '')
-        entries.append({'slug': slugs[b], 'title': title, 'desc': desc, 'group': note_group(b), 'q': q})
+        entries.append({'slug': slugs[b], 'title': title, 'desc': desc, 'group': note_group(b)})
+
+    for p, slug in extras:
+        meta, text = read_front(p.read_text(encoding='utf-8'))
+        title = meta.get('title') or (re.search(r'^# (.+)$', text, re.M) or [None, slug])[1]
+        note_html = render(text)
+        rel = p.relative_to(SRC / '學術').parent.as_posix()
+        mline = f'<p class="meta">研究文件 · 來源資料夾：學術/{esc(rel) if rel != "." else ""} · 論文 PDF 不上傳，請用原出處連結</p>'
+        k = note_html.find('</h1>')
+        note_html = note_html[:k + 5] + mline + note_html[k + 5:] if k != -1 else f'<h1>{esc(title)}</h1>' + mline + note_html
+        body = f'<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p>{note_html}<p class="big"><a href="index.html">回本期目錄</a></p>'
+        (out / f'{slug}.html').write_text(page(f'{title}｜教練研究', body, 2, 'research/', meta.get('description', '')), encoding='utf-8')
+        entries.append({'slug': f'{slug}.html', 'title': title, 'desc': meta.get('description', ''), 'group': 'docs'})
+    for e in build_match_data(out, xlsx):
+        entries.append(e)
 
     n_rows = build_catalog(out)
 
     meta, idx_text = read_front((NOTES / 'index.md').read_text(encoding='utf-8'))
     groups = [('chapter', '研究章節（完整版）', '每章整理一個主題的研究、證據強弱與教練應用。'),
               ('graphic', '圖解版（先看這裡）', '用動畫、圖表和數字講一個問題，5 分鐘看完。'),
+              ('docs', '研究文件', '學術資料夾中的文獻整理、男子雙打認知教學、研究紀錄與候選文獻清單。'),
+              ('data', '比賽數據（Excel）', '奧運羽球比賽（鄭任佑整理）的逐拍紀錄、統計表與信度表；可下載原始 Excel。'),
               ('other', '附錄與紀錄', '課堂筆記、書單與文獻整理過程。')]
     lists = ''
     for g, gt, gd in groups:
-        items = ''.join(f'<li><a href="{e["slug"]}">{esc(e["title"])}</a>' + (f'<br><small>這篇回答：{esc(e["q"])}</small>' if e.get('q') else (f'<br><small>{esc(e["desc"])}</small>' if e['desc'] else '')) + '</li>'
+        items = ''.join(f'<li><a href="{e["slug"]}">{esc(e["title"])}</a>' + (f'<br><small>{esc(e["desc"])}</small>' if e['desc'] else '') + '</li>'
                         for e in entries if e['group'] == g)
         lists += f'<h2>{gt}</h2><p class="muted">{gd}</p><ul>{items}</ul>'
     body = (f'<p class="crumb"><a href="../">教練研究</a> › {zh_date(date)}</p>'
@@ -332,11 +356,99 @@ def build_research(date: str, force: bool) -> list[str]:
     (out / 'index.html').write_text(page(f'教練研究 {date}｜羽球研究筆記', body, 2, 'research/', meta.get('description', '')), encoding='utf-8')
 
     issue = {'date': date, 'path': f'research/badminton-{date}/', 'title': '羽球研究筆記：用數據看懂羽球',
-             'summary': f'{len(entries)} 篇研究整理與圖解（多球、戰術、敏捷、肌力、心理、傷病、CLA 等），附 {n_rows:,} 筆近五年文獻目錄。',
+             'summary': f'{len(entries)} 篇研究整理、圖解、研究文件與比賽數據（多球、戰術、敏捷、肌力、心理、傷病、CLA 等），附 {n_rows:,} 筆近五年文獻目錄。',
              'source_hash': digest}
     cfg['categories']['research']['issues'] = [issue] + [i for i in issues if i['date'] != date]
     CONFIG.write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    return [f'教練研究新增一期：{len(entries)} 篇整理、{n_rows:,} 筆文獻目錄（research/badminton-{date}/）']
+    return [f'教練研究更新：{len(entries)} 篇（含研究文件 {sum(e["group"] == "docs" for e in entries)} 篇、比賽數據 {sum(e["group"] == "data" for e in entries)} 場）、{n_rows:,} 筆文獻目錄（research/badminton-{date}/）']
+
+
+def extra_docs() -> list[tuple[Path, str]]:
+    out = []
+    for pat in EXTRA_DOCS:
+        for p in sorted(SRC.glob(pat)):
+            out.append((p, '文件_' + base_name(p.stem)))
+    return out
+
+
+def read_xlsx(path: Path) -> list[tuple[str, list[list[str]]]]:
+    """只用 Python 內建模組讀 Excel（每週自動更新不必另裝套件）。回傳 [(工作表名稱, 列資料)]。"""
+    import zipfile
+    import xml.etree.ElementTree as ET
+    ns = {'m': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main',
+          'r': 'http://schemas.openxmlformats.org/officeDocument/2006/relationships'}
+    z = zipfile.ZipFile(path)
+    shared = []
+    if 'xl/sharedStrings.xml' in z.namelist():
+        for si in ET.fromstring(z.read('xl/sharedStrings.xml')).findall('m:si', ns):
+            shared.append(''.join(t.text or '' for t in si.iter('{%s}t' % ns['m'])))
+    rels = {r.get('Id'): r.get('Target') for r in ET.fromstring(z.read('xl/_rels/workbook.xml.rels'))}
+    out = []
+    for sh in ET.fromstring(z.read('xl/workbook.xml')).find('m:sheets', ns):
+        target = rels[sh.get('{%s}id' % ns['r'])].lstrip('/')
+        target = target if target.startswith('xl/') else 'xl/' + target
+        grid = {}
+        for c in ET.fromstring(z.read(target)).iter('{%s}c' % ns['m']):
+            ref, t = c.get('r'), c.get('t')
+            v = c.find('m:v', ns)
+            if t == 's' and v is not None:
+                val = shared[int(v.text)]
+            elif t == 'inlineStr':
+                val = ''.join(x.text or '' for x in c.iter('{%s}t' % ns['m']))
+            elif v is not None and v.text is not None:
+                val = v.text
+                if t != 'str' and t != 'b':
+                    try:
+                        f = float(val)
+                        val = str(int(f)) if f.is_integer() else f'{f:.3f}'.rstrip('0')
+                    except ValueError:
+                        pass
+            else:
+                continue
+            m = re.match(r'([A-Z]+)(\d+)', ref)
+            col = 0
+            for ch in m.group(1):
+                col = col * 26 + ord(ch) - 64
+            grid[(int(m.group(2)), col)] = val.strip()
+        if not grid:
+            out.append((sh.get('name'), []))
+            continue
+        rows = sorted({r for r, _ in grid})
+        cols = sorted({c for _, c in grid})
+        table = [[grid.get((r, c), '') for c in cols] for r in rows]
+        table = [row for row in table if any(row)]
+        out.append((sh.get('name'), table))
+    return out
+
+
+def build_match_data(out: Path, files: list[Path]) -> list[dict]:
+    entries = []
+    if not files:
+        return entries
+    (out / '資料/比賽數據').mkdir(parents=True, exist_ok=True)
+    for f in files:
+        shutil.copy2(f, out / '資料/比賽數據' / f.name)
+        sheets = read_xlsx(f)
+        name = f.stem
+        parts = ''
+        for sname, rows in sheets:
+            if not rows:
+                continue
+            head, rest = rows[0], rows[1:]
+            th = ''.join(f'<th>{esc(x)}</th>' for x in head)
+            tb = ''.join('<tr>' + ''.join(f'<td>{esc(x)}</td>' for x in r) + '</tr>' for r in rest)
+            parts += (f'<details class="card"><summary><b>{esc(sname)}</b> <small>（{len(rest)} 列 × {len(head)} 欄）</small></summary>'
+                      f'<div style="overflow-x:auto"><table class="wide"><thead><tr>{th}</tr></thead><tbody>{tb}</tbody></table></div></details>')
+        body = (f'<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1>比賽數據：{esc(name)}</h1>'
+                f'<p class="meta">研究文件 · 來源：學術/鄭任佑（Excel 原始檔）</p>'
+                f'<div class="card"><p>每個工作表是一個表格，按標題打開。<b>list-reference</b> 是記錄時用的分類（主被動、主動技術、被動技術、情況、站位）；'
+                f'<b>紀錄表</b> 是逐拍紀錄；<b>表格／工作表</b> 是樞紐統計；<b>信度</b> 是兩位記錄者的一致性核對。空白列已略去。</p>'
+                f'<p class="big"><a href="資料/比賽數據/{esc(f.name)}" download>下載原始 Excel</a></p></div>{parts}'
+                f'<p class="big"><a href="index.html">回本期目錄</a></p>')
+        slug = '數據_' + name
+        (out / f'{slug}.html').write_text(page(f'比賽數據：{name}｜教練研究', body, 2, 'research/'), encoding='utf-8')
+        entries.append({'slug': f'{slug}.html', 'title': f'比賽數據：{name}', 'desc': f'{len([1 for _, r in sheets if r])} 個工作表；逐拍紀錄與統計', 'group': 'data'})
+    return entries
 
 
 CATALOG_FIELDS = [('id', 'id'), ('發表日期', 'date'), ('標題', 'title'), ('作者', 'authors'), ('地區', 'region'),
@@ -386,7 +498,7 @@ fetch('資料/文獻總目錄.json').then(function(r){{return r.json()}}).then(f
 def same(src: Path, pub: Path) -> bool:
     """比較本機來源與網站副本；網頁和 Markdown 先去掉自動插入的閱讀卡與導覽條。"""
     if pub.suffix in ('.html', '.md'):
-        return src.read_text(encoding='utf-8') == RC.strip(pub.read_text(encoding='utf-8'))
+        return src.read_text(encoding='utf-8') == RC.strip(pub.read_text(encoding='utf-8')).replace(NOINDEX, '')
     return filecmp.cmp(src, pub, shallow=False)
 
 
@@ -431,16 +543,7 @@ def sync_sources() -> list[str]:
 
 # ---------------------------------------------------------------- 閱讀卡（閱讀與記憶工作流）
 
-_CARDS = None
-
-
-def load_cards() -> dict:
-    global _CARDS
-    if _CARDS is None:
-        raw = json.loads(CARDS.read_text(encoding='utf-8')) if CARDS.exists() else {}
-        raw.pop('_說明', None)
-        _CARDS = {k: (raw[v['same_as']] if 'same_as' in v else v) for k, v in raw.items()}
-    return _CARDS
+NOINDEX = '<meta name="robots" content="noindex, nofollow, noarchive">'
 
 
 def put_site_strip(text: str, up: str, here: str) -> str:
@@ -455,61 +558,30 @@ def put_site_strip(text: str, up: str, here: str) -> str:
     return text[:i] + bar + text[i:] if i != -1 else bar + text
 
 
-def inject_cards(cfg: dict) -> tuple[int, list[str]]:
-    """把閱讀卡放進每篇文章（研究頁只放最新一期）。回傳（放入篇數，缺卡的研究筆記）。"""
-    cards = load_cards()
-    rissue = cfg['categories']['research']['issues']
-    rdir = ROOT / rissue[0]['path'] if rissue else None
-    n = 0
-    for key, card in cards.items():
-        if key.startswith('research:'):
-            if not rdir:
-                continue
-            target, up = rdir / (key.split(':', 1)[1] + '.html'), '../../'
-        else:
-            target, up = ROOT / key, '../' * key.count('/')
-        if not target.exists():
+def put_noindex(text: str) -> str:
+    """不讓搜尋引擎收錄：每頁加 robots meta（GitHub Pages 專案網站的 robots.txt 不會生效）。"""
+    if NOINDEX in text:
+        return text
+    m = re.search(r'<meta charset[^>]*>', text, flags=re.I)
+    if m:
+        return text[:m.end()] + NOINDEX + text[m.end():]
+    m = re.search(r'<head[^>]*>', text, flags=re.I)
+    return text[:m.end()] + NOINDEX + text[m.end():] if m else NOINDEX + text
+
+
+def tidy_hand_pages():
+    """手寫及舊版頁面：移除舊閱讀卡、加網站導覽條、加 noindex。可重複執行。"""
+    for f in ROOT.rglob('*.html'):
+        rel = f.relative_to(ROOT)
+        if rel.parts[0] in ('.git',):
             continue
-        t = target.read_text(encoding='utf-8')
-        new = RC.insert(t, RC.block(card, key, up + 'guide/'))
-        new = put_site_strip(new, up, target.relative_to(ROOT).parts[0] + '/')
+        t = f.read_text(encoding='utf-8')
+        new = RC.strip_cards(t)
+        if rel.parts[0] in ('learn', 'technology', 'skills') and len(rel.parts) > 2:
+            new = put_site_strip(new, '../' * (len(rel.parts) - 1), rel.parts[0] + '/')
+        new = put_noindex(new)
         if new != t:
-            target.write_text(new, encoding='utf-8')
-        n += 1
-    missing = []
-    if rdir:
-        for f in sorted(rdir.glob('*.html')):
-            if f.stem not in ('index', '文獻目錄') and f'research:{f.stem}' not in cards:
-                missing.append(f.stem)
-    return n, missing
-
-
-def build_guide():
-    """閱讀方法頁：直接由使用者的〈閱讀與記憶工作流〉原檔產生，原檔更新時每週自動跟著更新。"""
-    srcs = sorted(WORKFLOW_SRC.glob('閱讀與記憶工作流_*.md')) if WORKFLOW_SRC.exists() else []
-    out = ROOT / 'guide'
-    out.mkdir(exist_ok=True)
-    if srcs:
-        shutil.copy2(srcs[-1], out / '閱讀與記憶工作流.md')
-    md = (out / '閱讀與記憶工作流.md').read_text(encoding='utf-8') if (out / '閱讀與記憶工作流.md').exists() else '# 閱讀與記憶工作流'
-    md = md.split('\n', 1)[1] if md.startswith('# ') else md
-    body_md = md_to_html(convert_callouts(md))
-    body = f"""<p class="crumb"><a href="../">首頁</a> › 閱讀方法</p>
-<h1>閱讀方法：先問一句，再選讀法</h1>
-<p class="meta">全站每篇文章都用這套讀法 · 原文：<a href="閱讀與記憶工作流.md">閱讀與記憶工作流.md</a>（Markdown 文字檔）</p>
-<div class="card"><h2 style="margin-top:.2em">在這個網站怎樣用？</h2>
-<ol>
-<li>打開任何一篇文章，最上面有一張<mark>閱讀卡</mark>，第一句寫著「我讀這篇是為了回答：……」。</li>
-<li>按一個讀法：<b>查資料</b>、<b>做決定</b>或<b>日後要教或反覆用</b>。卡片會告訴你先讀哪裡、讀到哪裡可以停。</li>
-<li>看四欄筆記：一句話核心、關鍵數據（最多 3 項，附出處）、因果／流程、跨域應用。</li>
-<li>想長期記住的文章：打開「閉卷回想」，蓋住上面自己答兩題，再按「開始排複習」。隔天和第 7 天回來各答一次，每次 0–3 分。</li>
-<li>按「複製成 Obsidian 筆記」，就能把整張卡貼進自己的 Obsidian（筆記軟體）。</li>
-</ol>
-<p class="muted">標示說明：<b>相關</b>＝原文只支持兩件事一起出現，不能當成因果；<b>機制未明</b>＝原文沒有交代為甚麼；<b>待驗證</b>＝超出原文、需要自己試過才知道。</p></div>
-<h2>原文：閱讀與記憶工作流</h2>
-{body_md}
-<script>document.querySelectorAll('main pre').forEach(function(p){{var b=document.createElement('button');b.type='button';b.textContent='複製';b.style.cssText='float:right;margin:-4px -4px 6px 8px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:13px;cursor:pointer';b.onclick=function(){{var t=p.querySelector('code').textContent;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){{b.textContent='已複製 ✓'}},function(){{b.textContent='請手動選取'}})}};p.prepend(b)}})</script>"""
-    (out / 'index.html').write_text(page('閱讀方法｜badminton', body, 1, 'guide/', '全站文章使用的閱讀與記憶工作流。'), encoding='utf-8')
+            f.write_text(new, encoding='utf-8')
 
 
 # ---------------------------------------------------------------- 目錄頁
@@ -561,7 +633,6 @@ def build_indexes(cfg: dict, log: list[dict]):
 <p>羽球學習與教練資料站：學生從細節開始練，教練用研究和科技安排訓練。</p>
 <p class="hero-tip">背景是自動對打的 3D 羽球場；點一下球場空白處，就會朝那裡殺球。</p></div></section>
 <div class="grid home">{cards}</div>
-<article class="card"><small>閱讀方法</small><h2 style="margin-top:.4em">每篇文章都有一張閱讀卡</h2><p>先寫一句「我讀這篇是為了回答甚麼」，再選查資料、做決定或日後要教的讀法；四欄筆記和閉卷回想幫你真的記住。</p><p><a href="guide/">看閱讀方法 →</a></p></article>
 <article class="card"><small>每星期六早上 8 點自動更新</small><h2 style="margin-top:.4em">最近更新：{zh_date(last['date'])}</h2><ul>{upd}</ul><p><a href="updates/">看全部更新紀錄 →</a></p></article>
 <article class="card"><small>另一個網站</small><h2 style="margin-top:.4em">手指發力 3D 互動教學</h2><p>用 3D 手骨模型看手指怎樣用力，5 個步驟配旁白。</p><p class="big"><a href="https://winglao.github.io/badminton-finger-biomechanics/">打開 3D 教學</a></p></article>
 <p class="muted">學生頁推薦的影片都核對過可免費觀看，不需要會員或信用卡。<a href="learn/badminton-2026-11-15/影片免費觀看檢查_20261115.html">查看核對表</a></p>"""
@@ -579,10 +650,7 @@ def main():
     items += build_research(a.date, a.force_research)
     items += sync_sources()
     cfg = json.loads(CONFIG.read_text(encoding='utf-8'))
-    n_cards, missing = inject_cards(cfg)
-    if missing:
-        items.append('待整理：這些研究筆記還沒有閱讀卡（請在 tools/reading_cards.json 補上）：' + '、'.join(missing))
-    build_guide()
+    tidy_hand_pages()
     log = json.loads(LOG.read_text(encoding='utf-8')) if LOG.exists() else []
     # 同一天重跑：保留之前寫入的項目，再加上新項目（不重複）
     old = next((e for e in log if e['date'] == a.date), None)
