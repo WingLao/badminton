@@ -44,6 +44,16 @@ blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);colo
 .callout.tip{border-left-color:var(--green)}
 .big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
 footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.hero.band{min-height:clamp(230px,32vh,280px)}
+.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
 @media (max-width:640px){
  table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
  table.cards thead{display:none}
@@ -57,7 +67,7 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 <body>
 <nav class="top" aria-label="網站導覽"><a href="../">首頁</a><a href="../learn/">學生學習</a><a href="../technology/">教練科技</a><a href="../research/" class="on">教練研究</a><a href="../skills/">工具說明</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
-<p class="crumb"><a href="../">首頁</a> › 教練研究</p><h1>教練研究</h1><p><span class="tag">教練</span></p><p>給教練：把 2021–2026 年的羽球運動科學研究，整理成看得懂、用得上的章節、圖解與文獻目錄。每個結論都附來源。</p><p class="muted">每一期按日期排列，最新的在最上面。</p><article class="card"><small>2026 年 11 月 23 日 · 最新</small><h3><a href="badminton-2026-11-23/">羽球研究筆記：用數據看懂羽球</a></h3><p>26 篇研究整理與圖解（多球、戰術、敏捷、肌力、心理、傷病、CLA 等），附 3,080 筆近五年文獻目錄。</p><p><a href="badminton-2026-11-23/">打開這一期 →</a></p></article>
+<p class="crumb"><a href="../">首頁</a> › 教練研究</p><section class="hero band" data-court="mono" data-hue="270"><div class="hero-text"><h1>教練研究</h1><p><span class="tag">教練</span></p></div></section><p>給教練：把 2021–2026 年的羽球運動科學研究，整理成看得懂、用得上的章節、圖解與文獻目錄。每個結論都附來源。</p><p class="muted">每一期按日期排列，最新的在最上面。</p><article class="card"><small>2026 年 11 月 23 日 · 最新</small><h3><a href="badminton-2026-11-23/">羽球研究筆記：用數據看懂羽球</a></h3><p>26 篇研究整理與圖解（多球、戰術、敏捷、肌力、心理、傷病、CLA 等），附 3,080 筆近五年文獻目錄。</p><p><a href="badminton-2026-11-23/">打開這一期 →</a></p></article>
 <footer>badminton · 小選手，大目標 · <a href="../">回首頁</a></footer>
 </main>
 <script>
@@ -70,5 +80,7 @@ document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.query
 if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
 })();
 </script>
+<script src="../assets/vendor/p5.min.js" defer></script>
+<script src="../assets/court.js" defer></script>
 </body>
 </html>

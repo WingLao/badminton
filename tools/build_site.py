@@ -76,6 +76,16 @@ blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);colo
 .callout.tip{border-left-color:var(--green)}
 .big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
 footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.hero.band{min-height:clamp(230px,32vh,280px)}
+.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
 @media (max-width:640px){
  table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
  table.cards thead{display:none}
@@ -97,12 +107,16 @@ if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forE
 })();
 </script>"""
 
+CAT_HUE = {'learn': 150, 'technology': 215, 'research': 270, 'skills': 25}   # 分類色：墨綠、藍、紫、橙
+
 NAV = [('首頁', ''), ('學生學習', 'learn/'), ('教練科技', 'technology/'), ('教練研究', 'research/'),
        ('工具說明', 'skills/'), ('更新紀錄', 'updates/')]
 
 
 def page(title: str, body: str, depth: int, active: str = '', desc: str = '') -> str:
     up = '../' * depth
+    court_js = (f'\n<script src="{up}assets/vendor/p5.min.js" defer></script>\n<script src="{up}assets/court.js" defer></script>'
+                if 'data-court=' in body else '')
     nav = ''.join(f'<a href="{up}{href}"{" class=\"on\"" if href == active else ""}>{name}</a>' for name, href in NAV)
     return f"""<!doctype html>
 <html lang="zh-Hant">
@@ -119,7 +133,7 @@ def page(title: str, body: str, depth: int, active: str = '', desc: str = '') ->
 {body}
 <footer>badminton · 小選手，大目標 · <a href="{up}">回首頁</a></footer>
 </main>
-{JS}
+{JS}{court_js}
 </body>
 </html>
 """
@@ -404,8 +418,9 @@ def build_indexes(cfg: dict, log: list[dict]):
                       f'<p><a href="{rel}">打開這一期 →</a>{extra}</p></article>')
         ext = ''.join(f'<article class="card"><small>{esc(x["note"])}</small><h3><a href="{esc(x["url"])}">{esc(x["title"])}</a></h3><p>{esc(x["summary"])}</p></article>'
                       for x in c.get('external', []))
-        body = (f'<p class="crumb"><a href="../">首頁</a> › {esc(c["name"])}</p><h1>{esc(c["name"])}</h1>'
-                f'<p><span class="tag">{esc(c["audience"])}</span></p><p>{esc(c["intro"])}</p>'
+        body = (f'<p class="crumb"><a href="../">首頁</a> › {esc(c["name"])}</p>'
+                f'<section class="hero band" data-court="mono" data-hue="{CAT_HUE.get(key, 160)}"><div class="hero-text"><h1>{esc(c["name"])}</h1>'
+                f'<p><span class="tag">{esc(c["audience"])}</span></p></div></section><p>{esc(c["intro"])}</p>'
                 f'<p class="muted">每一期按日期排列，最新的在最上面。</p>{cards}{ext}')
         (ROOT / key).mkdir(exist_ok=True)
         (ROOT / key / 'index.html').write_text(page(f'{c["name"]}｜badminton', body, 1, f'{key}/', c['intro']), encoding='utf-8')
@@ -433,8 +448,9 @@ def build_indexes(cfg: dict, log: list[dict]):
                   f'<p class="big"><a href="{it["path"]}">打開最新一期</a></p><p><a href="{key}/">看全部 {len(c["issues"])} 期 →</a></p></article>')
     last = log[0] if log else {'date': today(), 'items': []}
     upd = ''.join(f'<li>{esc(x)}</li>' for x in last['items'][:4]) or '<li>本週本機資料沒有變動。</li>'
-    body = f"""<h1>小選手，大目標。</h1>
+    body = f"""<section class="hero" data-court="rally"><div class="hero-text"><h1>小選手，大目標。</h1>
 <p>羽球學習與教練資料站：學生從細節開始練，教練用研究和科技安排訓練。</p>
+<p class="hero-tip">背景是自動對打的 3D 羽球場；點一下球場空白處，就會朝那裡殺球。</p></div></section>
 <div class="grid">{cards}</div>
 <article class="card"><small>每星期六早上 8 點自動更新</small><h2 style="border:0;padding:0;margin-top:.4em">最近更新：{zh_date(last['date'])}</h2><ul>{upd}</ul><p><a href="updates/">看全部更新紀錄 →</a></p></article>
 <article class="card"><small>另一個網站</small><h2 style="border:0;padding:0;margin-top:.4em">手指發力 3D 互動教學</h2><p>用 3D 手骨模型看手指怎樣用力，5 個步驟配旁白。</p><p class="big"><a href="https://winglao.github.io/badminton-finger-biomechanics/">打開 3D 教學</a></p></article>

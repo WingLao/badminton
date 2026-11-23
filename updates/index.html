@@ -44,6 +44,16 @@ blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);colo
 .callout.tip{border-left-color:var(--green)}
 .big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
 footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.hero.band{min-height:clamp(230px,32vh,280px)}
+.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
 @media (max-width:640px){
  table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
  table.cards thead{display:none}
@@ -57,7 +67,7 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 <body>
 <nav class="top" aria-label="網站導覽"><a href="../">首頁</a><a href="../learn/">學生學習</a><a href="../technology/">教練科技</a><a href="../research/">教練研究</a><a href="../skills/">工具說明</a><a href="../updates/" class="on">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
-<p class="crumb"><a href="../">首頁</a> › 更新紀錄</p><h1>更新紀錄</h1><p>網站每星期六早上 8 點（澳門時間）自動檢查本機資料：有新的研究筆記就新增一期，教學與科技來源有修改就同步，再檢查連結並發佈。需要人手核對的內容（例如新影片是否免費）會列為「待整理」，不會自動放上學生頁。</p><article class="card"><small>首次整站建立</small><h3>2026 年 11 月 23 日</h3><ul><li>整站改版：新增教練研究、工具說明、更新紀錄三個分類，首頁改為四個分類入口</li><li>學生學習新增一期：手指發力（learn/badminton-2026-11-23/）</li><li>工具說明新增：AVANCO 兩個 skill 的用途與步驟（skills/badminton-2026-11-23/）</li><li>教練研究新增一期：26 篇整理、3,080 筆文獻目錄（research/badminton-2026-11-23/）</li></ul></article>
+<p class="crumb"><a href="../">首頁</a> › 更新紀錄</p><h1>更新紀錄</h1><p>網站每星期六早上 8 點（澳門時間）自動檢查本機資料：有新的研究筆記就新增一期，教學與科技來源有修改就同步，再檢查連結並發佈。需要人手核對的內容（例如新影片是否免費）會列為「待整理」，不會自動放上學生頁。</p><article class="card"><small>首次整站建立</small><h3>2026 年 11 月 23 日</h3><ul><li>整站改版：新增教練研究、工具說明、更新紀錄三個分類，首頁改為四個分類入口</li><li>學生學習新增一期：手指發力（learn/badminton-2026-11-23/）</li><li>工具說明新增：AVANCO 兩個 skill 的用途與步驟（skills/badminton-2026-11-23/）</li><li>教練研究新增一期：26 篇整理、3,080 筆文獻目錄（research/badminton-2026-11-23/）</li><li>首頁與分類目錄加入 p5.js 3D 羽球場動畫（改編自 P5js 作品 bg_light_art、bg_mono_v2）</li></ul></article>
 <footer>badminton · 小選手，大目標 · <a href="../">回首頁</a></footer>
 </main>
 <script>

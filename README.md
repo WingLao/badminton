@@ -49,6 +49,9 @@ tools/
   weekly_update.sh                # 每週六 08:00 自動更新並部署
   check_site.py                   # 發佈前連結檢查
   site_config.json                # 分類與每期標題
+assets/
+  court.js                        # 首頁與分類目錄頂部的 p5.js 3D 羽球場動畫
+  vendor/p5.min.js                # p5.js 函式庫（本機副本）
 ```
 
 日期採澳門時間。2026-11-15 是整理／發佈日期，影片收錄期間為 2026/10/16–11/15。

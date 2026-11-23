@@ -44,6 +44,16 @@ blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);colo
 .callout.tip{border-left-color:var(--green)}
 .big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
 footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.hero.band{min-height:clamp(230px,32vh,280px)}
+.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
 @media (max-width:640px){
  table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
  table.cards thead{display:none}
@@ -57,7 +67,7 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 <body>
 <nav class="top" aria-label="網站導覽"><a href="../">首頁</a><a href="../learn/">學生學習</a><a href="../technology/">教練科技</a><a href="../research/">教練研究</a><a href="../skills/" class="on">工具說明</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
-<p class="crumb"><a href="../">首頁</a> › 工具說明</p><h1>工具說明</h1><p><span class="tag">AVANCO 後台維護者</span></p><p>AVANCO 報名後台的兩個開發工具（skill）說明：用途、甚麼時候用、做事步驟。只介紹做法，不公開任何網址、帳號或密碼設定。</p><p class="muted">每一期按日期排列，最新的在最上面。</p><article class="card"><small>2026 年 11 月 23 日 · 最新</small><h3><a href="badminton-2026-11-23/">AVANCO 兩個 skill 說明</a></h3><p>avanco-cross-computer（換電腦架設系統）與 avanco-activity-admin-template（後台新增活動頁）的用途與步驟。</p><p><a href="badminton-2026-11-23/">打開這一期 →</a></p></article>
+<p class="crumb"><a href="../">首頁</a> › 工具說明</p><section class="hero band" data-court="mono" data-hue="25"><div class="hero-text"><h1>工具說明</h1><p><span class="tag">AVANCO 後台維護者</span></p></div></section><p>AVANCO 報名後台的兩個開發工具（skill）說明：用途、甚麼時候用、做事步驟。只介紹做法，不公開任何網址、帳號或密碼設定。</p><p class="muted">每一期按日期排列，最新的在最上面。</p><article class="card"><small>2026 年 11 月 23 日 · 最新</small><h3><a href="badminton-2026-11-23/">AVANCO 兩個 skill 說明</a></h3><p>avanco-cross-computer（換電腦架設系統）與 avanco-activity-admin-template（後台新增活動頁）的用途與步驟。</p><p><a href="badminton-2026-11-23/">打開這一期 →</a></p></article>
 <footer>badminton · 小選手，大目標 · <a href="../">回首頁</a></footer>
 </main>
 <script>
@@ -70,5 +80,7 @@ document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.query
 if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
 })();
 </script>
+<script src="../assets/vendor/p5.min.js" defer></script>
+<script src="../assets/court.js" defer></script>
 </body>
 </html>
