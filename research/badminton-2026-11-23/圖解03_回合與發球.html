@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圖解 03｜一分怎麼打：發球、回合與主動權｜教練研究</title>
+<meta name="description" content="動畫看發球 1.15 m 規則與球路；數據看長回合比例、網前球與混雙前三拍。">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
+.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
+.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
+h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a href="../../">首頁</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><div class="card"><small>教練研究 · 整理日期 2026-11-17 · 依原研究整理，不是原文全文</small></div><h1 id="圖解-03一分怎麼打發球回合與主動權">圖解 03｜一分怎麼打：發球、回合與主動權</h1>
+<p>完整研究：<a href="03_戰術分析.html">03_戰術分析</a>、<a href="11_補充_跨章新增研究.html">11_補充_跨章新增研究</a>　·　回到 <a href="index.html">首頁</a></p>
+<div class="callout abstract">
+<p class="callout-title">📌 重點摘要卡</p>
+
+<ul>
+<li><strong>一句話核心：</strong> 主動權常在網前與前三拍取得，不只在最後一拍。</li>
+<li><strong>關鍵數據：</strong> 網前球製造正向擾動約 30.1%｜長回合男 19.4%、女 16.5%｜混雙短發 93–96%｜發球高度 ≤1.15 m</li>
+<li><strong>因果流程：</strong> <code>發球與接發品質</code> ➔ <code>第 3 拍取得主動（正向擾動）</code> ➔ <code>進攻得分</code></li>
+<li><strong>跨域應用：</strong> <strong>羽球訓練</strong>：影片分析改記「轉折拍」。<strong>數據模型</strong>：事件序列分析，找狀態轉換點而非終點事件。<strong>IT 教學</strong>：用回合紀錄表做資料標記與統計練習。</li>
+</ul>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 先猜一猜</p>
+
+<p>世錦賽單打中，最常把局面「扭轉成對自己有利」的擊球是<strong>殺球</strong>還是<strong>網前球</strong>？ 答案：<strong>網前球</strong>（約 30.1%）。殺球常是最後一拍，但主動權常在更早的網前就拿到了。</p>
+</div>
+
+<h2 id="clapper-動畫一分的球路與發球規則">🎬 動畫：一分的球路與發球規則</h2>
+<p><img src="圖片/圖_動畫/03_回合與發球_202611171214.svg" alt="一分怎麼打：發球規則與回合結構" /></p>
+<p>紫色虛線＝<strong>1.15 m</strong>。發球擊球的瞬間，整顆球必須在這條線以下（BWF 2018 年起使用的固定高度規則）。</p>
+<h2 id="bar_chart-數據一覽">📊 數據一覽</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th style="text-align: right;">數值</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>男單長回合佔比</td>
+<td style="text-align: right;">19.4%（13–79 秒、14–72 拍）</td>
+<td>第 11 章</td>
+</tr>
+<tr>
+<td>女單長回合佔比</td>
+<td style="text-align: right;">16.5%（11–56 秒、11–52 拍）</td>
+<td>第 11 章</td>
+</tr>
+<tr>
+<td>正向擾動擊球來自網前球</td>
+<td style="text-align: right;">約 30.1%</td>
+<td>Hammes &amp; Link 2024，2022 世錦賽</td>
+</tr>
+<tr>
+<td>混雙決賽短發球比例</td>
+<td style="text-align: right;">約 93–96%</td>
+<td>葉宏蔚 2025（1 場決賽）</td>
+</tr>
+<tr>
+<td>混雙接發以推球為主</td>
+<td style="text-align: right;">約 69–78%</td>
+<td>葉宏蔚 2025</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compass-把最後一拍改成轉折那一拍">🧭 把「最後一拍」改成「轉折那一拍」</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode mermaid"><code class="sourceCode mermaid"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">flowchart</span> <span class="cn">LR</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">S</span>[<span class="st">&quot;發球&quot;</span>] <span class="pp">--&gt;</span> <span class="dt">R</span>[<span class="st">&quot;接發&quot;</span>] <span class="pp">--&gt;</span> <span class="dt">T3</span>[<span class="st">&quot;第 3 拍&quot;</span>] <span class="pp">--&gt;</span> <span class="dt">P</span>{<span class="st">&quot;誰拿到主動？&quot;</span>}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">P</span> <span class="pp">--&gt;</span><span class="vs">|正向擾動|</span> <span class="dt">W</span>[<span class="st">&quot;我方進攻 → 得分&quot;</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">P</span> <span class="pp">--&gt;</span><span class="vs">|負向擾動|</span> <span class="dt">L</span>[<span class="st">&quot;被壓制 → 失分&quot;</span>]</span></code></pre></div>
+<p>看比賽影片時，不要只記「誰殺死」，而是找<strong>局面開始轉向</strong>的那一拍。</p>
+<h2 id="brain-延伸知識">🧠 延伸知識</h2>
+<div class="callout note">
+<p class="callout-title">📝 得分規則（BWF）</p>
+
+<ul>
+<li>每局 21 分，每一球都計分（每球得分制）。</li>
+<li>20：20 後要領先 2 分；29：29 時先得第 30 分者勝。</li>
+<li>一局有人先到 11 分，可休息最多 60 秒；局與局之間 120 秒。</li>
+</ul>
+</div>
+
+<div class="callout note">
+<p class="callout-title">📝 羽球是「出手最快、減速也最快」的球</p>
+
+<p>羽毛的球裙產生很大的空氣阻力，殺球初速雖可超過 400 km/h，飛到對手時已大幅減速。所以高水準接殺比想像中可能，關鍵在<strong>提早判斷</strong>（見 <a href="圖解04_敏捷.html">圖解 04</a>）。</p>
+</div>
+
+<div class="callout tip">
+<p class="callout-title">💡 訓練應用</p>
+
+<p>主體練 5–10 秒間歇；約五分之一安排 15–30 秒以上的長回合，並刻意練「長回合後的下一分」。</p>
+</div>
+
+<div class="callout warning">
+<p class="callout-title">⚠️ 判讀界線</p>
+
+<p>比賽分析是<strong>描述</strong>頂尖選手怎樣打，不是訓練效果研究；混雙數據只來自 1 場決賽。</p>
+</div>
+
+<h2 id="white_check_mark-30-秒自我測驗">✅ 30 秒自我測驗</h2>
+<div class="callout question">
+<p class="callout-title">❓ 1. 發球規則的 1.15 m 量的是甚麼？</p>
+
+<p>發球擊球瞬間，整顆球的高度必須低於 1.15 m。</p>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 2. 單打長回合大約佔幾成？對間歇訓練有甚麼啟示？</p>
+
+<p>約 16–19%。大部分練短間歇，約五分之一練長回合。</p>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 3. 哪一種擊球最常製造正向擾動？</p>
+
+<p>網前球（約 30%）。</p>
+</div>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

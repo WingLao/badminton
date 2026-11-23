@@ -4,9 +4,13 @@
 
 `learn/` 學習頁採手機優先排版，文字面向國一至國三（F1–F3）中學生：以五項成長細節選題，每項涵蓋準備、擊球、下一拍的觀察，並提供固定來球、變化來球到回合應用的練習路線。試練標記只保存在裝置瀏覽器，不會上傳，也不表示技能已掌握。
 
-- [線上學習精華](https://winglao.github.io/badminton/learn/badminton-2026-11-15/)
-- [羽球科技速覽](https://winglao.github.io/badminton/technology/badminton-2026-11-15/)
 - [網站首頁](https://winglao.github.io/badminton/)
+- [學生學習：手指發力](https://winglao.github.io/badminton/learn/badminton-2026-11-23/)
+- [學生學習：五項基礎細節](https://winglao.github.io/badminton/learn/badminton-2026-11-15/)
+- [教練科技：羽球科技速覽](https://winglao.github.io/badminton/technology/badminton-2026-11-15/)
+- [教練研究：羽球研究筆記](https://winglao.github.io/badminton/research/badminton-2026-11-23/)
+- [工具說明：AVANCO 兩個 skill](https://winglao.github.io/badminton/skills/badminton-2026-11-23/)
+- [更新紀錄](https://winglao.github.io/badminton/updates/)
 
 ## 資料夾
 
@@ -22,11 +26,29 @@ learn/
     羽球YouTube教學月報_20261016-20261115.md
     圖片/
     資料/                         # 報告引用的公開來源與整理紀錄
+  badminton-2026-11-23/
+    index.html                    # 手指發力：五個細節、四個練習階段
+    手指發力_學習精華.md
+    圖片/
 technology/
   index.html                      # 科技分類目錄
   badminton-2026-11-15/
     index.html                    # 2026 羽球科技速覽
     圖片/
+research/
+  index.html                      # 教練研究目錄
+  badminton-2026-11-23/           # 由 tools/build_site.py 從研究筆記自動產生
+    index.html、各章 .html、文獻目錄.html
+    圖片/、資料/文獻總目錄.json
+skills/
+  badminton-2026-11-23/index.html # AVANCO 兩個 skill 說明
+updates/
+  index.html                      # 每週更新紀錄（自動產生）
+tools/
+  build_site.py                   # 建站：同步來源、轉換研究筆記、重建目錄
+  weekly_update.sh                # 每週六 08:00 自動更新並部署
+  check_site.py                   # 發佈前連結檢查
+  site_config.json                # 分類與每期標題
 ```
 
 日期採澳門時間。2026-11-15 是整理／發佈日期，影片收錄期間為 2026/10/16–11/15。
@@ -37,7 +59,7 @@ technology/
 
 ## 更新
 
-將新一期資料新增到 `learn/badminton-YYYY-MM-DD/`，並更新首頁與 `learn/index.html` 的連結。GitHub Pages 從 `main` 分支根目錄發佈。
+每星期六早上 8 點（澳門時間）自動執行 `bash tools/weekly_update.sh`：同步本機來源、重建首頁與目錄、檢查連結、推送並核對線上版本。手動新增一期時，把資料放進 `<分類>/badminton-YYYY-MM-DD/`，在 `tools/site_config.json` 加上該期，再執行 `python3 tools/build_site.py` 重建首頁與目錄。GitHub Pages 從 `main` 分支根目錄發佈。
 
 ## 免費來源修訂（2026-11-15）
 

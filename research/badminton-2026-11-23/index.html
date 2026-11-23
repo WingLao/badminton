@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>教練研究 2026-11-23｜羽球研究筆記</title>
+<meta name="description" content="把 2021–2026 年的羽球運動科學研究，變成看得懂、用得上的動畫圖解與數據。">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
+.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
+.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
+h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a href="../../">首頁</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › 2026 年 11 月 23 日</p><div class="card"><small>教練研究 · 給教練 · 2026 年 11 月 23 日 更新</small><p>本期共 <b>26</b> 篇整理、<b>3,080</b> 筆文獻目錄。內容由本機研究筆記自動轉成網頁；論文全文因版權與檔案大小不上傳，請用各篇的 DOI（論文的固定網址）連到原出處。</p><p class="big"><a href="文獻目錄.html">搜尋 3,080 筆文獻目錄</a></p></div><h1 id="羽球研究筆記用數據看懂羽球">羽球研究筆記：用數據看懂羽球</h1>
+<div class="callout tip">
+<p class="callout-title">💡 一句話</p>
+
+<p>這裡把一百多篇羽球與運動科學研究，整理成<strong>動畫、圖表和數字</strong>。每個結論都附來源，也會說清楚研究「不能」證明甚麼。</p>
+</div>
+
+<p><img src="圖片/圖_動畫/00_首頁_球場動畫_202611171214.svg" alt="一場回合，在 13.40 × 6.10 m 裡發生" /></p>
+<h2 id="你知道嗎先挑一題點進去">你知道嗎？先挑一題點進去</h2>
+<table>
+<thead>
+<tr>
+<th>這個問題你答得出嗎？</th>
+<th>答案在這裡</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多球練 10 秒和練 50 秒，<strong>心率差不多</strong>，身體用的能量卻不同。為甚麼？</td>
+<td><a href="圖解01_多球訓練法.html">🔥 圖解 01 多球</a></td>
+</tr>
+<tr>
+<td>頂尖單打的回合，長回合佔幾成？發球規則 <strong>1.15 m</strong> 又改變了甚麼？</td>
+<td><a href="圖解03_回合與發球.html">🏸 圖解 03 戰術</a></td>
+</tr>
+<tr>
+<td>步法跑得快，為甚麼比賽還是<strong>慢半拍</strong>？</td>
+<td><a href="圖解04_敏捷.html">⚡ 圖解 04 敏捷</a></td>
+</tr>
+<tr>
+<td>100 個本來會受傷的人，做<strong>肌力訓練</strong>後剩幾個？做<strong>伸展</strong>呢？</td>
+<td><a href="圖解05_肌力與弓步.html">💪 圖解 05 肌力</a></td>
+</tr>
+<tr>
+<td>一週課表怎樣用<strong>一條算式</strong>算出負荷？</td>
+<td><a href="圖解08_一週負荷.html">📅 圖解 08 課表</a></td>
+</tr>
+<tr>
+<td>一局發球方拿到幾分，<strong>勝負幾乎已定</strong>？</td>
+<td><a href="圖解10_發球得分.html">🎯 圖解 10 四國研究</a></td>
+</tr>
+<tr>
+<td>教練不講標準動作，選手怎樣<strong>自己學會</strong>？</td>
+<td><a href="圖解12_CLA限制導向.html">🧩 圖解 12 CLA</a></td>
+</tr>
+<tr>
+<td>韓國精英選手受傷後，<strong>三分之二</strong>做錯了哪一步？</td>
+<td><a href="圖解13_精英傷病.html">🩹 圖解 13 傷病</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="羽球的-8-個數字">羽球的 8 個數字</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">數字</th>
+<th>意思</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>565 km/h</strong></td>
+<td>殺球初速的金氏世界紀錄（2023，印度 Satwiksairaj Rankireddy，測試環境，非正式比賽）</td>
+<td>金氏世界紀錄</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>13.40 × 6.10 m</strong></td>
+<td>雙打場地；單打寬 5.18 m</td>
+<td>BWF 規則</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1.55 m</strong></td>
+<td>網柱處網高；中央 1.524 m</td>
+<td>BWF 規則</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4.74–5.50 g</strong></td>
+<td>一顆羽毛球的重量，16 根羽毛</td>
+<td>BWF 規則</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1.15 m</strong></td>
+<td>發球擊球瞬間，整顆球須低於此高度</td>
+<td>BWF 規則（2018 起）</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>60 秒／120 秒</strong></td>
+<td>一局到 11 分的休息／局與局之間的休息</td>
+<td>BWF 規則</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>約 57%</strong></td>
+<td>比賽能量來自有氧系統（模型估算）</td>
+<td><a href="01_多球訓練法.html">第 01 章</a></td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>0.315</strong></td>
+<td>肌力訓練後的受傷相對風險（約降到三分之一）</td>
+<td><a href="05_肌力分析.html">第 05 章</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="章節地圖">章節地圖</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode mermaid"><code class="sourceCode mermaid"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">flowchart</span> <span class="cn">LR</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">A</span>[<span class="st">&quot;🏸 比賽需要甚麼？</span><span class="sc">&lt;br/&gt;</span><span class="st">03 戰術・10 四國研究&quot;</span>] <span class="pp">--&gt;</span> <span class="dt">B</span>[<span class="st">&quot;💪 身體能力</span><span class="sc">&lt;br/&gt;</span><span class="st">04 敏捷・05 肌力&quot;</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">A</span> <span class="pp">--&gt;</span> <span class="dt">C</span>[<span class="st">&quot;🔥 怎樣練</span><span class="sc">&lt;br/&gt;</span><span class="st">01 多球・02 其他訓練・12 CLA&quot;</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">B</span> <span class="pp">--&gt;</span> <span class="dt">D</span>[<span class="st">&quot;📅 排成課表</span><span class="sc">&lt;br/&gt;</span><span class="st">08 教練實務&quot;</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">C</span> <span class="pp">--&gt;</span> <span class="dt">D</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">E</span>[<span class="st">&quot;🧠 動作學習與筋膜</span><span class="sc">&lt;br/&gt;</span><span class="st">06・07&quot;</span>] <span class="pp">--&gt;</span> <span class="dt">D</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">F</span>[<span class="st">&quot;🎯 心理技能</span><span class="sc">&lt;br/&gt;</span><span class="st">09&quot;</span>] <span class="pp">--&gt;</span> <span class="dt">D</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">D</span> <span class="pp">--&gt;</span> <span class="dt">G</span>[<span class="st">&quot;🩹 恢復、傷害、復出</span><span class="sc">&lt;br/&gt;</span><span class="st">13&quot;</span>]</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>想做甚麼</th>
+<th>從這裡開始</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5 分鐘了解羽球科學</td>
+<td>先看上面的圖解頁，每頁一張動畫</td>
+</tr>
+<tr>
+<td>排下週課表</td>
+<td><a href="08_教練實務整合_從研究到課表.html">08 教練實務整合</a></td>
+</tr>
+<tr>
+<td>讀完整研究和判讀界線</td>
+<td><a href="00_羽球研究總覽.html">研究總覽</a></td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">ℹ️ 怎樣讀這些數字</p>
+
+<p>每張圖下方都寫明資料來源和章節。<strong>示意動畫</strong>只說明概念，不是比賽實測；標明「示範」的數值是按課表假設算出，不是研究結果。</p>
+</div>
+<h2>研究章節（完整版）</h2><p class="muted">每章整理一個主題的研究、證據強弱與教練應用。</p><ul><li><a href="00_羽球研究總覽.html">羽球研究筆記總覽</a><br><small>近五年羽球與運動科學研究的整理：多球、體能、戰術、敏捷、肌力、運動行為、筋膜與動作控制，以及教練實務整合。</small></li><li><a href="01_多球訓練法.html">01｜多球訓練法</a><br><small>多球餵球的間歇長短、代謝負荷與技術學習證據，以及如何轉成課表。</small></li><li><a href="02_其他訓練法.html">02｜其他訓練法</a><br><small>綜合體能、兒童羽球課程、整合式神經肌肉訓練、視覺訓練與特奧課程的證據整理。</small></li><li><a href="03_戰術分析.html">03｜戰術分析（技術與戰術）</a><br><small>擾動分析、五項目時間結構、男雙發接發、雙打控制區與混雙前三拍的比賽分析研究。</small></li><li><a href="04_敏捷體能分析.html">04｜敏捷體能分析</a><br><small>平衡、增強式、影子步法、光動反應等介入，以及羽球專項變向測驗的信效度。</small></li><li><a href="05_肌力分析.html">05｜肌力分析</a><br><small>阻力、增強式、核心與複合式訓練對羽球選手體能與跨步力學的證據。</small></li><li><a href="06_運動行為與運動訓練_vs_筋膜訓練.html">06｜運動行為、運動訓練與筋膜相關介入</a><br><small>運動參與、動作學習、長期訓練，以及泡棉滾筒、伸展、手法、貼紮等筋膜相關介入的證據比較。</small></li><li><a href="07_動作發展_動作控制與筋膜_近五年研究.html">07｜動作發展、動作控制與筋膜：近五年研究</a><br><small>兒童動作發展、筋膜感覺功能、本體感覺訓練、動作學習保留與轉移，以及肌力負荷適應的 16 篇研究。</small></li><li><a href="08_教練實務整合_從研究到課表.html">08｜教練實務整合：從研究到課表</a><br><small>把第 01–07 章的研究與運動科學基礎知識整合成可執行的課表、監控、動作學習、恢復與傷害預防原則。</small></li><li><a href="09_心理技能與分間例行程序.html">09｜心理技能與分間例行程序</a><br><small>心理技能訓練（PST）、分間與賽前例行程序、意象、自我對話、目標設定、放鬆；面授約三個月的 PST；中學前八名選手的教練流程。</small></li><li><a href="10_四國研究與制度.html">10｜四國研究與制度（日本、法國、台灣、韓國）</a><br><small>日本青少年代表分級與影片支援、法國 INSEP／FFBaD、台灣相子元鞋底生物力學與劉有德動態系統學習觀、韓國比賽分析與國家隊研究。</small></li><li><a href="11_補充_跨章新增研究.html">11｜補充：跨章新增研究</a><br><small>預判介入研究、頂尖比賽回合結構與青少年 HIIT、多球負荷的矛盾證據、sRPE 效度與減量；各篇標明延伸哪一章。</small></li><li><a href="12_限制導向動作學習_CLA_羽球應用.html">12 限制導向動作學習（CLA）— 羽球教學版</a></li><li><a href="13_補充_影片回饋_教練溝通_精英嚴重傷病.html">13｜補充：影片回饋、教練溝通與精英嚴重傷病</a><br><small>2026-11 新發表三篇：影片／科技回饋系統性回顧、教練對選手溝通範圍回顧、韓國精英單打 vs 雙打嚴重肌腱軟骨傷；各篇標明延伸哪一章。</small></li><li><a href="14_補充_變向訓練_殺球動作控制_聽覺預判_青年負荷.html">14｜補充：變向訓練、殺球動作控制、聽覺與預判、青年比賽負荷</a><br><small>2026-11 新發表四篇：羽球變向訓練貝氏網絡統合分析、動作控制訓練對殺球的隨機試驗、聽覺剝奪對擋殺與預判的場地實驗、青年比賽 RPE 與外部負荷；各篇標明延伸哪一章。</small></li></ul><h2>圖解版（先看這裡）</h2><p class="muted">用動畫、圖表和數字講一個問題，5 分鐘看完。</p><ul><li><a href="圖解01_多球訓練法.html">圖解 01｜多球：心率一樣，練到的卻不一樣</a><br><small>用動畫看懂多球間歇長短如何改變能量系統、乳酸與移動距離。</small></li><li><a href="圖解03_回合與發球.html">圖解 03｜一分怎麼打：發球、回合與主動權</a><br><small>動畫看發球 1.15 m 規則與球路；數據看長回合比例、網前球與混雙前三拍。</small></li><li><a href="圖解04_敏捷.html">圖解 04｜敏捷：跑得快，為甚麼還是慢半拍？</a><br><small>敏捷的兩個成分（知覺決策＋變向速度）、測驗誤差 CV 與真進步門檻。</small></li><li><a href="圖解05_肌力與弓步.html">圖解 05｜肌力：最被低估的防傷工具</a><br><small>弓步受力動畫、肌力／平衡／伸展的防傷效果比較，以及台灣國中選手複合式訓練數據。</small></li><li><a href="圖解08_一週負荷.html">圖解 08｜一條算式管好一週訓練負荷</a><br><small>session-RPE 負荷計算、單調度與壓力值、恢復優先順序與賽前減量。</small></li><li><a href="圖解10_發球得分.html">圖解 10｜一局發球方拿幾分，勝負幾乎已定？</a><br><small>韓國決策樹研究的發球得分門檻，以及日本、法國、台灣研究的重點數字。</small></li><li><a href="圖解12_CLA限制導向.html">圖解 12｜不講標準動作，選手怎樣自己學會？</a><br><small>限制導向動作學習（CLA）的三類限制動畫、教學循環與兩個羽球練習範例圖。</small></li><li><a href="圖解13_精英傷病.html">圖解 13｜三分之二選手沒等醫生批准就回場</a><br><small>韓國 126 名精英選手的嚴重傷病數據、五大診斷與復出管理缺口。</small></li></ul><h2>附錄與紀錄</h2><p class="muted">課堂筆記、書單與文獻整理過程。</p><ul><li><a href="2026-10-02_課堂筆記_筋膜訓練與運動行為.html">2026-10-02 課堂筆記：筋膜訓練與運動行為</a><br><small>課堂筋膜討論的重點、需要更正的引用，以及可延伸的研究問題。</small></li><li><a href="文獻整理與清理紀錄.html">文獻整理與清理紀錄</a><br><small>文獻收集、去重、章節新增與審閱更正的紀錄。</small></li><li><a href="附錄_台灣繁體中文_訓練與筋膜書單.html">附錄｜台灣繁體中文：運動訓練與筋膜書單</a><br><small>台灣可取得的繁體中文訓練、筋膜解剖與動作實作書單，以及如何與研究論文對照閱讀。</small></li></ul>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

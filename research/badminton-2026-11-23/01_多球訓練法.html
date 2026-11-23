@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>01｜多球訓練法｜教練研究</title>
+<meta name="description" content="多球餵球的間歇長短、代謝負荷與技術學習證據，以及如何轉成課表。">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
+.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
+.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
+h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a href="../../">首頁</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><div class="card"><small>教練研究 · 整理日期 2026-10-04 · 依原研究整理，不是原文全文</small></div><h1 id="01多球訓練法">01｜多球訓練法</h1>
+<p>返回 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a>；相關章節：<a href="03_戰術分析.html">03_戰術分析</a>、<a href="04_敏捷體能分析.html">04_敏捷體能分析</a>、<a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a>。</p>
+<div class="callout summary">
+<p class="callout-title">📌 一分鐘看完</p>
+
+<ul>
+<li><strong>高水準選手</strong>：多球可以製造比模擬比賽更高的心率、移動密度與代謝負荷（證據一致，但都是單次負荷研究）。</li>
+<li><strong>間歇長短決定能量系統</strong>：10 秒偏磷酸肌酸、反覆快速輸出；50 秒提高糖解與乳酸，但每分鐘移動距離下降。</li>
+<li><strong>初學者技術進步</strong>：目前證據設計較弱（單組前後測、分組方式不清），只能當「可能有效」。</li>
+<li><strong>教練重點</strong>：先決定目標（速度／乳酸耐受／技術穩定），再設定工作時間、休息比與品質標準。</li>
+</ul>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>研究</th>
+<th>對象</th>
+<th>設計</th>
+<th>證據</th>
+<th>一句話</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alvarez-Dacal 2025</td>
+<td>42 名國家級青少年</td>
+<td>交叉、單次負荷</td>
+<td>🔵</td>
+<td>多球心率約 184，模擬比賽約 153</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Edel 2023</td>
+<td>19 名國際排名選手</td>
+<td>隨機順序、單次</td>
+<td>🔵</td>
+<td>間歇越長乳酸越高、移動越慢</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Edel 2024</td>
+<td>16 名菁英</td>
+<td>能量系統模型估算</td>
+<td>🔵</td>
+<td>比賽約 57% 氧化；10 秒多球偏磷酸肌酸</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Li &amp; Hongsaenyatham 2023</td>
+<td>26 名 9–11 歲男童</td>
+<td>單組前後測</td>
+<td>🟠</td>
+<td>八週後技術測驗進步，無對照</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Tang &amp; Lim 2025</td>
+<td>50 名體育系學生</td>
+<td>兩組，分派不明</td>
+<td>🟠</td>
+<td>多球組落點較佳，設計交代不足</td>
+</tr>
+</tbody>
+</table>
+<p>證據符號說明見 <a href="00_羽球研究總覽.html#證據符號">證據符號</a>。</p>
+<h2 id="研究問題">研究問題</h2>
+<p>多球餵球能控制來球位置、節奏與休息時間。讀這一章時，先分清楚研究測量的是<strong>當下負荷</strong>、<strong>球路命中率</strong>，還是<strong>長期比賽表現</strong>；三者不能互相代替。</p>
+<h2 id="1-多球與模擬比賽的單次負荷">1. 多球與模擬比賽的單次負荷</h2>
+<p><strong>文獻與出處</strong>：Alvarez-Dacal 等（2025），<em>Training vs. Competition: Load and Intensity Differences Between Multi-Feeding and Simulated Match Play in High-Level Youth Badminton Players</em>，<em>Applied Sciences</em>。 <a href="https://doi.org/10.3390/app15137451">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：42 名國家級或國際級青少年選手，每人於不同日完成多球與模擬比賽。多球共 6 組、每組 5 分鐘，組內以 10 秒動作／7 秒休息交替；感測器與心率帶記錄移動、跳躍、心率及主觀負荷。</li>
+<li><strong>結果</strong>：多球的每分鐘移動距離、跳躍頻率及平均心率高於模擬比賽。男女平均心率約 184–185 下／分，模擬比賽約 152–154 下／分。</li>
+<li><strong>結論</strong>：這種多球安排可提供高密度的心肺與移動刺激，強度應依個人恢復能力調整。</li>
+<li><strong>判讀界線</strong>：只測單次負荷，沒有測數週後的球技或比賽成績；不能說多球比實戰更能提升競技能力。詳見 完整單篇統整（此連結位於上層資料夾，只在本機 Obsidian 可開啟）。</li>
+</ul>
+<h2 id="2-103050-秒多球間歇的差異">2. 10、30、50 秒多球間歇的差異</h2>
+<p><strong>文獻與出處</strong>：Edel 等（2023），<em>Training drills in high performance badminton—effects of interval duration on internal and external loads</em>，<em>Frontiers in Physiology</em>。 <a href="https://doi.org/10.3389/fphys.2023.1189688">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：19 名有國際排名的選手在 3 個實驗日完成教練隨機餵球；單次工作時間分別為 10、30、50 秒，工作／休息比均為 1：1，總有效擊球時間均為 600 秒。測心肺、乳酸、移動與影片擊球表現。</li>
+<li><strong>結果</strong>：平均耗氧量、心率及擊球準確率在三種間歇間差異不明顯；血乳酸約由 3.6 增至 5.6、7.3 mmol/L。50 秒條件的每分鐘移動距離低於 10 秒條件（約 65 比 76 公尺）。</li>
+<li><strong>結論</strong>：延長間歇會提高無氧糖解刺激，同時可能降低移動速度與密度；要依體能或技術目標選擇間歇。</li>
+<li><strong>判讀界線</strong>：這是單次實驗，不代表 50 秒訓練的長期效果較差。</li>
+</ul>
+<div class="callout tip">
+<p class="callout-title">💡 教練觀察</p>
+
+<p>心率在三種間歇間差不多，但乳酸差了一倍。<strong>只看心率表會誤判訓練性質</strong>：心率反映的是整體心肺負荷，不能分辨磷酸肌酸與糖解的比重。要區分能量系統，需看工作時間、休息比，必要時測乳酸或用主觀用力（RPE）輔助。</p>
+</div>
+
+<h2 id="3-多球間歇與能量系統">3. 多球間歇與能量系統</h2>
+<p><strong>文獻與出處</strong>：Edel 等（2024），<em>Metabolic profile in elite badminton match play and training drills</em>，<em>European Journal of Sport Science</em>。 <a href="https://doi.org/10.1002/ejsc.12196">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：16 名菁英選手中，7 人參與訓練賽、13 人參與 10／10、30／30、50／50 秒多球間歇；利用耗氧、恢復期反應及血乳酸估計氧化、磷酸肌酸與糖解系統的能量貢獻。兩種情境的人數並不完全相同。</li>
+<li><strong>結果</strong>：訓練賽的估計能量來源以氧化（約 57%）與磷酸肌酸（約 43%）為主。多球的 10 秒間歇磷酸肌酸比例約 51%，50 秒間歇約 31%；50 秒間歇的糖解比例約 12%，高於 10 秒的約 2%。</li>
+<li><strong>結論</strong>：多球間歇長短會改變代謝刺激。短間歇偏向反覆快速輸出，較長間歇提高糖解負荷。</li>
+<li><strong>判讀界線</strong>：各能量比例來自模型估算；不能直接當作每名選手的固定比例。</li>
+</ul>
+<div class="callout note">
+<p class="callout-title">📝 運動科學補充：為什麼比賽幾乎不靠糖解？</p>
+
+<p>羽球回合短、回合間有休息，屬於<strong>高強度間歇運動</strong>。磷酸肌酸在每拍爆發時快速供能，回合間的休息靠<strong>有氧系統</strong>把磷酸肌酸補回來（教科書常見數據：約 30 秒回復一半、3–5 分鐘接近完全回復）。所以有氧能力在羽球中的角色不是「打長回合」，而是<strong>加快回合間的恢復</strong>。這也解釋 Edel 2024 的結果：比賽中氧化與磷酸肌酸合計接近 100%，糖解很少。 實務含義：只練 50 秒長間歇會偏離比賽的代謝型態；但在準備期適量加入，可提高選手對長回合與乳酸的耐受。</p>
+</div>
+
+<h2 id="4-八週多球與初學兒童基本擊球">4. 八週多球與初學兒童基本擊球</h2>
+<p><strong>文獻與出處</strong>：Li 與 Hongsaenyatham（2023），<em>The Effects of Multi-ball Training Program on Badminton Skills of Male Students Aged Between 9-11 Years</em>，<em>International Journal of Sociologies and Anthropologies Science Reviews</em>。 <a href="https://doi.org/10.60027/ijsasr.2023.3283">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：26 名 9–11 歲、未學過基本羽球技術的男童，接受 8 週多球課程；以同一組的訓練前、第 4 週與第 8 週測試高遠球、吊球、殺球、發球。</li>
+<li><strong>結果</strong>：四類技術測試在第 4 週與第 8 週相對基線均有統計上的改善。</li>
+<li><strong>結論</strong>：這套多球課程與初學兒童基本技術進步同時出現。</li>
+<li><strong>判讀界線</strong>：單組前後測，缺少一般練習的對照組；無法排除熟悉測驗及一般學習造成的進步。初學兒童本來就會因任何規律練習而快速進步，<strong>沒有對照組時，進步幾乎無法歸因於「多球」本身</strong>。</li>
+</ul>
+<h2 id="5-後場多球與單球練習的比較">5. 後場多球與單球練習的比較</h2>
+<p><strong>文獻與出處</strong>：Tang 與 Lim（2025），<em>The Role of Multi-Shuttle Training in Rear-Court Techniques in Badminton</em>，<em>International Journal of Academic Research in Progressive Education and Development</em>。 <a href="https://doi.org/10.6007/ijarped/v14-i1/24531">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：50 名體育系學生分成多球與單球練習組，各 25 人，訓練約 3 個月；後測每人 30 球，計算後場高遠球、吊球與殺球的指定落點成功率。</li>
+<li><strong>結果</strong>：多球組的五項落點成功率約 64–80%，單球組約 35–50%；訓練後即時心率約 181 比 154 下／分。</li>
+<li><strong>結論</strong>：研究者主張多球能增加後場定點擊球練習密度與即時負荷。</li>
+<li><strong>判讀界線</strong>：原文未清楚報告隨機分派及技能基線；心率較高只代表這次活動較強，不能證明長期心肺功能改善。對心理韌性的推論也未見對應量測。</li>
+</ul>
+<div class="callout warning">
+<p class="callout-title">⚠️ 學者審視：第 4、5 篇的期刊與方法</p>
+
+<p>這兩篇刊登的開放取用期刊，審稿嚴謹度差異較大。判斷時不以期刊名稱下結論，而是看方法：第 4 篇沒有對照組，第 5 篇沒有清楚交代分派與基線。兩篇加起來，<strong>仍不足以證明「多球比單球更能提升技術」</strong>。引用時建議寫成「初步訊號」。</p>
+</div>
+
+<h2 id="綜合判讀">綜合判讀</h2>
+<p>多球的<strong>餵球密度和間歇時間</strong>是可直接調整的兩個訓練變項。高水準選手的短期研究較一致地顯示：多球可以創造較高的心率、移動或代謝負荷。初學者技術進步的介入證據較少且設計較弱。若研究目標是男雙前三拍或決策，需把發接發、對手回應與站位輪轉放入訓練情境，再另外測量比賽轉移效果；可接著讀 <a href="03_戰術分析.html">03_戰術分析</a>。</p>
+<h2 id="badminton-轉成課表多球設計矩陣">🏸 轉成課表：多球設計矩陣</h2>
+<p>以下是<strong>依本章研究與一般運動生理原則推導的設計參考</strong>，不是單篇研究直接驗證的處方。</p>
+<table>
+<thead>
+<tr>
+<th>訓練目標</th>
+<th>工作時間</th>
+<th>工作：休息</th>
+<th>組數參考</th>
+<th>品質標準（未達即停）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>啟動速度、磷酸肌酸爆發</td>
+<td>5–10 秒</td>
+<td>1：3 以上</td>
+<td>6–10 組</td>
+<td>每球啟動仍有爆發、落點不掉</td>
+</tr>
+<tr>
+<td>比賽型間歇（貼近回合結構）</td>
+<td>8–15 秒</td>
+<td>1：1.5–1：2</td>
+<td>依 RPE 7–8 調整</td>
+<td>步法完整回位、不靠拖步</td>
+</tr>
+<tr>
+<td>乳酸耐受（準備期為主）</td>
+<td>30–50 秒</td>
+<td>1：1</td>
+<td>3–6 組</td>
+<td>技術動作仍可辨識，不變形</td>
+</tr>
+<tr>
+<td>技術穩定（低疲勞）</td>
+<td>自訂</td>
+<td>充分休息</td>
+<td>少量多組</td>
+<td>命中率、落點達預設標準</td>
+</tr>
+</tbody>
+</table>
+<p><strong>執行原則</strong></p>
+<ol type="1">
+<li><strong>先定品質標準，再定組數</strong>：例如「後場殺球落在指定區域 7 成以上」。品質掉到標準以下就停，避免在疲勞下重複錯誤動作。</li>
+<li><strong>固定餵球 vs 隨機餵球</strong>：初學或修正動作時用固定路線；技術穩定後改用隨機路線，加入判斷（見 <a href="08_教練實務整合_從研究到課表.html#四動作學習練習怎麼排">四、動作學習：練習怎麼排</a>）。</li>
+<li><strong>記錄負荷</strong>：每節記下工作時間、休息比、總組數與課後 RPE（0–10），以便和比賽負荷比較。</li>
+<li><strong>青少年</strong>：Alvarez-Dacal 的多球平均心率比模擬比賽高約 30 下，屬於高強度刺激，同一週不宜連續多天排高強度多球。</li>
+</ol>
+<h2 id="主動回想">主動回想</h2>
+<ol type="1">
+<li>10 秒與 50 秒多球間歇，在代謝刺激與每分鐘移動距離上有何差異？</li>
+<li>哪兩篇研究只能回答「當下負荷」，不能回答「長期技術進步」？</li>
+<li>若要證明多球比一般練習更能改善後場落點，研究設計至少還需要什麼？</li>
+<li>為什麼三種間歇的心率差不多，卻不能說它們的訓練性質相同？</li>
+</ol>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

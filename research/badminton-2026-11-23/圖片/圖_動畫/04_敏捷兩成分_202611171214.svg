@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-label="敏捷 = 會判斷 + 跑得到">
+<title>敏捷 = 會判斷 + 跑得到</title>
+<style>
+.bg{fill:#f7faf8;stroke:#d9e4df}
+.t{fill:#1f2a2e;font-family:'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif;font-size:15px}
+.m{fill:#5b6b70}.s{font-size:12.5px}.h{font-size:22px;font-weight:700}.b{font-weight:700}
+.ln{stroke:#5b6b70}.trk{fill:#e6ece9}.court{fill:#e3efe6;stroke:#1f6f5c}
+@media (prefers-color-scheme:dark){.bg{fill:#172224;stroke:#2c3b3e}.t{fill:#e6eef0}.m{fill:#9fb1b5}.ln{stroke:#9fb1b5}.trk{fill:#24312f}.court{fill:#1d3329;stroke:#7fd1a8}}
+.g{transform-box:fill-box;transform-origin:left center;animation:g 8s cubic-bezier(.2,.8,.2,1) infinite both}
+.v{transform-box:fill-box;transform-origin:center bottom;animation:g2 8s cubic-bezier(.2,.8,.2,1) infinite both}
+.f{animation:f 8s ease infinite both}
+.dash{stroke-dasharray:6 8;animation:d 1.2s linear infinite}
+.pulse{transform-box:fill-box;transform-origin:center;animation:p 1.1s ease-in-out infinite}
+@keyframes g{0%{transform:scaleX(0)}20%{transform:scaleX(1)}93%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+@keyframes g2{0%{transform:scaleY(0)}20%{transform:scaleY(1)}93%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@keyframes f{0%,12%{opacity:0}25%,93%{opacity:1}100%{opacity:0}}
+@keyframes d{to{stroke-dashoffset:-28}}
+@keyframes p{0%,100%{transform:scale(1)}30%{transform:scale(1.18)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect class="bg" x="1" y="1" width="758" height="558" rx="18"/>
+<text class="t h" x="28" y="44">敏捷 = 會判斷 + 跑得到</text>
+<text class="t m s" x="28" y="68">大部分步法研究只測「跑得到」；比賽贏在「早判斷」</text>
+<rect x="28" y="95" width="280" height="120" rx="12" fill="#7a4fd0" opacity=".14" stroke="#7a4fd0"/>
+<text class="t b" x="44" y="125" text-anchor="start" fill="#7a4fd0">知覺與決策</text>
+<text class="t s" x="44" y="153" text-anchor="start">• 看對手動作、預判落點</text>
+<text class="t s" x="44" y="175" text-anchor="start">• 型態辨識</text>
+<text class="t s" x="44" y="197" text-anchor="start">• 反應時間</text>
+<path d="M313 155 C 400 155 400 225 470 225" fill="none" stroke="#7a4fd0" stroke-width="3" class="dash"/>
+<rect x="28" y="235" width="280" height="120" rx="12" fill="#2f6fd1" opacity=".14" stroke="#2f6fd1"/>
+<text class="t b" x="44" y="265" text-anchor="start" fill="#2f6fd1">變向速度</text>
+<text class="t s" x="44" y="293" text-anchor="start">• 步法技術</text>
+<text class="t s" x="44" y="315" text-anchor="start">• 直線速度</text>
+<text class="t s" x="44" y="337" text-anchor="start">• 腿部力量（離心、反應力量）</text>
+<path d="M313 295 C 400 295 400 225 470 225" fill="none" stroke="#2f6fd1" stroke-width="3" class="dash"/>
+<g class="pulse"><circle cx="560" cy="225" r="86" fill="#1f8a5c" opacity=".18" stroke="#1f8a5c" stroke-width="2"/></g>
+<text class="t b h" x="560" y="220" text-anchor="middle" fill="#1f8a5c">羽球敏捷</text>
+<text class="t s m" x="560" y="246" text-anchor="middle">看到球 → 判斷 → 移動</text>
+<text class="t b" x="28" y="400" text-anchor="start">測驗真的進步了嗎？（場上變向測驗 CV ≈ 1.6%）</text>
+<text class="t s" x="28" y="438" text-anchor="start">10.0 秒 → 9.9 秒（快 1%）</text>
+<rect class="trk" x="250" y="418" width="300" height="26" rx="5"/>
+<rect class="g" x="250" y="418" width="75.0" height="26" rx="5" fill="#9aa8ab" style="animation-delay:0.3s"/>
+<text class="t s b f" x="560" y="437" text-anchor="start" style="animation-delay:0.7s" fill="#9aa8ab">在誤差內，還不能說進步</text>
+<text class="t s" x="28" y="480" text-anchor="start">10.0 秒 → 9.7 秒（快 3%）</text>
+<rect class="trk" x="250" y="460" width="300" height="26" rx="5"/>
+<rect class="g" x="250" y="460" width="225.0" height="26" rx="5" fill="#1f8a5c" style="animation-delay:0.7s"/>
+<text class="t s b f" x="560" y="479" text-anchor="start" style="animation-delay:1.1s" fill="#1f8a5c">超過 2–3% 門檻，較可信</text>
+<line x1="400.0" y1="410" x2="400.0" y2="496" stroke="#d1495b" stroke-width="2" stroke-dasharray="4 4"/>
+<text class="t s" x="400.0" y="512" text-anchor="middle" fill="#d1495b">2% 門檻</text>
+<text class="t m s" x="28" y="540" text-anchor="start">模型：Sheppard &amp; Young 2006。CV 資料：Fernández-Fernández 2022（第 04 章第 2 篇）。</text>
+
+</svg>

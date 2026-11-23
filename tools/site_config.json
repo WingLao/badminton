@@ -1,0 +1,85 @@
+{
+  "categories": {
+    "learn": {
+      "name": "學生學習",
+      "audience": "國一至國三學生",
+      "intro": "給國一至國三小選手：每次只練一個細節，一句提示、一個練習、一項檢查。手機打開就能跟著練。",
+      "issues": [
+        {
+          "date": "2026-11-23",
+          "path": "learn/badminton-2026-11-23/",
+          "title": "手指發力：先放鬆，觸球前才握緊",
+          "summary": "用 8 張圖看懂手指怎樣用力：放鬆握拍、正手食指、反手拇指、網前短握與換握，附 4 個階段的練習和自我檢查。",
+          "source": "教學/手指發力/網站_2026-11-23"
+        },
+        {
+          "date": "2026-11-15",
+          "path": "learn/badminton-2026-11-15/",
+          "title": "小選手成長筆記：五項基礎細節",
+          "summary": "從 YouTube 教學月報整理五項細節：準備、擊球、下一拍。影片都核對過可免費觀看。",
+          "source": "教學/YouTube月報_2026-11",
+          "extra": [
+            [
+              "完整月報",
+              "月報_瀏覽版.html"
+            ],
+            [
+              "影片免費核對表",
+              "影片免費觀看檢查_20261115.html"
+            ]
+          ]
+        }
+      ],
+      "external": [
+        {
+          "title": "手指發力 3D 互動教學",
+          "url": "https://winglao.github.io/badminton-finger-biomechanics/",
+          "summary": "用 3D 手骨模型看手指怎樣用力，5 個步驟配旁白，手機直向也能看。",
+          "note": "另一個網站"
+        }
+      ]
+    },
+    "technology": {
+      "name": "教練科技",
+      "audience": "教練",
+      "intro": "給教練：發球機、感測器、AI 分析與器材的訓練用途、量測可信度、使用條件與成本。",
+      "issues": [
+        {
+          "date": "2026-11-15",
+          "path": "technology/badminton-2026-11-15/",
+          "title": "2026 羽球科技：教練應用速覽",
+          "summary": "33 支影片整理：比較訓練用途、量測可信度、使用條件與成本，協助安排小規模試用。"
+        }
+      ]
+    },
+    "research": {
+      "name": "教練研究",
+      "audience": "教練",
+      "intro": "給教練：把 2021–2026 年的羽球運動科學研究，整理成看得懂、用得上的章節、圖解與文獻目錄。每個結論都附來源。",
+      "issues": [
+        {
+          "date": "2026-11-23",
+          "path": "research/badminton-2026-11-23/",
+          "title": "羽球研究筆記：用數據看懂羽球",
+          "summary": "26 篇研究整理與圖解（多球、戰術、敏捷、肌力、心理、傷病、CLA 等），附 3,080 筆近五年文獻目錄。",
+          "source_hash": "41e1a51b8bca5783"
+        }
+      ]
+    },
+    "skills": {
+      "name": "工具說明",
+      "audience": "AVANCO 後台維護者",
+      "intro": "AVANCO 報名後台的兩個開發工具（skill）說明：用途、甚麼時候用、做事步驟。只介紹做法，不公開任何網址、帳號或密碼設定。",
+      "issues": [
+        {
+          "date": "2026-11-23",
+          "path": "skills/badminton-2026-11-23/",
+          "title": "AVANCO 兩個 skill 說明",
+          "summary": "avanco-cross-computer（換電腦架設系統）與 avanco-activity-admin-template（後台新增活動頁）的用途與步驟。",
+          "source_hash": "ef89bf2a5f69a18a"
+        }
+      ]
+    }
+  },
+  "ignored_sources": []
+}

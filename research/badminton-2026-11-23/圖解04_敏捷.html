@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圖解 04｜敏捷：跑得快，為甚麼還是慢半拍？｜教練研究</title>
+<meta name="description" content="敏捷的兩個成分（知覺決策＋變向速度）、測驗誤差 CV 與真進步門檻。">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
+.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
+.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
+h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a href="../../">首頁</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><div class="card"><small>教練研究 · 整理日期 2026-11-17 · 依原研究整理，不是原文全文</small></div><h1 id="圖解-04敏捷跑得快為甚麼還是慢半拍">圖解 04｜敏捷：跑得快，為甚麼還是慢半拍？</h1>
+<p>完整研究：<a href="04_敏捷體能分析.html">04_敏捷體能分析</a>　·　回到 <a href="index.html">首頁</a></p>
+<div class="callout abstract">
+<p class="callout-title">📌 重點摘要卡</p>
+
+<ul>
+<li><strong>一句話核心：</strong> 敏捷 = 知覺決策 + 變向速度，兩者要分開練、分開測。</li>
+<li><strong>關鍵數據：</strong> 測驗 CV ≈ 1.6%、ICC ≈ .90｜真進步門檻 2–3%｜簡單反應時間約 0.2 秒</li>
+<li><strong>因果流程：</strong> <code>看對手動作（線索）</code> ➔ <code>預判＋選擇（決策）</code> ➔ <code>啟動與變向（動作）</code></li>
+<li><strong>跨域應用：</strong> <strong>羽球訓練</strong>：步法測驗外，加入看對手的反應測驗。<strong>數據模型</strong>：測量誤差（CV）決定可偵測的最小變化。<strong>IT 教學</strong>：感測器量反應時間（ESP32＋按鈕＋LED）。</li>
+</ul>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 先想一想</p>
+
+<p>一名選手的步法測驗是全隊最快，比賽卻常常「來不及」。問題可能不在腳，而在<strong>眼睛和判斷</strong>。</p>
+</div>
+
+<h2 id="clapper-動畫敏捷--會判斷--跑得到">🎬 動畫：敏捷 = 會判斷 + 跑得到</h2>
+<p><img src="圖片/圖_動畫/04_敏捷兩成分_202611171214.svg" alt="敏捷 = 會判斷 + 跑得到" /></p>
+<h2 id="bar_chart-數據一覽">📊 數據一覽</h2>
+<table>
+<thead>
+<tr>
+<th>研究</th>
+<th>練了甚麼</th>
+<th>結果</th>
+<th>證據</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>廖宜亮 2022（24 名青少年，隨機）</td>
+<td>6 週敏捷訓練</td>
+<td>步法、T 測驗進步；<strong>60 m 衝刺沒有</strong></td>
+<td>🟡</td>
+</tr>
+<tr>
+<td>Guo &amp; Xu 2025（48 名）</td>
+<td>平衡＋增強式</td>
+<td>部分變向測驗優於只做增強式</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>Malwanage 2022（20 名 13 歲）</td>
+<td>平衡訓練</td>
+<td>場上步法啟動時間改善</td>
+<td>🟡</td>
+</tr>
+<tr>
+<td>Fernández-Fernández 2022</td>
+<td>場上變向測驗</td>
+<td>可靠：ICC ≈ .90、CV ≈ 1.6%</td>
+<td>🔵</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一句話：練甚麼就進步甚麼</strong>（訓練特異性）。練步法不一定讓直線衝刺變快。</p>
+<h2 id="compass-三層敏捷評估">🧭 三層敏捷評估</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode mermaid"><code class="sourceCode mermaid"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">flowchart</span> <span class="cn">LR</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">L1</span>[<span class="st">&quot;① 直線速度</span><span class="sc">&lt;br/&gt;</span><span class="st">短距衝刺&quot;</span>] <span class="pp">--&gt;</span> <span class="dt">L2</span>[<span class="st">&quot;② 預定路線變向</span><span class="sc">&lt;br/&gt;</span><span class="st">場上步法測驗&quot;</span>] <span class="pp">--&gt;</span> <span class="dt">L3</span>[<span class="st">&quot;③ 看到再反應</span><span class="sc">&lt;br/&gt;</span><span class="st">看燈／看對手&quot;</span>]</span></code></pre></div>
+<p>大部分研究只測到 ①②；比賽真正決勝的是 ③。</p>
+<h2 id="brain-延伸知識">🧠 延伸知識</h2>
+<div class="callout note">
+<p class="callout-title">📝 反應時間有下限</p>
+
+<p>一般人對單一燈號的簡單反應時間約 0.2 秒。選項越多，反應越慢（<strong>希克定律 Hick's law</strong>）。羽球來球有多個可能落點，所以頂尖選手不只是「反應快」，而是在對手擊球<strong>之前</strong>就從身體和拍面讀出線索（預判）。</p>
+</div>
+
+<div class="callout note">
+<p class="callout-title">📝 為甚麼「看燈」不等於「看對手」？</p>
+
+<p>反應燈訓練練的是「看到訊號就動」；比賽需要的是「從對手動作讀出落點」。兩者的視覺線索不同，所以練反應燈不一定轉移到球場。想練預判，可用真人餵球或對手影片（見 <a href="11_補充_跨章新增研究.html">第 11 章</a>）。</p>
+</div>
+
+<div class="callout tip">
+<p class="callout-title">💡 測驗小規則</p>
+
+<p>同一時段、同一場地、同一熱身，每 6–8 週測一次；成績改變超過 <strong>2–3%</strong> 才算真進步。</p>
+</div>
+
+<h2 id="white_check_mark-30-秒自我測驗">✅ 30 秒自我測驗</h2>
+<div class="callout question">
+<p class="callout-title">❓ 1. 10 秒的測驗，快了 0.1 秒算不算進步？</p>
+
+<p>不一定：只快 1%，在測驗誤差範圍內。快 0.3 秒（3%）才較可信。</p>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 2. 敏捷的兩個成分是甚麼？</p>
+
+<p>知覺與決策（判斷）＋變向速度（跑得到）。</p>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 3. 為甚麼練了 6 週步法，60 m 衝刺卻沒進步？</p>
+
+<p>訓練特異性：練的是變向和步法，不是直線加速。</p>
+</div>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

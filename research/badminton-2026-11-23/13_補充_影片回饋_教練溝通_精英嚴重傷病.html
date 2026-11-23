@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>13｜補充：影片回饋、教練溝通與精英嚴重傷病｜教練研究</title>
+<meta name="description" content="2026-11 新發表三篇：影片／科技回饋系統性回顧、教練對選手溝通範圍回顧、韓國精英單打 vs 雙打嚴重肌腱軟骨傷；各篇標明延伸哪一章。">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
+.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
+.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
+h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a href="../../">首頁</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><div class="card"><small>教練研究 · 整理日期 2026-11-15 · 依原研究整理，不是原文全文</small></div><h1 id="13補充影片回饋教練溝通與精英嚴重傷病">13｜補充：影片回饋、教練溝通與精英嚴重傷病</h1>
+<p>返回 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a>；相關章節：<a href="05_肌力分析.html">05_肌力分析</a>、<a href="06_運動行為與運動訓練_vs_筋膜訓練.html">06_運動行為與運動訓練_vs_筋膜訓練</a>、<a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a>、<a href="09_心理技能與分間例行程序.html">09_心理技能與分間例行程序</a>、<a href="10_四國研究與制度.html">10_四國研究與制度</a>、<a href="11_補充_跨章新增研究.html">11_補充_跨章新增研究</a>。</p>
+<div class="callout summary">
+<p class="callout-title">📌 一分鐘看完</p>
+
+<ul>
+<li><strong>影片回饋有用，但證據分散</strong>：9 項研究、330 人；發球、高遠、殺球、協調、步法有正向結果，多數技術只有 1–2 項研究；對象多為大學生與初中階。→ 延伸 08 章「影片回饋」。</li>
+<li><strong>教練溝通：難的球路要「正確做法＋錯在哪＋肯定」一起給</strong>；容易的球路給正確動作提示就夠。→ 延伸 08 章動作學習、09 章。</li>
+<li><strong>比賽中 11 分 60 秒、局間 120 秒的教練溝通，羽球目前沒有任何直接研究。</strong></li>
+<li><strong>韓國精英嚴重傷（停訓 ≥28 日）</strong>：57.9% 曾經有；78.2% 在下肢、64.4% 過度使用；髕腱、小腿肌、跟腱最多。→ 延伸 05 章傷害預防、08 章。</li>
+<li><strong>復出紀律是最大缺口</strong>：66.7% 首次復出前沒有醫生批准，52.9% 有再傷史。</li>
+<li>單打 vs 雙打大多數比較<strong>不顯著</strong>；唯一顯著的「單打較多主導側受傷」只是探索性結果。</li>
+</ul>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>研究</th>
+<th>延伸章節</th>
+<th>設計</th>
+<th>證據</th>
+<th>一句話</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Qiu 等 2026</td>
+<td>08、06</td>
+<td>系統性回顧（9 項、n=330），質性綜合</td>
+<td>🟢📄</td>
+<td>影片／科技回饋對部分技術有利；證據分散、異質</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Manunyanon 等 2026</td>
+<td>08、09</td>
+<td>範圍回顧（7 項）</td>
+<td>🔵</td>
+<td>回饋內容要配合難度；比賽中溝通無直接研究</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Su、Song、Lee 2026</td>
+<td>05、08、10</td>
+<td>回顧性橫斷問卷（n=126；87 傷例）</td>
+<td>🔵</td>
+<td>嚴重傷以下肢過度使用為主；多數未經醫生批准就復出</td>
+</tr>
+</tbody>
+</table>
+<div class="callout warning">
+<p class="callout-title">⚠️ 判讀總則</p>
+
+<p>第 1 篇未做統合分析；第 2 篇只是「描述有甚麼研究」，未評品質；第 3 篇是回憶式問卷、只訪問仍在役的精英選手。本章的「教練應用」都是<strong>依現有證據推論的合理做法</strong>，不是已被證實會減少傷病或提高勝率。</p>
+</div>
+
+<h2 id="1-影片科技輔助回饋延伸-08-章影片回饋06-章回饋研究">1. 影片／科技輔助回饋（延伸 08 章「影片回饋」、06 章回饋研究）</h2>
+<p><strong>文獻與出處</strong>：Qiu、Soh、Ab Jalil、Ma、Xu、Yue（2026），<em>Effects of video feedback-based training on badminton performance: a systematic review</em>，<em>Discover Psychology</em>，2026-11-07 線上發表。<a href="https://doi.org/10.1007/s44202-026-00971-6">DOI</a>。📄</p>
+<ul>
+<li><strong>研究方法</strong>：依 PRISMA 2020；檢索 Web of Science、Scopus、PubMed、SPORTDiscus；只納入實驗或準實驗研究；隨機試驗用 RoB 2、非隨機用 ROBINS-I 評偏誤。因研究設計、介入方式與量度差異大，只做質性綜合，<strong>沒有統合分析</strong>。</li>
+<li><strong>結果</strong>：9 項研究、共 330 人。影片／科技回饋在發球與高遠球、殺球相關指標、動作協調、反應與步法、發球準確度有較有利的結果。但<strong>多數技術類別只有 1–2 項研究</strong>，效果量與一致性參差；偏誤主要來自隨機化、干擾因素與報告不足。沒有研究報告不良事件，但安全結果也沒有被系統評估。</li>
+<li><strong>結論</strong>：影片回饋可能幫助部分技術學習，尤其大學生與初學到中階選手；不足以證明對每項技術都一致有效。</li>
+<li><strong>教練應用</strong>：用手機拍短片段讓選手「看自己」，優先用在發球、高遠、殺球與步法；每次只針對 1–2 個看得到的錯誤，隔幾天再拍一次看有沒有保留（與 08 章「影片回饋」做法一致）。不要當作可以取代多球或對打。</li>
+<li><strong>判讀界線</strong>：只核對期刊頁摘要與 Crossref 書目（作者、期刊、日期），未讀全文；對象以大學生與初中階為主，<strong>不能直接推論到高水平或中學前八名選手</strong>。</li>
+</ul>
+<h2 id="2-教練對選手的溝通延伸-08-章動作學習09-章分間例行程序">2. 教練對選手的溝通（延伸 08 章動作學習、09 章分間例行程序）</h2>
+<p><strong>文獻與出處</strong>：Manunyanon、Hareebin、Eden、Tawanwongsri（2026），<em>Coach-to-Athlete Communication in Badminton: A Scoping Review of Content, Delivery, and Context</em>，<em>Sports</em>，14(11)，510；2026-11-11 發表。<a href="https://doi.org/10.3390/sports14110510">DOI</a>。</p>
+<ul>
+<li><strong>研究方法</strong>：依 JBI 方法與 PRISMA-ScR；預先登錄 INPLASY202690011。檢索 Scopus、PubMed/MEDLINE、Web of Science 至 2026-09-03，另做前向引用檢索。172 筆紀錄 → 去重後 106 → 全文評估 15 → <strong>納入 7 項</strong>（2006–2026；希臘、菲律賓、台灣、印度）：2 項場地實驗、2 項問卷、2 項質性、1 項混合方法。只收英文文獻。</li>
+<li><strong>結果</strong>：
+<ul>
+<li><strong>場地實驗（希臘，10–14 歲男生，各 48 人）</strong>：短發球（較易）保留測驗以「正確動作提示」最高（30.04 vs 錯誤提示 25.71、兩者合併 24.02）；長發球（較難）以「合併」最高（39.02 vs 38.40、34.50）。反手高遠（較難）「正向回饋＋正確提示＋錯誤資訊」保留最高（26.75，對照 16.69；各比較 p ≤ 0.008）。</li>
+<li><strong>問卷（偏好或知覺，不等於實際溝通）</strong>：菲律賓 9–18 歲 167 名校園選手最偏好「訓練與指導」（4.47），其次正向回饋（4.07）；台灣 201 名大專選手知覺到的教練自主支持與心理訓練正相關（路徑係數 0.56，p &lt; 0.001），與運動焦慮無顯著直接關係（−0.07，p = 0.388）。</li>
+<li><strong>質性</strong>：台灣大學校隊教練的解釋、個別化糾正、示範與關懷；印度精英女子選手與教練談月經週期時，需要謹慎、保密、先徵得同意的溝通。</li>
+<li><strong>沒有任何納入研究直接觀察比賽中、11 分 60 秒或局間 120 秒的溝通。</strong></li>
+</ul></li>
+<li><strong>結論</strong>：羽球教練溝通的證據窄而分散；回饋內容可能要配合技術難度；比賽間歇溝通是最大研究缺口。</li>
+<li><strong>教練應用</strong>：練較難的技術時，不要只講「錯在哪」——把正確做法、錯在哪與一句具體肯定一起講；容易的技術給一個正確動作提示即可。解釋原因、給選擇（自主支持）可以一齊用。11 分與局間可參考其他項目「只講 1–2 句最重要、即時用得著的戰術或心理提示」，但<strong>這只是外推</strong>，配合 <a href="09_心理技能與分間例行程序.html#5-分間與賽前例行程序法國-ffbad-學位論文">5. 分間與賽前例行程序（法國 FFBaD 學位論文）</a> 使用並自己記錄成效。</li>
+<li><strong>判讀界線</strong>：作者未做品質評級；兩項希臘實驗樣本可能重疊，不能當兩次獨立驗證；只收英文、三個資料庫；問卷研究反映偏好或知覺，不是實際溝通行為。</li>
+</ul>
+<h2 id="3-韓國精英嚴重肌腱軟骨傷單打-vs-雙打延伸-05-章傷害預防08-章10-章韓國">3. 韓國精英嚴重肌、腱、軟骨傷：單打 vs 雙打（延伸 05 章傷害預防、08 章、10 章韓國）</h2>
+<p><strong>文獻與出處</strong>：Su、Song、Lee（2026），<em>Patterns and management of severe muscle, tendon, and cartilage injuries in elite badminton players: a discipline-based analysis of singles and doubles</em>，<em>Frontiers in Public Health</em>，14:1980850；2026-11-09 發表；開放取用（CC BY）。<a href="https://doi.org/10.3389/fpubh.2026.1980850">DOI</a>。原文：<code>羽球專項原文PDF/2026_Su_Song_Lee_Severe_muscle_tendon_cartilage_injuries_elite_badminton_singles_vs_doubles.pdf</code>。</p>
+<ul>
+<li><strong>研究方法</strong>：回顧性橫斷問卷；2026-04-01 至 05-28 在 16 支大學／職業隊面對面訪問。邀請 140 人、完成 126 人（男 61、女 65；單打 64、雙打 62；19–24 歲；國家隊經歷 56.3%）。第一作者任職河南中醫藥大學，但<strong>樣本是韓國選手</strong>。
+<ul>
+<li><strong>嚴重傷</strong>：停訓或停賽 ≥28 日，且選手自稱經骨科醫生診斷；只計肌、腱、軟骨（不含韌帶、骨折）。</li>
+<li><strong>主導側</strong>：上肢與軀幹以持拍手側計；下肢以最常向前弓步的腳計。</li>
+<li><strong>復出（RTP）</strong>：可以完全參加隊內訓練。</li>
+</ul></li>
+<li><strong>結果</strong>：
+<ul>
+<li>終身嚴重傷經驗 57.9%（單打 54.7%、雙打 61.3%，無顯著差異）；73 人提供 87 例選定傷例（單打 44、雙打 43）。</li>
+<li>下肢 78.2%、過度使用 64.4%、訓練中發生 70.1%；最常聯想的動作是弓步（32.2%）——單複之間均無顯著差異。</li>
+<li><strong>唯一顯著</strong>：未調整 GEE 分析中，單打主導側受傷機會高於雙打（OR = 3.11，95% CI 1.21–7.95，p = 0.018）；單打傷例 81.8% 在主導側，雙打 60.5%。</li>
+<li><strong>部位（圖 1）</strong>：兩組都以膝（單 25.0%、雙 34.9%）與小腿／跟腱（27.3%、30.2%）最多；腹股溝、前大腿、足、腹部只見於單打，腕／肘只見於雙打，但每類個案很少。</li>
+<li><strong>五大診斷（圖 2）合共 67.8%</strong>：髕腱病變 18 例（單 8、雙 10）、小腿肌撕裂 13 例（6、7）、跟腱傷 12 例（各 6；其中 10 例病變、2 例斷裂）、腘繩肌拉傷 8 例（4、4）、旋轉肌袖傷 8 例（4、4）。</li>
+<li><strong>復出管理</strong>：只有 11.5% 做手術；<strong>66.7% 首次復出前沒有醫生批准</strong>；52.9% 有再傷史（復出後同部位同一傷再發，不一定再停滿 28 日）。復出時間最常見 4 週至未滿 2 個月（43.7%），31.0% 需要 ≥3 個月。</li>
+<li><strong>心理</strong>：沒有人選「沒有顧慮」；單打較多擔心再傷（61.4% vs 37.2%），雙打較多擔心表現下降（51.2% vs 38.6%）——此差異視乎保留較早或較遲那次傷，統計顯著性不穩定。</li>
+</ul></li>
+</ul>
+<p><img src="圖片/圖_精英傷病/圖1_單複受傷部位_Su2026圖2_202611151400.png" alt="單打與雙打嚴重傷部位分布（原文圖 2，CC BY）" /></p>
+<p><img src="圖片/圖_精英傷病/圖2_五大診斷_Su2026圖3_202611151400.png" alt="五個最常見嚴重傷診斷（原文圖 3，CC BY）" /></p>
+<ul>
+<li><strong>結論</strong>：單打與雙打的嚴重傷型態大致相似，都以下肢過度使用的肌腱傷為主；最值得處理的是「未經醫生批准就復出」與高再傷率。</li>
+<li><strong>教練應用</strong>：
+<ul>
+<li>髕腱、小腿與跟腱是重點：弓步與跳躍落地的負荷要逐步加，配合 <a href="05_肌力分析.html">05_肌力分析</a> 的肌力訓練與 <a href="08_教練實務整合_從研究到課表.html#六傷害預防熱身範本">六、傷害預防：熱身範本</a>。</li>
+<li>單打可多留意慣用弓步腳與持拍手一側的累積負荷（探索性結果，當提醒，不當定論）。</li>
+<li>復出要有明確標準（疼痛、功能測試、訓練量逐步加回），不要只憑「看起來可以動」或只問選手覺得可不可以；用 sRPE 監控加量（見 <a href="11_補充_跨章新增研究.html#4-負荷監控srpe-效度與減量延伸-08-章">4. 負荷監控：sRPE 效度與減量（延伸 08 章）</a>）。</li>
+<li>單打選手復出時多處理「怕再傷」，雙打選手多處理「怕打得差」——可配合 09 章的心理技能。</li>
+</ul></li>
+<li><strong>判讀界線</strong>：回憶偏差、倖存者偏差（只訪問現役）、診斷沒有病歷核對、沒有收集受傷當時的主項、沒有量度訓練曝光時間（<strong>不是發生率</strong>）、未校正多重比較；單複兩組年齡與球齡本身不同但未調整。韓國大學／職業精英，<strong>不能直接當成中學生的傷病情況</strong>。已讀全文。</li>
+</ul>
+<h2 id="判讀界線本章">判讀界線（本章）</h2>
+<ul>
+<li>第 1 篇標 📄：只核對期刊頁摘要；第 2、3 篇已讀全文（期刊網頁／PDF）。</li>
+<li>三篇都是 2026 年 11 月新發表，尚未有其他研究重複驗證。</li>
+<li>「教練應用」中涉及比賽間歇溝通與單打主導側負荷的部分屬推論，需自己記錄試用結果。</li>
+</ul>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

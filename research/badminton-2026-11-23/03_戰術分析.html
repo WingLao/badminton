@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>03｜戰術分析（技術與戰術）｜教練研究</title>
+<meta name="description" content="擾動分析、五項目時間結構、男雙發接發、雙打控制區與混雙前三拍的比賽分析研究。">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
+.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
+.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
+h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a href="../../">首頁</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><div class="card"><small>教練研究 · 整理日期 2026-10-04 · 依原研究整理，不是原文全文</small></div><h1 id="03戰術分析技術與戰術">03｜戰術分析（技術與戰術）</h1>
+<p>返回 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a>；相關章節：<a href="01_多球訓練法.html">01_多球訓練法</a>、<a href="04_敏捷體能分析.html">04_敏捷體能分析</a>、<a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a>。</p>
+<div class="callout summary">
+<p class="callout-title">📌 一分鐘看完</p>
+
+<ul>
+<li><strong>不要只記最後一拍</strong>：造成對手失位的往往是前面的網前球，而不是最後的殺球。</li>
+<li><strong>項目不同，回合結構不同</strong>：男雙、混雙回合短、擊球頻率高；女雙回合較長。課表的回合時間與休息要對應項目。</li>
+<li><strong>雙打發接發</strong>：發球多落在中線附近；接發者的動作線索與回球方向有關聯，可以練「讀」對手。</li>
+<li><strong>全章都是觀察研究</strong>：適合提出訓練假設，<strong>不能證明某個戰術會提高勝率</strong>。</li>
+</ul>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>研究</th>
+<th>資料</th>
+<th>設計</th>
+<th>證據</th>
+<th>一句話</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hammes &amp; Link 2024</td>
+<td>2022 世錦賽 6 場單打</td>
+<td>觀察系統＋信度</td>
+<td>🔵</td>
+<td>正向擾動最常來自網前球（約 30%）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hoffmann 2024</td>
+<td>2018 世錦賽五項目</td>
+<td>時間結構描述</td>
+<td>🔵📄</td>
+<td>男雙、混雙回合短、頻率高</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Zhu 2023</td>
+<td>20 場男雙</td>
+<td>統計模型（預印本）</td>
+<td>🔵</td>
+<td>接發者動作特徵與回球方向相關</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ding 2023</td>
+<td>無人機雙打影像</td>
+<td>電腦視覺方法</td>
+<td>🔵</td>
+<td>可估計雙人控制區域</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Feng &amp; Chen 2023</td>
+<td>2020–22 男女雙決賽</td>
+<td>影片頻率統計</td>
+<td>🔵</td>
+<td>男雙中場平抽較多</td>
+</tr>
+<tr>
+<td>6</td>
+<td>葉宏蔚 2025</td>
+<td>2023 世錦賽混雙決賽 1 場</td>
+<td>影片頻率統計</td>
+<td>🔵📄</td>
+<td>短發 93–96%、推接發為主</td>
+</tr>
+</tbody>
+</table>
+<h2 id="研究問題">研究問題</h2>
+<p>比賽分析可以從「最後一拍」、「發接發與前三拍」、「整個回合的主動權變化」及「雙打站位空間」切入。下列研究多以影片或定位資料觀察特定賽事，結果適合形成訓練假設，仍需在新的比賽與選手群驗證。</p>
+<div class="callout note">
+<p class="callout-title">📝 規則背景：2018 年起的固定高度發球</p>
+
+<p>BWF 自 2018 年 3 月起試行（並於世界錦標賽等賽事使用）<strong>發球擊球瞬間整顆球須低於 1.15 公尺</strong>的固定高度規則，取代原本「腰部以下」的判定。本章的比賽資料都在 2018 年之後，但若讀到 <strong>2018 年以前</strong>的發球研究，發球高度與接發壓迫的條件已不同，引用時要注意。</p>
+</div>
+
+<h2 id="1-從最後一拍改看主動權轉折">1. 從最後一拍改看主動權轉折</h2>
+<p><strong>文獻與出處</strong>：Hammes 與 Link（2024），<em>Badminton as a dynamic system – A new method for analyzing badminton matches based on perturbations</em>，<em>Journal of Sports Sciences</em>。<a href="https://doi.org/10.1080/02640414.2024.2323327">DOI</a>。</p>
+<ul>
+<li><strong>研究方法</strong>：設計「擾動→跟進→存活→轉成得分」的回合觀察系統；由不同評分者分析 2022 年世錦賽 6 場單打比賽，檢驗標記一致性，再與只記最後一拍的分析比較。</li>
+<li><strong>結果</strong>：辨識關鍵擾動拍的一致程度 Jaccard 約 .80，分類正／負擾動的 κ 約 .70。直接得分常來自殺球，但產生正向擾動的擊球中，網前球佔最多（約 30.1%）。</li>
+<li><strong>結論</strong>：若只記得分拍，會漏掉先前使對手失位或失去主動權的一拍；戰術紀錄應追蹤回合序列。</li>
+<li><strong>判讀界線</strong>：本研究的實際檢驗資料是單打 6 場；將此系統用於男雙需另行驗證。此卡依出版社原文頁及書目摘要核對。</li>
+</ul>
+<h2 id="2-五個項目的比賽時間結構">2. 五個項目的比賽時間結構</h2>
+<p><strong>文獻與出處</strong>：Hoffmann、Brinkschulte 與 Vogt（2024），<em>Match characteristics of women's and men's singles and doubles events in elite badminton</em>，<em>International Journal of Performance Analysis in Sport</em>。<a href="https://doi.org/10.1080/24748668.2024.2386830">DOI</a>。</p>
+<ul>
+<li><strong>研究方法</strong>：分析 2018 年 BWF 世界錦標賽的男單、女單、男雙、女雙、混雙比賽時間結構與擊球頻率。</li>
+<li><strong>結果</strong>：女雙的回合時間與實際擊球時間比例較高；男雙與混雙的回合較短、擊球頻率較高。各項目的總休息時間等指標並非都不同。</li>
+<li><strong>結論</strong>：訓練回合時長、餵球頻率與休息安排應參照所屬項目的比賽型態。</li>
+<li><strong>判讀界線</strong>：2024 年發表，但分析的是 2018 年賽事；時間結構本身不能說明哪一種技術能得分。此卡依出版社摘要核對。</li>
+</ul>
+<h2 id="3-男雙發球接發球落點">3. 男雙發球、接發球落點</h2>
+<p><strong>文獻與出處</strong>：Zhu 等（2023），<em>Where to serve and return in Badminton Men's Double?</em>，arXiv 預印本。<a href="https://doi.org/10.48550/arxiv.2310.18572">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：由 20 場男雙比賽擷取發球與接發球落點，使用廣義 logit 模型分析接發球落點與發球方向、接發者步法及握拍特徵的關係。</li>
+<li><strong>結果</strong>：發球多落在靠近中線位置；接發回球常指向發球方場區交界。接發動作特徵與回球方向有可辨識關聯。</li>
+<li><strong>結論</strong>：發接發階段可把落點與對手站位、動作線索一同記錄，而非只統計發球成功率。</li>
+<li><strong>判讀界線</strong>：預印本（未經同儕審查）及觀察資料；模型關聯不是發球策略的因果效果。</li>
+</ul>
+<h2 id="4-雙打的場區控制與站位">4. 雙打的場區控制與站位</h2>
+<p><strong>文獻與出處</strong>：Ding 等（2023），<em>Estimation of control area in badminton doubles with pose information from top and back view drone videos</em>，<em>Multimedia Tools and Applications</em>。<a href="https://doi.org/10.1007/s11042-023-16362-1">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：建立雙打無人機頂視與後視姿態資料集，以球員位置和姿態估計場區控制機率圖，並比較模型與得分表現的關聯。</li>
+<li><strong>結果</strong>：模型可把雙人的空間覆蓋畫成連續的控制區域；研究報告控制區域與比分存在關聯。</li>
+<li><strong>結論</strong>：雙打戰術除擊球種類，還可用兩人的站位互補與可控制空間來分析。</li>
+<li><strong>判讀界線</strong>：主要是電腦視覺方法研究；模型的控制區域是估計值，不能直接當成實際取分原因。</li>
+</ul>
+<h2 id="5-男女雙技術使用型態">5. 男、女雙技術使用型態</h2>
+<p><strong>文獻與出處</strong>：Feng 與 Chen（2023），<em>Comparative Analysis of the Techniques and Tactics of World Excellent Badminton Men's and Women's Doubles</em>，<em>Advances in Physical Education</em>。<a href="https://doi.org/10.4236/ape.2023.134019">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：觀察 2020–2022 年國際賽男、女雙決賽影片，比較發接發及前、中、後場技術的使用頻率。</li>
+<li><strong>結果</strong>：男女雙的發球落點都偏向前場；男雙在中場較常運用平抽類處理，男女雙在前場與後場擊球組合也不同。</li>
+<li><strong>結論</strong>：雙打訓練應依項目與場區安排技術組合，不能用同一套出手頻率假設所有雙打項目。</li>
+<li><strong>判讀界線</strong>：影片觀察描述「常用什麼」，不代表該技術本身的得分效率較高；原文部分英譯術語不清，未報告評分者信度，正式引用需對照技術定義。</li>
+</ul>
+<h2 id="6-台灣學位論文混雙前三拍">6. 台灣學位論文：混雙前三拍</h2>
+<p><strong>文獻與出處</strong>：葉宏蔚（2025），《羽毛球混雙前三拍技戰術分析》，臺北市立大學學位論文。<a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&amp;s=id%3D%22113UT005418002%22.&amp;searchmode=basic">臺灣博碩士論文系統摘要</a>。</p>
+<ul>
+<li><strong>研究方法</strong>：分析 2023 年世錦賽混雙冠亞軍的發球、接發與第三拍技術比例，並以卡方檢定比較。</li>
+<li><strong>結果</strong>：兩隊發球均以短球為主（約 93–96%）；接發球以推球為主（約 69–78%）。第三拍技術組合不同，但摘要所報卡方檢定未顯示顯著差異。</li>
+<li><strong>結論</strong>：此場頂尖混雙對決的前三拍以短發、推接發及封擋處理為常見型態。</li>
+<li><strong>判讀界線</strong>：只分析一場決賽，不宜推廣為所有混雙或男雙的固定規律；目前依論文系統摘要整理，全文待核對。</li>
+</ul>
+<h2 id="綜合判讀">綜合判讀</h2>
+<p>男雙與混雙的短回合特徵支持在訓練中重視發接發與前幾拍；但「短回合多」是時間結構描述，不等於只練前三拍就能提高勝率。實務上可把回合記錄拆為四欄：<strong>發接發落點→造成主動權變化的擊球→雙人站位與控制區→最後得失分</strong>。再依 <a href="01_多球訓練法.html">01_多球訓練法</a> 設計餵球，檢查練習是否真的保留判斷與輪轉。</p>
+<div class="callout warning">
+<p class="callout-title">⚠️ 學者審視：比賽分析研究的共同限制</p>
+
+<ol type="1">
+<li><strong>樣本是「場」不是「人」</strong>：1 場決賽、6 場單打都只代表少數選手的風格。</li>
+<li><strong>頻率不等於效率</strong>：常用的技術不一定得分率高；要算「使用後的得分／失分比例」才能談效率。</li>
+<li><strong>對手互動</strong>：同一技術對不同對手效果不同，觀察資料很難分離。</li>
+<li><strong>評分者信度</strong>：只有 Hammes &amp; Link 報告了標記一致性；其他研究的分類可靠度未知。</li>
+</ol>
+</div>
+
+<h2 id="badminton-轉成訓練自己的比賽紀錄表">🏸 轉成訓練：自己的比賽紀錄表</h2>
+<p>把研究方法變成自己隊伍可用的工具。每場比賽（或錄影）記錄以下欄位，累積 10 場以上再下結論：</p>
+<table>
+<thead>
+<tr>
+<th>欄位</th>
+<th>記錄內容</th>
+<th>對應研究</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>發球</td>
+<td>落點（內角／中線／外角）、高度、是否被撲</td>
+<td>Zhu 2023、葉宏蔚 2025</td>
+</tr>
+<tr>
+<td>接發</td>
+<td>回球方式（推／放／撲／挑）與落點</td>
+<td>Zhu 2023</td>
+</tr>
+<tr>
+<td>擾動拍</td>
+<td>哪一拍讓對手失位？什麼技術？</td>
+<td>Hammes &amp; Link 2024</td>
+</tr>
+<tr>
+<td>站位</td>
+<td>攻守轉換時是前後站還是左右站，有沒有空檔</td>
+<td>Ding 2023</td>
+</tr>
+<tr>
+<td>結果</td>
+<td>得分／失分、主動失誤還是被迫失誤</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>練習設計</strong>：從紀錄中找出「最常失去主動權的情境」，用條件式對打（例如：發球方只能發短球、接發方前三拍不能挑）重複練。這比單純多球更保留判斷與對手互動，符合 <a href="08_教練實務整合_從研究到課表.html#四動作學習練習怎麼排">四、動作學習：練習怎麼排</a> 的代表性學習設計原則。</p>
+<h2 id="主動回想">主動回想</h2>
+<ol type="1">
+<li>為什麼「最後一拍」與「造成對手失位的一拍」可能不同？</li>
+<li>哪些研究測時間結構，哪些研究測落點或站位？</li>
+<li>若要把男雙發接發研究轉成課表，還需補哪種介入或比賽轉移證據？</li>
+<li>為什麼「常用的技術」不等於「有效的技術」？要怎麼記錄才能算效率？</li>
+</ol>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

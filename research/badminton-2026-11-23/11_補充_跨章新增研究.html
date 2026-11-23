@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11｜補充：跨章新增研究｜教練研究</title>
+<meta name="description" content="預判介入研究、頂尖比賽回合結構與青少年 HIIT、多球負荷的矛盾證據、sRPE 效度與減量；各篇標明延伸哪一章。">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
+.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
+.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
+h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a href="../../">首頁</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><div class="card"><small>教練研究 · 整理日期 2026-10-22 · 依原研究整理，不是原文全文</small></div><h1 id="11補充跨章新增研究">11｜補充：跨章新增研究</h1>
+<p>返回 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a>；相關章節：<a href="01_多球訓練法.html">01_多球訓練法</a>、<a href="03_戰術分析.html">03_戰術分析</a>、<a href="04_敏捷體能分析.html">04_敏捷體能分析</a>、<a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a>、<a href="10_四國研究與制度.html">10_四國研究與制度</a>。</p>
+<div class="callout summary">
+<p class="callout-title">📌 一分鐘看完</p>
+
+<ul>
+<li><strong>預判可以用影片練</strong>：隨機順序優於分段順序；模糊化影片有助看穿假動作（受試者為新手）。→ 延伸 08 章「練預判」只有背景文獻的缺口。</li>
+<li><strong>背景資訊未必加分</strong>：給完整回合脈絡，預判沒有更準 → 先練「讀擊球前動作」。</li>
+<li><strong>回合結構</strong>：長回合約佔 16–19%；男 13–79 秒，女 11–56 秒 → 間歇設計參考。</li>
+<li><strong>多球負荷證據互相矛盾</strong>：2021 巴西研究「比賽 &gt; 模擬 &gt; 多球」，2025 研究「多球 &gt; 模擬」→ 取決於設計。</li>
+<li><strong>sRPE 有效度依據；減量一週 HRV 回升</strong> → 補 08 章負荷監控。</li>
+</ul>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>研究</th>
+<th>延伸章節</th>
+<th>設計</th>
+<th>證據</th>
+<th>一句話</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Memmert 等 2009</td>
+<td>08、04</td>
+<td>三個實驗、分組</td>
+<td>🟡📄</td>
+<td>隨機知覺訓練保留較佳；易到難無優勢</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ryu 等 2018</td>
+<td>08、04</td>
+<td>隨機分 3 組（n=36）</td>
+<td>🟡</td>
+<td>低空間頻率影片訓練↑看穿假動作，保留 1 週</td>
+</tr>
+<tr>
+<td>3</td>
+<td>De Waelle 等（RQES）</td>
+<td>08、雙打認知筆記</td>
+<td>橫斷比較</td>
+<td>🔵📄</td>
+<td>完整回合脈絡未提高預判準確度</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Gomez 等 2020</td>
+<td>03、01</td>
+<td>比賽分析</td>
+<td>🔵</td>
+<td>長回合特徵與下一分表現</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Gomez 等 2019</td>
+<td>03、01</td>
+<td>比賽分析</td>
+<td>🔵📄</td>
+<td>男女時間結構差異依比賽長度而變</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Ko 等 2021</td>
+<td>02、01</td>
+<td>隨機分組（n=32）</td>
+<td>🟡📄</td>
+<td>4 週 Wingate 式 HIIT↑無氧能力</td>
+</tr>
+<tr>
+<td>7</td>
+<td>巴西 2021 精英青少年</td>
+<td>01</td>
+<td>觀察</td>
+<td>🔵📄</td>
+<td>正式比賽 &gt; 模擬比賽 &gt; 多球</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Haddad 等 2017</td>
+<td>08</td>
+<td>敘述性回顧</td>
+<td>🟢📄</td>
+<td>sRPE 效度與影響因素</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Araujo 等 2022</td>
+<td>08</td>
+<td>前後測</td>
+<td>🟠📄</td>
+<td>U19 加量→HRV↓；減量→HRV↑</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-預判介入研究延伸-08-章練預判04-章知覺決策">1. 預判介入研究（延伸 08 章「練預判」、04 章知覺決策）</h2>
+<p><strong>文獻與出處</strong>：Memmert 等（2009），<em>Conditions of Practice in Perceptual Skill Learning</em>，<em>Research Quarterly for Exercise and Sport</em>，80(1)。<a href="https://doi.org/10.1080/02701367.2009.10599527">DOI</a>。</p>
+<ul>
+<li><strong>研究方法</strong>：三個羽球預判實驗：易到難 vs 隨機（N=60）；分段（先左右後深淺）vs 隨機（N=60）；66% vs 100% 回饋（N=40）。</li>
+<li><strong>結果</strong>：易到難無優勢；隨機組在保留測驗的深淺誤差較佳；減少回饋不比全回饋好（新手）。</li>
+<li><strong>教練應用</strong>：影片預判題目「打亂順序」，不必刻意由易到難。</li>
+<li><strong>判讀界線</strong>：只讀摘要；2009 年；共同作者未逐一核對。</li>
+</ul>
+<p><strong>文獻與出處</strong>：Ryu 等（2018），<em>The Perception of Deceptive Information Can Be Enhanced by Training That Removes Superficial Visual Information</em>，<em>Frontiers in Psychology</em>。<a href="https://doi.org/10.3389/fpsyg.2018.01132">DOI</a>。</p>
+<ul>
+<li><strong>研究方法</strong>：36 名羽球新手（經驗約 1.3 年）隨機分低空間頻率（模糊）、高空間頻率（邊緣）、正常影片三組，訓練 3 天；擊球瞬間遮蔽，預測四個落點；前測、後測、1 週保留。</li>
+<li><strong>結果</strong>：低空間頻率組在假動作題的反應準確度後測高於對照（p=.005），保留仍較高（p=.020）；高空間頻率組只有後測較好；低空間頻率組注視擊球點時間較長。</li>
+<li><strong>教練應用</strong>：剪對手片段、擊球瞬間停格猜落點；可試把影片調模糊，逼選手看身體大動作而非細節。每週 2 次、每次 10 分鐘。</li>
+<li><strong>判讀界線</strong>：新手、成人、實驗室影片；尚無證據顯示能轉移到比賽勝率。</li>
+</ul>
+<p><strong>文獻與出處</strong>：De Waelle、Robertson、Deconinck、Lenoir，<em>The Use of Contextual Information for Anticipation of Badminton Shots in Different Expertise Levels</em>，<em>Research Quarterly for Exercise and Sport</em>（作者存放版）。<a href="https://resolutesps.com/wp-content/uploads/2022/01/The-use-of-contextual-information-for-anticipation-of-badminton-shots-in-different-expertise-levels-1.pdf">PDF</a>。📄</p>
+<ul>
+<li><strong>結果</strong>：精英 26、競技 15、新手 17 人；「只看最後擊球」vs「看完整回合」：完整回合反應較慢、準確度無差異；左右判斷優於深淺；成人精英反應最快。</li>
+<li><strong>教練應用</strong>：優先練讀擊球前動作；深淺判斷是弱點，需專門練。同一團隊的 Robertson 等 2022（已收於 <code>男子雙打認知教學運用.md</code>）。</li>
+<li><strong>判讀界線</strong>：橫斷比較，不是訓練研究；期刊卷期未核對。</li>
+</ul>
+<h2 id="2-回合結構與間歇設計延伸-03-章時間結構01-章多球間歇">2. 回合結構與間歇設計（延伸 03 章時間結構、01 章多球間歇）</h2>
+<p><strong>文獻與出處</strong>：Gomez、Leicht、Rivas、Furley（2020），<em>Long rallies and next rally performances in elite men's and women's badminton</em>，<em>PLOS ONE</em>，15(3)，e0229604。<a href="https://doi.org/10.1371/journal.pone.0229604">DOI</a>。</p>
+<ul>
+<li><strong>研究方法</strong>：2015 超級系列賽與世錦賽男女各 60 場（約 4,475／4,490 回合）；兩步驟群集定義長回合。</li>
+<li><strong>結果</strong>：長回合佔男 19.4%、女 16.5%；男 13–79 秒、14–72 拍；女 11–56 秒、11–52 拍。長回合後的休息較長；部分情境下一分發球方非受迫失誤或致勝球增加。</li>
+<li><strong>教練應用</strong>：主體練 5–10 秒間歇，約五分之一安排 15–30 秒以上長回合，並練「長回合後下一分」（例行程序見 <a href="09_心理技能與分間例行程序.html">09_心理技能與分間例行程序</a>）。</li>
+<li><strong>判讀界線</strong>：2015 年賽事、成人精英；2018 發球規則改變前（見 03 章規則背景）。</li>
+</ul>
+<p><strong>文獻與出處</strong>：Gomez、Rivas、Connor、Leicht（2019），<em>Performance Differences of Temporal Parameters and Point Outcome Between Elite Men's and Women's Badminton Players According to Match-Related Contexts</em>，<em>IJERPH</em>，16(21)，4057。<a href="https://doi.org/10.3390/ijerph16214057">DOI</a>。📄</p>
+<ul>
+<li><strong>結果</strong>：男子回合時間、休息、密度、每回合拍數強度較高，長比賽中差異更明顯；男子發球致勝球較多，女子非受迫失誤較多。</li>
+</ul>
+<p><strong>文獻與出處</strong>：Ko 等（2021），<em>The Effect of Short-Term Wingate-Based High Intensity Interval Training on Anaerobic Power and Isokinetic Muscle Function in Adolescent Badminton Players</em>，<em>Children</em>，8(6)，458。<a href="https://doi.org/10.3390/children8060458">DOI</a>；<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8228848/">PMC</a>。📄</p>
+<ul>
+<li><strong>研究方法</strong>：32 名 13–18 歲男子選手隨機分 Wingate 式 HIIT 或中等強度持續訓練，4 週。</li>
+<li><strong>結果</strong>：HIIT 改善無氧能力、疲勞恢復與高速膝等速肌力。</li>
+<li><strong>判讀界線</strong>：只有男生、樣本小、短期；只讀摘要。</li>
+</ul>
+<h2 id="3-多球負荷矛盾證據延伸-01-章">3. 多球負荷：矛盾證據（延伸 01 章）</h2>
+<ul>
+<li>01 章已收：2025 <em>Applied Sciences</em>（42 名精英青少年）多球的心率、sRPE、距離、加速、跳躍高於模擬比賽。<a href="https://www.mdpi.com/2076-3417/15/13/7451">連結</a>。</li>
+<li><strong>新增</strong>：《Official matches and training sessions: physiological demands of elite junior badminton players》（2021），<em>Motriz: Revista de Educação Física</em>。<a href="https://doi.org/10.1590/s1980-65742021021520">DOI</a>。📄
+<ul>
+<li><strong>結果（摘要）</strong>：正式比賽強度最高，其次模擬比賽，多球最低。</li>
+</ul></li>
+<li><strong>整合判讀</strong>：兩研究方向相反，最可能原因是<strong>多球設計不同</strong>（餵球速度、連續時間、休息比）。結論：「多球一定比對打累／輕」都不成立；應以 sRPE 與心率實測自己的課表。</li>
+<li><strong>判讀界線</strong>：2021 研究只讀摘要，作者未核對。</li>
+</ul>
+<h2 id="4-負荷監控srpe-效度與減量延伸-08-章">4. 負荷監控：sRPE 效度與減量（延伸 08 章）</h2>
+<p><strong>文獻與出處</strong>：Haddad 等（2017），<em>Session-RPE Method for Training Load Monitoring: Validity, Ecological Usefulness, and Influencing Factors</em>，<em>Frontiers in Neuroscience</em>。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5673663/">PMC</a>。📄</p>
+<ul>
+<li><strong>重點</strong>：sRPE（時長 × CR-10）在不同年齡與運動有效、可信；受年齡、心理狀態等因素影響。</li>
+<li><strong>教練應用</strong>：課後 30 分鐘內問 RPE；每週總負荷避免突然大幅上升。</li>
+</ul>
+<p><strong>文獻與出處</strong>：Araujo 等（2022），<em>Effect of 3-week progressive overloading and 1-week tapering on performance, internal training load, stress tolerance and heart rate variability in under-19 Brazilian badminton players</em>，<em>Archivos de Medicina del Deporte</em>。<a href="https://archivosdemedicinadeldeporte.com/articulos/upload/or1_Araujo_ingles.pdf">PDF</a>。📄（候選索引已列，未評讀）</p>
+<ul>
+<li><strong>結果（摘要）</strong>：3 週漸進加量使每週 sRPE 負荷上升、HRV 下降；1 週減量後負荷下降、HRV 改善。</li>
+<li><strong>教練應用</strong>：重要比賽前 1 週減量（量降、強度保留）。</li>
+<li><strong>判讀界線</strong>：小樣本、無對照組；只讀摘要。</li>
+</ul>
+<h2 id="判讀界線本章">判讀界線（本章）</h2>
+<ul>
+<li>預判介入研究受試者多為新手；中學前八名選手的效果屬推論。</li>
+<li>標 📄 者只讀摘要；作者標「等」者未逐一核對共同作者。</li>
+</ul>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

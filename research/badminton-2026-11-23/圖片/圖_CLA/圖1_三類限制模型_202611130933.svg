@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="760" height="520" fill="#ffffff"/>
+  <text x="380" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">Newell 三類限制模型（1986）</text>
+  <circle cx="300" cy="190" r="150" fill="#3b82f6" fill-opacity="0.18" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="460" cy="190" r="150" fill="#f59e0b" fill-opacity="0.18" stroke="#d97706" stroke-width="2"/>
+  <circle cx="380" cy="320" r="150" fill="#10b981" fill-opacity="0.18" stroke="#059669" stroke-width="2"/>
+  <text x="235" y="140" text-anchor="middle" font-size="19" font-weight="700" fill="#1d4ed8">個體</text>
+  <text x="235" y="162" text-anchor="middle" font-size="13" fill="#1d4ed8">Organism</text>
+  <text x="235" y="188" text-anchor="middle" font-size="13" fill="#374151">身高・力量・疲勞</text>
+  <text x="235" y="206" text-anchor="middle" font-size="13" fill="#374151">經驗・心理狀態</text>
+  <text x="525" y="140" text-anchor="middle" font-size="19" font-weight="700" fill="#b45309">任務</text>
+  <text x="525" y="162" text-anchor="middle" font-size="13" fill="#b45309">Task</text>
+  <text x="525" y="188" text-anchor="middle" font-size="13" fill="#374151">規則・得分方式</text>
+  <text x="525" y="206" text-anchor="middle" font-size="13" fill="#374151">器材・限拍數</text>
+  <text x="380" y="398" text-anchor="middle" font-size="19" font-weight="700" fill="#047857">環境</text>
+  <text x="380" y="420" text-anchor="middle" font-size="13" fill="#047857">Environment</text>
+  <text x="380" y="444" text-anchor="middle" font-size="13" fill="#374151">場地大小・網高・對手・比分</text>
+  <rect x="318" y="212" width="124" height="50" rx="10" fill="#ffffff" stroke="#111827" stroke-width="1.5"/>
+  <text x="380" y="234" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">動作湧現</text>
+  <text x="380" y="253" text-anchor="middle" font-size="12" fill="#4b5563">Emergence</text>
+  <text x="380" y="500" text-anchor="middle" font-size="15" fill="#111827">動作不是「教出來」，而是三類限制交互作用下「長出來」 → 教練的工作 = 調整限制</text>
+</svg>

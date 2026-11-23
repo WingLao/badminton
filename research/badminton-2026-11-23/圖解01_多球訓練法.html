@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圖解 01｜多球：心率一樣，練到的卻不一樣｜教練研究</title>
+<meta name="description" content="用動畫看懂多球間歇長短如何改變能量系統、乳酸與移動距離。">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
+.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
+.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
+h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a href="../../">首頁</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><div class="card"><small>教練研究 · 整理日期 2026-11-17 · 依原研究整理，不是原文全文</small></div><h1 id="圖解-01多球心率一樣練到的卻不一樣">圖解 01｜多球：心率一樣，練到的卻不一樣</h1>
+<p>完整研究：<a href="01_多球訓練法.html">01_多球訓練法</a>　·　回到 <a href="index.html">首頁</a></p>
+<div class="callout abstract">
+<p class="callout-title">📌 重點摘要卡</p>
+
+<ul>
+<li><strong>一句話核心：</strong> 間歇長短決定能量系統；心率相近，不代表訓練性質相同。</li>
+<li><strong>關鍵數據：</strong> 乳酸 3.6 → 7.3 mmol/L（10 → 50 秒）｜移動 76 → 65 m/分｜心率：多球約 184、模擬賽約 153</li>
+<li><strong>因果流程：</strong> <code>工作時間拉長</code> ➔ <code>糖解比例 2% → 12%、乳酸上升</code> ➔ <code>移動變慢，偏向耐乳酸而非爆發</code></li>
+<li><strong>跨域應用：</strong> <strong>羽球訓練</strong>：先定目標再定間歇。<strong>數據模型</strong>：單一指標（心率）會掩蓋差異，要多指標交叉驗證。<strong>IT 教學</strong>：教「同一平均值、不同分佈」的例子。</li>
+</ul>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 先猜一猜</p>
+
+<p>同一批國際級選手，多球練 <strong>10 秒</strong>和 <strong>50 秒</strong>（休息時間相同），平均心率幾乎一樣。那麼血乳酸會差多少？ 答案：<strong>約 2 倍</strong>（3.6 → 7.3 mmol/L）。往下看為甚麼。</p>
+</div>
+
+<h2 id="clapper-動畫一間歇越長糖解越多">🎬 動畫一：間歇越長，糖解越多</h2>
+<p><img src="圖片/圖_動畫/01_能量系統_多球間歇_202611171214.svg" alt="間歇越長，糖解（乳酸）越多" /></p>
+<ul>
+<li><strong>橙色（磷酸肌酸）</strong>：負責每一拍的爆發，只能撐數秒。</li>
+<li><strong>紅色（糖解）</strong>：工作時間一長就上升，同時產生乳酸。</li>
+<li><strong>藍色（有氧）</strong>：比賽中最大的能量來源，主要工作是<strong>回合之間把爆發能量補回來</strong>。</li>
+</ul>
+<h2 id="clapper-動畫二心率騙了你">🎬 動畫二：心率騙了你</h2>
+<p><img src="圖片/圖_動畫/01_心率乳酸_多球_202611171214.svg" alt="心率差不多，乳酸差一倍" /></p>
+<h2 id="bar_chart-數據一覽">📊 數據一覽</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th style="text-align: right;">10 秒間歇</th>
+<th style="text-align: right;">30 秒間歇</th>
+<th style="text-align: right;">50 秒間歇</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>血乳酸（mmol/L）</td>
+<td style="text-align: right;">3.6</td>
+<td style="text-align: right;">5.6</td>
+<td style="text-align: right;">7.3</td>
+<td>Edel 2023</td>
+</tr>
+<tr>
+<td>每分鐘移動距離（m）</td>
+<td style="text-align: right;">約 76</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">約 65</td>
+<td>Edel 2023</td>
+</tr>
+<tr>
+<td>磷酸肌酸比例</td>
+<td style="text-align: right;">約 51%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">約 31%</td>
+<td>Edel 2024（模型估算）</td>
+</tr>
+<tr>
+<td>糖解比例</td>
+<td style="text-align: right;">約 2%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">約 12%</td>
+<td>Edel 2024（模型估算）</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>比較</th>
+<th style="text-align: right;">多球</th>
+<th style="text-align: right;">模擬比賽</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平均心率（下／分）</td>
+<td style="text-align: right;">約 184</td>
+<td style="text-align: right;">約 153</td>
+<td>Alvarez-Dacal 2025，42 名國家級青少年</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compass-選間歇的決策流程">🧭 選間歇的決策流程</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode mermaid"><code class="sourceCode mermaid"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">flowchart</span> <span class="cn">TD</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Q</span>{<span class="st">&quot;今天想練甚麼？&quot;</span>} <span class="pp">--&gt;</span><span class="vs">|啟動爆發|</span> <span class="dt">A</span>[<span class="st">&quot;5–10 秒</span><span class="sc">&lt;br/&gt;</span><span class="st">工作：休息 1：3 以上&quot;</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Q</span> <span class="pp">--&gt;</span><span class="vs">|貼近比賽|</span> <span class="dt">B</span>[<span class="st">&quot;8–15 秒</span><span class="sc">&lt;br/&gt;</span><span class="st">1：1.5–1：2&quot;</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Q</span> <span class="pp">--&gt;</span><span class="vs">|耐乳酸（準備期）|</span> <span class="dt">C</span>[<span class="st">&quot;30–50 秒</span><span class="sc">&lt;br/&gt;</span><span class="st">1：1，3–6 組&quot;</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Q</span> <span class="pp">--&gt;</span><span class="vs">|技術穩定|</span> <span class="dt">D</span>[<span class="st">&quot;自訂時間</span><span class="sc">&lt;br/&gt;</span><span class="st">充分休息&quot;</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">A</span> <span class="kw">&amp; </span><span class="dt">B</span> <span class="kw">&amp; </span><span class="dt">C</span> <span class="kw">&amp; </span><span class="dt">D</span> <span class="pp">--&gt;</span> <span class="dt">S</span>[<span class="st">&quot;品質掉到標準以下就停&quot;</span>]</span></code></pre></div>
+<h2 id="brain-延伸知識">🧠 延伸知識</h2>
+<div class="callout note">
+<p class="callout-title">📝 為甚麼心率分不出來？</p>
+
+<p>心率對強度變化<strong>有延遲</strong>：短時間衝刺後，心率還沒升到頂，休息就開始了。所以 10 秒和 50 秒間歇的「平均心率」容易被拉近。要分辨能量系統，看<strong>工作時間、休息比</strong>，必要時測乳酸或問主觀用力（RPE）。</p>
+</div>
+
+<div class="callout note">
+<p class="callout-title">📝 乳酸不是「廢物」</p>
+
+<p>乳酸可以被心臟和其他肌肉當作燃料再利用。乳酸在運動後約 30–60 分鐘回到接近安靜值；<strong>隔天的肌肉痠痛（DOMS）不是乳酸造成的</strong>，而是肌肉微損傷與發炎反應（詳見 <a href="08_教練實務整合_從研究到課表.html#五恢復先後順序">第 08 章</a>）。</p>
+</div>
+
+<div class="callout warning">
+<p class="callout-title">⚠️ 判讀界線</p>
+
+<p>以上都是<strong>單次負荷研究</strong>：說明當下身體反應，不代表練 8 週後誰進步較多。</p>
+</div>
+
+<h2 id="white_check_mark-30-秒自我測驗">✅ 30 秒自我測驗</h2>
+<div class="callout question">
+<p class="callout-title">❓ 1. 想練「每一拍都有爆發力的啟動」，應選短還是長間歇？</p>
+
+<p>短間歇（5–10 秒）、休息長（1：3 以上）。長間歇會讓移動變慢。</p>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 2. 比賽中最大的能量來源是哪一個系統？它的主要工作是甚麼？</p>
+
+<p>有氧系統（約 57%，模型估算），主要負責回合之間的恢復。</p>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 3. 多球平均心率比模擬比賽高約多少？這代表多球一定讓人進步更多嗎？</p>
+
+<p>約 30 下／分。不代表：這只是單次負荷，沒有測長期進步。</p>
+</div>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>
