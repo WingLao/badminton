@@ -6,7 +6,7 @@
 <title>教練科技｜badminton</title>
 <meta name="description" content="給教練：發球機、感測器、AI 分析與器材的訓練用途、量測可信度、使用條件與成本。">
 <style>
-:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
 --blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
 :root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
@@ -14,14 +14,22 @@
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
 a{color:var(--link)}
-.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
-.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
-.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
-.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
 main{max-width:920px;margin:auto;padding:24px 16px 64px}
 .crumb{font-size:14px;color:var(--muted)}
-h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
-h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
 h3{font-size:18px;margin-top:1.4em}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
@@ -65,9 +73,9 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 </style>
 </head>
 <body>
-<nav class="top" aria-label="網站導覽"><a href="../">首頁</a><a href="../learn/">學生學習</a><a href="../technology/" class="on">教練科技</a><a href="../research/">教練研究</a><a href="../skills/">工具說明</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../">badminton</a><a href="../learn/">學生學習</a><a href="../technology/" class="on">教練科技</a><a href="../research/">教練研究</a><a href="../skills/">工具說明</a><a href="../guide/">閱讀方法</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
-<p class="crumb"><a href="../">首頁</a> › 教練科技</p><section class="hero band" data-court="mono" data-hue="215"><div class="hero-text"><h1>教練科技</h1><p><span class="tag">教練</span></p></div></section><p>給教練：發球機、感測器、AI 分析與器材的訓練用途、量測可信度、使用條件與成本。</p><p class="muted">每一期按日期排列，最新的在最上面。</p><article class="card"><small>2026 年 11 月 15 日 · 最新</small><h3><a href="badminton-2026-11-15/">2026 羽球科技：教練應用速覽</a></h3><p>33 支影片整理：比較訓練用途、量測可信度、使用條件與成本，協助安排小規模試用。</p><p><a href="badminton-2026-11-15/">打開這一期 →</a></p></article>
+<p class="crumb"><a href="../">首頁</a> › 教練科技</p><section class="hero band" data-court="mono" data-hue="215"><div class="hero-text"><h1>教練科技</h1><p><span class="tag">教練</span></p></div></section><p>給教練：發球機、感測器、AI 分析與器材的訓練用途、量測可信度、使用條件與成本。</p><p class="muted">每一期按日期排列，最新的在最上面。</p><article class="card cat" style="--h:215"><small>2026 年 11 月 15 日 · 最新</small><h3><a href="badminton-2026-11-15/">2026 羽球科技：教練應用速覽</a></h3><p>33 支影片整理：比較訓練用途、量測可信度、使用條件與成本，協助安排小規模試用。</p><p><a href="badminton-2026-11-15/">打開這一期 →</a></p></article>
 <footer>badminton · 小選手，大目標 · <a href="../">回首頁</a></footer>
 </main>
 <script>

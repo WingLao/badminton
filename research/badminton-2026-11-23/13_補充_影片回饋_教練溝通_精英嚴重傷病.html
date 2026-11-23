@@ -6,7 +6,7 @@
 <title>13｜補充：影片回饋、教練溝通與精英嚴重傷病｜教練研究</title>
 <meta name="description" content="2026-11 新發表三篇：影片／科技回饋系統性回顧、教練對選手溝通範圍回顧、韓國精英單打 vs 雙打嚴重肌腱軟骨傷；各篇標明延伸哪一章。">
 <style>
-:root{--bg:#f3f6f4;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
 --blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
 :root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
@@ -14,14 +14,22 @@
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
 a{color:var(--link)}
-.top{position:sticky;top:0;z-index:5;background:var(--brand);color:var(--brand-ink);display:flex;gap:4px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap}
-.top a{color:var(--brand-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
-.top a.on,.top a:hover{background:rgba(255,255,255,.18)}
-.top button{margin-left:auto;border:0;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.18);color:var(--brand-ink);font:inherit;font-size:14px;cursor:pointer}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
 main{max-width:920px;margin:auto;padding:24px 16px 64px}
 .crumb{font-size:14px;color:var(--muted)}
-h1{font-size:clamp(26px,6vw,36px);line-height:1.3;margin:.4em 0}
-h2{font-size:22px;margin-top:1.8em;border-left:6px solid var(--brand);padding-left:10px}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
 h3{font-size:18px;margin-top:1.4em}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
@@ -44,6 +52,16 @@ blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);colo
 .callout.tip{border-left-color:var(--green)}
 .big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
 footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.hero.band{min-height:clamp(230px,32vh,280px)}
+.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
 @media (max-width:640px){
  table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
  table.cards thead{display:none}
@@ -55,9 +73,102 @@ footer{margin-top:48px;font-size:14px;color:var(--muted)}
 </style>
 </head>
 <body>
-<nav class="top" aria-label="網站導覽"><a href="../../">首頁</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../guide/">閱讀方法</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
-<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><div class="card"><small>教練研究 · 整理日期 2026-11-15 · 依原研究整理，不是原文全文</small></div><h1 id="13補充影片回饋教練溝通與精英嚴重傷病">13｜補充：影片回饋、教練溝通與精英嚴重傷病</h1>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="13補充影片回饋教練溝通與精英嚴重傷病">13｜補充：影片回饋、教練溝通與精英嚴重傷病</h1><p class="meta">教練研究 · 整理日期 2026-11-15 · 依原研究整理，不是原文全文</p><!--rc:start--><section class="rc" data-id="research:13_補充_影片回饋_教練溝通_精英嚴重傷病" aria-label="閱讀卡"><style>
+.rc{--rc-card:var(--card,#fff);--rc-ink:var(--ink,#16302a);--rc-muted:var(--muted,#5d726b);--rc-line:var(--line,#d8e2dd);--rc-soft:var(--code,#eef3f0);--rc-acc:#d7f24b;--rc-brand:var(--brand,#0f5a46);
+ font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;color:var(--rc-ink);background:var(--rc-card);border:1px solid var(--rc-line);border-radius:18px;padding:18px 18px 8px;margin:18px 0 22px;text-align:left;box-sizing:border-box;max-width:100%}
+.rc *{box-sizing:border-box}
+.rc-head{display:flex;gap:8px;align-items:center;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--rc-muted);text-transform:none}
+.rc-head b{background:var(--rc-acc);color:#16302a;border-radius:999px;padding:2px 10px}
+.rc-q{font-size:18px;font-weight:700;line-height:1.5;margin:8px 0 12px}
+.rc-q small{display:block;font-size:13px;font-weight:400;color:var(--rc-muted)}
+.rc-modes{display:flex;flex-wrap:wrap;gap:8px}
+.rc-modes button{flex:1 1 auto;min-height:44px;border:2px solid var(--rc-line);background:transparent;color:var(--rc-ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:15px;cursor:pointer}
+.rc-modes button[aria-pressed="true"]{border-color:var(--rc-ink);background:var(--rc-ink);color:var(--rc-card)}
+.rc-tip{background:var(--rc-soft);border-radius:12px;padding:10px 14px;margin:10px 0 4px;font-size:15px}
+.rc-tip p{margin:4px 0}
+.rc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:640px){.rc-grid{grid-template-columns:1fr}}
+.rc-cell{border:1px solid var(--rc-line);border-radius:14px;padding:10px 14px}
+.rc-cell h4{margin:0 0 4px;font-size:14px;color:var(--rc-muted);font-weight:700}
+.rc-cell h4 span{font-weight:400;font-size:12px;margin-left:4px}
+.rc-cell p,.rc-cell ul{margin:4px 0;font-size:15px}
+.rc-cell ul{padding-left:18px}
+.rc-cell li small{color:var(--rc-muted)}
+.rc-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:14px}
+.rc-flow span{background:var(--rc-soft);border-radius:8px;padding:4px 8px}
+.rc-flow i{font-style:normal;color:var(--rc-muted)}
+.rc-tag{display:inline-block;font-size:12px;border:1px solid var(--rc-muted);border-radius:999px;padding:0 8px;margin-left:6px;color:var(--rc-muted)}
+.rc details{border-top:1px dashed var(--rc-line);padding:8px 0}
+.rc summary{cursor:pointer;font-weight:700;min-height:36px;display:flex;align-items:center}
+.rc ol{padding-left:22px;margin:6px 0}
+.rc .rc-ans{border-top:0;background:var(--rc-soft);border-radius:10px;padding:6px 12px;margin:6px 0 10px;font-size:15px}
+.rc .rc-ans summary{font-weight:400;color:var(--rc-muted);font-size:14px}
+.rc-review{display:grid;gap:8px;margin:8px 0}
+.rc-review label{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:15px}
+.rc-review select,.rc-review input{font:inherit;font-size:15px;padding:6px 8px;border:1px solid var(--rc-line);border-radius:8px;background:var(--rc-card);color:var(--rc-ink);min-height:40px}
+.rc-review input{width:5em}
+.rc-btns{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.rc-btns button{min-height:44px;border:0;border-radius:999px;padding:8px 16px;font:inherit;font-size:15px;font-weight:700;cursor:pointer;background:var(--rc-ink);color:var(--rc-card)}
+.rc-btns button.rc-ghost{background:transparent;color:var(--rc-ink);border:2px solid var(--rc-line)}
+.rc-note{font-size:13px;color:var(--rc-muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rc{--rc-acc:#b7d43a}}
+:root[data-theme="dark"] .rc{--rc-acc:#b7d43a}
+</style>
+<div class="rc-head"><b>閱讀卡</b><span>先選讀法，再讀全文</span></div>
+<p class="rc-q">我讀這篇是為了回答：影片回饋、教練溝通和精英選手的嚴重傷病，新研究說了甚麼？<small>選一種讀法，看看先讀哪裡、讀到哪裡可以停。<a href="../../guide/">這套讀法是甚麼？</a></small></p>
+<div class="rc-modes" role="group" aria-label="選擇讀法"><button type="button" data-m="lookup" aria-pressed="false">查資料</button><button type="button" data-m="decide" aria-pressed="false">做決定</button><button type="button" data-m="teach" aria-pressed="false">日後要教或反覆用</button></div><div class="rc-tip" data-m="lookup" hidden><p>先讀哪裡：用頁內搜尋（電腦按 Ctrl＋F 或 ⌘＋F；手機在瀏覽器選單選「在頁面中尋找」）找關鍵詞：「影片回饋」、「教練溝通」、「嚴重傷」、「復出」，直接讀範例和適用條件。</p><p>何時停：找到答案，並能在手上的例子用一次。</p></div><div class="rc-tip" data-m="decide" hidden><p>先讀哪裡：先看下面的四欄筆記和本頁圖表，再核對比較對象、指標和適用條件。</p><p>何時停：能說出要改哪一步、觀察甚麼，以及哪項證據可能改變決定。</p></div><div class="rc-tip" data-m="teach" hidden><p>先讀哪裡：一次讀一節，關掉原文，用約 1 分鐘畫出三格流程，再回原文核對（可對照下面的「因果／流程」）。</p><p>何時停：能換一個情境說明，並指出一個適用條件或常見錯誤。</p></div>
+<div class="rc-grid" id="rc-note">
+<div class="rc-cell"><h4>一句話核心<span>Core Thesis</span></h4><p>影片回饋有用但證據分散；難的球路要給「正確做法＋錯在哪＋肯定」；精英選手最大的缺口是復出管理。</p></div>
+<div class="rc-cell"><h4>關鍵數據<span>Key Metrics</span></h4><ul><li><b>57.9%</b>｜韓國精英選手曾有嚴重傷（停訓 ≥ 28 日）的比例<br><small>出處：本章〈3. 韓國精英嚴重傷〉</small></li><li><b>66.7%</b>｜首次復出前沒有醫生批准的比例<br><small>出處：同上</small></li><li><b>52.9%</b>｜有再傷史的比例<br><small>出處：同上</small></li></ul></div>
+<div class="rc-cell"><h4>因果／流程<span>Logic Flow</span></h4><div class="rc-flow"><span>未經批准提早復出</span><i>→</i><span>組織未完全適應</span><i>→</i><span>同部位再傷</span></div><p class="rc-note">標示：<span class="rc-tag">相關</span>（原文只支持相關，不能當成因果）</p></div>
+<div class="rc-cell"><h4>跨域應用<span>Cross-Domain Link</span></h4><p><b>羽球訓練</b>：我會改「建立復出三階段檢核表（醫生批准、場上測試、比賽）」→ 觀察「復出後再傷的人數」<span class="rc-tag">待驗證</span></p></div>
+</div>
+<p class="rc-note"><label>首次找到答案花了 <input type="number" min="0" inputmode="numeric" data-k="min" style="width:4.5em;font:inherit;padding:2px 6px;border:1px solid var(--rc-line);border-radius:6px;background:var(--rc-card);color:var(--rc-ink)"> 分鐘（可不填）</label></p>
+<details><summary>閉卷回想：蓋住上面，自己答兩題</summary>
+<ol><li>畫出「提早復出 → 再傷」的流程，並說明為甚麼這只是推論。<details class="rc-ans"><summary>參考答案（先自己答完再打開）</summary>未經批准復出 → 組織未完全適應 → 同部位再傷。資料來自問卷研究，只能看到相關，不能證明因果。</details></li><li>替選手修正一個很難的球路時，教練回饋應包含哪三部分？<details class="rc-ans"><summary>參考答案（先自己答完再打開）</summary>正確做法＋錯在哪＋肯定。容易的球路給正確動作提示就夠。</details></li></ol>
+<p class="rc-note">只為值得長期使用的內容排複習：隔天和第 7 天各一次。每次先蓋住筆記，口述核心、重畫機制、說出一個適用條件，各 1 分。答不全時，只回看對應段落。</p>
+<div class="rc-btns"><button type="button" class="rc-start rc-ghost">開始排複習（今天讀完）</button></div>
+<div class="rc-review" hidden>
+<label>隔天 <span data-d="1"></span>｜得分 <select data-k="d1"><option value="">未做</option><option>0</option><option>1</option><option>2</option><option>3</option></select> / 3</label>
+<label>第 7 天 <span data-d="7"></span>｜得分 <select data-k="d7"><option value="">未做</option><option>0</option><option>1</option><option>2</option><option>3</option></select> / 3</label>
+</div></details>
+<div class="rc-btns"><button type="button" class="rc-copy">複製成 Obsidian 筆記</button></div>
+<p class="rc-note">Obsidian 是一個免費的筆記軟體；沒有安裝也可以把複製的內容貼到任何筆記或文件。</p>
+<p class="rc-note">讀法選擇、分鐘數和複習分數只存在這部裝置的瀏覽器，不會上傳。四欄筆記依本頁內容整理；「待驗證」表示超出原文的推論。</p>
+<script type="application/json" class="rc-data">{"question": "影片回饋、教練溝通和精英選手的嚴重傷病，新研究說了甚麼？", "core": "影片回饋有用但證據分散；難的球路要給「正確做法＋錯在哪＋肯定」；精英選手最大的缺口是復出管理。", "metrics": [{"v": "57.9%", "basis": "韓國精英選手曾有嚴重傷（停訓 ≥ 28 日）的比例", "src": "本章〈3. 韓國精英嚴重傷〉"}, {"v": "66.7%", "basis": "首次復出前沒有醫生批准的比例", "src": "同上"}, {"v": "52.9%", "basis": "有再傷史的比例", "src": "同上"}], "metrics_note": null, "flow": ["未經批准提早復出", "組織未完全適應", "同部位再傷"], "flow_tag": "相關", "link": {"domain": "羽球訓練", "change": "建立復出三階段檢核表（醫生批准、場上測試、比賽）", "observe": "復出後再傷的人數", "tag": "待驗證"}, "recall": [{"q": "畫出「提早復出 → 再傷」的流程，並說明為甚麼這只是推論。", "a": "未經批准復出 → 組織未完全適應 → 同部位再傷。資料來自問卷研究，只能看到相關，不能證明因果。"}, {"q": "替選手修正一個很難的球路時，教練回饋應包含哪三部分？", "a": "正確做法＋錯在哪＋肯定。容易的球路給正確動作提示就夠。"}]}</script>
+<script>
+(function(){var rc=document.currentScript.closest('.rc');if(!rc)return;var id=rc.dataset.id,card=JSON.parse(rc.querySelector('.rc-data').textContent);
+function g(k){try{return localStorage.getItem('rc:'+id+':'+k)}catch(e){return null}}function s(k,v){try{localStorage.setItem('rc:'+id+':'+k,v)}catch(e){}}
+var bs=rc.querySelectorAll('.rc-modes button'),tips=rc.querySelectorAll('.rc-tip[data-m]');
+function pick(m){bs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.m===m)});tips.forEach(function(t){t.hidden=t.dataset.m!==m})}
+bs.forEach(function(b){b.onclick=function(){pick(b.dataset.m);s('mode',b.dataset.m)}});var m=g('mode');if(m)pick(m);
+var min=rc.querySelector('[data-k="min"]');if(min){min.value=g('min')||'';min.oninput=function(){s('min',min.value)}}
+var start=rc.querySelector('.rc-start'),rev=rc.querySelector('.rc-review');
+function ymd(x){return x.getFullYear()+'-'+('0'+(x.getMonth()+1)).slice(-2)+'-'+('0'+x.getDate()).slice(-2)}
+function day(d,n){var p=d.split('-'),x=new Date(+p[0],p[1]-1,+p[2]);x.setDate(x.getDate()+n);return ymd(x)}
+function showRev(){var d=g('start');if(!rev)return;rev.hidden=!d;if(start)start.textContent=d?'重新開始排複習':'開始排複習（今天讀完）';if(!d)return;
+ rev.querySelector('[data-d="1"]').textContent=day(d,1);rev.querySelector('[data-d="7"]').textContent=day(d,7);
+ rev.querySelectorAll('select').forEach(function(x){x.value=g(x.dataset.k)||''})}
+if(start)start.onclick=function(){s('start',ymd(new Date()));s('d1','');s('d7','');showRev()};
+if(rev)rev.querySelectorAll('select').forEach(function(x){x.onchange=function(){s(x.dataset.k,x.value)}});showRev();
+var cp=rc.querySelector('.rc-copy');if(cp)cp.onclick=function(){
+ var d=g('start'),L=[];var h=document.querySelector('h1');L.push('# '+(h?h.textContent.replace(/\s+/g,' ').trim():document.title));L.push('');
+ L.push('- 來源｜'+location.href.split('#')[0]);L.push('- 我的問題｜'+card.question);L.push('- 首次定位｜'+(g('min')||'　')+' 分鐘');L.push('');
+ L.push('| 欄位 | 筆記 |');L.push('|---|---|');
+ L.push('| **Core Thesis（一句話核心）** | '+card.core+' |');
+ L.push('| **Key Metrics（關鍵數據）** | '+(card.metrics.length?card.metrics.map(function(x){return x.v+'（'+x.basis+'；'+x.src+'）'}).join('<br>'):'未提供'+(card.metrics_note?'：'+card.metrics_note:''))+' |');
+ L.push('| **Logic Flow（因果／流程）** | '+card.flow.join(' → ')+(card.flow_tag?'（'+card.flow_tag+'）':'')+' |');
+ L.push('| **Cross-Domain Link（跨域應用）** | '+card.link.domain+'：'+card.link.change+' → '+card.link.observe+(card.link.tag?'（'+card.link.tag+'）':'')+' |');
+ if(card.recall){L.push('');L.push('## 閉卷回想');L.push('');card.recall.forEach(function(r,i){L.push((i+1)+'. '+r.q)});L.push('');
+  L.push('- 隔天 '+(d?day(d,1):'[日期]')+'｜'+(g('d1')||'　')+'/3');L.push('- 第 7 天 '+(d?day(d,7):'[日期]')+'｜'+(g('d7')||'　')+'/3');L.push('');
+  L.push('> [!note]- 參考答案');card.recall.forEach(function(r,i){L.push('> '+(i+1)+'. '+r.a)})}
+ var t=L.join('\n'),ok=function(){cp.textContent='已複製 ✓';setTimeout(function(){cp.textContent='複製成 Obsidian 筆記'},1800)};
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fb(t)})}else fb(t);
+ function fb(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(e){alert(t)}a.remove()}};
+})();
+</script></section><!--rc:end-->
 <p>返回 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a>；相關章節：<a href="05_肌力分析.html">05_肌力分析</a>、<a href="06_運動行為與運動訓練_vs_筋膜訓練.html">06_運動行為與運動訓練_vs_筋膜訓練</a>、<a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a>、<a href="09_心理技能與分間例行程序.html">09_心理技能與分間例行程序</a>、<a href="10_四國研究與制度.html">10_四國研究與制度</a>、<a href="11_補充_跨章新增研究.html">11_補充_跨章新增研究</a>。</p>
 <div class="callout summary">
 <p class="callout-title">📌 一分鐘看完</p>
