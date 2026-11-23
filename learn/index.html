@@ -53,12 +53,13 @@ blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);colo
 .callout.tip{border-left-color:var(--green)}
 .big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
 footer{margin-top:48px;font-size:14px;color:var(--muted)}
-.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
  background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
-.hero.band{min-height:clamp(230px,32vh,280px)}
-.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
 .court-canvas canvas{display:block;width:100%!important;height:100%!important}
-.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
 .hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
 .hero-tip{font-size:13px;color:var(--muted)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
@@ -75,7 +76,7 @@ table.wide{font-size:13px;white-space:nowrap}
 </style>
 </head>
 <body>
-<nav class="top" aria-label="網站導覽"><a class="brand" href="../">badminton</a><a href="../learn/" class="on">學生學習</a><a href="../technology/">教練科技</a><a href="../research/">教練研究</a><a href="../skills/">工具說明</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../">badminton</a><a href="../news/">最新消息</a><a href="../learn/" class="on">學生學習</a><a href="../technology/">教練科技</a><a href="../research/">教練研究</a><a href="../skills/">工具說明</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
 <p class="crumb"><a href="../">首頁</a> › 學生學習</p><section class="hero band" data-court="mono" data-hue="150"><div class="hero-text"><h1>學生學習</h1><p><span class="tag">小選手</span></p></div></section><p>給小選手：每次只練一個細節，一句提示、一個練習、一項檢查。手機打開就能跟著練。</p><p class="muted">每一期按日期排列，最新的在最上面。</p><article class="card cat" style="--h:150"><small>2026 年 11 月 23 日 · 最新</small><h3><a href="badminton-2026-11-23/">手指發力：先放鬆，觸球前才握緊</a></h3><p>用 8 張圖看懂手指怎樣用力：放鬆握拍、正手食指、反手拇指、網前短握與換握，附 4 個階段的練習和自我檢查。</p><p><a href="badminton-2026-11-23/">打開這一期 →</a> · <a href="badminton-2026-11-23/有聲書/">進階：手指發力有聲書</a> · <a href="badminton-2026-11-23/手指發力_學習精華.md">文字版</a></p></article><article class="card cat" style="--h:150"><small>2026 年 11 月 15 日</small><h3><a href="badminton-2026-11-15/">小選手成長筆記：五項基礎細節</a></h3><p>從 YouTube 教學月報整理五項細節：準備、擊球、下一拍。影片都核對過可免費觀看。</p><p><a href="badminton-2026-11-15/">打開這一期 →</a> · <a href="badminton-2026-11-15/月報_瀏覽版.html">完整月報</a> · <a href="badminton-2026-11-15/影片免費觀看檢查_20261115.html">影片免費核對表</a></p></article><article class="card"><small>另一個網站</small><h3><a href="https://winglao.github.io/badminton-finger-biomechanics/">手指發力 3D 互動教學</a></h3><p>用 3D 手骨模型看手指怎樣用力，5 個步驟配旁白，手機直向也能看。</p></article>
 <footer>badminton · 小選手，大目標 · <a href="../">回首頁</a></footer>

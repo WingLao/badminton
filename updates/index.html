@@ -53,12 +53,13 @@ blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);colo
 .callout.tip{border-left-color:var(--green)}
 .big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
 footer{margin-top:48px;font-size:14px;color:var(--muted)}
-.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
  background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
-.hero.band{min-height:clamp(230px,32vh,280px)}
-.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
 .court-canvas canvas{display:block;width:100%!important;height:100%!important}
-.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
 .hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
 .hero-tip{font-size:13px;color:var(--muted)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
@@ -75,9 +76,9 @@ table.wide{font-size:13px;white-space:nowrap}
 </style>
 </head>
 <body>
-<nav class="top" aria-label="網站導覽"><a class="brand" href="../">badminton</a><a href="../learn/">學生學習</a><a href="../technology/">教練科技</a><a href="../research/">教練研究</a><a href="../skills/">工具說明</a><a href="../updates/" class="on">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../">badminton</a><a href="../news/">最新消息</a><a href="../learn/">學生學習</a><a href="../technology/">教練科技</a><a href="../research/">教練研究</a><a href="../skills/">工具說明</a><a href="../updates/" class="on">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
-<p class="crumb"><a href="../">首頁</a> › 更新紀錄</p><h1>更新紀錄</h1><p>網站每星期六早上 8 點（澳門時間）自動檢查本機資料：有新的研究筆記就新增一期，教學與科技來源有修改就同步，再檢查連結並發佈。需要人手核對的內容（例如新影片是否免費）會列為「待整理」，不會自動放上學生頁。</p><article class="card"><small>首次整站建立</small><h3>2026 年 11 月 23 日</h3><ul><li>整站改版：新增教練研究、工具說明、更新紀錄三個分類，首頁改為四個分類入口</li><li>學生學習新增一期：手指發力（learn/badminton-2026-11-23/）</li><li>工具說明新增：AVANCO 兩個 skill 的用途與步驟（skills/badminton-2026-11-23/）</li><li>教練研究新增一期：26 篇整理、3,080 筆文獻目錄（research/badminton-2026-11-23/）</li><li>首頁與分類目錄加入 p5.js 3D 羽球場動畫（改編自 P5js 作品 bg_light_art、bg_mono_v2）</li><li>全站套用「閱讀與記憶工作流」：每篇文章加入閱讀卡（讀法選擇、四欄筆記、閉卷回想、隔天／第 7 天複習），新增「閱讀方法」頁</li><li>設計統一：深色導覽列＋螢光黃綠重點色、首頁 2×2 分類卡、研究文章標題置頂、舊頁加上網站導覽條</li><li>依使用者修正：網站不再顯示閱讀卡與「閱讀方法」頁（四欄筆記改為整理文章時另外交給使用者）；不再顯示年級標示</li><li>全站加上 noindex：不讓 Google 等搜尋引擎收錄</li><li>加入學術資料夾的研究文件（男子雙打認知教學、近五年文獻整理、研究紀錄、多球研究統整、候選文獻清單等）與 9 場奧運比賽數據（可下載原始 Excel）；論文 PDF 不上傳，只列題名與原出處</li><li>教練研究更新：47 篇（含研究文件 12 篇、比賽數據 9 場）、3,080 筆文獻目錄（research/badminton-2026-11-23/）</li><li>學生學習 2026-11-15：從本機來源同步 1 個檔案</li></ul></article>
+<p class="crumb"><a href="../">首頁</a> › 更新紀錄</p><h1>更新紀錄</h1><p>網站每星期六早上 8 點（澳門時間）自動檢查本機資料：有新的研究筆記就新增一期，教學與科技來源有修改就同步，再檢查連結並發佈。需要人手核對的內容（例如新影片是否免費）會列為「待整理」，不會自動放上學生頁。</p><article class="card"><small>首次整站建立</small><h3>2026 年 11 月 23 日</h3><ul><li>整站改版：新增教練研究、工具說明、更新紀錄三個分類，首頁改為四個分類入口</li><li>學生學習新增一期：手指發力（learn/badminton-2026-11-23/）</li><li>工具說明新增：AVANCO 兩個 skill 的用途與步驟（skills/badminton-2026-11-23/）</li><li>教練研究新增一期：26 篇整理、3,080 筆文獻目錄（research/badminton-2026-11-23/）</li><li>首頁與分類目錄加入 p5.js 3D 羽球場動畫（改編自 P5js 作品 bg_light_art、bg_mono_v2）</li><li>全站套用「閱讀與記憶工作流」：每篇文章加入閱讀卡（讀法選擇、四欄筆記、閉卷回想、隔天／第 7 天複習），新增「閱讀方法」頁</li><li>設計統一：深色導覽列＋螢光黃綠重點色、首頁 2×2 分類卡、研究文章標題置頂、舊頁加上網站導覽條</li><li>依使用者修正：網站不再顯示閱讀卡與「閱讀方法」頁（四欄筆記改為整理文章時另外交給使用者）；不再顯示年級標示</li><li>全站加上 noindex：不讓 Google 等搜尋引擎收錄</li><li>加入學術資料夾的研究文件（男子雙打認知教學、近五年文獻整理、研究紀錄、多球研究統整、候選文獻清單等）與 9 場奧運比賽數據（可下載原始 Excel）；論文 PDF 不上傳，只列題名與原出處</li><li>教練研究更新：47 篇（含研究文件 12 篇、比賽數據 9 場）、3,080 筆文獻目錄（research/badminton-2026-11-23/）</li><li>學生學習 2026-11-15：從本機來源同步 1 個檔案</li><li>新增「最新消息」：每星期五晚上搜尋羽球與動作學習、發展、控制新論文，星期六更新；首頁最上方顯示</li><li>p5.js 羽球場動畫縮小為約三分之一版面，提高解析度</li><li>最新消息新增：本週新文獻 24 篇（羽球 14、動作學習 0、動作發展 8、動作控制 2）（news/badminton-2026-11-23/）</li></ul></article>
 <footer>badminton · 小選手，大目標 · <a href="../">回首頁</a></footer>
 </main>
 <script>

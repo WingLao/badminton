@@ -38,6 +38,7 @@ EXTRA_DOCS = ['學術/男子雙打認知教學運用.md', '學術/羽毛球近�
               '學術/近五年羽毛球文獻_2021-2026/請先閱讀.md', '學術/近五年羽毛球文獻_2021-2026/多球訓練研究統整_2025.md',
               '學術/羽球研究筆記/課堂延伸研究原文/00_原文索引_*.md', '學術/羽球研究筆記/文獻候選索引/*.md']
 MATCH_XLSX = SRC / '學術/鄭任佑'
+NEWS_SRC = SRC / '學術/每週新文獻'      # badminton-weekly-papers skill 每週五產生
 LEARN_SRC = SRC / '教學'
 TECH_SRC = SRC / '科技/2026羽球科技速覽.html'
 SKILLS_SRC = SRC.parent / 'AVANCO_html/.codex/skills'
@@ -94,12 +95,13 @@ blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);colo
 .callout.tip{border-left-color:var(--green)}
 .big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
 footer{margin-top:48px;font-size:14px;color:var(--muted)}
-.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
  background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
-.hero.band{min-height:clamp(230px,32vh,280px)}
-.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
 .court-canvas canvas{display:block;width:100%!important;height:100%!important}
-.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
 .hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
 .hero-tip{font-size:13px;color:var(--muted)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
@@ -126,9 +128,9 @@ if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forE
 })();
 </script>"""
 
-CAT_HUE = {'learn': 150, 'technology': 215, 'research': 270, 'skills': 25}   # 分類色：墨綠、藍、紫、橙
+CAT_HUE = {'learn': 150, 'technology': 215, 'research': 270, 'skills': 25, 'news': 45}   # 分類色：墨綠、藍、紫、橙
 
-NAV = [('首頁', ''), ('學生學習', 'learn/'), ('教練科技', 'technology/'), ('教練研究', 'research/'),
+NAV = [('首頁', ''), ('最新消息', 'news/'), ('學生學習', 'learn/'), ('教練科技', 'technology/'), ('教練研究', 'research/'),
        ('工具說明', 'skills/'), ('更新紀錄', 'updates/')]
 
 
@@ -584,6 +586,65 @@ def tidy_hand_pages():
             f.write_text(new, encoding='utf-8')
 
 
+# ---------------------------------------------------------------- 最新消息（每週新文獻）
+
+TOPIC_ORDER = ['羽球', '動作學習', '動作發展', '動作控制']
+
+
+def news_files() -> list[dict]:
+    out = []
+    for f in sorted(NEWS_SRC.glob('新文獻_*.json')) if NEWS_SRC.exists() else []:
+        try:
+            d = json.loads(f.read_text(encoding='utf-8'))
+        except ValueError:
+            continue
+        d['_file'] = f
+        out.append(d)
+    return out
+
+
+def build_news(cfg: dict) -> list[str]:
+    """每份已整理（reviewed）的新文獻清單 → news/badminton-YYYY-MM-DD/。不公開摘要原文。"""
+    notes, issues = [], []
+    for d in news_files():
+        if not d.get('reviewed'):
+            notes.append(f'待整理：{d["_file"].name} 還沒完成篩選與中文重點（reviewed=false），本週不放上網站')
+            continue
+        items = [x for x in d['items'] if x.get('keep')]
+        date = d['date']
+        by = {t: [x for x in items if t in x['topics'] and min(TOPIC_ORDER.index(y) for y in x['topics']) == TOPIC_ORDER.index(t)] for t in TOPIC_ORDER}
+        secs = ''
+        for t in TOPIC_ORDER:
+            lst = by[t]
+            cards = ''.join(
+                f'<article class="card"><small>{esc(x["date"])} · {esc(x["journal"])}{" · 開放取用" if x.get("oa") else ""}'
+                f'{" · 也屬" + "、".join(y for y in x["topics"] if y != t) if len(x["topics"]) > 1 else ""}</small>'
+                f'<h3 style="margin:.3em 0"><a href="{esc(x["url"])}" target="_blank" rel="noopener">{esc(x["title_zh"] or x["title"])}</a></h3>'
+                f'<p>{esc(x["summary_zh"])}</p><p class="muted" style="font-size:14px">原題：{esc(x["title"])}<br>'
+                f'{esc("、".join(x["authors"][:3]))}{" 等" if len(x["authors"]) > 3 or x.get("more_authors") else ""}'
+                f'{" · 依題名整理" if x.get("basis") == "題名" else " · 依摘要整理，未讀全文"}</p></article>' for x in lst)
+            secs += f'<h2 id="{t}">{t}（{len(lst)} 篇）</h2>' + (cards or '<p class="muted">本週沒有符合條件的新論文。</p>')
+        counts = '、'.join(f'{t} {len(by[t])}' for t in TOPIC_ORDER)
+        body = (f'<p class="crumb"><a href="../">最新消息</a> › {zh_date(date)}</p><h1>本週新文獻：{zh_date(date)}</h1>'
+                f'<p class="meta">搜尋期間 {esc(d["range"][0])} 至 {esc(d["range"][1])} · 期刊論文 · 共 {len(items)} 篇（{counts}）</p>'
+                f'<div class="card"><p>每星期五晚上搜尋 OpenAlex 與 PubMed 的新發表論文：羽球，以及與運動、技能或兒童相關的動作學習、動作發展、動作控制研究。'
+                f'已篩掉工程、臨床醫學等不相關的論文。中文重點只寫摘要提到的研究目的、方法或結果，<mark>沒有讀全文</mark>；按題目會開到原出處。</p>'
+                f'<p class="muted">找到 {len(d["items"])} 篇，保留 {len(items)} 篇。</p></div>{secs}')
+        out = ROOT / f'news/badminton-{date}'
+        out.mkdir(parents=True, exist_ok=True)
+        new_html = page(f'本週新文獻 {date}｜最新消息', body, 2, 'news/', f'{date} 羽球與動作學習、發展、控制新論文 {len(items)} 篇。')
+        if not (out / 'index.html').exists() or (out / 'index.html').read_text(encoding='utf-8') != new_html:
+            if not (out / 'index.html').exists():
+                notes.append(f'最新消息新增：本週新文獻 {len(items)} 篇（{counts}）（news/badminton-{date}/）')
+            (out / 'index.html').write_text(new_html, encoding='utf-8')
+        top = sorted(items, key=lambda x: TOPIC_ORDER.index(min(x['topics'], key=TOPIC_ORDER.index)))
+        issues.append({'date': date, 'path': f'news/badminton-{date}/', 'title': f'本週新文獻：{len(items)} 篇',
+                       'summary': f'{counts}。', 'top': [{'t': x['title_zh'] or x['title'], 's': x['summary_zh'], 'u': x['url'], 'k': x['topics'][0]} for x in top[:6]]})
+    issues.sort(key=lambda i: i['date'], reverse=True)
+    cfg['categories']['news']['issues'] = issues
+    return notes
+
+
 # ---------------------------------------------------------------- 目錄頁
 
 def build_indexes(cfg: dict, log: list[dict]):
@@ -619,6 +680,7 @@ def build_indexes(cfg: dict, log: list[dict]):
 
     # 首頁
     order = ['learn', 'technology', 'research', 'skills']
+    news = cats.get('news', {}).get('issues', [])
     cards = ''
     for key in order:
         c = cats[key]
@@ -628,10 +690,20 @@ def build_indexes(cfg: dict, log: list[dict]):
                   f'<p><b>{esc(it["title"])}</b><br><small>{esc(it["summary"])}</small></p>'
                   f'<p class="big"><a href="{it["path"]}">打開最新一期</a></p><p><a href="{key}/">看全部 {len(c["issues"])} 期 →</a></p></article>')
     last = log[0] if log else {'date': today(), 'items': []}
+    if news:
+        n0 = news[0]
+        lis = ''.join(f'<li><span class="tag">{esc(x["k"])}</span><a href="{esc(x["u"])}" target="_blank" rel="noopener">{esc(x["t"])}</a><br><small>{esc(x["s"])}</small></li>' for x in n0['top'])
+        news_block = (f'<section class="card cat" style="--h:{CAT_HUE["news"]}"><small>最新消息 · 每星期五晚上搜尋、星期六早上更新</small>'
+                      f'<h2 style="margin-top:.3em">{esc(n0["title"])}（{zh_date(n0["date"])}）</h2><p class="muted">{esc(n0["summary"])}</p>'
+                      f'<ul style="padding-left:0;list-style:none;display:grid;gap:10px">{lis}</ul>'
+                      f'<p class="big"><a href="{n0["path"]}">看本週全部新文獻</a></p><p><a href="news/">往期最新消息 →</a> · <a href="updates/">網站更新紀錄 →</a></p></section>')
+    else:
+        news_block = ''
     upd = ''.join(f'<li>{esc(x)}</li>' for x in last['items'][:4]) or '<li>本週本機資料沒有變動。</li>'
     body = f"""<section class="hero" data-court="rally"><div class="hero-text"><h1>小選手，大目標。</h1>
 <p>羽球學習與教練資料站：學生從細節開始練，教練用研究和科技安排訓練。</p>
-<p class="hero-tip">背景是自動對打的 3D 羽球場；點一下球場空白處，就會朝那裡殺球。</p></div></section>
+<p class="hero-tip">旁邊的 3D 羽球場會自動對打；點一下球場，就會朝那裡殺球。</p></div></section>
+{news_block}
 <div class="grid home">{cards}</div>
 <article class="card"><small>每星期六早上 8 點自動更新</small><h2 style="margin-top:.4em">最近更新：{zh_date(last['date'])}</h2><ul>{upd}</ul><p><a href="updates/">看全部更新紀錄 →</a></p></article>
 <article class="card"><small>另一個網站</small><h2 style="margin-top:.4em">手指發力 3D 互動教學</h2><p>用 3D 手骨模型看手指怎樣用力，5 個步驟配旁白。</p><p class="big"><a href="https://winglao.github.io/badminton-finger-biomechanics/">打開 3D 教學</a></p></article>
@@ -650,6 +722,7 @@ def main():
     items += build_research(a.date, a.force_research)
     items += sync_sources()
     cfg = json.loads(CONFIG.read_text(encoding='utf-8'))
+    items += build_news(cfg)
     tidy_hand_pages()
     log = json.loads(LOG.read_text(encoding='utf-8')) if LOG.exists() else []
     # 同一天重跑：保留之前寫入的項目，再加上新項目（不重複）

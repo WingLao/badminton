@@ -48,7 +48,7 @@
 
       s.setup = function () {
         const r = holder.getBoundingClientRect();
-        s.pixelDensity(Math.min(window.devicePixelRatio || 1, 1.5));
+        s.pixelDensity(Math.min(window.devicePixelRatio || 1, 2));   // 畫面變小，提高解析度保持細緻
         s.createCanvas(Math.max(1, r.width), Math.max(1, r.height), s.WEBGL).parent(holder);
         s.colorMode(s.HSB, 360, 100, 100, 100);
         s.frameRate(window.innerWidth < 700 ? 30 : 45);
@@ -82,11 +82,11 @@
         s.clear();
         const px = pointer.x - 0.5, py = pointer.y - 0.5;
         const aspect = s.width / Math.max(1, s.height);
-        const fit = s.constrain(1.15 / aspect, 0.85, 1.45);    // 直向手機 → 鏡頭稍微拉遠
+        const fit = s.constrain(1.15 / aspect, 0.85, 1.45) * s.constrain(400 / Math.max(60, s.height), 1.3, 2.6);   // 畫面越矮，鏡頭越遠，整個球場都看得到
         const R = (mode === 'rally' ? 760 : 700) * fit - cameraPulse * 24;
         camAz = tGlobal * (mode === 'rally' ? 0.14 : 0.18) + px * 0.24 + Math.sin(tGlobal * 1.7) * 0.03;
         const elev = (mode === 'rally' ? 310 : 260) + Math.sin(tGlobal * 0.5) * 36 + py * 50 - cameraPulse * 16;
-        s.camera(Math.sin(camAz) * R, Y_FLOOR - elev, Math.cos(camAz) * R, px * 60, Y_FLOOR - 165 + py * 14, 0, 0, 1, 0);         // 看高一點 → 球場落在畫面下半（上半放文字）
+        s.camera(Math.sin(camAz) * R, Y_FLOOR - elev, Math.cos(camAz) * R, px * 60, Y_FLOOR - 15 + py * 14, 0, 0, 1, 0);         // 球場置中（文字已移到旁邊）
         if (mode === 'mono') drawGrid();
         drawCourt();
         drawShadow();

@@ -53,12 +53,13 @@ blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);colo
 .callout.tip{border-left-color:var(--green)}
 .big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
 footer{margin-top:48px;font-size:14px;color:var(--muted)}
-.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;min-height:clamp(380px,62vh,500px);display:flex;align-items:flex-start;
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
  background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
-.hero.band{min-height:clamp(230px,32vh,280px)}
-.court-canvas{position:absolute;inset:0;z-index:0}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
 .court-canvas canvas{display:block;width:100%!important;height:100%!important}
-.hero-text{position:relative;z-index:1;margin:16px;padding:14px 18px;border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);max-width:560px}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
 .hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
 .hero-tip{font-size:13px;color:var(--muted)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
@@ -75,7 +76,7 @@ table.wide{font-size:13px;white-space:nowrap}
 </style>
 </head>
 <body>
-<nav class="top" aria-label="網站導覽"><a class="brand" href="../">badminton</a><a href="../learn/">學生學習</a><a href="../technology/" class="on">教練科技</a><a href="../research/">教練研究</a><a href="../skills/">工具說明</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../">badminton</a><a href="../news/">最新消息</a><a href="../learn/">學生學習</a><a href="../technology/" class="on">教練科技</a><a href="../research/">教練研究</a><a href="../skills/">工具說明</a><a href="../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
 <main>
 <p class="crumb"><a href="../">首頁</a> › 教練科技</p><section class="hero band" data-court="mono" data-hue="215"><div class="hero-text"><h1>教練科技</h1><p><span class="tag">教練</span></p></div></section><p>給教練：發球機、感測器、AI 分析與器材的訓練用途、量測可信度、使用條件與成本。</p><p class="muted">每一期按日期排列，最新的在最上面。</p><article class="card cat" style="--h:215"><small>2026 年 11 月 15 日 · 最新</small><h3><a href="badminton-2026-11-15/">2026 羽球科技：教練應用速覽</a></h3><p>33 支影片整理：比較訓練用途、量測可信度、使用條件與成本，協助安排小規模試用。</p><p><a href="badminton-2026-11-15/">打開這一期 →</a></p></article>
 <footer>badminton · 小選手，大目標 · <a href="../">回首頁</a></footer>
