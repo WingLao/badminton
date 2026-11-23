@@ -8,7 +8,7 @@ REPO="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO"
 DATE="$(TZ=Asia/Macau date +%F)"
 SITE="https://winglao.github.io/badminton"
-LOGDIR="$REPO/../網站維護/自動更新紀錄"
+LOGDIR="${BADMINTON_SRC:-$HOME/Desktop/Badminton/網站資料}/網站維護/自動更新紀錄"   # 紀錄留在本機資料夾，不進網站
 mkdir -p "$LOGDIR"
 LOG="$LOGDIR/更新_${DATE}.log"
 exec > >(tee -a "$LOG") 2>&1

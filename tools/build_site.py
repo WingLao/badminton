@@ -17,6 +17,7 @@ import filecmp
 import hashlib
 import html
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -27,8 +28,9 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import reading_card as RC  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[1]          # 網站資料/badminton
-SRC = ROOT.parent                                   # 網站資料
+ROOT = Path(__file__).resolve().parents[1]          # 網站 Git 儲存庫（~/Projects/badminton，不放在 iCloud 同步資料夾）
+# 本機資料來源（研究筆記、教學、科技）仍在 iCloud 桌面；建站只「讀取」，不寫入。可用環境變數 BADMINTON_SRC 改位置。
+SRC = Path(os.environ.get('BADMINTON_SRC', Path.home() / 'Desktop/Badminton/網站資料')).expanduser()
 NOTES = SRC / '學術/羽球研究筆記'
 CATALOG_CSV = SRC / '學術/近五年羽毛球文獻_2021-2026/文獻總目錄.csv'
 LEARN_SRC = SRC / '教學'
