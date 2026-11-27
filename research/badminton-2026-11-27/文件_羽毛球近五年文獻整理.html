@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>羽毛球近五年文獻整理｜教練研究</title>
+<meta name="description" content="羽毛球近五年文獻整理｜教練研究">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../news/">最新消息</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="羽毛球近五年文獻整理">羽毛球近五年文獻整理</h1><p class="meta">研究文件 · 來源資料夾：學術/ · 論文 PDF 不上傳，請用原出處連結</p>
+<p>更新日期：2026-04-10<br />
+整理範圍：以 2021-04 至 2026-04 為主<br />
+整理原則：優先收錄台灣與國外研究，排除中國大陸單位為主；主題聚焦羽毛球競技、訓練、傷害、知覺認知，以及男子雙打技戰術</p>
+<h2 id="使用說明">使用說明</h2>
+<p>這份筆記整理成三個層次：</p>
+<ol type="1">
+<li>羽毛球近五年的整體研究趨勢</li>
+<li>台灣與國外代表性研究</li>
+<li>男子雙打技戰術專題整理</li>
+</ol>
+<p>這份文件適合用來：</p>
+<ul>
+<li>快速回顧近五年羽毛球研究脈絡</li>
+<li>撰寫報告或文獻回顧</li>
+<li>後續延伸成 APA 參考文獻</li>
+<li>下次繼續補新論文</li>
+</ul>
+<h2 id="一近五年羽毛球研究整體趨勢">一、近五年羽毛球研究整體趨勢</h2>
+<p>近五年羽毛球研究已從單純技術分析，逐步擴展為結合體能、知覺認知、傷害預防、恢復管理與教學應用的整合型研究模式。研究焦點集中於以下幾類：</p>
+<ul>
+<li>疲勞對動作品質與敏捷表現的影響</li>
+<li>神經肌肉訓練對青少年選手體能表現的效果</li>
+<li>視覺、知覺認知與工作記憶對比賽能力的影響</li>
+<li>下肢傷害、足部生物力學與 ACL 回場</li>
+<li>教學科技與終身運動參與</li>
+<li>雙打比賽的發接發、場區控制、攻防轉換與站位輪轉</li>
+</ul>
+<p>整體來看，近年的共同結論是：羽毛球表現不再被視為單靠技術或戰術決定，而是技術、體能、認知、恢復與空間控制共同作用的結果。</p>
+<h2 id="二台灣研究整理">二、台灣研究整理</h2>
+<h3 id="1-知覺認知">1. 知覺認知</h3>
+<p><strong>Wu, Lee, Chen (2024)</strong><br />
+主題：青少年羽球選手知覺認知能力<br />
+重點：</p>
+<ul>
+<li>較高競技層級選手的工作記憶表現較佳</li>
+<li>性別差異不明顯，但競技層級差異較明顯</li>
+<li>顯示羽球表現不只和球技有關，也和認知處理能力有關</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>羽球高層級選手在決策與資訊處理能力上具有優勢</li>
+<li>青少年訓練可考慮加入知覺認知與決策訓練</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1415693/full">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1415693/full</a></li>
+</ul>
+<h3 id="2-疲勞與敏捷跳躍表現">2. 疲勞與敏捷、跳躍表現</h3>
+<p><strong>Cheng et al. (2025)</strong><br />
+主題：疲勞對年輕菁英羽球選手跳躍與敏捷表現的影響<br />
+重點：</p>
+<ul>
+<li>疲勞會影響跳躍和敏捷任務中的身體加速度表現</li>
+<li>受影響的不只是速度，還包括動作控制品質</li>
+<li>穿戴式感測器可作為監控疲勞後動作品質的工具</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>後段比賽的失誤與疲勞後控制能力下降有關</li>
+<li>訓練上應加入疲勞狀態下的技術與敏捷控制訓練</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/38634629/">https://pubmed.ncbi.nlm.nih.gov/38634629/</a></li>
+</ul>
+<h3 id="3-神經肌肉訓練">3. 神經肌肉訓練</h3>
+<p><strong>Chen et al. (2025)</strong><br />
+主題：整合式神經肌肉訓練對不同成熟度羽球選手的效果<br />
+重點：</p>
+<ul>
+<li>12 週訓練可提升 10 公尺衝刺、跳躍、平衡與敏捷</li>
+<li>不同成熟度選手的訓練反應不同</li>
+<li>訓練設計應依發育階段進行調整</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>青少年羽球體能訓練不應只有多球與跑動</li>
+<li>應納入結構化的平衡、穩定、爆發力與神經肌肉訓練</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/40723023/">https://pubmed.ncbi.nlm.nih.gov/40723023/</a></li>
+<li><a href="https://www.mdpi.com/2227-9067/12/7/830">https://www.mdpi.com/2227-9067/12/7/830</a></li>
+</ul>
+<h3 id="4-足部生物力學">4. 足部生物力學</h3>
+<p><strong>Chow et al. (2023)</strong><br />
+主題：台灣大專羽球選手足部靜態與動態受力特徵<br />
+重點：</p>
+<ul>
+<li>菁英選手具有較高的前足負荷</li>
+<li>足部特定區域受力集中，提示足踝與前足過度使用風險</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>羽球訓練與防護應更重視前足與足踝管理</li>
+<li>可作為鞋款、鞋墊與足踝穩定訓練的依據</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/37106685/">https://pubmed.ncbi.nlm.nih.gov/37106685/</a></li>
+<li><a href="https://www.mdpi.com/2306-5354/10/4/498">https://www.mdpi.com/2306-5354/10/4/498</a></li>
+</ul>
+<h3 id="5-視覺訓練">5. 視覺訓練</h3>
+<p><strong>Wang et al. (2025)</strong><br />
+主題：短期視覺訓練對青少年羽球選手的影響<br />
+重點：</p>
+<ul>
+<li>短期 vergence training 可能改善部分雙眼視功能</li>
+<li>反應時間可能有所改善</li>
+<li>目前仍屬 pilot study，證據強度有限</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>羽球訓練可初步納入視覺反應與眼球控制元素</li>
+<li>但應避免過度放大其效果，仍需更多研究支持</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://www.nature.com/articles/s41598-025-28743-7">https://www.nature.com/articles/s41598-025-28743-7</a></li>
+</ul>
+<h3 id="6-高齡參與與健康促進">6. 高齡參與與健康促進</h3>
+<p><strong>Liao et al. (2024)</strong><br />
+主題：台灣與美國高齡羽球參與者的動機比較<br />
+重點：</p>
+<ul>
+<li>台灣參與者更重視健康與減壓</li>
+<li>美國參與者更重視成就與認同</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>羽球在台灣兼具競技與健康促進功能</li>
+<li>適合放入終身運動或運動參與動機的討論</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/39590915/">https://pubmed.ncbi.nlm.nih.gov/39590915/</a></li>
+<li><a href="https://www.mdpi.com/2075-4663/12/11/313">https://www.mdpi.com/2075-4663/12/11/313</a></li>
+</ul>
+<h3 id="7-教學科技">7. 教學科技</h3>
+<p><strong>Lin et al. (2024)</strong><br />
+主題：羽球課程教學品質與教育科技<br />
+重點：</p>
+<ul>
+<li>傳統教學搭配教育科技與多媒體工具，有助提升課程品質</li>
+<li>可提升學習參與和學習效果</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>羽球不只可作為競技研究主題，也可作為體育教學研究主題</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://www.mdpi.com/2076-328X/14/9/857">https://www.mdpi.com/2076-328X/14/9/857</a></li>
+</ul>
+<h2 id="三國外研究整理">三、國外研究整理</h2>
+<h3 id="1-比賽後疲勞與恢復">1. 比賽後疲勞與恢復</h3>
+<p><strong>Lin et al. (2023)</strong><br />
+主題：模擬男子單打賽後的神經肌肉疲勞與肌肉損傷<br />
+重點：</p>
+<ul>
+<li>單打模擬賽後出現神經肌肉疲勞與痠痛反應</li>
+<li>多數指標可在 24 小時內逐步恢復</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>高強度比賽後恢復期非常重要</li>
+<li>恢復管理不應只看主觀感受，還要看功能表現</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/36763122/">https://pubmed.ncbi.nlm.nih.gov/36763122/</a></li>
+</ul>
+<h3 id="2-acl-回場">2. ACL 回場</h3>
+<p><strong>Kaldau et al. (2024)</strong><br />
+主題：ACL 傷後重返羽球<br />
+重點：</p>
+<ul>
+<li>多數選手可回到打球</li>
+<li>但回到原本競技表現水準的人數較少</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>回到運動不等於回到原先表現</li>
+<li>羽球傷後評估應納入競技能力而非只看能否上場</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/38643398/">https://pubmed.ncbi.nlm.nih.gov/38643398/</a></li>
+</ul>
+<h3 id="3-acl-回表現">3. ACL 回表現</h3>
+<p><strong>Tan et al. (2024)</strong><br />
+主題：菁英羽球選手 ACL 傷後回場與回表現<br />
+重點：</p>
+<ul>
+<li>約 84% 可回到運動</li>
+<li>約一半回到原有表現</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>傷後復健與回場管理應有更完整的分期與追蹤</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/38984858/">https://pubmed.ncbi.nlm.nih.gov/38984858/</a></li>
+</ul>
+<h3 id="4-傷害流行病學">4. 傷害流行病學</h3>
+<p><strong>Zainuddin et al. (2025)</strong><br />
+主題：菁英羽球選手傷害型態系統回顧<br />
+重點：</p>
+<ul>
+<li>下肢傷害最常見</li>
+<li>扭傷與肌腱病為主要傷型</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>預防應聚焦於膝、踝、前足與反覆變向動作</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/41332252/">https://pubmed.ncbi.nlm.nih.gov/41332252/</a></li>
+</ul>
+<h3 id="5-停訓與復訓">5. 停訓與復訓</h3>
+<p><strong>Silva et al. (2022)</strong><br />
+主題：疫情期間停訓與後續復訓<br />
+重點：</p>
+<ul>
+<li>長時間停訓不利於身心狀態</li>
+<li>系統性復訓有助恢復體能與競技狀態</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>羽球選手的訓練中斷後，需要循序回復，而非直接回到原本強度</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/35502298/">https://pubmed.ncbi.nlm.nih.gov/35502298/</a></li>
+</ul>
+<h2 id="四男子雙打技戰術專題整理">四、男子雙打技戰術專題整理</h2>
+<h3 id="整體結論">整體結論</h3>
+<p>近年男子雙打技戰術研究顯示，男雙具有短回合、高速度、高壓迫的特性，勝負往往在發球、接發球與第三拍就逐步形成。高水準男雙的關鍵不只是後場進攻，而是前中場主動權、站位輪轉、場區控制與應變能力。</p>
+<h3 id="1-發球與接發球">1. 發球與接發球</h3>
+<p><strong>Zhu et al. (2023)</strong><br />
+主題：男子雙打發球與接發球落點<br />
+重點：</p>
+<ul>
+<li>發球多集中在靠近中線區域</li>
+<li>接發球常回擊至發球方場區交界或空檔</li>
+<li>回球落點與發球方向、接發動作特徵有關</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>男雙發球戰術的重點是限制對手第一拍</li>
+<li>接發球戰術的重點是破壞對方輪轉與站位銜接</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://arxiv.org/abs/2310.18572">https://arxiv.org/abs/2310.18572</a></li>
+</ul>
+<h3 id="2-男雙與女雙技術型態差異">2. 男雙與女雙技術型態差異</h3>
+<p><strong>Feng and Chen (2023)</strong><br />
+主題：世界高水準男女雙打技術與戰術比較<br />
+重點：</p>
+<ul>
+<li>男雙在接發球更常使用推、搓、撲</li>
+<li>前場偏向封網與快速處理</li>
+<li>中場平抽擋使用頻率高</li>
+<li>後場仍以殺球作為主要進攻方式</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>男雙的核心是搶平抽、搶前場、搶主動權</li>
+<li>得分並非只靠單一殺球，而是靠連續壓迫</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://www.scirp.org/pdf/ape_2023111316003213.pdf">https://www.scirp.org/pdf/ape_2023111316003213.pdf</a></li>
+</ul>
+<h3 id="3-比賽結構與短回合特徵">3. 比賽結構與短回合特徵</h3>
+<p><strong>Hoffmann, Brinkschulte, Vogt (2024)</strong><br />
+主題：菁英羽球五個項目賽事特徵分析<br />
+重點：</p>
+<ul>
+<li>男雙回合時間短、擊球頻率高</li>
+<li>文中指出男雙有超過 60% 的回合少於 6 秒</li>
+<li>突顯發接發與前三拍的重要性</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>男雙訓練應大量納入短回合、高強度、前三拍情境</li>
+<li>不能只做長時間多球與體能訓練</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://www.tandfonline.com/doi/full/10.1080/24748668.2024.2386830">https://www.tandfonline.com/doi/full/10.1080/24748668.2024.2386830</a></li>
+</ul>
+<h3 id="4-站位與場區控制">4. 站位與場區控制</h3>
+<p><strong>Okumura et al. (2023)</strong><br />
+主題：雙打場區 control area 估計<br />
+重點：</p>
+<ul>
+<li>較佳組合在主要來球區域具有較大的 control area</li>
+<li>場區寬度覆蓋與得分呈正相關</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>優秀男雙的優勢來自雙人站位互補與輪轉效率</li>
+<li>站位訓練應重視橫向覆蓋與交界區補位</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://link.springer.com/article/10.1007/s11042-023-16362-1">https://link.springer.com/article/10.1007/s11042-023-16362-1</a></li>
+</ul>
+<h3 id="5-世界級男雙落點與取分邏輯">5. 世界級男雙落點與取分邏輯</h3>
+<p><strong>Liao et al. (2022)</strong><br />
+主題：2022 世界級男子雙打賽事落點分析<br />
+重點：</p>
+<ul>
+<li>前中場技術、發接發準確度與後場持續施壓是勝負關鍵</li>
+<li>戰術調整與危機處理能力同樣重要</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>男雙不應只依賴重殺</li>
+<li>前中場連貫與臨場應變能力是高層級關鍵差異</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://www.gavinpublishers.com/article/pdf/location-location-location-understanding-the--impact-of-shot-placements-in-badminton-mens-double-at-2022-world-championship">https://www.gavinpublishers.com/article/pdf/location-location-location-understanding-the--impact-of-shot-placements-in-badminton-mens-double-at-2022-world-championship</a></li>
+</ul>
+<h3 id="6-動態系統分析">6. 動態系統分析</h3>
+<p><strong>Hammes et al. (2024)</strong><br />
+主題：以動態系統與 perturbation 分析羽球賽事<br />
+重點：</p>
+<ul>
+<li>可用擾動概念分析哪一拍開始造成對手失衡</li>
+<li>雙打可被視為雙方互動中的空間與時間競爭系統</li>
+</ul>
+<p>可用結論：</p>
+<ul>
+<li>男雙技戰術分析不應只看得分拍</li>
+<li>應追蹤哪一拍開始讓對手失去平衡或失去主動權</li>
+</ul>
+<p>來源：</p>
+<ul>
+<li><a href="https://www.tandfonline.com/doi/full/10.1080/02640414.2024.2323327">https://www.tandfonline.com/doi/full/10.1080/02640414.2024.2323327</a></li>
+</ul>
+<h2 id="五男子雙打技戰術可直接貼進報告的文獻回顧">五、男子雙打技戰術可直接貼進報告的文獻回顧</h2>
+<p>近年男子雙打羽毛球的技戰術研究顯示，其比賽型態具有高節奏、短回合與強烈主動權競爭的特徵。相較於單打，男子雙打更多回合在發球、接發球與第三拍便逐漸形成攻守優勢，因此發接發階段被視為男子雙打最關鍵的技戰術起點。Hoffmann 等人（2024）指出，男子雙打在世界級賽事中具有較短的回合時間與較高的擊球頻率，且超過六成回合少於六秒，顯示短時間內的判斷、出手品質與站位配合，對於比賽結果具有顯著影響。</p>
+<p>在發接發戰術方面，Zhu 等人（2023）發現，男子雙打發球多集中於靠近中線的區域，而接發球則經常回擊至發球方場區的交界或空檔位置。此結果顯示，男子雙打開局戰術的重點不只是發球成功率，而是透過發球落點與接發球處理，先行爭取前中場主動權。也就是說，男子雙打的發球戰術本質在於限制對手第一拍的處理品質，而接發球戰術則在於破壞對方的站位穩定性與輪轉連結。</p>
+<p>就整體技戰術結構而言，Feng 與 Chen（2023）指出，男子雙打在前場主要依賴撲球、推球與搓球，中場大量使用平抽擋技術，而後場則仍以殺球作為主要進攻手段。這顯示男子雙打的得分模式並非僅由單一重殺完成，而是透過後場下壓、前場封網與中場續壓等連續動作共同構成攻擊鏈。Liao 等人（2022）在世界級男子雙打決賽分析中也發現，較成功的組合通常具備更高的發接發準確性、更強的前中場控制能力，以及更好的戰術調整與危機處理能力。由此可見，現代男子雙打已從單純速度與力量導向，轉變為結合發接發品質、前中場壓迫、後場持續施壓與臨場應變的整合型技戰術模式。</p>
+<p>此外，雙打站位與空間控制也是近年研究的重要方向。Okumura 等人（2023）透過雙鏡頭與姿態分析建立雙打場區控制模型，結果指出，表現較佳的雙打組合在來球所在主要區域具有較大的 control area，且橫向覆蓋寬度與得分呈正相關。此結果說明，男子雙打的優勢不僅來自個別選手能力，更來自兩名選手之間的站位協調、輪轉效率與空間互補。因此，男子雙打技戰術訓練應特別重視發接發情境設計、前中場搶點能力、平抽擋連貫訓練，以及輪轉補位與場區覆蓋能力的提升。</p>
+<h2 id="六可直接引用的來源清單">六、可直接引用的來源清單</h2>
+<ul>
+<li>Wu et al. (2024). Frontiers in Psychology. <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1415693/full">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1415693/full</a></li>
+<li>Cheng et al. (2025). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/38634629/">https://pubmed.ncbi.nlm.nih.gov/38634629/</a></li>
+<li>Chen et al. (2025). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/40723023/">https://pubmed.ncbi.nlm.nih.gov/40723023/</a></li>
+<li>Chow et al. (2023). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/37106685/">https://pubmed.ncbi.nlm.nih.gov/37106685/</a></li>
+<li>Wang et al. (2025). Scientific Reports. <a href="https://www.nature.com/articles/s41598-025-28743-7">https://www.nature.com/articles/s41598-025-28743-7</a></li>
+<li>Liao et al. (2024). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/39590915/">https://pubmed.ncbi.nlm.nih.gov/39590915/</a></li>
+<li>Lin et al. (2024). MDPI. <a href="https://www.mdpi.com/2076-328X/14/9/857">https://www.mdpi.com/2076-328X/14/9/857</a></li>
+<li>Lin et al. (2023). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/36763122/">https://pubmed.ncbi.nlm.nih.gov/36763122/</a></li>
+<li>Kaldau et al. (2024). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/38643398/">https://pubmed.ncbi.nlm.nih.gov/38643398/</a></li>
+<li>Tan et al. (2024). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/38984858/">https://pubmed.ncbi.nlm.nih.gov/38984858/</a></li>
+<li>Zainuddin et al. (2025). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/41332252/">https://pubmed.ncbi.nlm.nih.gov/41332252/</a></li>
+<li>Silva et al. (2022). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/35502298/">https://pubmed.ncbi.nlm.nih.gov/35502298/</a></li>
+<li>Zhu et al. (2023). arXiv. <a href="https://arxiv.org/abs/2310.18572">https://arxiv.org/abs/2310.18572</a></li>
+<li>Feng and Chen (2023). SCIRP PDF. <a href="https://www.scirp.org/pdf/ape_2023111316003213.pdf">https://www.scirp.org/pdf/ape_2023111316003213.pdf</a></li>
+<li>Hoffmann et al. (2024). Taylor and Francis. <a href="https://www.tandfonline.com/doi/full/10.1080/24748668.2024.2386830">https://www.tandfonline.com/doi/full/10.1080/24748668.2024.2386830</a></li>
+<li>Okumura et al. (2023). Springer. <a href="https://link.springer.com/article/10.1007/s11042-023-16362-1">https://link.springer.com/article/10.1007/s11042-023-16362-1</a></li>
+<li>Liao et al. (2022). Gavin Publishers PDF. <a href="https://www.gavinpublishers.com/article/pdf/location-location-location-understanding-the--impact-of-shot-placements-in-badminton-mens-double-at-2022-world-championship">https://www.gavinpublishers.com/article/pdf/location-location-location-understanding-the--impact-of-shot-placements-in-badminton-mens-double-at-2022-world-championship</a></li>
+<li>Hammes et al. (2024). Taylor and Francis. <a href="https://www.tandfonline.com/doi/full/10.1080/02640414.2024.2323327">https://www.tandfonline.com/doi/full/10.1080/02640414.2024.2323327</a></li>
+</ul>
+<h2 id="七目前可再補強的方向">七、目前可再補強的方向</h2>
+<p>如果下次要繼續擴充，建議優先補：</p>
+<ul>
+<li>男子雙打前三拍得失分模式</li>
+<li>發接發與輪轉的影片量化研究</li>
+<li>世界巡迴賽或奧運男雙比賽的時間結構</li>
+<li>台灣本地男雙技戰術研究與學位論文</li>
+<li>將目前來源補成 APA 第 7 版格式</li>
+</ul>
+<h2 id="八引用時的提醒">八、引用時的提醒</h2>
+<ul>
+<li>部分男子雙打技戰術研究屬影片分析、空間模型或預印本，引用時要註明研究性質</li>
+<li>如果要交正式論文，建議再補至少 3 到 5 篇同主題期刊文獻</li>
+<li>若老師要求「只用期刊」或「只用 SSCI / SCI」，需再做一輪篩選</li>
+</ul>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

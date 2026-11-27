@@ -1,0 +1,124 @@
+{
+  "checked_date_macau": "2026-11-27",
+  "method": "GitHub API 讀取每個儲存庫的星數、授權、最後推送日期與 README；YouTube 影片以未登入、不帶 Cookie 的影片頁播放器狀態核對。",
+  "source": "本機 badminton_github_catalog.html（2026-11-23）整理，逐項核對後修正",
+  "corrections": [
+    "原圖鑑把 muhammadyasin79/Badminton_Analytics_Project 與 amramer/Badminton-visionAI 合成一張卡：示範影片屬於 amramer/Badminton-visionAI。本頁拆成兩張卡。",
+    "TrackNetV3 的示範影片（2020 年）是原版 TrackNet，不是 V3。",
+    "RallyLens 的回合報告用 Vertex AI Gemini 產生、輸出韓文，原圖鑑只寫「LLM 戰報」。",
+    "弧迹（Huji）README 標示的平台是 Android、Linux、Windows，原圖鑑寫的 macOS 未見於 README。",
+    "BADDY 官方稱為 DIY 羽球機器人（badminton robot），不是一般多球發球機；儲存庫 2022-07-29 之後沒有更新。",
+    "ezBadminton 伺服器以 Go＋PocketBase 寫成，管理程式（Flutter／Dart）README 寫明「仍在開發中」。",
+    "原圖鑑動畫裡的數字（例如「16 分鐘剪成 4.2 分鐘」「殺球 20%」、比分與球員名）是示意，沒有出處，本頁已移除；只保留 README 有寫的數字。"
+  ],
+  "tools": [
+    {
+      "id": "tracknetv3", "category": "影像與追蹤", "name": "TrackNetV3", "repo": "qaz812345/TrackNetV3",
+      "stars": 339, "license": "有授權檔，GitHub 無法自動辨識", "pushed": "2026-09-03",
+      "video": {"id": "NHsgkH7DG4k", "len": "0:22", "note": "原版 TrackNet 示範（2020），不是 V3"},
+      "desc": "從一般比賽錄影逐格找出羽球位置的深度學習模型，V3 加入資料增強與軌跡修補（InpaintNet），補回被擋住或太快看不到的球。",
+      "metric": "作者 README 測試結果：準確率 97.51%、每秒 25.11 格（作者自己的測試集與硬體）。",
+      "use": "取得每一格的球座標，再自行計算球速、落點分布、擊球點高度。",
+      "cond": "要會 Python 與 PyTorch，有 NVIDIA 顯示卡較實際；模型權重要另外下載；只輸出座標，球速和落點要自己寫程式換算。",
+      "basis": "A", "tech": ["PyTorch", "Python", "OpenCV"],
+      "cmd": "git clone https://github.com/qaz812345/TrackNetV3.git && cd TrackNetV3 && pip install -r requirements.txt",
+      "sim": "trajectory"
+    },
+    {
+      "id": "rallylens", "category": "影像與追蹤", "name": "RallyLens", "repo": "YeonSeong-Lee/rallylens",
+      "stars": 25, "license": "指令列工具 MIT、網頁版 AGPL-3.0（README 標示）", "pushed": "2026-09-03",
+      "video": {"id": "fKwac0CsBLc", "len": "0:17", "note": "作者示範：骨架、球路尾跡、左下角俯視小地圖"},
+      "desc": "一條指令把比賽影片變成球員骨架、球路尾跡、球場俯視小地圖與回合報告；整合 YOLO11-pose 骨架、ByteTrack 追蹤與 TrackNetV3 球路。",
+      "metric": "README 範例報告列出每位球員跑動距離（例如 40.3 公尺對 59.5 公尺）與站位區域比例。",
+      "use": "快速得到單打回合的跑動距離、站位分布與球路圖，適合賽後檢討。",
+      "cond": "要安裝 uv 與 ffmpeg；只自動挑選 2 名單打球員；回合文字報告用 Google Vertex AI Gemini 產生、輸出韓文，需要雲端帳號，費用未驗證。",
+      "basis": "A", "tech": ["YOLO11-pose", "ByteTrack", "TrackNetV3", "Python"],
+      "cmd": "git clone https://github.com/YeonSeong-Lee/rallylens && cd rallylens && uv sync",
+      "sim": "rallylens"
+    },
+    {
+      "id": "visionai", "category": "動作與戰術", "name": "Badminton-VisionAI", "repo": "amramer/Badminton-visionAI",
+      "stars": 14, "license": "有授權檔，GitHub 無法自動辨識", "pushed": "2026-04-05",
+      "video": {"id": "dAe9e_1AGuA", "len": "0:19", "note": "作者示範：球員追蹤、小球場投影、擊球類型"},
+      "desc": "YOLOv8 追蹤球員、TrackNet 追蹤球路，再用球場透視校正（homography，把斜拍畫面換成俯視座標）畫出小球場，並辨識擊球類型。",
+      "metric": "README 沒有公布準確率。",
+      "use": "看球員站位熱區、移動路徑與擊球類型分布，結果在 Streamlit 網頁儀表板瀏覽。",
+      "cond": "用 Docker 或 Conda 安裝；先跑影像分析、再開儀表板，兩步分開；擊球分類準確度未驗證。",
+      "basis": "A", "tech": ["YOLOv8", "TrackNet", "Homography", "Streamlit"],
+      "cmd": "git clone https://github.com/amramer/Badminton-visionAI.git && cd Badminton-visionAI",
+      "sim": "heatmap"
+    },
+    {
+      "id": "analytics", "category": "動作與戰術", "name": "Badminton Analytics Project", "repo": "muhammadyasin79/Badminton_Analytics_Project",
+      "stars": 35, "license": "MIT", "pushed": "2026-05-26",
+      "img": "gh_Badminton_Analytics_Project.jpg",
+      "desc": "用 YOLOv8-Pose 偵測球員關節，把動作換到統一的球場座標，量化每位球員控制哪些區域；羽球用自行訓練的 YOLO11 偵測。",
+      "metric": "README 沒有公布準確率。",
+      "use": "比較球員的場地覆蓋與移動軌跡，輸出骨架疊圖與軌跡圖。",
+      "cond": "要會 Python；README 說之後才加入擊球分類與回合分析，目前偏向示範專案。",
+      "basis": "A", "tech": ["YOLOv8-Pose", "YOLO11", "OpenCV", "Python"],
+      "cmd": "git clone https://github.com/muhammadyasin79/Badminton_Analytics_Project.git",
+      "sim": "heatmap"
+    },
+    {
+      "id": "coachai", "category": "動作與戰術", "name": "CoachAI-Projects（ShuttleSet）", "repo": "wywyWang/CoachAI-Projects",
+      "stars": 294, "license": "MIT", "pushed": "2026-07-17",
+      "img": "gh_CoachAI-Projects.jpg",
+      "desc": "國立陽明交通大學資料庫實驗室的羽球 AI 研究合集：ShuttleSet（KDD 2023，最大的人工標註單打擊球資料集）與 ShuttleNet（AAAI 2022，預測下一拍的模型）。",
+      "metric": "README 列出 16 篇已發表論文；資料集是專業比賽的逐拍標註。",
+      "use": "做戰術量化研究，或用真實逐拍資料帶數據分析專題。",
+      "cond": "資料來自國際賽，不是自己球隊；要會 Python、Jupyter；預測模型是研究用途，不是現成的教練軟件。",
+      "basis": "A", "tech": ["PyTorch", "ShuttleSet", "Jupyter"],
+      "cmd": "git clone https://github.com/wywyWang/CoachAI-Projects.git",
+      "sim": "tactics"
+    },
+    {
+      "id": "huji", "category": "影片剪輯", "name": "弧迹（Huji）", "repo": "hhoao/huji",
+      "stars": 58, "license": "AGPL-3.0", "pushed": "2026-11-25",
+      "img": "gh_huji.jpg",
+      "desc": "自動找出乒乓球、羽毛球比賽的精彩回合，去掉撿球和休息片段，輸出精簡集錦；也可以邊拍邊剪。",
+      "metric": "README 沒有公布剪輯準確率或壓縮比例。",
+      "use": "1 小時的練習或比賽錄影，自動剪成只有回合的影片，方便賽後檢討。",
+      "cond": "一般使用者直接下載安裝版：Android 由官網、Linux／Windows 由 GitHub Releases；介面是簡體中文；選雲端偵測時影片會上傳，拍到學生要先考慮私隱。",
+      "basis": "A", "tech": ["Flutter", "Python", "FFmpeg"],
+      "cmd": "git clone --recurse-submodules https://github.com/hhoao/huji.git",
+      "sim": "autoclip"
+    },
+    {
+      "id": "picobeth", "category": "硬體與器材", "name": "PicoBETH", "repo": "206cc/PicoBETH",
+      "stars": 92, "license": "有授權檔，GitHub 無法自動辨識", "pushed": "2026-09-24",
+      "video": {"id": "mMpsa_LFCbM", "len": "19:10", "note": "作者示範：3D 列印版穿線全過程"},
+      "desc": "用 Raspberry Pi Pico 自製電子恆拉穿線機頭，讓只有機械式（落錘、手搖）穿線機的人升級成電子拉線。",
+      "metric": "README：拉力可每 0.5 磅微調、範圍約 15–90 磅；作者自述完成 100 萬次拉力測試沒有硬件故障（未獨立驗證）。",
+      "use": "自製低成本電子拉線頭，做張力衰退測試或機電整合專題。",
+      "cond": "要焊接、組裝零件或 3D 列印，並會基本程式；拉力須用拉力計自行校正；零件總成本未驗證。",
+      "basis": "A", "tech": ["Raspberry Pi Pico", "MicroPython", "荷重元"],
+      "cmd": "git clone https://github.com/206cc/PicoBETH.git",
+      "sim": "stringer"
+    },
+    {
+      "id": "baddy", "category": "硬體與器材", "name": "BADDY Makers Edition", "repo": "baddy-lab/baddy-makers-edition",
+      "stars": 36, "license": "CERN OHL v1.1＋非商業附加條款", "pushed": "2022-07-29",
+      "video": {"id": "HNGg4OPCNFo", "len": "9:23", "note": "官方教學：馬達與電子零件組裝（2018，英文字幕）"},
+      "desc": "DIY 羽球機器人（官方稱 badminton robot）的圖紙（dxf）與程式碼，不是一般的多球發球機。",
+      "metric": "README 沒有公布發球速度或頻率。",
+      "use": "作為自製訓練器材或機電專題的參考：馬達控制、結構與電子接線。",
+      "cond": "2022 年後沒有更新；公司不可修改後商業銷售；組裝要工具與機械經驗，實際訓練用途未驗證。",
+      "basis": "B", "tech": ["C++", "Arduino", "CAD 圖紙"],
+      "cmd": "git clone https://github.com/baddy-lab/baddy-makers-edition.git",
+      "sim": "feeder"
+    },
+    {
+      "id": "ezbadminton", "category": "賽事管理", "name": "ezBadminton", "repo": "ezBadminton/ezBadmintonServer",
+      "stars": 0, "license": "MIT", "pushed": "2025-11-13",
+      "img": "gh_ezBadmintonServer.jpg",
+      "desc": "免費開源的羽球比賽管理軟件：伺服器用 Go＋PocketBase（內建資料庫與即時同步），管理程式是 Flutter 桌面版（ezBadmintonAdmin）。",
+      "metric": "社群很小（伺服器 0 星、管理程式 2 星）；README 寫明仍在開發中。",
+      "use": "球會內部賽或校內賽的報名、賽程與結果管理（詳細功能未逐項驗證）。",
+      "cond": "要自架伺服器（Go 1.21 以上）並自行編譯管理程式；正式比賽使用前請先小規模試辦。",
+      "basis": "B", "tech": ["Go", "PocketBase", "Flutter"],
+      "cmd": "git clone https://github.com/ezBadminton/ezBadmintonServer.git",
+      "sim": "tournament"
+    }
+  ]
+}

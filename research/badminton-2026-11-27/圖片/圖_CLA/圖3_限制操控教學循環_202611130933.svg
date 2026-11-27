@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" width="760" height="410" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="760" height="410" fill="#ffffff"/>
+  <text x="380" y="30" text-anchor="middle" font-size="21" font-weight="700" fill="#1f2937">CLA 教學循環（教練設計流程）</text>
+  <circle cx="380" cy="215" r="150" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <g fill="#475569">
+    <polygon points="-8,-7 8,0 -8,7" transform="translate(468,94) rotate(36)"/>
+    <polygon points="-8,-7 8,0 -8,7" transform="translate(523,261) rotate(108)"/>
+    <polygon points="-8,-7 8,0 -8,7" transform="translate(380,365) rotate(180)"/>
+    <polygon points="-8,-7 8,0 -8,7" transform="translate(237,261) rotate(252)"/>
+    <polygon points="-8,-7 8,0 -8,7" transform="translate(292,94) rotate(324)"/>
+  </g>
+  <g font-size="15" text-anchor="middle">
+    <rect x="305" y="41" width="150" height="48" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="380" y="62" font-weight="700" fill="#1e3a8a">① 設定目標行為</text>
+    <text x="380" y="80" font-size="12" fill="#1e3a8a">例：可攻球要進攻</text>
+    <rect x="448" y="145" width="150" height="48" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="523" y="166" font-weight="700" fill="#78350f">② 選 1–2 個限制</text>
+    <text x="523" y="184" font-size="12" fill="#78350f">例：後場角落 2 分</text>
+    <rect x="393" y="312" width="150" height="48" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+    <text x="468" y="333" font-weight="700" fill="#064e3b">③ 觀察湧現行為</text>
+    <text x="468" y="351" font-size="12" fill="#064e3b">少講解，多觀察</text>
+    <rect x="217" y="312" width="150" height="48" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="292" y="333" font-weight="700" fill="#4c1d95">④ 量測指標</text>
+    <text x="292" y="351" font-size="12" fill="#4c1d95">進攻率・落點・時間</text>
+    <rect x="162" y="145" width="150" height="48" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="237" y="166" font-weight="700" fill="#7f1d1d">⑤ 調整限制</text>
+    <text x="237" y="184" font-size="12" fill="#7f1d1d">太難放寬・太易加碼</text>
+  </g>
+  <text x="380" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">目標成功率</text>
+  <text x="380" y="236" text-anchor="middle" font-size="22" font-weight="700" fill="#2563eb">60–80%</text>
+  <text x="380" y="256" text-anchor="middle" font-size="11" fill="#6b7280">（教練經驗值）</text>
+  <text x="380" y="398" text-anchor="middle" font-size="13" fill="#374151">每次只改 1–2 個限制，才知道是哪個限制造成改變</text>
+</svg>

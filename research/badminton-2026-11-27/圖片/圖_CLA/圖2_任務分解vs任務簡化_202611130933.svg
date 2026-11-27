@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#059669"/></marker>
+  </defs>
+  <rect width="760" height="360" fill="#ffffff"/>
+  <text x="380" y="32" text-anchor="middle" font-size="21" font-weight="700" fill="#1f2937">任務分解 vs 任務簡化</text>
+  <!-- row 1 -->
+  <rect x="16" y="56" width="728" height="128" rx="12" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="30" y="108" font-size="18" font-weight="700" fill="#b91c1c">任務分解</text>
+  <text x="30" y="130" font-size="12" fill="#b91c1c">Decomposition</text>
+  <rect x="180" y="90" width="100" height="50" rx="8" fill="#ffffff" stroke="#9ca3af" stroke-dasharray="5 4"/>
+  <text x="230" y="121" text-anchor="middle" font-size="16" fill="#9ca3af">看球</text>
+  <rect x="310" y="90" width="100" height="50" rx="8" fill="#ffffff" stroke="#9ca3af" stroke-dasharray="5 4"/>
+  <text x="360" y="121" text-anchor="middle" font-size="16" fill="#9ca3af">移動</text>
+  <rect x="440" y="90" width="100" height="50" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="490" y="121" text-anchor="middle" font-size="16" font-weight="700" fill="#b91c1c">揮拍</text>
+  <text x="295" y="122" text-anchor="middle" font-size="18" fill="#dc2626">✕</text>
+  <text x="425" y="122" text-anchor="middle" font-size="18" fill="#dc2626">✕</text>
+  <text x="360" y="168" text-anchor="middle" font-size="13" fill="#7f1d1d">只練空揮 / 固定站位 → 知覺與動作被拆開</text>
+  <text x="645" y="112" text-anchor="middle" font-size="18" font-weight="700" fill="#b91c1c">✕ 轉移差</text>
+  <text x="645" y="134" text-anchor="middle" font-size="12" fill="#7f1d1d">比賽用不出來</text>
+  <!-- row 2 -->
+  <rect x="16" y="204" width="728" height="128" rx="12" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text x="30" y="256" font-size="18" font-weight="700" fill="#047857">任務簡化</text>
+  <text x="30" y="278" font-size="12" fill="#047857">Simplification</text>
+  <rect x="180" y="238" width="100" height="50" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="230" y="269" text-anchor="middle" font-size="16" font-weight="700" fill="#065f46">看球</text>
+  <rect x="310" y="238" width="100" height="50" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="360" y="269" text-anchor="middle" font-size="16" font-weight="700" fill="#065f46">移動</text>
+  <rect x="440" y="238" width="100" height="50" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="490" y="269" text-anchor="middle" font-size="16" font-weight="700" fill="#065f46">擊球</text>
+  <line x1="282" y1="263" x2="306" y2="263" stroke="#059669" stroke-width="2.5" marker-end="url(#a)"/>
+  <line x1="412" y1="263" x2="436" y2="263" stroke="#059669" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="360" y="316" text-anchor="middle" font-size="13" fill="#065f46">保留完整循環，只降難度：慢球・短距離・大目標</text>
+  <text x="645" y="260" text-anchor="middle" font-size="18" font-weight="700" fill="#047857">✓ 轉移佳</text>
+  <text x="645" y="282" text-anchor="middle" font-size="12" fill="#065f46">CLA 推薦</text>
+</svg>

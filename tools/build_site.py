@@ -509,9 +509,11 @@ def sync_sources() -> list[str]:
     notes = []
     # 教練科技：本機來源 → 網站副本
     cfg = json.loads(CONFIG.read_text(encoding='utf-8'))
-    tech = cfg['categories']['technology']['issues'][0]
-    dest = ROOT / tech['path'] / 'index.html'
-    if TECH_SRC.exists() and not same(TECH_SRC, dest):
+    # 只同步到來源是〈2026羽球科技速覽〉的那一期（不一定是最新一期；其他期是手寫或自動產生的頁面）
+    rel_src = TECH_SRC.relative_to(SRC).as_posix()
+    tech = next((i for i in cfg['categories']['technology']['issues'] if i.get('source') == rel_src), None)
+    dest = ROOT / tech['path'] / 'index.html' if tech else None
+    if dest and TECH_SRC.exists() and not same(TECH_SRC, dest):
         shutil.copy2(TECH_SRC, dest)
         notes.append('教練科技：已從本機來源同步最新內容')
     # 學生學習：只同步網站已有的檔案（index.html 是網站專用入口，不覆蓋）

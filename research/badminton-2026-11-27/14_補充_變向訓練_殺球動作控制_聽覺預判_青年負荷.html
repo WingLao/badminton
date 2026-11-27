@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>14｜補充：變向訓練、殺球動作控制、聽覺與預判、青年比賽負荷｜教練研究</title>
+<meta name="description" content="2026-11 新發表四篇：羽球變向訓練貝氏網絡統合分析、動作控制訓練對殺球的隨機試驗、聽覺剝奪對擋殺與預判的場地實驗、青年比賽 RPE 與外部負荷；各篇標明延伸哪一章。">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../news/">最新消息</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="14補充變向訓練殺球動作控制聽覺與預判青年比賽負荷">14｜補充：變向訓練、殺球動作控制、聽覺與預判、青年比賽負荷</h1><p class="meta">教練研究 · 整理日期 2026-11-23 · 依原研究整理，不是原文全文</p>
+<p>返回 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a>；相關章節：<a href="02_其他訓練法.html">02_其他訓練法</a>、<a href="04_敏捷體能分析.html">04_敏捷體能分析</a>、<a href="05_肌力分析.html">05_肌力分析</a>、<a href="07_動作發展_動作控制與筋膜_近五年研究.html">07_動作發展_動作控制與筋膜_近五年研究</a>、<a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a>、<a href="11_補充_跨章新增研究.html">11_補充_跨章新增研究</a>、<a href="13_補充_影片回饋_教練溝通_精英嚴重傷病.html">13_補充_影片回饋_教練溝通_精英嚴重傷病</a>。</p>
+<div class="callout summary">
+<p class="callout-title">📌 一分鐘看完</p>
+
+<ul>
+<li><strong>變向訓練有平均效果，但排不出名次</strong>：53 項 RCT；綜合、核心、增強式訓練對預定路線變向的平均效果為正，阻力訓練不確定；<strong>所有比較的證據確定性都是「極低」</strong>。→ 延伸 04、05 章。</li>
+<li><strong>動作控制訓練（MCE）加在一般訓練上，殺球更快更準、Y 平衡更好</strong>：三臂 RCT、n=84；但 MCE 組多練了約 29% 時間，<strong>不能確定是內容本身有效</strong>。→ 延伸 05 章核心、07 章動作控制。</li>
+<li><strong>聽不到擊球聲，擋殺變差、預判變慢</strong>：已知方向時擋殺分數 2.24 → 1.94、失誤率 18% → 27%；未知方向時反應時間約 169 → 185 ms。這是<strong>急性剝奪實驗，不是聽覺訓練研究</strong>。→ 延伸 11 章預判、08 章「練預判」。</li>
+<li><strong>青年選手「覺得多累」與「實際跑動量」對不上</strong>：73 名 14 歲左右選手，平均每局 RPE 與外部 player load 無顯著相關（ρ = −0.112）；身高、BMI 的年齡 z 分數也解釋不了。→ 延伸 08 章負荷監控、11 章 sRPE。</li>
+</ul>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>研究</th>
+<th>延伸章節</th>
+<th>設計</th>
+<th>證據</th>
+<th>一句話</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Liu、Lu 2026</td>
+<td>04、05、02</td>
+<td>系統性回顧＋貝氏網絡統合分析（53 項 RCT、1,404 人）</td>
+<td>🟢</td>
+<td>結構化訓練平均可能改善變向；沒有可靠的訓練方式排名；確定性極低</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Indora、Malik、Kaur 2026</td>
+<td>05、07</td>
+<td>評估者盲化三臂 RCT（n=84）</td>
+<td>🟢📄</td>
+<td>MCE ↑殺球速度、準確度與 Y 平衡；但多了約 29% 訓練時間</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Wang、Zhang、Ren、Li 2026</td>
+<td>11、04、08</td>
+<td>受試者內場地實驗（n=30；眼動 n=26）</td>
+<td>🔵</td>
+<td>聽覺剝奪↓擋殺質素、↑預判反應時間</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Afzal 等 2026</td>
+<td>08、11、02</td>
+<td>橫斷觀察（n=73）</td>
+<td>🔵</td>
+<td>平均每局 RPE 與外部負荷無關；生長指標無調節作用</td>
+</tr>
+</tbody>
+</table>
+<div class="callout warning">
+<p class="callout-title">⚠️ 判讀總則</p>
+
+<p>第 1 篇雖是統合分析，但納入研究多為小型單中心研究與學位論文，所有變向比較確定性「極低」；第 2 篇只讀到摘要（全文需訂閱）；第 3 篇是一次性的「剝奪」實驗，證明聲音有用，<strong>不等於證明「加聽覺訓練會進步」</strong>；第 4 篇是橫斷研究、把每局資料平均成每人一個數字，<strong>不能回答同一選手每局之間的關係</strong>。本章「教練應用」都是依現有證據推論的合理做法。</p>
+</div>
+
+<h2 id="1-變向訓練貝氏網絡統合分析延伸-04-章變向05-章增強式與核心">1. 變向訓練：貝氏網絡統合分析（延伸 04 章變向、05 章增強式與核心）</h2>
+<p><strong>文獻與出處</strong>：Liu、Lu（2026），<em>Effects of training modalities on change-of-direction ability and badminton-specific performance: a systematic review and Bayesian network meta-analysis</em>，<em>Frontiers in Physiology</em>，17:1988217；2026-11-16 發表；開放取用（CC BY）。<a href="https://doi.org/10.3389/fphys.2026.1988217">DOI</a>。原文：<code>羽球專項原文PDF/2026_Liu_Lu_Training_modalities_change_of_direction_badminton_Bayesian_network_meta_analysis.pdf</code>。作者單位：武漢體育學院。</p>
+<ul>
+<li><strong>研究方法</strong>：檢索 PubMed、Web of Science、Scopus、SPORTDiscus、中國知網、萬方至 2026-05-30；<strong>未預先登錄</strong>。主要結果為變向能力（預定路線，不含反應性敏捷）；次要結果為動態平衡、下肢爆發力、直線速度、羽球專項技術。
+<ul>
+<li>190 項研究（202 份報告）→ 80 項可量化（58 項 RCT、22 項非隨機）→ <strong>53 項 RCT、86 個效果值、1,404 人</strong>進入主要貝氏隨機效應網絡。</li>
+<li>非隨機研究、只有一項研究的「末端節點」（Pilates、平衡、HIIT）及 |Hedges g| &gt; 3 的極端效果只放在敏感度分析。</li>
+<li>偏誤：RCT 用 RoB 2、非隨機用 ROBINS-I，另計 PEDro 分數；確定性用 CINeMA／GRADE。</li>
+<li>課表多為 8–12 週、每週 2–3 次；約一半 RCT 組別沒有報告每節時間。</li>
+</ul></li>
+<li><strong>結果</strong>：
+<ul>
+<li><strong>變向網絡（39 項 RCT、1,061 人）</strong>，相對對照組的後驗平均效果（Hedges g，95% 可信區間）：綜合訓練 1.33（0.83 至 1.83）、核心訓練 1.33（0.19 至 2.47；只有 2 項研究）、增強式 1.16（0.68 至 1.63）、阻力訓練 0.28（−0.21 至 0.77）。</li>
+<li><strong>預測區間全部跨過 0</strong>（綜合 −0.06 至 2.72；核心 −0.40 至 3.06；增強式 −0.22 至 2.54；阻力 −1.11 至 1.66）；異質性高（I² = 71.2%），網絡存在不一致（incoherence）。</li>
+<li>綜合訓練其實是兩類：「增強式＋平衡或肌力」效果較大（2.20，1.38 至 3.03），「多元功能性肌力套裝」較小（1.10，0.61 至 1.59）；沒有任何研究層級的共變項能解釋異質性。</li>
+<li>作者換算：g 約 1.2–1.3，代表綜合或增強式組的典型選手，變向測驗比約 85–90% 繼續一般訓練的人快（是平均值，不是每個人都會有）。</li>
+<li><strong>次要結果（網絡稀疏，作者不做排名）</strong>：動態平衡（4 項 RCT）綜合 1.27（0.04 至 2.57）、增強式 0.36（−1.39 至 2.16）；下肢爆發力（29 項 RCT，I² = 79.8%）綜合 0.98（0.28 至 1.72）、增強式 0.67（0.10 至 1.24）、阻力 0.34（−0.22 至 0.92）；直線速度（5 項）綜合 1.00（−0.12 至 2.08）、增強式 0.97（−0.04 至 1.94）、阻力 0.68（−0.46 至 1.78）；專項技術（9 項，I² = 72.4%、不一致）綜合 1.85（0.48 至 3.28）、增強式 0.77（−1.16 至 2.75）、阻力 0.84（−0.43 至 2.15）。</li>
+<li><strong>研究品質</strong>：98 項結果層級 RoB 2 評估中 93 項「有疑慮」、5 項高風險；<strong>沒有任何一項 RCT 報告分派隱匿或盲化評估</strong>；PEDro 52 項為 5 分。Egger 檢定未見漏斗不對稱（P = 0.484），但檢定力有限。</li>
+<li>敏感度分析：加入非隨機研究後效果略縮小；重新加入單一 Pilates 研究會出現 5.09 的極端值——單一極端研究足以主導估計。</li>
+</ul></li>
+<li><strong>結論</strong>：在青少年與大學選手中，加上結構化的增強式或綜合訓練，平均<strong>可能</strong>改善預定路線的變向；增強式內容似乎是效果最大課表的共同元素。但<strong>不能證明哪種方式比另一種好</strong>，也不能證明阻力訓練無效。</li>
+<li><strong>教練應用</strong>：
+<ul>
+<li>不要追求「最好的一種訓練」；按選手弱點、落地與肌力基礎、能否有人看管來選，增強式＋平衡或肌力的組合可作首選方向（配合 <a href="04_敏捷體能分析.html#3-平衡加增強式訓練與變向">3. 平衡加增強式訓練與變向</a>、<a href="05_肌力分析.html#2-增強式訓練統合分析">2. 增強式訓練：統合分析</a>）。</li>
+<li>練了 8–12 週要自己測：用同一個場上變向測驗前後比較，進步要大於測驗誤差（見 <a href="04_敏捷體能分析.html#2-羽球專項變向測驗">2. 羽球專項變向測驗</a> 的 CV 方框）。</li>
+<li>變向測驗進步 ≠ 比賽中「看球、判斷、起動」更快；反應性敏捷仍要另外練。</li>
+</ul></li>
+<li><strong>判讀界線</strong>：所有變向比較<strong>確定性極低</strong>；未預先登錄；納入不少中文學位論文與會議報告；多為小型單中心研究；用介入後的標準化平均差而非變化值；<strong>結論不適用於精英選手、女子選手或反應性敏捷</strong>。已讀全文（PDF）。</li>
+</ul>
+<h2 id="2-動作控制訓練與感覺動作訓練殺球速度準確度與平衡延伸-05-章核心07-章動作控制">2. 動作控制訓練與感覺動作訓練：殺球速度、準確度與平衡（延伸 05 章核心、07 章動作控制）</h2>
+<p><strong>文獻與出處</strong>：Indora、Malik、Kaur（2026），<em>Efficacy of sensorimotor training (SMT) and motor control exercise (MCE) on smash velocity, accuracy, and balance in badminton players: a randomized controlled trial</em>，<em>Sport Sciences for Health</em>，22(4)，418；2026-11-20 線上發表。<a href="https://doi.org/10.1007/s11332-026-01992-3">DOI</a>。📄 作者單位：印度 Guru Jambheshwar University of Science and Technology 物理治療系。臨床試驗登錄 CTRI/2021/03/031967（2021-03-12）。</p>
+<ul>
+<li><strong>研究方法</strong>：評估者盲化、分派隱匿、1:1:1 三臂隨機對照試驗。印度 5 間學院 84 名選手（男 47、女 37；20.46 ± 2.35 歲），分為 SMT、MCE、對照組各 28 人。SMT 與 MCE <strong>加在</strong>一般訓練之上，6 週共 30 節；對照組只做一般訓練。量度時間：基線、第 6 週、第 10 週。
+<ul>
+<li>殺球速度（主要結果）：雷達測速槍。</li>
+<li>殺球準確度：Forehand Smash Stroke Performance Test。</li>
+<li>動態平衡：Y-Balance Test（左右腳綜合分數）。</li>
+</ul></li>
+<li><strong>結果</strong>（MCE 對比對照組；用 98.33% 信賴區間，即三組比較的多重校正）：
+<ul>
+<li>殺球速度：平均差 9.71（3.85 至 15.57），p &lt; .001。⚠️ 摘要未寫單位（推測為 km/h，未核實）。</li>
+<li>殺球準確度：+3.10 個百分點（0.35 至 5.84），p = .021。</li>
+<li>Y 平衡綜合分數：左 +12.06（2.86 至 21.26），p = .006；右 +12.95（3.85 至 22.05），p = .002。</li>
+<li>四項結果的組別 × 時間交互作用均顯著（p ≤ .010）。</li>
+<li>SMT 組本身有前後進步，但相對對照組的效果較小、較不一致。</li>
+<li><strong>因為是「加練」而非「替換」，SMT 與 MCE 組比對照組多約 29% 訓練時間。</strong></li>
+</ul></li>
+<li><strong>結論</strong>：MCE 加在一般訓練上，比只做一般訓練有更好的殺球速度、準確度與動態平衡；但因多了訓練時間，<strong>效果不能歸因於 MCE 內容本身</strong>。SMT 的額外好處仍不確定。</li>
+<li><strong>教練應用</strong>：可以在熱身或體能時段加入軀幹與骨盆的動作控制練習，作為殺球與平衡的輔助（配合 <a href="05_肌力分析.html#5-核心肌力與羽球專項表現">5. 核心肌力與羽球專項表現</a>）；但要記住「多練了時間」也可能是原因——如果時間有限，與其額外加一節，不如把它放進原有熱身並自己記錄殺球速度與 Y 平衡前後變化。</li>
+<li><strong>判讀界線</strong>：<strong>只核對期刊頁摘要與 Crossref 書目，全文需訂閱、未讀</strong>；MCE／SMT 的具體動作內容、劑量、第 10 週保留結果的數字、平均差對應哪個時間點、殺球速度單位，都<strong>未能核實</strong>。對象為印度學院約 20 歲選手，未必適用於中學生。</li>
+</ul>
+<h2 id="3-聽覺剝奪擋殺質素與預判延伸-11-章預判04-章知覺決策08-章練預判">3. 聽覺剝奪：擋殺質素與預判（延伸 11 章預判、04 章知覺決策、08 章「練預判」）</h2>
+<p><strong>文獻與出處</strong>：Wang、Zhang、Ren、Li（2026），<em>Auditory deprivation impairs badminton players' stroke and anticipatory performance: a field experimental study</em>，<em>Frontiers in Psychology</em>，17:1958855；2026-11-18 發表；開放取用（CC BY）。<a href="https://doi.org/10.3389/fpsyg.2026.1958855">DOI</a>。原文：<code>羽球專項原文PDF/2026_Wang_Zhang_Ren_Li_Auditory_deprivation_stroke_anticipatory_performance_badminton.pdf</code>。作者單位：陝西師範大學、浙江師範大學、山東體育學院；倫理審查：北京體育大學。</p>
+<ul>
+<li><strong>研究方法</strong>：兩部分受試者內場地實驗，<strong>固定先做 A 再做 B</strong>（中間休息 15 分鐘）。30 名國家二級或以上選手（男 19、女 11；20.60 ± 2.14 歲；球齡 10.64 ± 3.63 年；每週訓練 11.24 ± 2.95 小時）。G*Power 預估需要 34 人，因招募困難最終 30 人。
+<ul>
+<li><strong>兩種條件</strong>：視聽（正常）vs 只有視覺（耳塞＋Bose 降噪耳機；事後選手均表示幾乎聽不到外界聲音）。條件次序 AB/BA 平衡。</li>
+<li><strong>A 部分（已知方向）</strong>：陪練（國家健將級）殺直線至反手區或殺斜線至正手區，選手用直線擋網回到指定分區（1–4 分，近網區分數最高）；每條件直線、斜線各 15 球。兩種條件的殺球速度無差異（202.40 ± 5.17 vs 201.92 ± 4.72，原文未標單位）。</li>
+<li><strong>B 部分（未知方向）</strong>：陪練按電腦程式偽隨機打吊、殺、高遠（直線／斜線，六個落點）；每條件 60 球，每組 15 個殺球穿插在 15 個高遠或吊球中。加戴 Tobii Glasses 3 眼動儀（50 Hz）。</li>
+<li>反應時間：由陪練擊球瞬間到選手球拍、髖、肩或腳轉向來球方向，影片逐格（Kinovea）由兩人判讀取平均。</li>
+</ul></li>
+<li><strong>結果</strong>：
+<ul>
+<li><strong>A 部分（已知方向）</strong>：擋殺分數 2.24 ± 0.42 → 1.94 ± 0.46（p &lt; 0.001，d = −0.847）；失誤率 0.18 → 0.27（p &lt; 0.001，d = 0.716）；反應時間 69.23 vs 71.80 ms，<strong>無顯著差異</strong>（p = 0.376）。</li>
+<li><strong>B 部分（未知方向）</strong>：反應時間 168.67 ± 26.04 → 185.23 ± 22.35 ms（p &lt; 0.001，d = 1.030）；平均凝視時間 0.21 → 0.19 秒（n = 26，p = 0.009，d = −0.551）；掃視頻率 5.58 vs 5.54 次／秒，無差異（p = 0.862）。</li>
+<li>4 人眼動資料不完整，眼動分析只用 26 人。</li>
+</ul></li>
+<li><strong>結論</strong>：聽不到聲音時，擋殺準確度下降、失誤增加、預判反應變慢、凝視時間縮短；作者認為擊球聲幫助判斷來球力量與速度，也幫助處理視覺資訊，建議技術與預判訓練刻意保留多感官（尤其聽覺）線索。</li>
+<li><strong>教練應用</strong>：
+<ul>
+<li>場地練習<strong>盡量保留擊球聲與球飛行聲</strong>；大聲播音樂或讓選手戴耳機練習，可能遮住有用線索。</li>
+<li>餵球或對打練預判時，可提醒選手留意殺球與吊球的聲音分別，配合 <a href="11_補充_跨章新增研究.html#1-預判介入研究延伸-08-章練預判04-章知覺決策">1. 預判介入研究（延伸 08 章「練預判」、04 章知覺決策）</a> 的影片預判練習。</li>
+<li><strong>不要當作已證明「聽覺訓練」有效</strong>——這篇只證明「拿走聲音會變差」，沒有測試加練聽覺會不會進步。</li>
+</ul></li>
+<li><strong>判讀界線</strong>：急性剝奪實驗，不是訓練介入；樣本 30 人、少於預估的 34 人，且同質（國家二級以上、約 21 歲）；A、B 次序固定，可能有練習、疲勞或延續效應；眼動儀 50 Hz 不足以準確量度掃視（作者建議 200–300 Hz），掃視「無差異」可能只是量不到；耳塞與耳機本身也可能影響專注或舒適度，不只是「沒有聲音」（本筆記推論，原文未討論）。已讀全文（PDF）。</li>
+</ul>
+<h2 id="4-青年比賽自覺用力與外部負荷延伸-08-章負荷監控11-章-srpe02-章青少年成熟度">4. 青年比賽：自覺用力與外部負荷（延伸 08 章負荷監控、11 章 sRPE、02 章青少年成熟度）</h2>
+<p><strong>文獻與出處</strong>：Afzal、Bhaskar Raj、Musa、Rahim、Khan（2026），<em>Growth status and internal-external match-load association in youth badminton players: A cross-sectional study</em>，<em>Journal of ROL Sport Sciences</em>，9，2593（頁 1–9）；2026-11-15 發表；開放取用（CC BY 4.0）。<a href="https://doi.org/10.70736/jrolss.2593">DOI</a>。原文：<code>羽球專項原文PDF/2026_Afzal_et_al_Growth_status_internal_external_match_load_youth_badminton.pdf</code>。作者單位：馬來西亞 Universiti Sultan Zainal Abidin、Universiti Malaysia Terengganu。</p>
+<ul>
+<li><strong>研究方法</strong>：橫斷觀察、方便取樣。馬來西亞青訓 73 名選手（男 50、女 23；10.4–17.7 歲，平均 14.0 ± 1.9 歲；球齡 6.0 ± 2.2 年）。
+<ul>
+<li><strong>比賽</strong>：俱樂部選拔賽，按年齡組與性別配對；最多三局、每局 15 分。<strong>每人打了幾局、每局多久沒有保留</strong>。</li>
+<li><strong>外部負荷</strong>：腰部綁 Xsens DOT 慣性感測器（30 Hz、±16 g），計算加速度變化的 player load（AU），每人合併成一個數值；該感測器與算法組合<strong>未在本研究另行驗證</strong>。</li>
+<li><strong>內部負荷</strong>：每局結束、坐下休息前報 0–10 RPE，再把所有局平均成「每人平均每局 RPE」。</li>
+<li><strong>生長狀態</strong>：以 WHO 2007 參考值計算身高年齡 z 分數（HAZ）與 BMI 年齡 z 分數（BAZ）。</li>
+<li>統計：Spearman 相關（10,000 次 bootstrap）；多元迴歸（外部負荷、HAZ、BAZ、年齡、性別及兩個交互項，HC3 標準誤）；多項敏感度分析。</li>
+</ul></li>
+<li><strong>結果</strong>：
+<ul>
+<li>外部負荷中位數 3.87 AU（IQR 3.68–4.21；範圍 0.21–16.95）；平均每局 RPE 中位數 3.00（IQR 2.00–3.67；範圍 1.00–5.00）。</li>
+<li><strong>平均每局 RPE 與外部負荷無顯著相關</strong>：ρ = −0.112，p = 0.346（bootstrap 95% CI −0.346 至 0.136）。</li>
+<li>模型解釋力很低：R² = 0.069，調整後 R² = −0.031（比只有截距的模型還差）。</li>
+<li>生長狀態沒有調節作用：外部負荷 × HAZ 0.173（95% CI −0.084 至 0.430，p = 0.187）；外部負荷 × BAZ 0.069（−0.518 至 0.656，p = 0.817）。</li>
+<li>樣本生長狀態很集中：身高正常 97.3%、BMI 正常 84.9%（消瘦 4.1%、過重 9.6%、肥胖 1.4%）；研究只有能力偵測較大的交互效果（f² ≥ 0.138）。</li>
+</ul></li>
+<li><strong>結論</strong>：以「每人」層級看，平均每局 RPE 與合併後的外部 player load 沒有關係，HAZ、BAZ 也沒有調節作用；兩種量度可能反映比賽負荷的不同面向。作者強調：<strong>不能把兩者互相代替，也不能用兩者的落差去判斷疲勞、生病、恢復不足或受傷風險</strong>。</li>
+<li><strong>教練應用</strong>：突破隊隊員年齡跨度大，不要只靠選手「覺得幾累」去估計場上跑動量；內部負荷（RPE、sRPE）與外部負荷（跑動、次數、時間）要分開記錄、分開看（配合 <a href="08_教練實務整合_從研究到課表.html#三負荷監控簡單每天持續">三、負荷監控：簡單、每天、持續</a>、<a href="11_補充_跨章新增研究.html#4-負荷監控srpe-效度與減量延伸-08-章">4. 負荷監控：sRPE 效度與減量（延伸 08 章）</a>）。HAZ、BAZ 只是身材指標，不等於生理成熟度。</li>
+<li><strong>判讀界線</strong>：⚠️ 更正簡報用語：這篇<strong>不是分析「每一局」RPE 與該局負荷的關係</strong>——RPE 雖然每局收集，但被平均成每人一個數字，外部負荷也只有每人一個總值，所以<strong>不能回答同一選手每局之間是否對得上</strong>；外部負荷沒有按比賽時間或局數校正；感測器未經驗證；橫斷、方便樣本、馬來西亞青訓；期刊與研究設計都比上面三篇弱。已讀全文（PDF）。</li>
+</ul>
+<h2 id="判讀界線本章">判讀界線（本章）</h2>
+<ul>
+<li>第 2 篇標 📄：只核對期刊頁摘要；第 1、3、4 篇已讀全文（PDF）。</li>
+<li>四篇都是 2026 年 11 月新發表，尚未有其他研究重複驗證。</li>
+<li>「教練應用」中關於保留擊球聲、把 MCE 放進熱身、內外部負荷分開記錄的部分屬推論，需自己記錄試用結果。</li>
+<li>未能核實：第 2 篇的殺球速度單位、MCE／SMT 具體內容與劑量、第 10 週保留數據；第 3 篇殺球速度的單位（原文未標）。</li>
+</ul>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

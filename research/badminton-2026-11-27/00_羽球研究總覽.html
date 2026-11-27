@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>羽球研究筆記總覽｜教練研究</title>
+<meta name="description" content="近五年羽球與運動科學研究的整理：多球、體能、戰術、敏捷、肌力、運動行為、筋膜與動作控制，以及教練實務整合。">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../news/">最新消息</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="羽球研究筆記總覽">羽球研究筆記總覽</h1><p class="meta">教練研究 · 整理日期 2026-10-04 · 依原研究整理，不是原文全文</p>
+<div class="callout info">
+<p class="callout-title">ℹ️ 這套筆記是什麼</p>
+
+<p>把 2021–2026 年的羽球與運動科學研究，整理成<strong>教練用得上、讀者看得懂</strong>的筆記。每篇研究都列出：資料出處 → 研究方法 → 結果 → 結論 → <strong>判讀界線</strong>（這篇研究「不能」證明什麼）。 最新審閱：2026-10-04，以教練與運動科學研究者的角度重新檢視全部內容，修正 2 處資料錯誤、標示 1 組重複樣本，並新增第 08 章與各章的「教練應用」段落。</p>
+</div>
+
+<h2 id="從哪裡開始">從哪裡開始？</h2>
+<table>
+<thead>
+<tr>
+<th>你是…</th>
+<th>建議先讀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>教練，想直接排課表</strong></td>
+<td><a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a> → 再回頭查各章的「🏸 轉成課表」</td>
+</tr>
+<tr>
+<td><strong>想建立科學認知</strong></td>
+<td><a href="08_教練實務整合_從研究到課表.html#七科學認知常見說法對照表">七、科學認知：常見說法對照表</a> → <a href="06_運動行為與運動訓練_vs_筋膜訓練.html">06_運動行為與運動訓練_vs_筋膜訓練</a></td>
+</tr>
+<tr>
+<td><strong>想深入研究方法</strong></td>
+<td>各章開頭的「一分鐘看完」→ 逐篇讀判讀界線 → <a href="08_教練實務整合_從研究到課表.html#八讀研究的五個問題給未來的自己">八、讀研究的五個問題（給未來的自己）</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="八個主題">八個主題</h2>
+<table>
+<thead>
+<tr>
+<th>章節</th>
+<th>主要問題</th>
+<th>核心結論</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="01_多球訓練法.html">01_多球訓練法</a></td>
+<td>餵球間歇、代謝負荷與技術練習</td>
+<td>間歇長短決定能量系統；多球負荷高於模擬比賽</td>
+</tr>
+<tr>
+<td><a href="02_其他訓練法.html">02_其他訓練法</a></td>
+<td>綜合體能、兒童課程、神經肌肉、視覺訓練</td>
+<td>體能訓練改善最大攝氧量；青少年要看成熟度</td>
+</tr>
+<tr>
+<td><a href="03_戰術分析.html">03_戰術分析</a></td>
+<td>發接發、前三拍、回合結構、雙打站位</td>
+<td>不要只記最後一拍；項目不同回合結構不同</td>
+</tr>
+<tr>
+<td><a href="04_敏捷體能分析.html">04_敏捷體能分析</a></td>
+<td>步法、變向、平衡與敏捷測量</td>
+<td>變向速度與知覺決策要分開練、分開測</td>
+</tr>
+<tr>
+<td><a href="05_肌力分析.html">05_肌力分析</a></td>
+<td>阻力、增強式、核心、複合式訓練</td>
+<td>阻力與增強式改善體能；肌力訓練也能預防傷害</td>
+</tr>
+<tr>
+<td><a href="06_運動行為與運動訓練_vs_筋膜訓練.html">06_運動行為與運動訓練_vs_筋膜訓練</a></td>
+<td>運動參與、動作學習、滾筒、伸展、手法</td>
+<td>滾筒不能取代訓練；「滾鬆筋膜」缺乏證據</td>
+</tr>
+<tr>
+<td><a href="07_動作發展_動作控制與筋膜_近五年研究.html">07_動作發展_動作控制與筋膜_近五年研究</a></td>
+<td>動作發展、本體感覺、保留與轉移</td>
+<td>筋膜有感覺神經，但「訓練筋膜→表現」未被證實</td>
+</tr>
+<tr>
+<td><a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a> ⭐ 新增</td>
+<td>課表、負荷監控、動作學習、恢復、傷害預防</td>
+<td>把前七章變成每天可用的原則</td>
+</tr>
+</tbody>
+</table>
+<p>其他：<a href="2026-10-02_課堂筆記_筋膜訓練與運動行為.html">2026-10-02_課堂筆記_筋膜訓練與運動行為</a>（課堂討論與引用更正）、<a href="附錄_台灣繁體中文_訓練與筋膜書單.html">附錄_台灣繁體中文_訓練與筋膜書單</a>（中文延伸閱讀）、<a href="文獻整理與清理紀錄.html">文獻整理與清理紀錄</a>（整理與審閱紀錄）。</p>
+<h2 id="證據符號">證據符號</h2>
+<p>各章開頭的研究總表使用以下符號，幫助快速判斷「這篇研究可以信多少」：</p>
+<table>
+<thead>
+<tr>
+<th>符號</th>
+<th>意義</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢</td>
+<td><strong>較強</strong>：統合分析、系統性回顧，或有對照組的隨機試驗</td>
+<td>Deng 2024 增強式統合分析</td>
+</tr>
+<tr>
+<td>🟡</td>
+<td><strong>中等</strong>：有對照組但非隨機、分組不等，或小樣本隨機試驗</td>
+<td>Malwanage 2022 平衡訓練</td>
+</tr>
+<tr>
+<td>🟠</td>
+<td><strong>較弱</strong>：單組前後測、無同期對照、分派方式不明</td>
+<td>Li 2023 兒童多球</td>
+</tr>
+<tr>
+<td>🔵</td>
+<td><strong>描述／機制</strong>：比賽觀察、單次負荷、測驗信效度、組織學</td>
+<td>Hammes &amp; Link 2024 比賽分析</td>
+</tr>
+<tr>
+<td>📄</td>
+<td><strong>只核對摘要</strong>：尚未讀到全文，結論保守看待</td>
+<td>台灣碩士論文摘要</td>
+</tr>
+</tbody>
+</table>
+<div class="callout warning">
+<p class="callout-title">⚠️ 符號只是起點</p>
+
+<p>「🟢 統合分析」也可能證據確定性低（例如 Deng 2024 為低到極低），也可能受發表偏誤影響（見 <a href="08_教練實務整合_從研究到課表.html#四動作學習練習怎麼排">四、動作學習：練習怎麼排</a> 的外在焦點爭議）。符號幫你排序閱讀，不取代讀判讀界線。</p>
+</div>
+
+<h2 id="2026-10-04-審閱重點">2026-10-04 審閱重點</h2>
+<table>
+<thead>
+<tr>
+<th>類型</th>
+<th>內容</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>❗ 資料更正</td>
+<td>Ma 2025 敏捷結果：第二章與第六章各引用一半，看似矛盾；已補齊「初始不顯著、敏感度分析後顯著」</td>
+<td><a href="02_其他訓練法.html#1-各類體能訓練的整體證據">1. 各類體能訓練的整體證據</a></td>
+</tr>
+<tr>
+<td>❗ 資料更正</td>
+<td>Shyu 2025 受試者為 18–25 歲大專選手，不是青少年</td>
+<td><a href="02_其他訓練法.html#4-單次視覺集合訓練">4. 單次視覺集合訓練</a></td>
+</tr>
+<tr>
+<td>❗ 重疊提醒</td>
+<td>Shyu 2025 與 Chiang 2026 很可能是同一個試驗，不能算兩次獨立驗證</td>
+<td>第二章第 4 篇、第六章第 6 篇</td>
+</tr>
+<tr>
+<td>➕ 新增知識</td>
+<td>能量系統、生長高峰期、敏捷兩成分、測驗誤差、效果量、傷害預防、滾筒機制、靜態伸展、肌筋膜經線證據、結締組織適應、固定發球高度規則</td>
+<td>各章「運動科學補充」方框</td>
+</tr>
+<tr>
+<td>➕ 新增章節</td>
+<td>課表範例、負荷監控、動作學習、恢復順序、熱身範本、迷思對照表</td>
+<td><a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a></td>
+</tr>
+<tr>
+<td>⚠️ 品質提醒</td>
+<td>部分研究期刊審稿標準或研究設計較弱，已在該篇標示</td>
+<td>第一章第 4、5 篇；第三章</td>
+</tr>
+</tbody>
+</table>
+<h2 id="證據註記">證據註記</h2>
+<ul>
+<li><strong>介入研究</strong>：觀察訓練前後；若有對照組，可較清楚比較不同安排。</li>
+<li><strong>交叉／單次負荷研究</strong>：說明當下心率、移動或代謝反應，無法直接推論長期球技進步。</li>
+<li><strong>比賽影片分析</strong>：描述特定賽事的技戰術型態，不能當作訓練介入成效。</li>
+<li><strong>系統性回顧／統合分析</strong>：彙整多篇研究，仍須看納入研究的品質、異質性與發表偏誤。</li>
+<li><strong>摘要核對</strong>：來源頁可核實摘要，但尚未取得全文；筆記不超出摘要所報告的範圍。</li>
+</ul>
+<h2 id="原始資料">原始資料</h2>
+<ul>
+<li><strong>原文 PDF</strong>：各章引用的 PDF 放在三個資料夾：<code>羽球專項原文PDF</code>（第 01–05 章，自上層總收集複製）、<code>新增研究原文PDF</code>（第六章）、<code>課堂延伸研究原文</code>（第七章，索引見 課堂延伸研究原文/00_原文索引）。</li>
+<li><strong>統計</strong>：原五章詳述 29 篇研究；第六章 26 篇（1 篇與第二章重疊）；第七章新增 16 篇，另交叉連結第六章 6 篇。系統回顧之間可能納入相同試驗，參與者數不可相加。</li>
+<li><strong>完整書目</strong>：原羽球專項收集有 <strong>3,080 筆書目、1,207 份 PDF</strong>，存於本機上層資料夾 <code>近五年羽毛球文獻_2021-2026</code>（未隨本網站發布）。<strong>原始書目並未全部完成全文評讀</strong>。</li>
+</ul>
+<h3 id="候選文獻索引">候選文獻索引</h3>
+<p>以下是依題名關鍵詞自動初篩的清單，是<strong>找文獻的入口，不是已核實的研究結論</strong>。同名論文可能有預印本與正式版，引用前請核對版本。清單中的「PDF」連結指向本機上層資料夾，在網站上只能使用「來源頁」連結。</p>
+<table>
+<thead>
+<tr>
+<th>候選索引</th>
+<th style="text-align: right;">筆數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多球訓練法</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td>其他訓練法</td>
+<td style="text-align: right;">455</td>
+</tr>
+<tr>
+<td>戰術分析</td>
+<td style="text-align: right;">194</td>
+</tr>
+<tr>
+<td>敏捷體能分析</td>
+<td style="text-align: right;">310</td>
+</tr>
+<tr>
+<td>肌力分析</td>
+<td style="text-align: right;">223</td>
+</tr>
+<tr>
+<td>其他／待人工篩選</td>
+<td style="text-align: right;">1,890</td>
+</tr>
+</tbody>
+</table>
+<p><code>文獻候選索引/五主題分類總表.csv</code> 保留每筆的來源網址、下載狀態及原始 ID。清理與去重情況見 <a href="文獻整理與清理紀錄.html">文獻整理與清理紀錄</a>。</p>
+<h2 id="建議複習方式">建議複習方式</h2>
+<ol type="1">
+<li>先讀一章的「一分鐘看完」和「綜合判讀」。</li>
+<li>再逐篇核對研究方法與判讀界線。</li>
+<li>最後不看筆記回答章末「主動回想」；一週後用相同問題再回想一次。</li>
+<li>把一個結論實際放進課表，記錄選手的反應——這是筆記目前最缺的部分：<strong>你自己的訓練經驗</strong>。</li>
+</ol>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

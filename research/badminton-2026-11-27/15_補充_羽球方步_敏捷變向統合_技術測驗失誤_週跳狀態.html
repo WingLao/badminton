@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>15｜補充：羽球方步訓練、敏捷變向統合、技術測驗與比賽失誤、週跳狀態監控｜教練研究</title>
+<meta name="description" content="2026-11 新發表四篇：日本方步訓練改成羽球專項的準實驗、計時敏捷與變向的頻率派網絡統合分析（對照第 14 章貝氏分析）、15–17 歲國家隊技術測驗與比賽非受迫失誤、大學選手每週 CMJ 狀態估計；各篇標明延伸哪一章。">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../news/">最新消息</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="15補充羽球方步訓練敏捷變向統合技術測驗與比賽失誤週跳狀態監控">15｜補充：羽球方步訓練、敏捷變向統合、技術測驗與比賽失誤、週跳狀態監控</h1><p class="meta">教練研究 · 整理日期 2026-11-27 · 依原研究整理，不是原文全文</p>
+<p>返回 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a>；相關章節：<a href="02_其他訓練法.html">02_其他訓練法</a>、<a href="03_戰術分析.html">03_戰術分析</a>、<a href="04_敏捷體能分析.html">04_敏捷體能分析</a>、<a href="05_肌力分析.html">05_肌力分析</a>、<a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a>、<a href="11_補充_跨章新增研究.html">11_補充_跨章新增研究</a>、<a href="14_補充_變向訓練_殺球動作控制_聽覺預判_青年負荷.html">14_補充_變向訓練_殺球動作控制_聽覺預判_青年負荷</a>。</p>
+<div class="callout summary">
+<p class="callout-title">📌 一分鐘看完</p>
+
+<ul>
+<li><strong>羽球專項方步訓練（bs-SSE）8 週後，部分平衡、踝力量與 T 測驗變向有進步</strong>：準實驗、n=32 業餘選手；實驗組右前伸 +7.69 百分點、右後內側 +9.16 百分點，選定踝力量 +4.72 至 +7.80 N，T 測驗 −0.76 秒。但是<strong>非隨機分組</strong>，對照組沒有對等監督，也<strong>沒測比賽表現</strong>。→ 延伸 04 章。</li>
+<li><strong>計時敏捷／變向的頻率派網絡統合：綜合訓練效果最大，但不能當處方排名</strong>：13 項 RCT、532 人次；相對對照組，綜合訓練 Hedges g = 2.49（1.90 至 3.09）。<strong>九項主要比較的確定性都是低或極低</strong>；這篇與第 14 章 Liu、Lu 的貝氏分析是不同論文，不要把兩篇的數字直接合併。→ 延伸 14、04、05 章。</li>
+<li><strong>15–17 歲國家隊：一次技術測驗預測不了比賽非受迫失誤</strong>：20 人、55 場正式賽；女生高遠與部分網前／後場失誤的未校正相關達 rs = −0.640 至 −0.726，但 <strong>FDR 校正後全部不顯著</strong>。→ 延伸 03 章比賽紀錄。</li>
+<li><strong>估計每週 CMJ 狀態，簡短恢復量表已經接近整套穿戴裝置</strong>：96 名大學選手、960 個選手－週；整合模型 R² ≈ 0.45，只用量尺的模型 R² = 0.405，多加裝置只多解釋 0.041。這是<strong>當日估計，不是預測未來，也不能指揮減量</strong>。→ 延伸 08、11 章負荷監控。</li>
+</ul>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>研究</th>
+<th>延伸章節</th>
+<th>設計</th>
+<th>證據</th>
+<th>一句話</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Krishnan Vasanthi 等 2026</td>
+<td>04</td>
+<td>兩組準實驗、非隨機（n=32）</td>
+<td>🟡</td>
+<td>監督下的 bs-SSE 伴隨日常打球，8 週後部分 Y 平衡、踝力量與 T 測驗較佳；不是隨機試驗</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Liu、Zheng 2026</td>
+<td>14、04、05、02</td>
+<td>系統性回顧＋頻率派網絡統合分析（13 項 RCT、532 人次）</td>
+<td>🟢</td>
+<td>綜合訓練點估計最大；增強式的直接證據較多；排名不可當處方；確定性低或極低</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Özgür、Hotaman、Koçoğlu 2026</td>
+<td>03</td>
+<td>橫斷相關（n=20；55 場正式賽）</td>
+<td>🔵</td>
+<td>校正後，技術測驗與比賽非受迫失誤無顯著相關；兩者應互補使用</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jian 2026</td>
+<td>08、11</td>
+<td>前瞻縱貫觀察＋機器學習（n=96、960 選手－週）</td>
+<td>🔵</td>
+<td>賽前恢復量表幾乎趕上多來源模型；只能估計當日 CMJ 變化，不能當自動處方</td>
+</tr>
+</tbody>
+</table>
+<div class="callout warning">
+<p class="callout-title">⚠️ 判讀總則</p>
+
+<p>第 1 篇不是隨機試驗，對照組訓練內容與實際負荷無法核實相當，進步也不等於場上步法或少受傷。第 2 篇雖然是統合分析，但效果值偏大、直接比較稀疏，作者自己寫明確定性低或極低，<strong>不可用來取代第 14 章「排不出可靠名次」的結論</strong>。第 3 篇每邊只有 10 人，60 次相關全部過不了 FDR。第 4 篇解釋力只有約 45%，後期週次的時序驗證降到約 0.24–0.27，而且樣本是大學生不是中學生。本章「教練應用」都是依現有證據推論的合理做法。</p>
+</div>
+
+<h2 id="1-羽球專項方步訓練bs-sse平衡踝力量與預定路線變向延伸-04-章平衡與變向">1. 羽球專項方步訓練（bs-SSE）：平衡、踝力量與預定路線變向（延伸 04 章平衡與變向）</h2>
+<p><strong>文獻與出處</strong>：Krishnan Vasanthi、Nadzalan、Zolkafi、Shigematsu、Kannan、Sridaran、Kathirvelu（2026），<em>Effects of a Badminton-Specific Square-Stepping Exercise (bs-SSE) Programme on Balance, Agility, and Ankle Strength Among Amateur Badminton Players</em>，<em>Journal of Functional Morphology and Kinesiology</em>，11(4)，489；2026-11-23 發表；開放取用（CC BY）。<a href="https://doi.org/10.3390/jfmk11040489">DOI</a>。原文：<code>羽球專項原文PDF/2026_Krishnan_Vasanthi_et_al_Badminton_specific_Square_Stepping_Exercise_bs_SSE.pdf</code>。通訊作者單位：馬來西亞 Universiti Pendidikan Sultan Idris；第三作者 Ryosuke Shigematsu 任職日本中京大學。倫理審查：INTI International University（INTI-IU/FHLS-RC/BPHTI/7NY12022；2022-11-21）。</p>
+<ul>
+<li><strong>研究方法</strong>：前瞻兩組對照準實驗，重覆量數（基線、第 4 週、第 8 週）。馬來西亞森美蘭州 Nilai 一帶球會與大學方便取樣；<strong>由研究者按能否出席課表非隨機分組</strong>，沒有隨機序列、也沒有分派隱匿。結果評估者對組別盲化，資料分析者在主要分析完成前只看到編碼標籤。
+<ul>
+<li>納入：18–40 歲、羽球球齡至少 5 年、每週至少打 2 小時；排除近 6 個月肢體受傷、同時固定參加其他運動等。</li>
+<li>樣本：預估中效果 f = 0.25、α = 0.05、檢定力 0.80，最少 28 人，加上 10% 流失後目標 32 人。實際兩組各 16 人，全部完成。基線年齡對照組 22.00 ± 2.00 歲、實驗組 22.69 ± 2.47 歲；兩組皆為男 14、女 2。</li>
+<li><strong>介入</strong>：實驗組在日常打球之外，由物理治療師監督進行羽球專項方步訓練（bs-SSE）。器材為 2.5 × 1.0 m、分成 40 格的方步墊；右腳踩單數、左腳踩雙數。方步本是為改善下肢功能體能而設計的預定前後、側向與斜向踩格練習，過去證據多在年長與防跌情境。本方案把 Junior、Basic、Regular、Master 四級<strong>按熱身／主課／緩和階段固定配置，8 週內不按表現升級</strong>。每節 55 分鐘（熱身 10 分鐘、主課 30 分鐘、緩和 15 分鐘），每週 5 節共 40 節，出席率 100%。主課連續循環：Regular 六步圖案 5 次，再 Master 十六步圖案 5 次，<strong>沒有安排休息</strong>，步速由治療師按目標心率調整。目標強度用年齡預測 HRmax = 207 − (0.7 × 年齡)：熱身 57–&lt;64%、主課 64–&lt;76%、緩和 &lt;57%；實驗組以 Garmin HRM-Dual 持續監測，但<strong>數值沒有保留</strong>，因此無法核實實際強度。</li>
+<li><strong>對照組</strong>：繼續日常打球與習慣活動，被要求不要另加劇烈或新的結構化訓練；內容由日誌自述（動態熱身、慢跑、步法、餵球、對打或比賽、伸展），<strong>沒有現場監督</strong>。課表同樣預訂每週 5 節、各 55 分鐘，日誌自報完成率 100%，但類型、次數與時間記錄不足，<strong>兩組實際負荷是否相當無法核實</strong>。</li>
+<li>結果（11 項，沒有預先指定主要結果，交互作用以 Holm–Bonferroni 校正，屬探索性分析）：Y 平衡測驗（YBT）六個方向的肢長正規化伸距（%）；手持測力計等長踝背屈／跖屈（N）；場地 T 測驗（秒）。評估時段未標準化。</li>
+</ul></li>
+<li><strong>結果</strong>（Holm 校正後仍顯著的組別 × 時間交互作用）：
+<ul>
+<li>右前伸：F(1.02, 30.73) = 21.25，pHolm &lt; 0.001，ηp² = 0.415；實驗組基線 68.01 ± 7.35% → 第 8 週 75.70 ± 10.27%；基線至第 8 週 +7.69 百分點（4.53 至 10.86），p &lt; 0.001。</li>
+<li>右後內側伸：F(1.21, 36.34) = 8.95，pHolm = 0.019，ηp² = 0.230；實驗組 116.33 ± 10.80% → 125.50 ± 10.73%；+9.16 百分點（3.69 至 14.64），p = 0.008。</li>
+<li>右背屈：pHolm = 0.008，ηp² = 0.238；+4.72 N（2.93 至 6.50），p &lt; 0.001。</li>
+<li>右跖屈：pHolm = 0.005，ηp² = 0.270；+5.62 N（4.08 至 7.15），p &lt; 0.001；第 8 週實驗組比對照組高 8.57 N（4.04 至 13.11），p = 0.002。</li>
+<li>左跖屈：pHolm = 0.018，ηp² = 0.265；+7.80 N（3.38 至 12.22），p = 0.006。</li>
+<li>T 測驗：pHolm = 0.002，ηp² = 0.329；實驗組 15.24 ± 0.76 秒 → 第 4 週 15.48 ± 0.85 秒 → 第 8 週 14.48 ± 0.85 秒，基線至第 8 週 −0.76 秒（−1.11 至 −0.42）。<strong>不是一路進步</strong>（第 4 週還稍慢）。Welch 敏感度：兩組變化差在第 8 週為 −0.81 秒（−1.25 至 −0.37），pHolm = 0.0015，利於實驗組；第 4 週則無（0.08 秒，−0.36 至 0.52，pHolm = 0.705）。</li>
+<li>其餘 YBT 方向與左背屈的交互作用校正後不顯著（左後外側 pHolm = 0.052，接近但未過線）。對照組各項均值大致穩定。</li>
+</ul></li>
+<li><strong>結論</strong>：在這項非隨機研究裡，監督下的 bs-SSE 加上日常打球，相對「非標準化的習慣活動加日常打球」，在部分 Y 平衡方向、部分踝力量與 T 測驗上有較有利的變化。作者強調：這是兩套完整條件的比較，<strong>不能證明 bs-SSE 優於另一種時間、監督都對等的結構化訓練</strong>；也沒有預先設定最小可偵測變化，平均進步不等于對個別選手有實務意義，更不能推論比賽表現或受傷風險。</li>
+<li><strong>教練應用</strong>：
+<ul>
+<li>方步墊或地上畫格，用來練「記順序、準確落腳、轉換重心」，可以作為步法課的輔助，而不是取代場上對球步法（配合 <a href="04_敏捷體能分析.html#1-平衡訓練對場上步法">1. 平衡訓練對場上步法</a>、<a href="04_敏捷體能分析.html#3-平衡加增強式訓練與變向">3. 平衡加增強式訓練與變向</a>）。</li>
+<li>若要試，先小劑量放在熱身或技術課前後，自己用同一個場上變向測驗追蹤（見 <a href="04_敏捷體能分析.html#2-羽球專項變向測驗">2. 羽球專項變向測驗</a>）；本篇 T 測驗進步出現在第 4 至 8 週，短於 4 週不要急於下結論。</li>
+<li>突破隊以中學生為主、女生比例也較高，不能直接套用這篇以約 22 歲、絕大多數男性業餘選手為樣本的結果。</li>
+</ul></li>
+<li><strong>判讀界線</strong>：非隨機、方便樣本、殘餘混淆無法排除；對照組無監督、負荷無法核實；11 項結果均為探索性；T 測驗是預定路線變向，不是反應性敏捷，也沒有場上技術或比賽結果；未報告最小可偵測變化；評估時段未統一；作者在撰稿時使用了生成式工具做語文潤飾（文中有聲明）。已讀全文（PDF）。</li>
+</ul>
+<h2 id="2-計時敏捷與變向頻率派網絡統合分析延伸-14-章變向統合04-章變向05-章增強式">2. 計時敏捷與變向：頻率派網絡統合分析（延伸 14 章變向統合、04 章變向、05 章增強式）</h2>
+<p><strong>文獻與出處</strong>：Liu、Zheng（2026），<em>Comparative effects of training modalities on timed agility and change-of-direction performance in badminton players: a systematic review and network meta-analysis</em>，<em>Frontiers in Physiology</em>，17:2004455；2026-11-25 發表；開放取用。<a href="https://doi.org/10.3389/fphys.2026.2004455">DOI</a>。原文：<code>羽球專項原文PDF/2026_Liu_Zheng_Training_modalities_timed_agility_COD_network_meta_analysis.pdf</code>。作者單位：武漢體育學院。PROSPERO 登錄 CRD420261456006。收稿 2026-09-20，修訂與接受 2026-11-13。</p>
+<ul>
+<li><strong>與第 14 章的關係</strong>：第 14 章第 1 篇是同一第一作者（Liu）與 Lu 在 2026-11-16 發表的<strong>貝氏</strong>網絡統合分析（DOI <a href="https://doi.org/10.3389/fphys.2026.1988217">10.3389/fphys.2026.1988217</a>），納入 53 項 RCT、主要結果是預定路線變向，並有平衡、爆發力等次要結果。本篇是 9 天後與 Zheng 合作發表的<strong>頻率派</strong>分析，只做計時敏捷／變向，檢索至 2026-05-29，只納入 13 份報告。本篇正文<strong>沒有引用</strong>那篇貝氏分析。兩者題目相近、不應視為獨立的第二次驗證，也不要把兩套效果值加總或對排名。</li>
+<li><strong>研究方法</strong>：PRISMA / PRISMA-NMA。檢索 PubMed、Web of Science Core Collection、Scopus、Embase 至 2026-05-29，並補檢納入研究與相關回顧的參考文獻。只納 RCT、羽球選手、有敏捷或變向結果且可計算效果值。節點預先分為對照、增強式、阻力、核心穩定、神經肌肉、綜合訓練；綜合訓練包括平衡＋增強式、阻力＋增強式，以及在常規訓練上加跑步機行走的多元方案；神經肌肉節點把梯步、敏捷與踏步有氧等歸在一起，作者寫明這些<strong>不是相同刺激</strong>。主要分析用介入後均值計算 Hedges g，正向表示較佳；同一研究多個結果預設相關 r = 0.50。偏誤用 RoB 2，網絡確定性用 CINeMA。</li>
+<li><strong>結果</strong>：
+<ul>
+<li>資料庫 482 筆 → 去重後 378 → 全文 52 篇中納入 9 篇，再由引用補 4 篇，共 <strong>13 份報告、532 人次</strong>；發表年 2015–2026；年齡均值 10.80 至 22.69 歲，多為青少年或年輕成人。國家／地區：中國 6、印度或孟買地區 4、土耳其 2、泰國 1。介入 3–8 週、每週 2–3 次、每次 10–120 分鐘。測驗包括 T 測驗、SEMO、Hexagon、505、Illinois、場上變向、羽球專項敏捷等，<strong>主要是預定路線的加速、減速與轉向</strong>。有兩份報告無法確認是否獨立（補充表 S7）；討論指出 Guo 等 2021 與 Lu 等 2022 的組別特徵與倫理編號接近，重疊不能排除也不能證實。</li>
+<li>偏誤：低風險 3 篇（23.1%）、有疑慮 8 篇（61.5%）、高風險 2 篇（15.4%）。作者也寫明：隨機化與結果量度最初都被標成低風險，但現有報告並不能獨立支持每一項低風險判斷。</li>
+<li><strong>網絡（相對對照組，Hedges g、95% CI）</strong>：綜合 2.49（1.90 至 3.09）、增強式 1.64（1.17 至 2.12）、阻力 1.52（0.73 至 2.31）、神經肌肉 1.17（0.57 至 1.76）；核心 0.90（−0.29 至 2.09），區間跨過 0。主動介入之間，綜合訓練優於核心 1.59（0.26 至 2.92）、神經肌肉 1.32（0.48 至 2.16）、增強式 0.85（0.34 至 1.36）、阻力 0.97（0.25 至 1.70）；其餘主動介入兩兩比較的 CI 都跨過 0。P-score：綜合 0.997、增強式 0.677、阻力 0.588、神經肌肉 0.402、核心 0.323、對照 0.014。<strong>九項主要網絡比較的確定性均為低或極低</strong>。</li>
+<li>直接比較補充：綜合 vs 對照只有 1 項（g = 2.57，1.90 至 3.24）；增強式 vs 對照 4 項、合併 1.62（0.72 至 2.52，I² = 66.46%）；綜合 vs 增強式 3 項、合併 0.76（−0.21 至 1.72），<strong>直接比較不顯著</strong>（Knapp–Hartung 區間）。綜合 vs 對照的唯一直接研究，Illinois 測驗後測相差 1.22 秒（15.32 vs 16.54），不能推到比賽。</li>
+<li>異質性：I² = 53.94%（5.94% 至 77.44%），τ² = 0.145，Q = 19.54（df = 9，P = 0.021）；整體不一致性檢定不顯著（P = 0.915），但每條邊的研究少，檢定力有限。Egger 檢定未見漏斗不對稱（相對對照 P = 0.904），研究數同樣限制解釋。</li>
+<li>敏感度：改用前後變化值時，綜合、增強式、神經肌肉仍顯著，但效果縮小（綜合 g = 1.36 至 1.87）；<strong>阻力訓練的 CI 在所有變化值假設下都跨過 0</strong>。只保留每項研究一個結果時，綜合 vs 核心的區間跨過 0（g = 1.43，−0.02 至 2.88）。</li>
+</ul></li>
+<li><strong>結論</strong>：現有證據顯示綜合、增強式、神經肌肉與阻力訓練的計時敏捷／變向，平均優於對照；綜合訓練的網絡效果與 P-score 最高，增強式的直接證據較多、較穩，單獨核心訓練仍不確定。作者明確寫：<strong>相對排名不應理解成最佳處方</strong>。</li>
+<li><strong>教練應用</strong>：
+<ul>
+<li>與第 14 章一致：不要追求「最好的一種課」，按選手弱點把增強式與平衡或肌力組合起來，仍是合理方向（<a href="14_補充_變向訓練_殺球動作控制_聽覺預判_青年負荷.html#1-變向訓練貝氏網絡統合分析延伸-04-章變向05-章增強式與核心">1. 變向訓練：貝氏網絡統合分析（延伸 04 章變向、05 章增強式與核心）</a>、<a href="04_敏捷體能分析.html#3-平衡加增強式訓練與變向">3. 平衡加增強式訓練與變向</a>、<a href="05_肌力分析.html#2-增強式訓練統合分析">2. 增強式訓練：統合分析</a>）。</li>
+<li>本篇 g = 2.49 這類很大的標準化效果，很可能受小型研究與測驗選擇影響，<strong>不要把它換算成「隊員一定快多少秒」</strong>。</li>
+<li>測驗進步仍是預定路線變向，不等于看球後起動更快。</li>
+</ul></li>
+<li><strong>判讀界線</strong>：確定性低或極低；效果值偏大，需懷疑小研究效應與測量差異；綜合 vs 增強式的直接證據不足；可能有兩篇報告樣本重疊；神經肌肉與綜合都是雜項節點；主要分析用介入後分數而非變化值；結果不能直接換成某一項測驗的秒數，也不適用於反應性敏捷或比賽步法。已讀全文（PDF）。</li>
+</ul>
+<h2 id="3-1517-歲國家隊技術測驗與比賽非受迫失誤延伸-03-章比賽紀錄">3. 15–17 歲國家隊：技術測驗與比賽非受迫失誤（延伸 03 章比賽紀錄）</h2>
+<p><strong>文獻與出處</strong>：Özgür、Hotaman、Koçoğlu（2026），<em>Associations Between Technical Performance and Match-Specific Unforced Errors in Turkish National Badminton Players Aged 15–17 Years</em>，<em>Sports</em>，14(12)，533；2026-11-25 發表；開放取用（CC BY）。<a href="https://doi.org/10.3390/sports14120533">DOI</a>。原文：<code>羽球專項原文PDF/2026_Ozgur_Hotaman_Kocoglu_Technical_performance_unforced_errors_youth_national.pdf</code>。作者單位：土耳其 Mardin Artuklu University、Akçaabat Fen Lisesi、Kocaeli University。倫理審查：Marmara University Institute of Health Sciences Ethics Committee（2017-165）。家長／監護人知情同意。</p>
+<ul>
+<li><strong>研究方法</strong>：觀察性橫斷相關。目的取樣土耳其羽總 U17 國家隊選拔名單 20 人（男 10、女 10；15–17 歲）；納入條件包括至少兩次正式國際青年賽代表經驗。因為全隊可納入人數就是每邊 10 人，<strong>沒有事先做樣本數估算</strong>。
+<ul>
+<li><strong>技術測驗</strong>：三個月賽季的第一場正式賽前 5 天，在室內場地做一次（之後未再測）：短發球、高發球、高遠、吊球、殺球，各 20 次有效球，總分 0–100。吊球須先越過本側一條高繩，再從網上第二條繩下方穿過，進入前場目標區，難度明顯較高。</li>
+<li><strong>比賽失誤</strong>：其後三個月、土耳其羽總六項賽事中的 55 場正式單打（不是每個人都打齊六項）。每人中位數 3 場（範圍 2–4）。非受迫失誤定義為在對手壓力不足以解釋結果的情況下，球不過網或出界。三位具至少 10 年資歷的教練場邊實時記錄，賽前用 5 場練習賽對過標準，但<strong>各看各的比賽，沒有正式評分者間信度</strong>。每人把各場平均成「每場平均失誤次數」，再與那一次基線測驗做相關。非受迫失誤佔失分百分比：男中位數 43.25%，女 48.77%。</li>
+<li>統計：按性別分開做 Spearman 相關（BCa 95% CI）；每邊 5 項測驗 × 12 項失誤變量 = 60 次比較，用 Benjamini–Hochberg FDR 校正，顯著水準為 padj &lt; 0.05。</li>
+</ul></li>
+<li><strong>結果</strong>：
+<ul>
+<li>技術測驗中位數（男／女）：短發球 46.00／45.50，高發球 93.00／84.50，高遠 91.00／89.00，吊球 23.00／9.00，殺球 85.50／83.50。吊球分數明顯偏低，作者認為主要是測驗門檻高，可能有地板效應。</li>
+<li><strong>男生</strong>：沒有任何相關達到未校正的 p &lt; 0.05；FDR 後全部 padj ≥ 0.988。高遠與後場失誤 rs = −0.590（p = 0.073）等幾個「大」的負相關，信賴區間都跨過 0。</li>
+<li><strong>女生</strong>（未校正）：高遠與總網前失誤 rs = −0.726（p = 0.017，BCa 95% CI −1.000 至 −0.089）、與後場失誤 rs = −0.726（p = 0.017，−1.000 至 −0.020）、與後場網前失誤 rs = −0.652（p = 0.041，−0.987 至 0.135，<strong>區間已跨過 0</strong>）、與前場網前失誤 rs = −0.640（p = 0.046，−1.000 至 0.094，<strong>區間已跨過 0</strong>）；吊球與後場出界 rs = −0.667（p = 0.035，−1.000 至 −0.003）。<strong>FDR 後全部不顯著（皆 padj ≥ 0.510）</strong>。</li>
+</ul></li>
+<li><strong>結論</strong>：校正多重比較後，沒有證據顯示「一次封閉式技術準確度測驗」與正式比賽的非受迫失誤有可靠關聯；因每邊只有 10 人、區間很寬，本研究也<strong>沒有足夠把握去否定這種關係</strong>。未校正的女生趨勢只能當探索線索。作者沒有做兩性相關差異的正式檢定，不能說「男女不同」。</li>
+<li><strong>教練應用</strong>：
+<ul>
+<li>對突破隊這個年齡層，技術測驗（高遠、吊球、殺球落點）與比賽記錄（自己的非受迫失誤）要<strong>分開做、一起看</strong>，不要用一次測驗分數去推測「這個人比賽會不會無故失誤」（配合 <a href="03_戰術分析.html#-轉成訓練自己的比賽紀錄表">🏸 轉成訓練：自己的比賽紀錄表</a>）。</li>
+<li>吊球測驗分數低，先檢查測驗本身是否過嚴，再判斷是不是技術真的差；要把吊球從固定餵球，逐步加到有時間壓力和對手的代表情境，但不能宣稱「加練吊球就會減少比賽失誤」——本文沒有訓練介入。</li>
+</ul></li>
+<li><strong>判讀界線</strong>：小樣本、探索性、檢定力低；測驗只做一次，與最遠相隔可達三個月的比賽配對；失誤按「每場」平均，沒有按回合數、擊球數、對手或比賽時間校正；無評分者間信度、無測驗再測信度；橫斷相關不能推論因果。已讀全文（PDF）。</li>
+</ul>
+<h2 id="4-每週-cmj-狀態恢復量表幾乎趕上多來源模型延伸-08-章負荷監控11-章-srpe">4. 每週 CMJ 狀態：恢復量表幾乎趕上多來源模型（延伸 08 章負荷監控、11 章 sRPE）</h2>
+<p><strong>文獻與出處</strong>：Jian（2026），<em>Explainable Multimodal Machine Learning Estimates Weekly Countermovement Jump Readiness in Collegiate Badminton Players</em>，<em>Journal of Visualized Experiments</em>；2026-11-20 發表。<a href="https://doi.org/10.3791/75519">DOI</a>。作者單位：漳州理工職業學院通識教育學院體育教研室。倫理審查編號 B091928，書面知情同意。⚠️ 已對照出版社頁的摘要、方法、結果與討論；<strong>未能成功下載 PDF 存檔</strong>。</p>
+<ul>
+<li><strong>研究方法</strong>：前瞻縱貫觀察。大學競技羽球選手 18–25 歲，結構化訓練至少 3 年、每週至少 4 節課或體能課。篩 103 人、排除 7 人後，分析隊列 96 人（男 52、女 44；年齡 20.55 ± 1.37 歲；訓練年資 6.41 ± 1.93 年）。12 週方案於 2026 年 6 月完成：熟悉 1 週、基線 1 週、分析監測 10 週，共 960 個選手－週，全部符合預先規定的完整度，主分析沒有補值。訓練與比賽安排仍由教練決定。
+<ul>
+<li><strong>結果</strong>：每週固定星期、盡量 16:00–18:00，在恢復日之後、訓練之前測雙腳 CMJ；目標是相對個人基線的百分比變化。基線 CMJ 高度 38.32 ± 7.24 cm（男 43.39 ± 5.39、女 32.32 ± 3.64）。</li>
+<li><strong>預測變量</strong>：八個主要動態變量。Short Recovery and Stress Scale（SRSS）的恢復與壓力在熱身前填；其餘變量彙總測試前 168 小時：每週 session-RPE 負荷、軀幹 IMU 的 PlayerLoad、夜間 lnRMSSD 及其變異、靜息心率、睡眠時數。</li>
+<li>模型：Elastic Net、Random Forest、XGBoost；以選手分組的巢狀交叉驗證，被留出的選手資料完全不參與該折的建模。</li>
+</ul></li>
+<li><strong>結果</strong>：
+<ul>
+<li>監測期 CMJ 相對基線平均 −0.44% ± 2.27%（範圍 −8.50% 至 +6.48%）；第 4、7 週較差（約 −1.58%、−1.61%），與較高的 session-RPE 負荷及較低的 SRSS 恢復同時出現。</li>
+<li>整合八變量的 XGBoost：折外平均 R² = 0.446 ± 0.068，RMSE = 1.680 ± 0.128 百分點，MAE = 1.320 ± 0.096 百分點；彙總 R² = 0.448（95% CI 0.391–0.502）。三種算法差別很小。相對於「預測 0% 變化」的基準，RMSE 約低 27%。</li>
+<li><strong>單領域</strong>：SRSS-only 最強（R² = 0.405 ± 0.068）；負荷模型 0.277 ± 0.067；生理／睡眠 0.201 ± 0.073。整合模型只比 SRSS-only 多 0.041 的 R²（約 10% 相對提升），RMSE 從 1.740 降到 1.680 百分點。</li>
+<li>SHAP（平均絕對貢獻，百分點）：SRSS 恢復 0.675、SRSS 壓力 0.397、session-RPE 負荷 0.331、lnRMSSD 0.273，其餘更低。恢復分數最低五分位平均 2.90、貢獻 −1.05 百分點；最高五分位平均 5.10、貢獻 +0.82。session-RPE 負荷最高五分位貢獻 −0.90 百分點。</li>
+<li>重要限制性結果：用前 7 週建模、只評估留出選手的第 8–10 週時，平均 R² 降至 0.237（彙總 0.265）。學習曲線在 77 名訓練選手時仍未完全趨平。作者未估計本隊列 CMJ 的典型誤差或最小有價值變化，因此<strong>不能判斷某一次預測誤差是否小於測驗本身的誤差</strong>。</li>
+</ul></li>
+<li><strong>結論</strong>：在嚴格把選手分開驗證的前提下，多來源資料對大學選手當週 CMJ 變化只有中等估計力；熱身前的主觀恢復／壓力，加上每週 session-RPE，貢獻最大；再加穿戴裝置的增量很小。SHAP 是預測關聯，不是因果，也不能當作測試日之後的預報。</li>
+<li><strong>教練應用</strong>：
+<ul>
+<li>對資源有限的球隊，熱身前用一張短的恢復／壓力量表，再配合 session-RPE（sRPE），可能已經抓住大部分與當日下肢爆發狀態有關的訊號，不必先買齊心率帶與 IMU（配合 <a href="08_教練實務整合_從研究到課表.html#三負荷監控簡單每天持續">三、負荷監控：簡單、每天、持續</a>、<a href="11_補充_跨章新增研究.html#4-負荷監控srpe-效度與減量延伸-08-章">4. 負荷監控：sRPE 效度與減量（延伸 08 章）</a>）。</li>
+<li>這是幫助看「今天彈跳狀態」的輔助，<strong>不能自動決定減量、停訓或選拔</strong>；也沒有測羽球技術或比賽。樣本是大學生，外推到中學突破隊要自己驗證。</li>
+</ul></li>
+<li><strong>判讀界線</strong>：觀察性預測，非因果；單一學校週期、外在效度不明；R² 不足 0.50，後期週次估計力明顯下降；沒有本隊列的 CMJ 測量誤差；生理與睡眠依賴特定消費級裝置與彙總規則；出版社頁可讀全文，但本次未能存入 PDF。已核對全文（無 PDF）。</li>
+</ul>
+<h2 id="判讀界線本章">判讀界線（本章）</h2>
+<ul>
+<li>第 1、2、3 篇已讀全文並存 PDF；第 4 篇已核對出版社頁全文，無 PDF。</li>
+<li>四篇都是 2026 年 11 月 20 至 25 日新發表，尚未有其他研究重複驗證。第 2 篇與第 14 章第 1 篇主題重疊，必須分開讀，不能當兩次獨立驗證。</li>
+<li>「教練應用」中關於小劑量試方步、測驗與比賽紀錄互補、先用恢復量表加 sRPE 的部分屬推論，需自己記錄試用結果。</li>
+<li>未能核實：第 4 篇 PDF 原文版面與補充表細節；SRSS 在該文中的量尺範圍（文中只報了分數的均值與分位）；第 2 篇補充表 S7、S8 的逐項細節（正文已說明兩份報告可能重疊，以及確定性為低或極低）。</li>
+</ul>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

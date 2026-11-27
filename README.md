@@ -7,6 +7,7 @@
 - [網站首頁](https://winglao.github.io/badminton/)
 - [學生學習：手指發力](https://winglao.github.io/badminton/learn/badminton-2026-11-23/)
 - [學生學習：五項基礎細節](https://winglao.github.io/badminton/learn/badminton-2026-11-15/)
+- [教練科技：GitHub 羽球開源工具圖鑑](https://winglao.github.io/badminton/technology/badminton-2026-11-27/)
 - [教練科技：羽球科技速覽](https://winglao.github.io/badminton/technology/badminton-2026-11-15/)
 - [教練研究：羽球研究筆記](https://winglao.github.io/badminton/research/badminton-2026-11-23/)
 - [工具說明：AVANCO 兩個 skill](https://winglao.github.io/badminton/skills/badminton-2026-11-23/)
@@ -84,5 +85,5 @@ assets/
 ## 讀者分眾與現行路徑
 
 - 學生學習：國一至國三，手機優先；`learn/badminton-2026-11-15/`。
-- 羽球科技：給教練，聚焦訓練應用、量測限制、實際條件與成本；`technology/badminton-2026-11-15/`。
+- 羽球科技：給教練，聚焦訓練應用、量測限制、實際條件與成本；`technology/badminton-2026-11-15/`；GitHub 開源工具圖鑑 `technology/badminton-2026-11-27/`（由 `tools/github_catalog.py` 讀 `資料/工具資料_20261127.json` 產生）。
 - P23 起分類與日期資料夾全部小寫。舊大寫路徑只作歷史。繁中例外依最新原文 P24，教練定位依 P25。

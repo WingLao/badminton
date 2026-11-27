@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>GitHub 羽球開源工具圖鑑｜教練科技</title>
+<meta name="description" content="9 個羽球開源專案：影像追蹤、動作與戰術、影片剪輯、器材 DIY、賽事管理的用途、條件與成本。">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../news/">最新消息</a><a href="../../learn/">學生學習</a><a href="../../technology/" class="on">教練科技</a><a href="../../research/">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<style>
+.gc-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0}
+.gc-pill{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:15px;cursor:pointer;min-height:40px}
+.gc-pill[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);font-weight:700}
+.gc-search{flex:1 1 220px;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:9px 12px;font:inherit;font-size:16px}
+.gc-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr))}
+.gc-card{background:var(--card);border:1px solid var(--line);border-top:5px solid hsl(215 55% 42%);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.gc-stage{position:relative;aspect-ratio:16/9;background:#020617}
+.gc-stage img,.gc-stage canvas{display:block;width:100%;height:100%;object-fit:cover;border-radius:0}
+.gc-stage .gc-len{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.75);color:#fff;font-size:13px;padding:1px 7px;border-radius:6px}
+.gc-stage .gc-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:40px;border-radius:12px;background:rgba(220,38,38,.92)}
+.gc-stage .gc-play::after{content:"";position:absolute;left:23px;top:11px;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff}
+.gc-stage .gc-simtag{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.65);color:#fde047;font-size:12px;padding:1px 8px;border-radius:6px}
+.gc-stage [hidden]{display:none}
+.gc-switch{display:flex;gap:6px;padding:8px;border-bottom:1px solid var(--line)}
+.gc-switch button{flex:1;border:1px solid transparent;background:transparent;color:var(--muted);border-radius:8px;padding:7px 6px;font:inherit;font-size:14px;cursor:pointer}
+.gc-switch button[aria-pressed="true"]{background:var(--code);color:var(--ink);border-color:var(--line);font-weight:700}
+.gc-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.gc-body h3{margin:0;font-size:19px}
+.gc-repo{font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--muted)}
+.gc-body p{margin:0}
+.gc-dl{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:15px;margin:0}
+.gc-dl dt{color:var(--muted);font-weight:600;white-space:nowrap}
+.gc-dl dd{margin:0}
+.gc-cmd{margin-top:auto;display:flex;gap:8px;align-items:center;background:var(--code);border-radius:10px;padding:8px 10px}
+.gc-cmd code{flex:1;min-width:0;overflow-x:auto;white-space:nowrap;background:none;padding:0;font-size:13px}
+.gc-cmd button{flex-shrink:0;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 10px;font:inherit;font-size:14px;cursor:pointer}
+.gc-empty{display:none;color:var(--muted)}
+.gc-card[hidden]{display:none}
+.gc-chip{display:inline-block;font-size:13px;padding:1px 9px;border-radius:999px;background:hsl(215 55% 42% / .12);color:var(--blue);margin-right:4px}
+</style><p class="crumb"><a href="../">教練科技</a> › 2026 年 11 月 27 日</p>
+<h1>GitHub 羽球開源工具圖鑑</h1>
+<p class="meta">2026 年 11 月 27 日 · 給教練 · 9 個開源專案 · 5 支示範影片已核對免費觀看</p>
+<div class="card"><h2 style="margin-top:0">一分鐘重點</h2><ul>
+<li><mark>影像追蹤最成熟</mark>：TrackNetV3 找球、RallyLens 一條指令出骨架＋球路＋跑動距離，但都要會 Python、最好有顯示卡。</li>
+<li><mark>想直接用、不寫程式</mark>：只有「弧迹」有安裝版（Android／Windows／Linux），自動剪掉撿球片段。</li>
+<li><mark>戰術研究</mark>：CoachAI 的 ShuttleSet 是專業比賽逐拍資料，適合研究或帶數據專題，不是自己球隊的數據。</li>
+<li><mark>器材 DIY</mark>：PicoBETH 自製電子拉線頭、BADDY 羽球機器人；都要動手組裝，BADDY 已多年沒更新。</li>
+<li>所有準確率都是<mark>作者自己的測試</mark>，換成你的場館燈光、拍攝角度要重新試。</li></ul></div>
+<p class="muted">看不懂的英文名詞（例如 README、授權、骨架偵測），見文末<a href="#gc-words">名詞小字典</a>。</p>
+<h2>比較表</h2>
+<table><thead><tr><th>工具</th><th>分類</th><th>訓練用途</th><th>授權</th><th>活躍度</th><th>依據</th></tr></thead><tbody><tr><td>TrackNetV3</td><td>影像與追蹤</td><td>取得每一格的球座標，再自行計算球速、落點分布、擊球點高度。</td><td>有授權檔，GitHub 無法自動辨識</td><td>★ 339 · 2026-09-03</td><td>A</td></tr><tr><td>RallyLens</td><td>影像與追蹤</td><td>快速得到單打回合的跑動距離、站位分布與球路圖，適合賽後檢討。</td><td>指令列工具 MIT、網頁版 AGPL-3.0（README 標示）</td><td>★ 25 · 2026-09-03</td><td>A</td></tr><tr><td>Badminton-VisionAI</td><td>動作與戰術</td><td>看球員站位熱區、移動路徑與擊球類型分布，結果在 Streamlit 網頁儀表板瀏覽。</td><td>有授權檔，GitHub 無法自動辨識</td><td>★ 14 · 2026-04-05</td><td>A</td></tr><tr><td>Badminton Analytics Project</td><td>動作與戰術</td><td>比較球員的場地覆蓋與移動軌跡，輸出骨架疊圖與軌跡圖。</td><td>MIT</td><td>★ 35 · 2026-05-26</td><td>A</td></tr><tr><td>CoachAI-Projects（ShuttleSet）</td><td>動作與戰術</td><td>做戰術量化研究，或用真實逐拍資料帶數據分析專題。</td><td>MIT</td><td>★ 294 · 2026-07-17</td><td>A</td></tr><tr><td>弧迹（Huji）</td><td>影片剪輯</td><td>1 小時的練習或比賽錄影，自動剪成只有回合的影片，方便賽後檢討。</td><td>AGPL-3.0</td><td>★ 58 · 2026-11-25</td><td>A</td></tr><tr><td>PicoBETH</td><td>硬體與器材</td><td>自製低成本電子拉線頭，做張力衰退測試或機電整合專題。</td><td>有授權檔，GitHub 無法自動辨識</td><td>★ 92 · 2026-09-24</td><td>A</td></tr><tr><td>BADDY Makers Edition</td><td>硬體與器材</td><td>作為自製訓練器材或機電專題的參考：馬達控制、結構與電子接線。</td><td>CERN OHL v1.1＋非商業附加條款</td><td>★ 36 · 2022-07-29</td><td>B</td></tr><tr><td>ezBadminton</td><td>賽事管理</td><td>球會內部賽或校內賽的報名、賽程與結果管理（詳細功能未逐項驗證）。</td><td>MIT</td><td>★ 0 · 2025-11-13</td><td>B</td></tr></tbody></table>
+<h2>逐個看</h2>
+<p>按分類或輸入關鍵字篩選。每張卡上方可切換「示範影片／GitHub 預覽」與「功能示意」動畫；示意動畫只說明工具在做甚麼，<b>不是真實數據</b>。</p>
+<div class="gc-tools"><button type="button" class="gc-pill" data-cat="全部" aria-pressed="true">全部</button><button type="button" class="gc-pill" data-cat="影像與追蹤" aria-pressed="false">影像與追蹤</button><button type="button" class="gc-pill" data-cat="動作與戰術" aria-pressed="false">動作與戰術</button><button type="button" class="gc-pill" data-cat="影片剪輯" aria-pressed="false">影片剪輯</button><button type="button" class="gc-pill" data-cat="硬體與器材" aria-pressed="false">硬體與器材</button><button type="button" class="gc-pill" data-cat="賽事管理" aria-pressed="false">賽事管理</button><input class="gc-search" type="search" placeholder="搜尋工具、功能或技術，例如：骨架" aria-label="搜尋工具"></div>
+<p class="gc-empty">找不到符合的工具，請換一個關鍵字或按「全部」。</p>
+<div class="gc-grid"><article class="gc-card" data-cat="影像與追蹤" data-text="tracknetv3 qaz812345/tracknetv3 影像與追蹤 從一般比賽錄影逐格找出羽球位置的深度學習模型，v3 加入資料增強與軌跡修補（inpaintnet），補回被擋住或太快看不到的球。 取得每一格的球座標，再自行計算球速、落點分布、擊球點高度。 要會 python 與 pytorch，有 nvidia 顯示卡較實際；模型權重要另外下載；只輸出座標，球速和落點要自己寫程式換算。 pytorch python opencv">
+<div class="gc-stage"><div data-pane="media"><a href="https://www.youtube.com/watch?v=NHsgkH7DG4k" target="_blank" rel="noopener" aria-label="在 YouTube 看 TrackNetV3 示範影片"><img src="圖片/NHsgkH7DG4k.jpg" alt="TrackNetV3 示範影片縮圖" loading="lazy"><span class="gc-play"></span><span class="gc-len">0:22</span></a></div><div data-pane="sim" hidden><canvas data-sim="trajectory" width="640" height="360" aria-label="功能示意動畫"></canvas><span class="gc-simtag">示意動畫，不是真實數據</span></div></div>
+<div class="gc-switch"><button type="button" data-show="media" aria-pressed="true">▶ 示範影片</button><button type="button" data-show="sim" aria-pressed="false">✨ 功能示意</button></div>
+<div class="gc-body"><p><span class="gc-chip">影像與追蹤</span><span class="tag">依據 A</span></p>
+<h3><a href="https://github.com/qaz812345/TrackNetV3" target="_blank" rel="noopener">TrackNetV3 ↗</a></h3><div class="gc-repo">qaz812345/TrackNetV3 · ★ 339 · 最後更新 2026-09-03</div>
+<p>從一般比賽錄影逐格找出羽球位置的深度學習模型，V3 加入資料增強與軌跡修補（InpaintNet），補回被擋住或太快看不到的球。</p>
+<dl class="gc-dl"><dt>訓練用途</dt><dd>取得每一格的球座標，再自行計算球速、落點分布、擊球點高度。</dd><dt>公開數據</dt><dd>作者 README 測試結果：準確率 97.51%、每秒 25.11 格（作者自己的測試集與硬體）。</dd><dt>條件與成本</dt><dd>要會 Python 與 PyTorch，有 NVIDIA 顯示卡較實際；模型權重要另外下載；只輸出座標，球速和落點要自己寫程式換算。</dd><dt>授權</dt><dd>有授權檔，GitHub 無法自動辨識</dd></dl>
+<p class="muted" style="font-size:14px">影片：原版 TrackNet 示範（2020），不是 V3 · 2026-11-27 未登入核對可免費觀看</p>
+<div class="gc-cmd"><code>git clone https://github.com/qaz812345/TrackNetV3.git &amp;&amp; cd TrackNetV3 &amp;&amp; pip install -r requirements.txt</code><button type="button">複製</button></div></div></article><article class="gc-card" data-cat="影像與追蹤" data-text="rallylens yeonseong-lee/rallylens 影像與追蹤 一條指令把比賽影片變成球員骨架、球路尾跡、球場俯視小地圖與回合報告；整合 yolo11-pose 骨架、bytetrack 追蹤與 tracknetv3 球路。 快速得到單打回合的跑動距離、站位分布與球路圖，適合賽後檢討。 要安裝 uv 與 ffmpeg；只自動挑選 2 名單打球員；回合文字報告用 google vertex ai gemini 產生、輸出韓文，需要雲端帳號，費用未驗證。 yolo11-pose bytetrack tracknetv3 python">
+<div class="gc-stage"><div data-pane="media"><a href="https://www.youtube.com/watch?v=fKwac0CsBLc" target="_blank" rel="noopener" aria-label="在 YouTube 看 RallyLens 示範影片"><img src="圖片/fKwac0CsBLc.jpg" alt="RallyLens 示範影片縮圖" loading="lazy"><span class="gc-play"></span><span class="gc-len">0:17</span></a></div><div data-pane="sim" hidden><canvas data-sim="rallylens" width="640" height="360" aria-label="功能示意動畫"></canvas><span class="gc-simtag">示意動畫，不是真實數據</span></div></div>
+<div class="gc-switch"><button type="button" data-show="media" aria-pressed="true">▶ 示範影片</button><button type="button" data-show="sim" aria-pressed="false">✨ 功能示意</button></div>
+<div class="gc-body"><p><span class="gc-chip">影像與追蹤</span><span class="tag">依據 A</span></p>
+<h3><a href="https://github.com/YeonSeong-Lee/rallylens" target="_blank" rel="noopener">RallyLens ↗</a></h3><div class="gc-repo">YeonSeong-Lee/rallylens · ★ 25 · 最後更新 2026-09-03</div>
+<p>一條指令把比賽影片變成球員骨架、球路尾跡、球場俯視小地圖與回合報告；整合 YOLO11-pose 骨架、ByteTrack 追蹤與 TrackNetV3 球路。</p>
+<dl class="gc-dl"><dt>訓練用途</dt><dd>快速得到單打回合的跑動距離、站位分布與球路圖，適合賽後檢討。</dd><dt>公開數據</dt><dd>README 範例報告列出每位球員跑動距離（例如 40.3 公尺對 59.5 公尺）與站位區域比例。</dd><dt>條件與成本</dt><dd>要安裝 uv 與 ffmpeg；只自動挑選 2 名單打球員；回合文字報告用 Google Vertex AI Gemini 產生、輸出韓文，需要雲端帳號，費用未驗證。</dd><dt>授權</dt><dd>指令列工具 MIT、網頁版 AGPL-3.0（README 標示）</dd></dl>
+<p class="muted" style="font-size:14px">影片：作者示範：骨架、球路尾跡、左下角俯視小地圖 · 2026-11-27 未登入核對可免費觀看</p>
+<div class="gc-cmd"><code>git clone https://github.com/YeonSeong-Lee/rallylens &amp;&amp; cd rallylens &amp;&amp; uv sync</code><button type="button">複製</button></div></div></article><article class="gc-card" data-cat="動作與戰術" data-text="badminton-visionai amramer/badminton-visionai 動作與戰術 yolov8 追蹤球員、tracknet 追蹤球路，再用球場透視校正（homography，把斜拍畫面換成俯視座標）畫出小球場，並辨識擊球類型。 看球員站位熱區、移動路徑與擊球類型分布，結果在 streamlit 網頁儀表板瀏覽。 用 docker 或 conda 安裝；先跑影像分析、再開儀表板，兩步分開；擊球分類準確度未驗證。 yolov8 tracknet homography streamlit">
+<div class="gc-stage"><div data-pane="media"><a href="https://www.youtube.com/watch?v=dAe9e_1AGuA" target="_blank" rel="noopener" aria-label="在 YouTube 看 Badminton-VisionAI 示範影片"><img src="圖片/dAe9e_1AGuA.jpg" alt="Badminton-VisionAI 示範影片縮圖" loading="lazy"><span class="gc-play"></span><span class="gc-len">0:19</span></a></div><div data-pane="sim" hidden><canvas data-sim="heatmap" width="640" height="360" aria-label="功能示意動畫"></canvas><span class="gc-simtag">示意動畫，不是真實數據</span></div></div>
+<div class="gc-switch"><button type="button" data-show="media" aria-pressed="true">▶ 示範影片</button><button type="button" data-show="sim" aria-pressed="false">✨ 功能示意</button></div>
+<div class="gc-body"><p><span class="gc-chip">動作與戰術</span><span class="tag">依據 A</span></p>
+<h3><a href="https://github.com/amramer/Badminton-visionAI" target="_blank" rel="noopener">Badminton-VisionAI ↗</a></h3><div class="gc-repo">amramer/Badminton-visionAI · ★ 14 · 最後更新 2026-04-05</div>
+<p>YOLOv8 追蹤球員、TrackNet 追蹤球路，再用球場透視校正（homography，把斜拍畫面換成俯視座標）畫出小球場，並辨識擊球類型。</p>
+<dl class="gc-dl"><dt>訓練用途</dt><dd>看球員站位熱區、移動路徑與擊球類型分布，結果在 Streamlit 網頁儀表板瀏覽。</dd><dt>公開數據</dt><dd>README 沒有公布準確率。</dd><dt>條件與成本</dt><dd>用 Docker 或 Conda 安裝；先跑影像分析、再開儀表板，兩步分開；擊球分類準確度未驗證。</dd><dt>授權</dt><dd>有授權檔，GitHub 無法自動辨識</dd></dl>
+<p class="muted" style="font-size:14px">影片：作者示範：球員追蹤、小球場投影、擊球類型 · 2026-11-27 未登入核對可免費觀看</p>
+<div class="gc-cmd"><code>git clone https://github.com/amramer/Badminton-visionAI.git &amp;&amp; cd Badminton-visionAI</code><button type="button">複製</button></div></div></article><article class="gc-card" data-cat="動作與戰術" data-text="badminton analytics project muhammadyasin79/badminton_analytics_project 動作與戰術 用 yolov8-pose 偵測球員關節，把動作換到統一的球場座標，量化每位球員控制哪些區域；羽球用自行訓練的 yolo11 偵測。 比較球員的場地覆蓋與移動軌跡，輸出骨架疊圖與軌跡圖。 要會 python；readme 說之後才加入擊球分類與回合分析，目前偏向示範專案。 yolov8-pose yolo11 opencv python">
+<div class="gc-stage"><div data-pane="media"><a href="https://github.com/muhammadyasin79/Badminton_Analytics_Project" target="_blank" rel="noopener"><img src="圖片/gh_Badminton_Analytics_Project.jpg" alt="Badminton Analytics Project GitHub 預覽圖" loading="lazy"></a></div><div data-pane="sim" hidden><canvas data-sim="heatmap" width="640" height="360" aria-label="功能示意動畫"></canvas><span class="gc-simtag">示意動畫，不是真實數據</span></div></div>
+<div class="gc-switch"><button type="button" data-show="media" aria-pressed="true">🖼 GitHub 預覽</button><button type="button" data-show="sim" aria-pressed="false">✨ 功能示意</button></div>
+<div class="gc-body"><p><span class="gc-chip">動作與戰術</span><span class="tag">依據 A</span></p>
+<h3><a href="https://github.com/muhammadyasin79/Badminton_Analytics_Project" target="_blank" rel="noopener">Badminton Analytics Project ↗</a></h3><div class="gc-repo">muhammadyasin79/Badminton_Analytics_Project · ★ 35 · 最後更新 2026-05-26</div>
+<p>用 YOLOv8-Pose 偵測球員關節，把動作換到統一的球場座標，量化每位球員控制哪些區域；羽球用自行訓練的 YOLO11 偵測。</p>
+<dl class="gc-dl"><dt>訓練用途</dt><dd>比較球員的場地覆蓋與移動軌跡，輸出骨架疊圖與軌跡圖。</dd><dt>公開數據</dt><dd>README 沒有公布準確率。</dd><dt>條件與成本</dt><dd>要會 Python；README 說之後才加入擊球分類與回合分析，目前偏向示範專案。</dd><dt>授權</dt><dd>MIT</dd></dl>
+<p class="muted" style="font-size:14px">沒有找到作者的示範影片。</p>
+<div class="gc-cmd"><code>git clone https://github.com/muhammadyasin79/Badminton_Analytics_Project.git</code><button type="button">複製</button></div></div></article><article class="gc-card" data-cat="動作與戰術" data-text="coachai-projects（shuttleset） wywywang/coachai-projects 動作與戰術 國立陽明交通大學資料庫實驗室的羽球 ai 研究合集：shuttleset（kdd 2023，最大的人工標註單打擊球資料集）與 shuttlenet（aaai 2022，預測下一拍的模型）。 做戰術量化研究，或用真實逐拍資料帶數據分析專題。 資料來自國際賽，不是自己球隊；要會 python、jupyter；預測模型是研究用途，不是現成的教練軟件。 pytorch shuttleset jupyter">
+<div class="gc-stage"><div data-pane="media"><a href="https://github.com/wywyWang/CoachAI-Projects" target="_blank" rel="noopener"><img src="圖片/gh_CoachAI-Projects.jpg" alt="CoachAI-Projects（ShuttleSet） GitHub 預覽圖" loading="lazy"></a></div><div data-pane="sim" hidden><canvas data-sim="tactics" width="640" height="360" aria-label="功能示意動畫"></canvas><span class="gc-simtag">示意動畫，不是真實數據</span></div></div>
+<div class="gc-switch"><button type="button" data-show="media" aria-pressed="true">🖼 GitHub 預覽</button><button type="button" data-show="sim" aria-pressed="false">✨ 功能示意</button></div>
+<div class="gc-body"><p><span class="gc-chip">動作與戰術</span><span class="tag">依據 A</span></p>
+<h3><a href="https://github.com/wywyWang/CoachAI-Projects" target="_blank" rel="noopener">CoachAI-Projects（ShuttleSet） ↗</a></h3><div class="gc-repo">wywyWang/CoachAI-Projects · ★ 294 · 最後更新 2026-07-17</div>
+<p>國立陽明交通大學資料庫實驗室的羽球 AI 研究合集：ShuttleSet（KDD 2023，最大的人工標註單打擊球資料集）與 ShuttleNet（AAAI 2022，預測下一拍的模型）。</p>
+<dl class="gc-dl"><dt>訓練用途</dt><dd>做戰術量化研究，或用真實逐拍資料帶數據分析專題。</dd><dt>公開數據</dt><dd>README 列出 16 篇已發表論文；資料集是專業比賽的逐拍標註。</dd><dt>條件與成本</dt><dd>資料來自國際賽，不是自己球隊；要會 Python、Jupyter；預測模型是研究用途，不是現成的教練軟件。</dd><dt>授權</dt><dd>MIT</dd></dl>
+<p class="muted" style="font-size:14px">沒有找到作者的示範影片。</p>
+<div class="gc-cmd"><code>git clone https://github.com/wywyWang/CoachAI-Projects.git</code><button type="button">複製</button></div></div></article><article class="gc-card" data-cat="影片剪輯" data-text="弧迹（huji） hhoao/huji 影片剪輯 自動找出乒乓球、羽毛球比賽的精彩回合，去掉撿球和休息片段，輸出精簡集錦；也可以邊拍邊剪。 1 小時的練習或比賽錄影，自動剪成只有回合的影片，方便賽後檢討。 一般使用者直接下載安裝版：android 由官網、linux／windows 由 github releases；介面是簡體中文；選雲端偵測時影片會上傳，拍到學生要先考慮私隱。 flutter python ffmpeg">
+<div class="gc-stage"><div data-pane="media"><a href="https://github.com/hhoao/huji" target="_blank" rel="noopener"><img src="圖片/gh_huji.jpg" alt="弧迹（Huji） GitHub 預覽圖" loading="lazy"></a></div><div data-pane="sim" hidden><canvas data-sim="autoclip" width="640" height="360" aria-label="功能示意動畫"></canvas><span class="gc-simtag">示意動畫，不是真實數據</span></div></div>
+<div class="gc-switch"><button type="button" data-show="media" aria-pressed="true">🖼 GitHub 預覽</button><button type="button" data-show="sim" aria-pressed="false">✨ 功能示意</button></div>
+<div class="gc-body"><p><span class="gc-chip">影片剪輯</span><span class="tag">依據 A</span></p>
+<h3><a href="https://github.com/hhoao/huji" target="_blank" rel="noopener">弧迹（Huji） ↗</a></h3><div class="gc-repo">hhoao/huji · ★ 58 · 最後更新 2026-11-25</div>
+<p>自動找出乒乓球、羽毛球比賽的精彩回合，去掉撿球和休息片段，輸出精簡集錦；也可以邊拍邊剪。</p>
+<dl class="gc-dl"><dt>訓練用途</dt><dd>1 小時的練習或比賽錄影，自動剪成只有回合的影片，方便賽後檢討。</dd><dt>公開數據</dt><dd>README 沒有公布剪輯準確率或壓縮比例。</dd><dt>條件與成本</dt><dd>一般使用者直接下載安裝版：Android 由官網、Linux／Windows 由 GitHub Releases；介面是簡體中文；選雲端偵測時影片會上傳，拍到學生要先考慮私隱。</dd><dt>授權</dt><dd>AGPL-3.0</dd></dl>
+<p class="muted" style="font-size:14px">沒有找到作者的示範影片。</p>
+<div class="gc-cmd"><code>git clone --recurse-submodules https://github.com/hhoao/huji.git</code><button type="button">複製</button></div></div></article><article class="gc-card" data-cat="硬體與器材" data-text="picobeth 206cc/picobeth 硬體與器材 用 raspberry pi pico 自製電子恆拉穿線機頭，讓只有機械式（落錘、手搖）穿線機的人升級成電子拉線。 自製低成本電子拉線頭，做張力衰退測試或機電整合專題。 要焊接、組裝零件或 3d 列印，並會基本程式；拉力須用拉力計自行校正；零件總成本未驗證。 raspberry pi pico micropython 荷重元">
+<div class="gc-stage"><div data-pane="media"><a href="https://www.youtube.com/watch?v=mMpsa_LFCbM" target="_blank" rel="noopener" aria-label="在 YouTube 看 PicoBETH 示範影片"><img src="圖片/mMpsa_LFCbM.jpg" alt="PicoBETH 示範影片縮圖" loading="lazy"><span class="gc-play"></span><span class="gc-len">19:10</span></a></div><div data-pane="sim" hidden><canvas data-sim="stringer" width="640" height="360" aria-label="功能示意動畫"></canvas><span class="gc-simtag">示意動畫，不是真實數據</span></div></div>
+<div class="gc-switch"><button type="button" data-show="media" aria-pressed="true">▶ 示範影片</button><button type="button" data-show="sim" aria-pressed="false">✨ 功能示意</button></div>
+<div class="gc-body"><p><span class="gc-chip">硬體與器材</span><span class="tag">依據 A</span></p>
+<h3><a href="https://github.com/206cc/PicoBETH" target="_blank" rel="noopener">PicoBETH ↗</a></h3><div class="gc-repo">206cc/PicoBETH · ★ 92 · 最後更新 2026-09-24</div>
+<p>用 Raspberry Pi Pico 自製電子恆拉穿線機頭，讓只有機械式（落錘、手搖）穿線機的人升級成電子拉線。</p>
+<dl class="gc-dl"><dt>訓練用途</dt><dd>自製低成本電子拉線頭，做張力衰退測試或機電整合專題。</dd><dt>公開數據</dt><dd>README：拉力可每 0.5 磅微調、範圍約 15–90 磅；作者自述完成 100 萬次拉力測試沒有硬件故障（未獨立驗證）。</dd><dt>條件與成本</dt><dd>要焊接、組裝零件或 3D 列印，並會基本程式；拉力須用拉力計自行校正；零件總成本未驗證。</dd><dt>授權</dt><dd>有授權檔，GitHub 無法自動辨識</dd></dl>
+<p class="muted" style="font-size:14px">影片：作者示範：3D 列印版穿線全過程 · 2026-11-27 未登入核對可免費觀看</p>
+<div class="gc-cmd"><code>git clone https://github.com/206cc/PicoBETH.git</code><button type="button">複製</button></div></div></article><article class="gc-card" data-cat="硬體與器材" data-text="baddy makers edition baddy-lab/baddy-makers-edition 硬體與器材 diy 羽球機器人（官方稱 badminton robot）的圖紙（dxf）與程式碼，不是一般的多球發球機。 作為自製訓練器材或機電專題的參考：馬達控制、結構與電子接線。 2022 年後沒有更新；公司不可修改後商業銷售；組裝要工具與機械經驗，實際訓練用途未驗證。 c++ arduino cad 圖紙">
+<div class="gc-stage"><div data-pane="media"><a href="https://www.youtube.com/watch?v=HNGg4OPCNFo" target="_blank" rel="noopener" aria-label="在 YouTube 看 BADDY Makers Edition 示範影片"><img src="圖片/HNGg4OPCNFo.jpg" alt="BADDY Makers Edition 示範影片縮圖" loading="lazy"><span class="gc-play"></span><span class="gc-len">9:23</span></a></div><div data-pane="sim" hidden><canvas data-sim="feeder" width="640" height="360" aria-label="功能示意動畫"></canvas><span class="gc-simtag">示意動畫，不是真實數據</span></div></div>
+<div class="gc-switch"><button type="button" data-show="media" aria-pressed="true">▶ 示範影片</button><button type="button" data-show="sim" aria-pressed="false">✨ 功能示意</button></div>
+<div class="gc-body"><p><span class="gc-chip">硬體與器材</span><span class="tag">依據 B</span></p>
+<h3><a href="https://github.com/baddy-lab/baddy-makers-edition" target="_blank" rel="noopener">BADDY Makers Edition ↗</a></h3><div class="gc-repo">baddy-lab/baddy-makers-edition · ★ 36 · 最後更新 2022-07-29</div>
+<p>DIY 羽球機器人（官方稱 badminton robot）的圖紙（dxf）與程式碼，不是一般的多球發球機。</p>
+<dl class="gc-dl"><dt>訓練用途</dt><dd>作為自製訓練器材或機電專題的參考：馬達控制、結構與電子接線。</dd><dt>公開數據</dt><dd>README 沒有公布發球速度或頻率。</dd><dt>條件與成本</dt><dd>2022 年後沒有更新；公司不可修改後商業銷售；組裝要工具與機械經驗，實際訓練用途未驗證。</dd><dt>授權</dt><dd>CERN OHL v1.1＋非商業附加條款</dd></dl>
+<p class="muted" style="font-size:14px">影片：官方教學：馬達與電子零件組裝（2018，英文字幕） · 2026-11-27 未登入核對可免費觀看</p>
+<div class="gc-cmd"><code>git clone https://github.com/baddy-lab/baddy-makers-edition.git</code><button type="button">複製</button></div></div></article><article class="gc-card" data-cat="賽事管理" data-text="ezbadminton ezbadminton/ezbadmintonserver 賽事管理 免費開源的羽球比賽管理軟件：伺服器用 go＋pocketbase（內建資料庫與即時同步），管理程式是 flutter 桌面版（ezbadmintonadmin）。 球會內部賽或校內賽的報名、賽程與結果管理（詳細功能未逐項驗證）。 要自架伺服器（go 1.21 以上）並自行編譯管理程式；正式比賽使用前請先小規模試辦。 go pocketbase flutter">
+<div class="gc-stage"><div data-pane="media"><a href="https://github.com/ezBadminton/ezBadmintonServer" target="_blank" rel="noopener"><img src="圖片/gh_ezBadmintonServer.jpg" alt="ezBadminton GitHub 預覽圖" loading="lazy"></a></div><div data-pane="sim" hidden><canvas data-sim="tournament" width="640" height="360" aria-label="功能示意動畫"></canvas><span class="gc-simtag">示意動畫，不是真實數據</span></div></div>
+<div class="gc-switch"><button type="button" data-show="media" aria-pressed="true">🖼 GitHub 預覽</button><button type="button" data-show="sim" aria-pressed="false">✨ 功能示意</button></div>
+<div class="gc-body"><p><span class="gc-chip">賽事管理</span><span class="tag">依據 B</span></p>
+<h3><a href="https://github.com/ezBadminton/ezBadmintonServer" target="_blank" rel="noopener">ezBadminton ↗</a></h3><div class="gc-repo">ezBadminton/ezBadmintonServer · ★ 0 · 最後更新 2025-11-13</div>
+<p>免費開源的羽球比賽管理軟件：伺服器用 Go＋PocketBase（內建資料庫與即時同步），管理程式是 Flutter 桌面版（ezBadmintonAdmin）。</p>
+<dl class="gc-dl"><dt>訓練用途</dt><dd>球會內部賽或校內賽的報名、賽程與結果管理（詳細功能未逐項驗證）。</dd><dt>公開數據</dt><dd>社群很小（伺服器 0 星、管理程式 2 星）；README 寫明仍在開發中。</dd><dt>條件與成本</dt><dd>要自架伺服器（Go 1.21 以上）並自行編譯管理程式；正式比賽使用前請先小規模試辦。</dd><dt>授權</dt><dd>MIT</dd></dl>
+<p class="muted" style="font-size:14px">沒有找到作者的示範影片。</p>
+<div class="gc-cmd"><code>git clone https://github.com/ezBadminton/ezBadmintonServer.git</code><button type="button">複製</button></div></div></article></div>
+<h2>使用前注意</h2>
+<ul><li>開源免費指軟件本身；顯示卡、雲端服務（例如 RallyLens 的 Gemini 報告）和硬件零件可能要付費，金額<mark>未驗證</mark>。</li>
+<li>拍攝學生影片前先取得同意；上傳到雲端分析的工具（弧迹雲端模式、RallyLens 報告）要特別注意私隱。</li>
+<li>授權寫「AGPL-3.0」或「非商業」的專案，改了再對外提供或銷售前，要先讀授權條款。</li>
+<li>建議先拿一段 1 分鐘的練習影片小規模試，確認在自己場館的準確度，再放進正式訓練流程。</li></ul>
+<h2 id="gc-words">名詞小字典</h2>
+<table><thead><tr><th>名詞</th><th>意思</th></tr></thead><tbody>
+<tr><td>GitHub</td><td>放程式碼的網站；每個工具是一個「儲存庫」（repository，簡稱 repo），網址是 github.com/作者/名稱。</td></tr>
+<tr><td>README</td><td>儲存庫首頁的說明檔，寫功能、安裝方法和測試結果；本頁的數字都從這裡核對。</td></tr>
+<tr><td>★ 星數</td><td>GitHub 使用者按「收藏」的次數，可粗略看出多少人關注，不代表品質。</td></tr>
+<tr><td>授權（License）</td><td>規定可否修改、轉售；MIT 最寬鬆，AGPL-3.0 改了再公開提供要公開原始碼，「非商業」不可拿去賣。</td></tr>
+<tr><td>git clone</td><td>把整個儲存庫下載到自己電腦的指令；卡片底部「複製」按鈕複製的就是這行。</td></tr>
+<tr><td>Python／PyTorch</td><td>程式語言／深度學習工具；影像分析工具大多要用到。</td></tr>
+<tr><td>顯示卡（GPU）</td><td>電腦的繪圖晶片，AI 影像分析用它會快很多，NVIDIA 最常用。</td></tr>
+<tr><td>骨架偵測（Pose）</td><td>AI 在畫面中找出肩、肘、膝等關節點，連成火柴人，用來分析動作與站位。</td></tr>
+<tr><td>透視校正（Homography）</td><td>把斜角拍攝的球場換算成從正上方看的平面座標，才可以畫小球場和算跑動距離。</td></tr>
+<tr><td>示意動畫</td><td>本頁自己畫的動畫，只說明工具在做甚麼，不是工具真正輸出的數據。</td></tr>
+</tbody></table>
+<h2>資料依據</h2>
+<p>查核日期 2026-11-27（澳門時間）：星數、授權、最後更新日期由 GitHub API 讀取；功能、數字與安裝指令逐項對照各專案 README；示範影片以未登入狀態核對可免費播放。
+依據標記：<b>A</b> 已讀 README 原文、<b>B</b> README 簡短，部分依官方簡介與影片說明。星數會變動，以 GitHub 頁面為準。</p>
+<details><summary>與原圖鑑相比的更正（7 項）</summary><ul><li>原圖鑑把 muhammadyasin79/Badminton_Analytics_Project 與 amramer/Badminton-visionAI 合成一張卡：示範影片屬於 amramer/Badminton-visionAI。本頁拆成兩張卡。</li><li>TrackNetV3 的示範影片（2020 年）是原版 TrackNet，不是 V3。</li><li>RallyLens 的回合報告用 Vertex AI Gemini 產生、輸出韓文，原圖鑑只寫「LLM 戰報」。</li><li>弧迹（Huji）README 標示的平台是 Android、Linux、Windows，原圖鑑寫的 macOS 未見於 README。</li><li>BADDY 官方稱為 DIY 羽球機器人（badminton robot），不是一般多球發球機；儲存庫 2022-07-29 之後沒有更新。</li><li>ezBadminton 伺服器以 Go＋PocketBase 寫成，管理程式（Flutter／Dart）README 寫明「仍在開發中」。</li><li>原圖鑑動畫裡的數字（例如「16 分鐘剪成 4.2 分鐘」「殺球 20%」、比分與球員名）是示意，沒有出處，本頁已移除；只保留 README 有寫的數字。</li></ul></details>
+<p class="big"><a href="#" id="gc-export" role="button">⬇ 下載 Markdown 筆記</a></p>
+<script type="application/json" id="gc-data">{"checked_date_macau": "2026-11-27", "tools": [{"id": "tracknetv3", "category": "影像與追蹤", "name": "TrackNetV3", "repo": "qaz812345/TrackNetV3", "stars": 339, "license": "有授權檔，GitHub 無法自動辨識", "pushed": "2026-09-03", "video": {"id": "NHsgkH7DG4k", "len": "0:22", "note": "原版 TrackNet 示範（2020），不是 V3"}, "desc": "從一般比賽錄影逐格找出羽球位置的深度學習模型，V3 加入資料增強與軌跡修補（InpaintNet），補回被擋住或太快看不到的球。", "metric": "作者 README 測試結果：準確率 97.51%、每秒 25.11 格（作者自己的測試集與硬體）。", "use": "取得每一格的球座標，再自行計算球速、落點分布、擊球點高度。", "cond": "要會 Python 與 PyTorch，有 NVIDIA 顯示卡較實際；模型權重要另外下載；只輸出座標，球速和落點要自己寫程式換算。", "basis": "A", "tech": ["PyTorch", "Python", "OpenCV"], "cmd": "git clone https://github.com/qaz812345/TrackNetV3.git && cd TrackNetV3 && pip install -r requirements.txt", "sim": "trajectory"}, {"id": "rallylens", "category": "影像與追蹤", "name": "RallyLens", "repo": "YeonSeong-Lee/rallylens", "stars": 25, "license": "指令列工具 MIT、網頁版 AGPL-3.0（README 標示）", "pushed": "2026-09-03", "video": {"id": "fKwac0CsBLc", "len": "0:17", "note": "作者示範：骨架、球路尾跡、左下角俯視小地圖"}, "desc": "一條指令把比賽影片變成球員骨架、球路尾跡、球場俯視小地圖與回合報告；整合 YOLO11-pose 骨架、ByteTrack 追蹤與 TrackNetV3 球路。", "metric": "README 範例報告列出每位球員跑動距離（例如 40.3 公尺對 59.5 公尺）與站位區域比例。", "use": "快速得到單打回合的跑動距離、站位分布與球路圖，適合賽後檢討。", "cond": "要安裝 uv 與 ffmpeg；只自動挑選 2 名單打球員；回合文字報告用 Google Vertex AI Gemini 產生、輸出韓文，需要雲端帳號，費用未驗證。", "basis": "A", "tech": ["YOLO11-pose", "ByteTrack", "TrackNetV3", "Python"], "cmd": "git clone https://github.com/YeonSeong-Lee/rallylens && cd rallylens && uv sync", "sim": "rallylens"}, {"id": "visionai", "category": "動作與戰術", "name": "Badminton-VisionAI", "repo": "amramer/Badminton-visionAI", "stars": 14, "license": "有授權檔，GitHub 無法自動辨識", "pushed": "2026-04-05", "video": {"id": "dAe9e_1AGuA", "len": "0:19", "note": "作者示範：球員追蹤、小球場投影、擊球類型"}, "desc": "YOLOv8 追蹤球員、TrackNet 追蹤球路，再用球場透視校正（homography，把斜拍畫面換成俯視座標）畫出小球場，並辨識擊球類型。", "metric": "README 沒有公布準確率。", "use": "看球員站位熱區、移動路徑與擊球類型分布，結果在 Streamlit 網頁儀表板瀏覽。", "cond": "用 Docker 或 Conda 安裝；先跑影像分析、再開儀表板，兩步分開；擊球分類準確度未驗證。", "basis": "A", "tech": ["YOLOv8", "TrackNet", "Homography", "Streamlit"], "cmd": "git clone https://github.com/amramer/Badminton-visionAI.git && cd Badminton-visionAI", "sim": "heatmap"}, {"id": "analytics", "category": "動作與戰術", "name": "Badminton Analytics Project", "repo": "muhammadyasin79/Badminton_Analytics_Project", "stars": 35, "license": "MIT", "pushed": "2026-05-26", "img": "gh_Badminton_Analytics_Project.jpg", "desc": "用 YOLOv8-Pose 偵測球員關節，把動作換到統一的球場座標，量化每位球員控制哪些區域；羽球用自行訓練的 YOLO11 偵測。", "metric": "README 沒有公布準確率。", "use": "比較球員的場地覆蓋與移動軌跡，輸出骨架疊圖與軌跡圖。", "cond": "要會 Python；README 說之後才加入擊球分類與回合分析，目前偏向示範專案。", "basis": "A", "tech": ["YOLOv8-Pose", "YOLO11", "OpenCV", "Python"], "cmd": "git clone https://github.com/muhammadyasin79/Badminton_Analytics_Project.git", "sim": "heatmap"}, {"id": "coachai", "category": "動作與戰術", "name": "CoachAI-Projects（ShuttleSet）", "repo": "wywyWang/CoachAI-Projects", "stars": 294, "license": "MIT", "pushed": "2026-07-17", "img": "gh_CoachAI-Projects.jpg", "desc": "國立陽明交通大學資料庫實驗室的羽球 AI 研究合集：ShuttleSet（KDD 2023，最大的人工標註單打擊球資料集）與 ShuttleNet（AAAI 2022，預測下一拍的模型）。", "metric": "README 列出 16 篇已發表論文；資料集是專業比賽的逐拍標註。", "use": "做戰術量化研究，或用真實逐拍資料帶數據分析專題。", "cond": "資料來自國際賽，不是自己球隊；要會 Python、Jupyter；預測模型是研究用途，不是現成的教練軟件。", "basis": "A", "tech": ["PyTorch", "ShuttleSet", "Jupyter"], "cmd": "git clone https://github.com/wywyWang/CoachAI-Projects.git", "sim": "tactics"}, {"id": "huji", "category": "影片剪輯", "name": "弧迹（Huji）", "repo": "hhoao/huji", "stars": 58, "license": "AGPL-3.0", "pushed": "2026-11-25", "img": "gh_huji.jpg", "desc": "自動找出乒乓球、羽毛球比賽的精彩回合，去掉撿球和休息片段，輸出精簡集錦；也可以邊拍邊剪。", "metric": "README 沒有公布剪輯準確率或壓縮比例。", "use": "1 小時的練習或比賽錄影，自動剪成只有回合的影片，方便賽後檢討。", "cond": "一般使用者直接下載安裝版：Android 由官網、Linux／Windows 由 GitHub Releases；介面是簡體中文；選雲端偵測時影片會上傳，拍到學生要先考慮私隱。", "basis": "A", "tech": ["Flutter", "Python", "FFmpeg"], "cmd": "git clone --recurse-submodules https://github.com/hhoao/huji.git", "sim": "autoclip"}, {"id": "picobeth", "category": "硬體與器材", "name": "PicoBETH", "repo": "206cc/PicoBETH", "stars": 92, "license": "有授權檔，GitHub 無法自動辨識", "pushed": "2026-09-24", "video": {"id": "mMpsa_LFCbM", "len": "19:10", "note": "作者示範：3D 列印版穿線全過程"}, "desc": "用 Raspberry Pi Pico 自製電子恆拉穿線機頭，讓只有機械式（落錘、手搖）穿線機的人升級成電子拉線。", "metric": "README：拉力可每 0.5 磅微調、範圍約 15–90 磅；作者自述完成 100 萬次拉力測試沒有硬件故障（未獨立驗證）。", "use": "自製低成本電子拉線頭，做張力衰退測試或機電整合專題。", "cond": "要焊接、組裝零件或 3D 列印，並會基本程式；拉力須用拉力計自行校正；零件總成本未驗證。", "basis": "A", "tech": ["Raspberry Pi Pico", "MicroPython", "荷重元"], "cmd": "git clone https://github.com/206cc/PicoBETH.git", "sim": "stringer"}, {"id": "baddy", "category": "硬體與器材", "name": "BADDY Makers Edition", "repo": "baddy-lab/baddy-makers-edition", "stars": 36, "license": "CERN OHL v1.1＋非商業附加條款", "pushed": "2022-07-29", "video": {"id": "HNGg4OPCNFo", "len": "9:23", "note": "官方教學：馬達與電子零件組裝（2018，英文字幕）"}, "desc": "DIY 羽球機器人（官方稱 badminton robot）的圖紙（dxf）與程式碼，不是一般的多球發球機。", "metric": "README 沒有公布發球速度或頻率。", "use": "作為自製訓練器材或機電專題的參考：馬達控制、結構與電子接線。", "cond": "2022 年後沒有更新；公司不可修改後商業銷售；組裝要工具與機械經驗，實際訓練用途未驗證。", "basis": "B", "tech": ["C++", "Arduino", "CAD 圖紙"], "cmd": "git clone https://github.com/baddy-lab/baddy-makers-edition.git", "sim": "feeder"}, {"id": "ezbadminton", "category": "賽事管理", "name": "ezBadminton", "repo": "ezBadminton/ezBadmintonServer", "stars": 0, "license": "MIT", "pushed": "2025-11-13", "img": "gh_ezBadmintonServer.jpg", "desc": "免費開源的羽球比賽管理軟件：伺服器用 Go＋PocketBase（內建資料庫與即時同步），管理程式是 Flutter 桌面版（ezBadmintonAdmin）。", "metric": "社群很小（伺服器 0 星、管理程式 2 星）；README 寫明仍在開發中。", "use": "球會內部賽或校內賽的報名、賽程與結果管理（詳細功能未逐項驗證）。", "cond": "要自架伺服器（Go 1.21 以上）並自行編譯管理程式；正式比賽使用前請先小規模試辦。", "basis": "B", "tech": ["Go", "PocketBase", "Flutter"], "cmd": "git clone https://github.com/ezBadminton/ezBadmintonServer.git", "sim": "tournament"}]}</script>
+<script>
+(function(){
+var cat='全部',q='',cards=[].slice.call(document.querySelectorAll('.gc-card')),empty=document.querySelector('.gc-empty');
+function apply(){var n=0;cards.forEach(function(c){var ok=(cat==='全部'||c.dataset.cat===cat)&&(!q||c.dataset.text.indexOf(q)>-1);c.hidden=!ok;if(ok)n++});empty.style.display=n?'none':'block'}
+document.querySelectorAll('.gc-pill').forEach(function(b){b.onclick=function(){cat=b.dataset.cat;document.querySelectorAll('.gc-pill').forEach(function(x){x.setAttribute('aria-pressed',x===b)});apply()}});
+document.querySelector('.gc-search').oninput=function(e){q=e.target.value.trim().toLowerCase();apply()};
+document.querySelectorAll('.gc-switch button').forEach(function(b){b.onclick=function(){var card=b.closest('.gc-card');
+ card.querySelectorAll('.gc-switch button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+ card.querySelectorAll('[data-pane]').forEach(function(p){p.hidden=p.dataset.pane!==b.dataset.show})}});
+document.querySelectorAll('.gc-cmd button').forEach(function(b){b.onclick=function(){var t=b.previousElementSibling.textContent;
+ (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='已複製 ✓'},function(){b.textContent='請手動選取'});setTimeout(function(){b.textContent='複製'},1500)}});
+var data=JSON.parse(document.getElementById('gc-data').textContent);
+document.getElementById('gc-export').onclick=function(){var L=['# GitHub 羽球開源工具圖鑑（查核：'+data.checked_date_macau+'）','','| 分類 | 工具 | 用途 | 授權 | GitHub |','| --- | --- | --- | --- | --- |'];
+ data.tools.forEach(function(t){L.push('| '+t.category+' | '+t.name+' | '+t.use+' | '+t.license+' | https://github.com/'+t.repo+' |')});
+ data.tools.forEach(function(t){L.push('','## '+t.name,'- 說明：'+t.desc,'- 數據：'+t.metric,'- 使用條件與成本：'+t.cond,'- 快速開始：`'+t.cmd+'`')});
+ var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([L.join('\n')],{type:'text/markdown;charset=utf-8'}));a.download='羽球開源工具圖鑑.md';a.click()};
+// 示意動畫：只在看得到時畫；系統「減少動態效果」時只畫一格
+var still=matchMedia('(prefers-reduced-motion: reduce)').matches,vis=new Set();
+var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?vis.add(e.target):vis.delete(e.target)})}):null;
+var cvs=[].slice.call(document.querySelectorAll('canvas[data-sim]'));cvs.forEach(function(c){io?io.observe(c):vis.add(c)});
+function court(x,w,h){x.fillStyle='#064e3b';x.fillRect(40,30,w-80,h-60);x.strokeStyle='rgba(255,255,255,.4)';x.lineWidth=2;x.strokeRect(40,30,w-80,h-60);
+ x.beginPath();x.moveTo(w/2,30);x.lineTo(w/2,h-30);x.moveTo(40,52);x.lineTo(w-40,52);x.moveTo(40,h-52);x.lineTo(w-40,h-52);x.stroke()}
+function label(x,s){x.fillStyle='#e2e8f0';x.font='bold 16px sans-serif';x.fillText(s,48,22)}
+function draw(c,t){if(c.offsetParent===null)return;var x=c.getContext('2d'),w=c.width,h=c.height,k=c.dataset.sim;x.fillStyle='#020617';x.fillRect(0,0,w,h);
+ if(k==='trajectory'||k==='rallylens'){court(x,w,h);for(var i=0;i<24;i++){var p=((t*.8-i*.025)%1+1)%1;x.beginPath();x.arc(90+p*(w-180),h/2-Math.sin(p*Math.PI)*110,i?4:7,0,7);x.fillStyle=i?'rgba(56,189,248,'+(1-i/24)*.85+')':'#fde047';x.fill()}
+  if(k==='rallylens'){[[115,h/2+Math.sin(t*2.2)*55,'#38bdf8'],[w-115,h/2-Math.cos(t*1.9)*55,'#f472b6']].forEach(function(a){x.strokeStyle=a[2];x.lineWidth=2.5;x.strokeRect(a[0]-22,a[1]-34,44,68)});
+   x.fillStyle='rgba(15,23,42,.85)';x.fillRect(w-150,h-110,110,80);x.strokeStyle='#94a3b8';x.strokeRect(w-150,h-110,110,80)}
+  label(x,k==='trajectory'?'逐格找出球的位置（黃點），連成球路':'骨架框＋球路尾跡＋右下俯視小地圖')}
+ else if(k==='heatmap'){court(x,w,h);[[170,140,45],[210,220,55],[460,180,60],[500,120,40]].forEach(function(s,i){var r=s[2]+Math.sin(t*3+i)*8,g=x.createRadialGradient(s[0],s[1],4,s[0],s[1],r);
+  g.addColorStop(0,'rgba(239,68,68,.85)');g.addColorStop(.5,'rgba(245,158,11,.45)');g.addColorStop(1,'rgba(245,158,11,0)');x.fillStyle=g;x.beginPath();x.arc(s[0],s[1],r,0,7);x.fill()});label(x,'俯視球場上的站位熱區')}
+ else if(k==='tactics'){court(x,w,h);var n=[[140,110],[180,240],[490,100],[470,250],[320,180]],a=Math.floor(t*1.5)%n.length;x.strokeStyle='rgba(56,189,248,.7)';x.lineWidth=2;
+  for(var j=0;j<n.length-1;j++){x.beginPath();x.moveTo(n[j][0],n[j][1]);x.lineTo(n[j+1][0],n[j+1][1]);x.stroke()}
+  n.forEach(function(p,i){x.beginPath();x.arc(p[0],p[1],i===a?12:7,0,7);x.fillStyle=i===a?'#10b981':'#38bdf8';x.fill()});label(x,'逐拍落點序列 → 預測下一拍')}
+ else if(k==='autoclip'){x.fillStyle='#0f172a';x.fillRect(30,70,w-60,110);[[0,.14,0],[.14,.34,1],[.34,.48,0],[.48,.72,1],[.72,.82,0],[.82,.98,1]].forEach(function(s){x.fillStyle=s[2]?'#10b981':'#334155';x.fillRect(40+s[0]*(w-80),95,(s[1]-s[0])*(w-80)-4,60)});
+  var sx=40+((t*.25)%1)*(w-80);x.strokeStyle='#fde047';x.lineWidth=3;x.beginPath();x.moveTo(sx,75);x.lineTo(sx,175);x.stroke();x.fillStyle='#10b981';x.font='bold 18px sans-serif';x.fillText('綠色＝保留回合　灰色＝剪走撿球、休息',50,235);label(x,'自動找回合、剪掉空檔')}
+ else if(k==='stringer'){x.strokeStyle='#334155';x.lineWidth=2;x.strokeRect(50,60,w-100,220);x.strokeStyle='#38bdf8';x.lineWidth=3;x.beginPath();
+  for(var X=0;X<w-120;X+=6){var y=260-Math.min(1,X/(w-120)*3.2)*145+Math.sin(t*5+X*.05)*2.5;X?x.lineTo(60+X,y):x.moveTo(60+X,y)}x.stroke();x.fillStyle='#10b981';x.font='bold 22px sans-serif';x.fillText('拉到設定磅數後保持恆定',65,105);label(x,'恆拉：荷重元讀數 → 馬達微調')}
+ else if(k==='feeder'){court(x,w,h);x.fillStyle='#f59e0b';x.fillRect(60,h/2-18,36,36);for(var m=0;m<3;m++){var q2=(t*.9+m*.33)%1;x.beginPath();x.arc(96+q2*(w-170),h/2-Math.sin(q2*Math.PI)*(60+m*35),6,0,7);x.fillStyle='#fde047';x.fill()}label(x,'馬達控制角度與力度，把球送出')}
+ else if(k==='tournament'){for(var r=0;r<3;r++){var Y=65+r*85;x.fillStyle='#1e293b';x.fillRect(45,Y,w-90,68);x.strokeStyle=r===Math.floor(t)%3?'#38bdf8':'#334155';x.lineWidth=2;x.strokeRect(45,Y,w-90,68);
+  x.fillStyle='#38bdf8';x.font='bold 16px sans-serif';x.fillText((r+1)+' 號場',65,Y+40);x.fillStyle='#f1f5f9';x.fillText('選手 A　對　選手 B',170,Y+40)}label(x,'場地分配與賽程看板')}}
+function loop(ts){cvs.forEach(function(c){if(vis.has(c))draw(c,ts/1000)});if(!still&&!document.hidden)requestAnimationFrame(loop)}
+document.addEventListener('visibilitychange',function(){if(!document.hidden&&!still)requestAnimationFrame(loop)});
+if(still){cvs.forEach(function(c){draw(c,1.2)});document.querySelectorAll('.gc-switch button').forEach(function(b){b.addEventListener('click',function(){setTimeout(function(){cvs.forEach(function(c){draw(c,1.2)})},0)})})}
+else requestAnimationFrame(loop);
+})();
+</script>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

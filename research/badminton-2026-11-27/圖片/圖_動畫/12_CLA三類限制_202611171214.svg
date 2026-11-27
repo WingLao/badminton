@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 455" role="img" aria-label="動作從哪裡來？三種限制一起塑造">
+<title>動作從哪裡來？三種限制一起塑造</title>
+<style>
+.bg{fill:#f7faf8;stroke:#d9e4df}
+.t{fill:#1f2a2e;font-family:'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif;font-size:15px}
+.m{fill:#5b6b70}.s{font-size:12.5px}.h{font-size:22px;font-weight:700}.b{font-weight:700}
+.ln{stroke:#5b6b70}.trk{fill:#e6ece9}.court{fill:#e3efe6;stroke:#1f6f5c}
+@media (prefers-color-scheme:dark){.bg{fill:#172224;stroke:#2c3b3e}.t{fill:#e6eef0}.m{fill:#9fb1b5}.ln{stroke:#9fb1b5}.trk{fill:#24312f}.court{fill:#1d3329;stroke:#7fd1a8}}
+.g{transform-box:fill-box;transform-origin:left center;animation:g 8s cubic-bezier(.2,.8,.2,1) infinite both}
+.v{transform-box:fill-box;transform-origin:center bottom;animation:g2 8s cubic-bezier(.2,.8,.2,1) infinite both}
+.f{animation:f 8s ease infinite both}
+.dash{stroke-dasharray:6 8;animation:d 1.2s linear infinite}
+.pulse{transform-box:fill-box;transform-origin:center;animation:p 1.1s ease-in-out infinite}
+@keyframes g{0%{transform:scaleX(0)}20%{transform:scaleX(1)}93%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+@keyframes g2{0%{transform:scaleY(0)}20%{transform:scaleY(1)}93%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@keyframes f{0%,12%{opacity:0}25%,93%{opacity:1}100%{opacity:0}}
+@keyframes d{to{stroke-dashoffset:-28}}
+@keyframes p{0%,100%{transform:scale(1)}30%{transform:scale(1.18)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect class="bg" x="1" y="1" width="758" height="453" rx="18"/>
+<text class="t h" x="28" y="44">動作從哪裡來？三種限制一起塑造</text>
+<text class="t m s" x="28" y="68">教練不直接給標準動作，而是設計限制</text>
+<line x1="380" y1="120" x2="380" y2="255" stroke="#2f6fd1" stroke-width="3" class="dash"/>
+<line x1="180" y1="340" x2="380" y2="255" stroke="#e07b2a" stroke-width="3" class="dash"/>
+<line x1="580" y1="340" x2="380" y2="255" stroke="#7a4fd0" stroke-width="3" class="dash"/>
+<g class="pulse" style="animation-delay:0.0s"><circle cx="380" cy="120" r="44" fill="#2f6fd1"/></g>
+<text class="t b h" x="380" y="127" text-anchor="middle" style="fill:#fff">個體</text>
+<text class="t s" x="436" y="125" text-anchor="start">身高、力量、疲勞、經驗</text>
+<g class="pulse" style="animation-delay:0.35s"><circle cx="180" cy="340" r="44" fill="#e07b2a"/></g>
+<text class="t b h" x="180" y="347" text-anchor="middle" style="fill:#fff">任務</text>
+<text class="t s" x="180" y="406" text-anchor="middle">規則、得分、限拍數、器材</text>
+<g class="pulse" style="animation-delay:0.7s"><circle cx="580" cy="340" r="44" fill="#7a4fd0"/></g>
+<text class="t b h" x="580" y="347" text-anchor="middle" style="fill:#fff">環境</text>
+<text class="t s" x="580" y="406" text-anchor="middle">場地、網高、對手、比分</text>
+<circle class="bg" cx="380" cy="255" r="62"/><circle cx="380" cy="255" r="62" fill="#1f8a5c" opacity=".16" stroke="#1f8a5c" stroke-width="2"/>
+<text class="t b h" x="380" y="251" text-anchor="middle" fill="#1f8a5c">動作解法</text>
+<text class="t s m" x="380" y="275" text-anchor="middle">自我組織出現</text>
+<text class="t s" x="28" y="430" text-anchor="start">教練最容易改的是「任務」和「環境」：改規則、改場地，讓選手自己找出解法。模型：Newell 1986。</text>
+
+</svg>

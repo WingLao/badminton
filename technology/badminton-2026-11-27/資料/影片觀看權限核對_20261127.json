@@ -1,0 +1,89 @@
+{
+  "checked_date_macau": "2026-11-27",
+  "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+  "note": "教練科技頁的工具示範影片；影片免費不代表工具或硬件免費。",
+  "videos": [
+    {
+      "id": "NHsgkH7DG4k",
+      "url": "https://www.youtube.com/watch?v=NHsgkH7DG4k",
+      "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+      "checked_date_macau": "2026-11-27",
+      "player_status": "OK",
+      "reason": "",
+      "has_streams": true,
+      "access": "free_public",
+      "title": "Badminton tracking by TrackNet",
+      "channel": "張嘉棋",
+      "duration_seconds": 22,
+      "publish_date_raw": "2020-12-03T01:51:51-08:00",
+      "caption_languages": [],
+      "audience": "coach"
+    },
+    {
+      "id": "fKwac0CsBLc",
+      "url": "https://www.youtube.com/watch?v=fKwac0CsBLc",
+      "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+      "checked_date_macau": "2026-11-27",
+      "player_status": "OK",
+      "reason": "",
+      "has_streams": true,
+      "access": "free_public",
+      "title": "AI Badminton Tracking: Player Pose + Shuttle + Top-View Court |  RallyLens",
+      "channel": "yeonseong",
+      "duration_seconds": 17,
+      "publish_date_raw": "2026-04-16T01:23:28-07:00",
+      "caption_languages": [],
+      "audience": "coach"
+    },
+    {
+      "id": "dAe9e_1AGuA",
+      "url": "https://www.youtube.com/watch?v=dAe9e_1AGuA",
+      "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+      "checked_date_macau": "2026-11-27",
+      "player_status": "OK",
+      "reason": "",
+      "has_streams": true,
+      "access": "free_public",
+      "title": "Badminton-VisionAI – Player Tracking, Mini-Court Projection & Shot Analysis",
+      "channel": "Amr Amer",
+      "duration_seconds": 19,
+      "publish_date_raw": "2026-03-07T13:14:41-08:00",
+      "caption_languages": [],
+      "audience": "coach"
+    },
+    {
+      "id": "mMpsa_LFCbM",
+      "url": "https://www.youtube.com/watch?v=mMpsa_LFCbM",
+      "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+      "checked_date_macau": "2026-11-27",
+      "player_status": "OK",
+      "reason": "",
+      "has_streams": true,
+      "access": "free_public",
+      "title": "PicoBETH 3D-Printed Version Stringing Demo | 3D 列印版本穿線展示 (DIY badminton stringing machine)",
+      "channel": "KuoKuo",
+      "duration_seconds": 1150,
+      "publish_date_raw": "2025-03-01T06:07:29-08:00",
+      "caption_languages": [],
+      "audience": "coach"
+    },
+    {
+      "id": "HNGg4OPCNFo",
+      "url": "https://www.youtube.com/watch?v=HNGg4OPCNFo",
+      "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+      "checked_date_macau": "2026-11-27",
+      "player_status": "OK",
+      "reason": "",
+      "has_streams": true,
+      "access": "free_public",
+      "title": "#4 BADDY tutorial - Motors and electronics",
+      "channel": "Baddy",
+      "duration_seconds": 563,
+      "publish_date_raw": "2018-09-12T07:53:05-07:00",
+      "caption_languages": [
+        "en"
+      ],
+      "audience": "coach"
+    }
+  ]
+}

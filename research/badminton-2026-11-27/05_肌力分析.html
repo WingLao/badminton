@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>05｜肌力分析｜教練研究</title>
+<meta name="description" content="阻力、增強式、核心與複合式訓練對羽球選手體能與跨步力學的證據。">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../news/">最新消息</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="05肌力分析">05｜肌力分析</h1><p class="meta">教練研究 · 整理日期 2026-10-04 · 依原研究整理，不是原文全文</p>
+<p>返回 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a>；相關章節：<a href="04_敏捷體能分析.html">04_敏捷體能分析</a>、<a href="02_其他訓練法.html">02_其他訓練法</a>、<a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a>。</p>
+<div class="callout summary">
+<p class="callout-title">📌 一分鐘看完</p>
+
+<ul>
+<li><strong>阻力訓練、增強式訓練</strong>：能改善爆發力、速度、敏捷，是本章最穩定的訊號（但證據確定性低到極低）。</li>
+<li><strong>增強式對反應時間沒有明確效果</strong>：反應是知覺問題，不是腿力問題。</li>
+<li><strong>核心訓練</strong>：青少年的爆發力與前、後場技術有改善，但每篇的「核心訓練」內容差很多。</li>
+<li><strong>複合式（重量＋增強式）</strong>：在短距離速度與敏捷上可能比單做重量更好。</li>
+<li><strong>肌力訓練最被低估的好處是預防傷害</strong>（見下方補充）。</li>
+</ul>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>研究</th>
+<th>對象</th>
+<th>設計</th>
+<th>證據</th>
+<th>一句話</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Wang 2025</td>
+<td>競技選手研究</td>
+<td>系統回顧</td>
+<td>🟢</td>
+<td>爆發、速度、敏捷、耐力有改善訊號</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Deng 2024</td>
+<td>11 項 RCT、445 人</td>
+<td>統合分析＋GRADE</td>
+<td>🟢</td>
+<td>爆發 0.60、敏捷 0.96；反應時間不顯著</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chandra 2023</td>
+<td>102 名男大學生</td>
+<td>隨機、3 週</td>
+<td>🟡</td>
+<td>短期增強式改善敏捷與衝刺</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Xie 2025</td>
+<td>20 名業餘男選手</td>
+<td>隨機兩組</td>
+<td>🟡</td>
+<td>複合式改善跨步制動與回位</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ma 2024</td>
+<td>13 項研究、208 人</td>
+<td>統合分析</td>
+<td>🟢</td>
+<td>核心訓練改善爆發與前後場技術</td>
+</tr>
+<tr>
+<td>6</td>
+<td>陳駿烽 2025</td>
+<td>18 名國中選手</td>
+<td>兩組比較</td>
+<td>🟡📄</td>
+<td>複合式在衝刺、T 測驗優於重量訓練</td>
+</tr>
+</tbody>
+</table>
+<h2 id="研究問題">研究問題</h2>
+<p>羽球的起跳、急停、跨步及擊球需要力量，也需要把力量快速用出來。以下區分<strong>阻力訓練、增強式訓練、核心訓練、複合式訓練</strong>，並留意研究測的是肌力、體能測驗、動作力學，還是實際比賽表現。</p>
+<div class="callout note">
+<p class="callout-title">📝 用語：這四種訓練差在哪？</p>
+
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>做什麼</th>
+<th>主要目標</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阻力訓練</td>
+<td>深蹲、硬舉、弓箭步等負重動作</td>
+<td>最大肌力、肌肉量</td>
+</tr>
+<tr>
+<td>增強式訓練</td>
+<td>跳箱、跳深、連續跳等快速伸縮動作</td>
+<td>爆發力、彈性回彈（伸展–收縮循環）</td>
+</tr>
+<tr>
+<td>核心訓練</td>
+<td>軀幹穩定、抗旋轉、軀幹力量傳遞</td>
+<td>力量從下肢傳到上肢的效率</td>
+</tr>
+<tr>
+<td>複合式訓練</td>
+<td>重量動作後接相似的跳躍動作（如深蹲後接跳躍）</td>
+<td>同時發展力量與爆發</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="1-阻力訓練的整體證據">1. 阻力訓練的整體證據</h2>
+<p><strong>文獻與出處</strong>：Wang 等（2025），<em>Effects of resistance training on performance in competitive badminton players: a systematic review</em>，<em>Frontiers in Physiology</em>。<a href="https://doi.org/10.3389/fphys.2025.1548869">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：系統性搜尋競技羽球選手的阻力訓練研究，比較力量、爆發力、速度、敏捷及耐力等結果，依納入研究的介入安排與品質作整體判讀。</li>
+<li><strong>結果</strong>：納入研究整體顯示爆發力、速度、敏捷及耐力有改善訊號；介入超過 8 週的研究常有較大的效果，但訓練內容及測驗不一致。</li>
+<li><strong>結論</strong>：阻力訓練可納入羽球體能課表，訓練劑量仍應依選手與測驗目標調整。</li>
+<li><strong>判讀界線</strong>：這是二手證據；不能據此指定唯一有效的每週次數、負重百分比，或推論正式比賽勝率必然提高。</li>
+</ul>
+<h2 id="2-增強式訓練統合分析">2. 增強式訓練：統合分析</h2>
+<p><strong>文獻與出處</strong>：Deng 等（2024），<em>Effects of plyometric training on skill-related physical fitness in badminton players: A systematic review and meta-analysis</em>，<em>Heliyon</em>。<a href="https://doi.org/10.1016/j.heliyon.2024.e28051">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：搜尋五個資料庫至 2024 年 2 月，納入有主動對照組的隨機研究；11 項研究、共 445 名羽球選手；用 PEDro 評估方法品質、GRADE 評估證據確定性。</li>
+<li><strong>結果</strong>：增強式訓練對爆發力（效果量 0.60）、敏捷（0.96）、速度（0.63）、平衡（0.89）有顯著正向效果；反應時間未達顯著（0.56，<em>p</em>＝.189）。</li>
+<li><strong>結論</strong>：跳躍及快速伸縮循環訓練可改善若干體能表現；對反應時間的效果尚不明確。</li>
+<li><strong>判讀界線</strong>：各結果的證據確定性為低或極低；效果量不能直接換算成場上得分增加。</li>
+</ul>
+<div class="callout tip">
+<p class="callout-title">💡 怎麼讀效果量（SMD）？</p>
+
+<p>常用的粗略標準：<strong>0.2 小、0.5 中、0.8 大</strong>。效果量 0.60 表示訓練組平均比對照組好約 0.6 個標準差。但「證據確定性低」的意思是：真正的效果可能和這個數字差很多，未來研究很可能改變結論。<strong>效果量大小與證據可信度是兩件事</strong>。</p>
+</div>
+
+<h2 id="3-大學生的短期增強式訓練">3. 大學生的短期增強式訓練</h2>
+<p><strong>文獻與出處</strong>：Chandra 等（2023），<em>Effects of Plyometric Training on the Agility, Speed, and Explosive Power of Male Collegiate Badminton Players</em>，<em>Journal of Lifestyle Medicine</em>。<a href="https://doi.org/10.15280/jlm.2023.13.1.52">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：102 名男性大學羽球員隨機分為增強式訓練與一般訓練各 51 人；介入 3 週、每週 2 次，前後測敏捷、30 公尺衝刺及爆發力。</li>
+<li><strong>結果</strong>：作者報告介入組的敏捷與衝刺表現改善，並稱爆發力改善。</li>
+<li><strong>結論</strong>：短期增強式課表對這批大學生的速度與敏捷有正向訊號。</li>
+<li><strong>判讀界線</strong>：介入僅 3 週、僅男性大學生。3 週的進步多半來自神經適應與動作熟練，而非肌肉結構改變。論文摘要對立定跳遠的數值與單位呈現有疑點，此處不引用該數值作效果估計。</li>
+</ul>
+<h2 id="4-阻力與複合式訓練對跨步力學">4. 阻力與複合式訓練對跨步力學</h2>
+<p><strong>文獻與出處</strong>：Xie 等（2025），<em>Effects of eight-week resistance and complex training on the biomechanical characteristics of lower limbs during backhand forward lunges in amateur badminton players</em>，<em>Frontiers in Sports and Active Living</em>。<a href="https://doi.org/10.3389/fspor.2025.1615558">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：20 名男性業餘選手隨機分至阻力訓練與複合式訓練，持續 8 週；利用動作擷取與測力板分析反手前跨步的制動、支撐及回位階段。</li>
+<li><strong>結果</strong>：兩組的部分跨步階段耗時下降；複合組在制動與回位、阻力組在回位方面呈現改善，力學指標改變依階段而異。</li>
+<li><strong>結論</strong>：兩種訓練均可能提升特定跨步階段的動作效率，複合式安排對部分階段較有利。</li>
+<li><strong>判讀界線</strong>：樣本小、只測實驗室動作；沒有追蹤受傷率或正式比賽，因此不能由力學變化直接宣稱預防傷害。</li>
+</ul>
+<h2 id="5-核心肌力與羽球專項表現">5. 核心肌力與羽球專項表現</h2>
+<p><strong>文獻與出處</strong>：Ma 等（2024），<em>Effect of core strength training on the badminton player's performance: A systematic review &amp; meta-analysis</em>，<em>PLOS ONE</em>。<a href="https://doi.org/10.1371/journal.pone.0305116">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：依 PRISMA 搜尋至 2023 年 8 月，納入 13 項研究、208 名 10–19 歲選手；介入 4–16 週、每週 1–4 次，統合分析體能與前、後場技術表現。</li>
+<li><strong>結果</strong>：爆發力、前場技術及後場技術有統計上顯著的正向結果；速度、耐力、敏捷、柔軟度及協調性效果尚不清楚。</li>
+<li><strong>結論</strong>：核心訓練可作為青少年羽球體能及部分技術訓練的補充。</li>
+<li><strong>判讀界線</strong>：納入研究樣本普遍小（平均每篇約 16 人），女性選手資料不足；不能把所有「核心訓練」視為相同課表。</li>
+</ul>
+<h2 id="6-台灣複合式訓練與重量訓練比較">6. 台灣：複合式訓練與重量訓練比較</h2>
+<p><strong>文獻與出處</strong>：陳駿烽（2025），《複合式訓練對國中羽球選手爆發力與敏捷性之影響》，國立嘉義大學碩士論文。<a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&amp;s=id%3D%22113NCYU5567026%22.&amp;searchmode=basic">臺灣博碩士論文系統摘要</a>。</p>
+<ul>
+<li><strong>研究方法</strong>：18 名國中羽球員分為複合式訓練與重量訓練各 9 人；介入 6 週，複合式組結合重量與增強式訓練；測 20 公尺衝刺、敏捷 T 測驗、反向跳及反應力量指標。</li>
+<li><strong>結果</strong>：摘要報告複合式組 20 公尺衝刺由 3.57 秒至 3.22 秒、T 測驗由 11.79 秒至 10.91 秒，且優於重量訓練組；反向跳、蹲跳及反應力量的組間差異未達顯著。</li>
+<li><strong>結論</strong>：對這批國中選手，複合式訓練在短距離速度與敏捷測驗上比單做重量訓練更有利。</li>
+<li><strong>判讀界線</strong>：依官方論文摘要整理，全文與詳細訓練劑量尚待核對；樣本僅 18 人。6 週內 20 公尺衝刺快 0.35 秒（約 10%）幅度相當大，需全文確認測量方式。</li>
+</ul>
+<h2 id="綜合判讀">綜合判讀</h2>
+<p>目前較穩定的訊號是<strong>阻力與增強式訓練能改善若干體能測驗</strong>；核心與複合式訓練可能增加特定技術或跨步效益，但研究對象、課表及測驗差異很大。設計課表時，可先明確指定要改善的能力，再以相同測驗追蹤；這是根據文獻推導的實務建議，並非單篇研究驗證的固定處方。</p>
+<div class="callout note">
+<p class="callout-title">📝 運動科學補充：肌力訓練與運動傷害預防</p>
+
+<p>這是本章原本沒有、但對教練最重要的一塊。</p>
+<ul>
+<li><strong>Lauersen、Bertelsen 與 Andersen（2014）</strong>，<em>British Journal of Sports Medicine</em>，48(11)，871–877：統合 25 項隨機對照試驗、26,610 名參與者。<strong>肌力訓練讓運動傷害降到不到三分之一</strong>（RR 0.315，95% CI 0.207–0.480）；本體感覺訓練約降一半（RR 0.550）；<strong>伸展沒有預防效果</strong>（RR 0.963）。不是羽球專項、也早於本筆記的五年範圍，但是運動傷害預防最常被引用的基礎證據。</li>
+<li><strong>羽球的高風險部位</strong>：踝關節扭傷、膝（髕腱）、肩，以及成年選手的<strong>阿基里斯腱斷裂</strong>。北歐流行病學資料（如芬蘭 Oulu 1979–1994 年）中，羽球是阿基里斯腱斷裂最常見的運動情境之一。</li>
+<li><strong>含義</strong>：小腿（提踵、離心提踵）、股四頭肌、腿後肌、臀部和肩部旋轉肌群的肌力訓練，同時有「表現」與「預防」兩個理由。</li>
+</ul>
+</div>
+
+<h2 id="badminton-轉成課表一週肌力安排參考">🏸 轉成課表：一週肌力安排參考</h2>
+<p>以下依本章研究、Currier 2023（第七章 R15）與一般肌力體能原則整理，<strong>不是單篇研究驗證的固定處方</strong>，需依年齡、訓練經驗與賽程調整。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>建議</th>
+<th>依據</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>頻率</td>
+<td>每週 2–3 次肌力，至少間隔 48 小時</td>
+<td>Ma 2025、Wang 2025 多數研究為 2–3 次／週</td>
+</tr>
+<tr>
+<td>週期</td>
+<td>至少 6–8 週才評估效果</td>
+<td>Wang 2025：&gt; 8 週效果常較大</td>
+</tr>
+<tr>
+<td>最大肌力</td>
+<td>有經驗者：較高負荷（約 3–6 下）、多組</td>
+<td>Currier 2023 力量排名最高為高負荷多組</td>
+</tr>
+<tr>
+<td>爆發力</td>
+<td>增強式每節約 60–100 次落地接觸，品質優先</td>
+<td>一般增強式訓練原則</td>
+</tr>
+<tr>
+<td>複合式</td>
+<td>重量動作後 3–4 分鐘接跳躍動作</td>
+<td>陳駿烽 2025、Xie 2025</td>
+</tr>
+<tr>
+<td>核心</td>
+<td>抗旋轉、抗伸展為主，不只做捲腹</td>
+<td>Ma 2024（內容差異大，選功能性動作）</td>
+</tr>
+<tr>
+<td>預防</td>
+<td>每次加入小腿離心、單腳平衡落地、肩外旋</td>
+<td>Lauersen 2014</td>
+</tr>
+</tbody>
+</table>
+<p><strong>賽季中</strong>：維持每週 1–2 次、降低總量、保持強度，比完全停練更能保住力量。</p>
+<p><strong>青少年</strong>：先學會動作（徒手深蹲、弓箭步、落地技術），再逐步加負荷；在合格指導下的阻力訓練對青少年是安全的。</p>
+<h2 id="主動回想">主動回想</h2>
+<ol type="1">
+<li>增強式訓練的統合分析中，哪一項結果沒有達顯著？證據確定性如何？</li>
+<li>跨步的制動時間縮短，是否就能證明比賽表現提升或傷害降低？</li>
+<li>台灣的複合式訓練研究，哪些指標有組間差異，哪些沒有？</li>
+<li>預防運動傷害，肌力訓練和伸展的效果差多少？</li>
+</ol>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

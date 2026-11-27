@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>12 限制導向動作學習（CLA）— 羽球教學版｜教練研究</title>
+<meta name="description" content="12 限制導向動作學習（CLA）— 羽球教學版｜教練研究">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../news/">最新消息</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="12-限制導向動作學習cla-羽球教學版">12 限制導向動作學習（CLA）— 羽球教學版</h1><p class="meta">教練研究 · 整理日期  · 依原研究整理，不是原文全文</p>
+<p>更新：2026-11-13｜關聯：06 運動行為、07 動作控制、08 教練實務</p>
+<hr />
+<h2 id="第-1-課動作從哪裡來">第 1 課：動作從哪裡來？</h2>
+<p><img src="圖片/圖_CLA/圖1_三類限制模型_202611130933.svg" alt="三類限制模型" /></p>
+<table>
+<thead>
+<tr>
+<th>限制</th>
+<th>羽球例子</th>
+<th>教練能改嗎？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個體</td>
+<td>身高、力量、疲勞、經驗</td>
+<td>部分（體能、疲勞狀態）</td>
+</tr>
+<tr>
+<td>任務</td>
+<td>規則、得分、器材、限拍數</td>
+<td>最容易改</td>
+</tr>
+<tr>
+<td>環境</td>
+<td>場地大小、網高、對手、比分</td>
+<td>容易改</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重點</strong>：教練不給標準答案，而是設計限制。</p>
+<hr />
+<h2 id="第-2-課關鍵詞">第 2 課：關鍵詞</h2>
+<table>
+<thead>
+<tr>
+<th>詞</th>
+<th>一句話</th>
+<th>羽球例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可供性 Affordance</td>
+<td>環境給「你」的行動機會</td>
+<td>半場高球 = 可殺機會</td>
+</tr>
+<tr>
+<td>知覺—動作耦合</td>
+<td>看與打不能拆開</td>
+<td>讀對手拍面 → 啟動</td>
+</tr>
+<tr>
+<td>代表性學習設計 RLD</td>
+<td>練習要像比賽</td>
+<td>真人餵球 &gt; 發球機</td>
+</tr>
+<tr>
+<td>功能性變異</td>
+<td>變異 ≠ 錯誤</td>
+<td>每拍步法不同，但都到位</td>
+</tr>
+<tr>
+<td>外在焦點</td>
+<td>注意結果，不注意身體</td>
+<td>「打到那個圈」&gt;「手肘抬高」</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="第-3-課練法對比">第 3 課：練法對比</h2>
+<p><img src="圖片/圖_CLA/圖2_任務分解vs任務簡化_202611130933.svg" alt="任務分解vs任務簡化" /></p>
+<table>
+<thead>
+<tr>
+<th>面向</th>
+<th>傳統（線性）</th>
+<th>CLA（非線性）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目標</td>
+<td>標準動作</td>
+<td>有效解法</td>
+</tr>
+<tr>
+<td>結構</td>
+<td>分解 → 組合</td>
+<td>簡化的完整情境 → 加難</td>
+</tr>
+<tr>
+<td>教練</td>
+<td>講解、糾正</td>
+<td>設計規則、觀察</td>
+</tr>
+<tr>
+<td>變異</td>
+<td>消除</td>
+<td>利用</td>
+</tr>
+<tr>
+<td>評估</td>
+<td>動作外形</td>
+<td>結果 + 換情境仍有效</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="第-4-課教練設計流程">第 4 課：教練設計流程</h2>
+<p><img src="圖片/圖_CLA/圖3_限制操控教學循環_202611130933.svg" alt="CLA教學循環" /></p>
+<h3 id="限制操控表">限制操控表</h3>
+<table>
+<thead>
+<tr>
+<th>改什麼</th>
+<th>怎樣改</th>
+<th>練出什麼</th>
+<th>量什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>得分</td>
+<td>後場角落 2 分</td>
+<td>拉四角</td>
+<td>角落落點 %</td>
+</tr>
+<tr>
+<td>擊球種類</td>
+<td>只准平抽 / 網前</td>
+<td>專項技術</td>
+<td>目標技術次數</td>
+</tr>
+<tr>
+<td>限拍數</td>
+<td>3 拍內必攻</td>
+<td>搶攻、提早擊球</td>
+<td>第 3 拍進攻率 %</td>
+</tr>
+<tr>
+<td>時間</td>
+<td>多球間隔 1.2 → 0.9 s</td>
+<td>啟動、還原</td>
+<td>到位時間</td>
+</tr>
+<tr>
+<td>場地</td>
+<td>縮窄寬度</td>
+<td>前後移動</td>
+<td>落點深度 cm</td>
+</tr>
+<tr>
+<td>網高</td>
+<td>網上 30 cm 拉繩</td>
+<td>平抽壓低</td>
+<td>過網高度</td>
+</tr>
+<tr>
+<td>比分</td>
+<td>18:20 開局</td>
+<td>壓力決策</td>
+<td>失誤率</td>
+</tr>
+<tr>
+<td>個體</td>
+<td>疲勞後練技術</td>
+<td>疲勞下穩定</td>
+<td>落點誤差變化</td>
+</tr>
+<tr>
+<td>器材</td>
+<td>短拍、慢球</td>
+<td>兒童完整揮擊</td>
+<td>連續對打拍數</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="第-5-課範例課表">第 5 課：範例課表</h2>
+<h3 id="範例-a後場進攻單打">範例 A：後場進攻（單打）</h3>
+<p><img src="圖片/圖_CLA/圖4_範例A_後場角落2分_202611130933.svg" alt="範例A" /></p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>時間</td>
+<td>3 × 7 分鐘，輪換對手</td>
+</tr>
+<tr>
+<td>進階</td>
+<td>進攻後下一拍必須網前跟進</td>
+</tr>
+</tbody>
+</table>
+<h3 id="範例-b雙打封網">範例 B：雙打封網</h3>
+<p><img src="圖片/圖_CLA/圖5_範例B_網上限高繩_202611130933.svg" alt="範例B" /></p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>時間</td>
+<td>4 × 5 分鐘</td>
+</tr>
+<tr>
+<td>觀察</td>
+<td>兩人前後/左右站位變化（Passos 2022）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="範例-cd">範例 C、D</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>C：預判</th>
+<th>D：兒童入門</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>限制</td>
+<td>真人餵球，同準備動作混 2 種球路</td>
+<td>短拍 + 慢球 + 窄場 + 低網</td>
+</tr>
+<tr>
+<td>目標</td>
+<td>讀出直線/對角</td>
+<td>完整「看—動—打」</td>
+</tr>
+<tr>
+<td>指標</td>
+<td>啟動方向正確率、啟動時間</td>
+<td>連續對打拍數</td>
+</tr>
+<tr>
+<td>禁止</td>
+<td>用發球機取代</td>
+<td>先教分解揮拍</td>
+</tr>
+<tr>
+<td>依據</td>
+<td>Abernethy 1987、Hagemann 2006</td>
+<td>Nor Azmi 2023、Buszard 2016</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="常見錯誤">常見錯誤</h2>
+<table>
+<thead>
+<tr>
+<th>錯誤</th>
+<th>修正</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同時改 3+ 個限制</td>
+<td>一次 1–2 個</td>
+</tr>
+<tr>
+<td>CLA = 只打比賽</td>
+<td>限制要對準目標行為</td>
+</tr>
+<tr>
+<td>完全不給指導</td>
+<td>初學者可配示範、比喻</td>
+</tr>
+<tr>
+<td>太難全失敗</td>
+<td>成功率保持 60–80%</td>
+</tr>
+<tr>
+<td>只看結果</td>
+<td>同時監測肩、膝負荷</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="文獻">文獻</h2>
+<p>A = 已在文獻總目錄核對｜B = 經典，未逐字核對｜C = 需查核卷期</p>
+<table>
+<thead>
+<tr>
+<th>文獻</th>
+<th>一句話</th>
+<th>信度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Newell (1986), <em>Motor development in children</em></td>
+<td>三類限制模型原典</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Newell, Liu, Mayer-Kress 系列</td>
+<td>學習的多時間尺度（見第 10 章）</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Araújo et al. (2006), <em>PSE</em> 7</td>
+<td>決策 = 知覺—動作耦合</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Chow et al. (2007), <em>RER</em> 77(3)</td>
+<td>非線性教學法</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Renshaw et al. (2010), <em>PESP</em> 15(2)</td>
+<td>CLA 與體育教學</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Pinder et al. (2011), <em>JSEP</em> 33</td>
+<td>代表性學習設計</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Renshaw et al. (2019), Routledge</td>
+<td>CLA 教練手冊（入門首選）</td>
+<td>B</td>
+</tr>
+<tr>
+<td><strong>Dieu et al. (2022), <em>PESP</em></strong></td>
+<td>羽球體育課組織設計</td>
+<td>A</td>
+</tr>
+<tr>
+<td><strong>Passos et al. (2022), <em>Ecol. Psychol.</em></strong></td>
+<td>頂尖雙打人際協同</td>
+<td>A</td>
+</tr>
+<tr>
+<td><strong>Nor Azmi et al. (2023), <em>IJHMSS</em></strong></td>
+<td>兒童羽球器材比例</td>
+<td>A</td>
+</tr>
+<tr>
+<td>De Waelle et al. (2022), <em>RQES</em></td>
+<td>情境資訊與預判</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Hülsdünker et al. (2021), <em>Front. Hum. Neurosci.</em></td>
+<td>擊球聲加快反應</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Goode &amp; Magill (1986), <em>RQES</em> 57(4)</td>
+<td>羽球發球：隨機 &gt; 區塊練習</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Abernethy &amp; Russell (1987), <em>JSP</em> 9</td>
+<td>羽球專家早期預判</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Hagemann et al. (2006), <em>JSEP</em> 28</td>
+<td>注意力引導提升預判</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Buszard et al. (2016), <em>Sports Med</em> 46</td>
+<td>縮小器材/場地效果</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Alder et al. (2014)；Wrisberg &amp; Liu (1991)；Lee et al. (2014)</td>
+<td>凝視、發球變異、網球非線性教學</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p>DOI 見舊版：<a href="12_限制導向動作學習_CLA_羽球應用.html">12_..._202611071015.md</a></p>
+<hr />
+<h2 id="可做的研究">可做的研究</h2>
+<table>
+<thead>
+<tr>
+<th>題目</th>
+<th>設計</th>
+<th>依變項</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLA vs 分解教學（中學生高遠球）</td>
+<td>2 組，8 週，前/後/保留/轉移</td>
+<td>落點、比賽使用率</td>
+</tr>
+<tr>
+<td>場地寬度 → 單打移動</td>
+<td>受試者內，3 種場寬</td>
+<td>移動距離、回合長度</td>
+</tr>
+<tr>
+<td>兒童器材比例</td>
+<td>2×2</td>
+<td>揮拍角速度、成功率</td>
+</tr>
+<tr>
+<td>雙打協同 × 規則限制</td>
+<td>影片 + 相對相位</td>
+<td>兩人間距、穩定度</td>
+</tr>
+</tbody>
+</table>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

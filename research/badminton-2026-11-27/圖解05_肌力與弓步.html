@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>圖解 05｜肌力：最被低估的防傷工具｜教練研究</title>
+<meta name="description" content="弓步受力動畫、肌力／平衡／伸展的防傷效果比較，以及台灣國中選手複合式訓練數據。">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../news/">最新消息</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="圖解-05肌力最被低估的防傷工具">圖解 05｜肌力：最被低估的防傷工具</h1><p class="meta">教練研究 · 整理日期 2026-11-17 · 依原研究整理，不是原文全文</p>
+<p>完整研究：<a href="05_肌力分析.html">05_肌力分析</a>、<a href="10_四國研究與制度.html">10_四國研究與制度</a>　·　回到 <a href="index.html">首頁</a></p>
+<div class="callout abstract">
+<p class="callout-title">📌 重點摘要卡</p>
+
+<ul>
+<li><strong>一句話核心：</strong> 肌力訓練是最有證據的防傷工具；伸展幾乎無防傷效果。</li>
+<li><strong>關鍵數據：</strong> 受傷相對風險：肌力 0.315、平衡 0.550、伸展 0.963｜弓步佔嚴重傷聯想動作 32.2%</li>
+<li><strong>因果流程：</strong> <code>弓步煞車期大負荷</code> ➔ <code>離心肌力與肌腱逐步適應</code> ➔ <code>受傷風險下降、推蹬更有效</code></li>
+<li><strong>跨域應用：</strong> <strong>羽球訓練</strong>：每週 2 次肌力，間隔 48 小時。<strong>數據模型</strong>：讀懂相對風險（RR）與信賴區間。<strong>IT 教學</strong>：用力板／加速度計數據畫弓步受力曲線。</li>
+</ul>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 先猜一猜</p>
+
+<p>很多球隊賽前花最多時間做<strong>伸展</strong>來防傷。統合 25 項隨機試驗（26,610 人）後，伸展的防傷效果是多少？ 答案：<strong>幾乎是零</strong>（相對風險 0.963）。肌力訓練則把受傷風險降到約三分之一。</p>
+</div>
+
+<h2 id="clapper-動畫一弓步的兩個階段">🎬 動畫一：弓步的兩個階段</h2>
+<p><img src="圖片/圖_動畫/05_弓步動畫_202611171214.svg" alt="弓步：煞車 → 推蹬" /></p>
+<ul>
+<li><strong>煞車期</strong>：前腳著地，股四頭肌一邊用力一邊被拉長（<strong>離心收縮 eccentric</strong>），膝和跟腱受力最大。</li>
+<li><strong>推蹬期</strong>：把身體推回中心，準備下一拍。</li>
+</ul>
+<h2 id="clapper-動畫二哪一種訓練最能防傷">🎬 動畫二：哪一種訓練最能防傷？</h2>
+<p><img src="圖片/圖_動畫/05_傷害預防_相對風險_202611171214.svg" alt="預防受傷：肌力訓練 &gt; 平衡訓練 &gt;&gt; 伸展" /></p>
+<h2 id="bar_chart-數據一覽">📊 數據一覽</h2>
+<table>
+<thead>
+<tr>
+<th>訓練</th>
+<th style="text-align: right;">相對風險 RR</th>
+<th>白話</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>肌力訓練</td>
+<td style="text-align: right;">0.315</td>
+<td>受傷約降到三分之一</td>
+<td>Lauersen 2014，BJSM</td>
+</tr>
+<tr>
+<td>本體感覺（平衡）訓練</td>
+<td style="text-align: right;">0.550</td>
+<td>約降一半</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>伸展</td>
+<td style="text-align: right;">0.963</td>
+<td>幾乎沒有效果</td>
+<td>同上</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>台灣國中選手 6 週複合式訓練（陳駿烽 2025，18 人）</th>
+<th style="text-align: right;">前測</th>
+<th style="text-align: right;">後測</th>
+<th style="text-align: right;">變化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20 m 衝刺（秒）</td>
+<td style="text-align: right;">3.57</td>
+<td style="text-align: right;">3.22</td>
+<td style="text-align: right;">−0.35（約 −10%）</td>
+</tr>
+<tr>
+<td>敏捷 T 測驗（秒）</td>
+<td style="text-align: right;">11.79</td>
+<td style="text-align: right;">10.91</td>
+<td style="text-align: right;">−0.88（約 −7%）</td>
+</tr>
+</tbody>
+</table>
+<div class="callout warning">
+<p class="callout-title">⚠️ 讀這組數字要小心</p>
+
+<p>只依論文摘要、樣本 18 人；6 週快 10% 幅度很大，需看全文確認測量方式。</p>
+</div>
+
+<h2 id="compass-一週肌力怎樣放">🧭 一週肌力怎樣放</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode mermaid"><code class="sourceCode mermaid"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">flowchart</span> <span class="cn">LR</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">A</span>[<span class="st">&quot;週一 肌力 A</span><span class="sc">&lt;br/&gt;</span><span class="st">下肢最大力量&quot;</span>] <span class="pp">--&gt;</span><span class="vs">|間隔 48 小時|</span> <span class="dt">B</span>[<span class="st">&quot;週四 肌力 B</span><span class="sc">&lt;br/&gt;</span><span class="st">增強式＋複合式&quot;</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">B</span> <span class="pp">--&gt;</span> <span class="dt">C</span>[<span class="st">&quot;每節最後</span><span class="sc">&lt;br/&gt;</span><span class="st">落地控制・單腳停 2 秒&quot;</span>]</span></code></pre></div>
+<h2 id="brain-延伸知識">🧠 延伸知識</h2>
+<div class="callout note">
+<p class="callout-title">📝 肌肉長得快，肌腱跟得慢</p>
+
+<p>肌腱對訓練的適應比肌肉慢。跳躍量突然大增時，肌肉撐得住，肌腱未必跟得上，這是<strong>髕腱、跟腱過度使用傷</strong>的常見背景。所以跳躍和弓步的總量要逐步加，不要一次跳很多。</p>
+</div>
+
+<div class="callout note">
+<p class="callout-title">📝 鞋子幫得了多少？</p>
+
+<p>台灣相子元團隊發現：5° 外側楔形鞋讓前弓步煞車期垂直力 +3.86%、水平力 +7.77%；而<strong>中底越厚不等於越減震</strong>。選鞋有影響，但取代不了步法和肌力訓練。</p>
+</div>
+
+<h2 id="white_check_mark-30-秒自我測驗">✅ 30 秒自我測驗</h2>
+<div class="callout question">
+<p class="callout-title">❓ 1. 弓步哪一個階段膝蓋受力最大？那時肌肉在做甚麼收縮？</p>
+
+<p>煞車期；股四頭肌做離心收縮。</p>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 2. 肌力訓練、平衡訓練、伸展，防傷效果怎樣排？</p>
+
+<p>肌力（RR 0.315）&gt; 平衡（0.550）&gt;&gt; 伸展（0.963，幾乎無效）。</p>
+</div>
+
+<div class="callout question">
+<p class="callout-title">❓ 3. 為甚麼跳躍量不能突然加很多？</p>
+
+<p>肌腱適應比肌肉慢，容易出現過度使用傷。</p>
+</div>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

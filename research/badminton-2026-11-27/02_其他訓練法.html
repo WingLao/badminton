@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>02｜其他訓練法｜教練研究</title>
+<meta name="description" content="綜合體能、兒童羽球課程、整合式神經肌肉訓練、視覺訓練與特奧課程的證據整理。">
+<style>
+:root{--nav:#11241f;--nav-ink:#e8f2ec;--bg:#f4f6f2;--card:#fff;--ink:#16302a;--muted:#5d726b;--line:#d8e2dd;--brand:#0f5a46;--brand-ink:#fff;--accent:#d7f24b;--link:#0a6f8c;--code:#eef3f0;
+--blue:#2563eb;--purple:#7c3aed;--green:#15803d;--orange:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221e;--ink:#e3ede8;--muted:#9db1a9;--line:#2a3a34;--brand:#3fae8c;--brand-ink:#08130f;--accent:#b7d43a;--link:#6cc6e0;--code:#1f2d28}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;overflow-wrap:anywhere}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--nav-ink);display:flex;gap:2px;align-items:center;overflow-x:auto;padding:6px 10px;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.top .brand{color:#d7f24b;font-weight:800;letter-spacing:.02em;padding:8px 10px 8px 4px;text-decoration:none}
+.top a{color:var(--nav-ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:15px}
+.top a:hover{background:rgba(255,255,255,.1)}
+.top a.on{background:#d7f24b;color:#16302a;font-weight:700}
+.top button{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;background:transparent;color:var(--nav-ink);font:inherit;font-size:14px;cursor:pointer}
+main{max-width:920px;margin:auto;padding:24px 16px 64px}
+.crumb{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,6.4vw,42px);line-height:1.22;margin:.35em 0;font-weight:850;letter-spacing:-.01em}
+h2{font-size:clamp(20px,4.6vw,24px);margin-top:1.9em;font-weight:800;letter-spacing:-.005em}
+main>h2::after,.rc~h2::after{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--accent);margin-top:8px}
+.meta{font-size:14px;color:var(--muted);margin:-.2em 0 .6em}
+.grid.home{grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+.card.cat{border-top:5px solid hsl(var(--h) 55% 42%)}
+.card.cat .tag{background:hsl(var(--h) 55% 42% / .12);color:hsl(var(--h) 55% 30%)}
+.card .q{font-size:14px;color:var(--muted);margin:.1em 0 .4em}
+h3{font-size:18px;margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--code);color:var(--muted);margin-right:6px}
+mark,.hl{background:var(--accent);color:#16302a;padding:0 3px;border-radius:3px}
+small,.muted{color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto}
+pre code{padding:0}
+blockquote{margin:14px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:12px;padding:6px 16px;margin:16px 0;background:var(--card)}
+.callout-title{font-weight:700;margin:8px 0 4px}
+.callout.warning,.callout.important{border-left-color:var(--orange)}
+.callout.question{border-left-color:var(--purple)}
+.callout.info,.callout.note,.callout.abstract,.callout.summary{border-left-color:var(--blue)}
+.callout.tip{border-left-color:var(--green)}
+.big a{display:inline-block;margin-top:6px;padding:10px 16px;border-radius:999px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+.hero{position:relative;overflow:hidden;border-radius:22px;margin:4px 0 18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:0;
+ background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.16),transparent 38%),radial-gradient(circle at 82% 18%,rgba(125,211,252,.14),transparent 34%),linear-gradient(135deg,#fffefa,#f3f6f2);border:1px solid var(--line)}
+.court-canvas{position:relative;order:2;height:clamp(200px,28vh,250px);z-index:0}
+.hero.band .court-canvas{height:clamp(140px,18vh,170px)}
+.court-canvas canvas{display:block;width:100%!important;height:100%!important}
+.hero-text{position:relative;z-index:1;order:1;padding:18px 22px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.court-canvas{height:130px}.hero.band .court-canvas{height:100px}.hero-text{padding:14px 16px 4px}}
+.hero-text h1{margin:.1em 0 .2em}.hero-text p{margin:.3em 0}
+.hero-tip{font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}}
+:root[data-theme="dark"] .hero{background:radial-gradient(circle at 18% 12%,rgba(45,212,191,.18),transparent 38%),radial-gradient(circle at 82% 18%,rgba(59,130,246,.16),transparent 34%),linear-gradient(135deg,#0d1a16,#0f1714)}
+table.wide{font-size:13px;white-space:nowrap}
+@media (max-width:640px){
+ table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}
+ table.cards thead{display:none}
+ table.cards tr{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:6px 10px;background:var(--card)}
+ table.cards td{border:0;border-bottom:1px dashed var(--line);padding:6px 0}
+ table.cards td:last-child{border-bottom:0}
+ table.cards td[data-label]::before{content:attr(data-label);display:block;font-size:13px;color:var(--muted);font-weight:600}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="網站導覽"><a class="brand" href="../../">badminton</a><a href="../../news/">最新消息</a><a href="../../learn/">學生學習</a><a href="../../technology/">教練科技</a><a href="../../research/" class="on">教練研究</a><a href="../../skills/">工具說明</a><a href="../../updates/">更新紀錄</a><button id="theme" type="button">🌙 深色</button></nav>
+<main>
+<p class="crumb"><a href="../">教練研究</a> › <a href="index.html">本期目錄</a></p><h1 id="02其他訓練法">02｜其他訓練法</h1><p class="meta">教練研究 · 整理日期 2026-10-04 · 依原研究整理，不是原文全文</p>
+<p>返回 <a href="00_羽球研究總覽.html">00_羽球研究總覽</a>；相關章節：<a href="04_敏捷體能分析.html">04_敏捷體能分析</a>、<a href="05_肌力分析.html">05_肌力分析</a>、<a href="08_教練實務整合_從研究到課表.html">08_教練實務整合_從研究到課表</a>。</p>
+<div class="callout summary">
+<p class="callout-title">📌 一分鐘看完</p>
+
+<ul>
+<li><strong>體能訓練整體</strong>：對最大攝氧量有一致的改善；敏捷的結論<strong>取決於是否排除離群研究</strong>（見第 1 篇更正）。</li>
+<li><strong>兒童羽球課程</strong>：BWF Shuttle Time 可改善基本動作技能，適合當體育教學方案。</li>
+<li><strong>青少年整合訓練</strong>：依生長成熟度調整重點（成熟者偏速度爆發，未成熟者偏平衡協調）。</li>
+<li><strong>視覺訓練</strong>：只有初步訊號；本章第 4 篇與第六章第 6 篇<strong>很可能是同一批受試者</strong>，不是兩次獨立驗證。</li>
+</ul>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>研究</th>
+<th>對象</th>
+<th>設計</th>
+<th>證據</th>
+<th>一句話</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ma 2025</td>
+<td>15 項研究、370 人</td>
+<td>系統回顧＋統合分析</td>
+<td>🟢</td>
+<td>最大攝氧量明確改善；敏捷結果受離群研究影響</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Duncan 2023</td>
+<td>76 名 9–11 歲兒童</td>
+<td>單組、含 10 週追蹤</td>
+<td>🟠</td>
+<td>基本動作技能進步</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Weng 2025</td>
+<td>24 名 13.5 歲男選手</td>
+<td>兩組都訓練，比成熟度</td>
+<td>🟡</td>
+<td>成熟度不同，進步重點不同</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Shyu 2025</td>
+<td>26 名 18–25 歲大專選手</td>
+<td>隨機、單次</td>
+<td>🟡</td>
+<td>單次稜鏡訓練後部分視功能改善</td>
+</tr>
+<tr>
+<td>5</td>
+<td>陳孟欣 2024</td>
+<td>24 名特教班學生</td>
+<td>實驗／控制組</td>
+<td>🟡📄</td>
+<td>羽球表現有正向訊號</td>
+</tr>
+</tbody>
+</table>
+<h2 id="研究問題">研究問題</h2>
+<p>除多球之外，綜合體能、兒童羽球活動、神經肌肉與視覺訓練各自改善什麼？先確認研究測的是體能、專項球技，還是單次反應。</p>
+<h2 id="1-各類體能訓練的整體證據">1. 各類體能訓練的整體證據</h2>
+<p><strong>文獻與出處</strong>：Ma 等（2025），<em>Effects of physical training programs on healthy badminton players' performance: a systematic review and meta-analysis</em>，<em>BMC Sports Science, Medicine and Rehabilitation</em>。 <a href="https://doi.org/10.1186/s13102-025-01199-y">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：系統性回顧納入 15 項研究、370 名受試者，其中 12 項進入統合分析；訓練多為 4–10 週，每週 2–3 次，涵蓋核心、平衡、間歇與阻力等方式。</li>
+<li><strong>結果</strong>：最大攝氧量明確改善（SMD 1.27，<em>p</em>＝.0001，<em>I</em>²＝0%）。敏捷有兩個數字：<strong>初始合併</strong> SMD −1.45、<em>p</em>＝.06、<em>I</em>²＝94%（未達顯著、異質性極高）；作者做敏感度分析、排除造成異質性的研究後，SMD −0.61、<em>p</em>＝.01、<em>I</em>²＝13%（時間類測驗下降代表進步）。平衡相關訓練也有正向結果。</li>
+<li><strong>結論</strong>：不同體能方案可能提升心肺、敏捷與平衡，訓練目標應對應到測量指標。</li>
+<li><strong>判讀界線</strong>：各介入、選手程度和測驗不同；單一效果量不能代表所有訓練都同樣有效。</li>
+</ul>
+<div class="callout important">
+<p class="callout-title">❗ 更正（2026-10-04 審閱）</p>
+
+<p>舊版本章只引用敏捷 −0.61（顯著），第六章第 10 篇只引用 <em>p</em>＝.06（不顯著），兩章看起來互相矛盾。核對原文後，<strong>兩個數字都正確</strong>：前者是排除離群研究後的結果，後者是初始合併結果。正確寫法是：「敏捷改善的結論，取決於是否排除個別研究；證據強度應視為中等偏弱」。</p>
+</div>
+
+<h2 id="2-羽球課程與兒童基本動作">2. 羽球課程與兒童基本動作</h2>
+<p><strong>文獻與出處</strong>：Duncan 等（2023），<em>A 6-Week Badminton-Based Movement Intervention Enhances Fundamental Movement Skills and Physical Fitness in Saudi Boys and Girls</em>，<em>Sports</em>。 <a href="https://doi.org/10.3390/sports11070132">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：76 名 9–11 歲兒童每週參與 2 次 BWF Shuttle Time 課程，共 6 週；於介入前、介入後及 10 週後測基本動作、10 公尺衝刺、立定跳遠、藥球投擲及 6 分鐘步行。</li>
+<li><strong>結果</strong>：男女兒童的基本動作分數在課程後改善；介入前至 10 週追蹤時，多項體能指標亦改善。</li>
+<li><strong>結論</strong>：羽球活動課程可以作為兒童基本動作與體適能教學的一種方案。</li>
+<li><strong>判讀界線</strong>：這是兒童教學與體適能研究，不可直接推論競技選手的戰術表現；缺乏平行對照組時，兒童自然成長會混入結果。</li>
+</ul>
+<h2 id="3-台灣青少年整合式神經肌肉訓練">3. 台灣青少年整合式神經肌肉訓練</h2>
+<p><strong>文獻與出處</strong>：Weng 等（2025），<em>Effects of Integrated Neuromuscular Training on Physical Fitness in Badminton Athletes of Different Maturity Statuses</em>，<em>Children</em>。 <a href="https://doi.org/10.3390/children12070830">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：24 名約 13.5 歲男性羽球選手依生長成熟度分為兩組，皆接受 12 週、每週 2 次、每次約 40–60 分鐘的平衡、核心、肌力、增強式及敏捷整合訓練；比較前後的衝刺、跳躍、敏捷及 Y 平衡。</li>
+<li><strong>結果</strong>：兩組多數測驗進步；較成熟組在衝刺、跳躍和敏捷上的改善較大，較未成熟組在平衡與下肢不對稱上的改善較大。</li>
+<li><strong>結論</strong>：青少年整合訓練可依成熟度調整重點。</li>
+<li><strong>判讀界線</strong>：兩組都接受訓練，沒有「不訓練」對照組；成熟度差異也不等於訓練造成的差異。</li>
+</ul>
+<div class="callout note">
+<p class="callout-title">📝 運動科學補充：生長高峰期（PHV）</p>
+
+<p>成熟度通常以**身高增長最快的時期（Peak Height Velocity, PHV）**估算，男生約 13–14 歲、女生約 11–12 歲，個別差異可達數年。PHV 前後骨骼快速生長，肌腱與骨骼的負荷耐受暫時下降，常見膝蓋（Osgood-Schlatter）與腳跟（Sever 病）疼痛；同時可能出現暫時性的協調下降。 教練實務：同年齡選手不一定同成熟度。可定期量身高（每 3 個月）來估計是否進入快速生長期；這段時間減少高衝擊跳躍總量、加強動作控制與平衡，與 Weng 2025「未成熟組平衡改善較大」的方向一致。</p>
+</div>
+
+<h2 id="4-單次視覺集合訓練">4. 單次視覺集合訓練</h2>
+<p><strong>文獻與出處</strong>：Shyu 等（2025），<em>A pilot study investigating immediate effects of vergence training on binocular function and reaction time in youth badminton athletes</em>，<em>Scientific Reports</em>。 <a href="https://doi.org/10.1038/s41598-025-28743-7">DOI</a>；原文 PDF。</p>
+<ul>
+<li><strong>研究方法</strong>：26 名 <strong>18–25 歲</strong>台灣大專羽球選手（題名寫 youth，但納入條件是 18–30 歲、至少兩年訓練）隨機分至視覺訓練組 16 人及對照組 10 人；視覺組完成 15 分鐘自動雙旋轉 Risley 稜鏡集合訓練，前後測雙眼視功能與反應時間。</li>
+<li><strong>結果</strong>：部分集合與調節功能短期改善，反應時間也有下降；其他視覺指標改善有限或不顯著。</li>
+<li><strong>結論</strong>：短時間視覺訓練具有可行性，但目前只能視為初步訊號。</li>
+<li><strong>判讀界線</strong>：單次、小樣本、組別不等量，未測比賽表現或長期效果。</li>
+</ul>
+<div class="callout important">
+<p class="callout-title">❗ 更正與重疊提醒（2026-10-04 審閱）</p>
+
+<ol type="1">
+<li>舊版本寫「青少年選手」，原文實際是 18–25 歲大專選手，已更正。</li>
+<li>本篇與第六章第 6 篇 Chiang 等（2026）<strong>作者群相同、倫理審查編號相同（CRREC-114-011）、同為 26 人且 16：10 分組、同樣來自兩所台中大專院校</strong>。Chiang 2026 也引用本篇。合理推測：本篇是同一試驗第一次訓練的即時結果，Chiang 2026 是四週後的結果。<strong>兩篇不能當作兩次獨立重複驗證</strong>，證據量應視為「一個小型試驗」。</li>
+</ol>
+</div>
+
+<h2 id="5-台灣特殊奧運羽球課程">5. 台灣特殊奧運羽球課程</h2>
+<p><strong>文獻與出處</strong>：陳孟欣（2024），《八週特奧羽球訓練對智能障礙學生體能與運動表現之影響》，國立彰化師範大學碩士論文。<a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&amp;s=id%3D%22112NCUE0420003%22.&amp;searchmode=basic">臺灣博碩士論文系統摘要</a>。</p>
+<ul>
+<li><strong>研究方法</strong>：24 名高中職特教班學生，實驗組與控制組各 12 人；實驗組每週 2 次、每次 50 分鐘，進行 8 週球路、戰術與基本體能課程；測體適能及羽球運動表現。</li>
+<li><strong>結果</strong>：論文摘要報告羽球運動表現的組別與前後測交互作用達顯著（<em>p</em>＝.011），另有部分下肢肌耐力與性別相關差異；多數三因子交互作用未顯著。</li>
+<li><strong>結論</strong>：這套課程對研究樣本的羽球表現有正向訊號。</li>
+<li><strong>判讀界線</strong>：目前依論文系統摘要整理，全文待核對；研究對象與一般競技選手不同。</li>
+</ul>
+<h2 id="綜合判讀">綜合判讀</h2>
+<p>這些方法的目標不同。整合式體能適合追蹤衝刺、跳躍、平衡等能力；羽球課程適合看基本動作與參與者體適能；視覺訓練目前只呈現短期功能變化，且只有一個小型試驗。規劃訓練時，可先寫下「要改變什麼」，再選擇對應的測量工具與對照條件。體能結果與專項比賽轉移應分開記錄。</p>
+<h2 id="badminton-轉成課表">🏸 轉成課表</h2>
+<ul>
+<li><strong>兒童（約 6–12 歲）</strong>：以 Shuttle Time 式的遊戲化課程建立跑、跳、拋接、平衡等基本動作；技術細節可以晚一點，動作多樣性優先。</li>
+<li><strong>青少年（PHV 前後）</strong>：整合式神經肌肉訓練每週 2 次、每次 20–40 分鐘，可放在熱身後；依成熟度調整跳躍量與阻力負荷。</li>
+<li><strong>視覺訓練</strong>：目前只能當實驗性輔助，不宜取代真實來球的判斷練習。真實比賽中的「看球」包含讀對手動作與預判，見 <a href="08_教練實務整合_從研究到課表.html#四動作學習練習怎麼排">四、動作學習：練習怎麼排</a>。</li>
+</ul>
+<h2 id="主動回想">主動回想</h2>
+<ol type="1">
+<li>哪些研究有對照組？哪些只能觀察前後改變？</li>
+<li>青少年整合式神經肌肉訓練為什麼要看成熟度？PHV 期間要特別注意什麼？</li>
+<li>單次反應時間改善，距離證明正式比賽表現改善，還缺哪些證據？</li>
+<li>Ma 2025 的敏捷結果為什麼會出現「顯著」與「不顯著」兩種寫法？</li>
+</ol>
+<p class="big"><a href="index.html">回本期目錄</a></p>
+<footer>badminton · 小選手，大目標 · <a href="../../">回首頁</a></footer>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+function cur(){return r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+function label(){if(b)b.textContent=cur()==='dark'?'☀️ 淺色':'🌙 深色'}
+label();if(b)b.onclick=function(){r.dataset.theme=cur()==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}label()};
+document.querySelectorAll('table').forEach(function(t){if(t.classList.contains('wide'))return;var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent.trim()});
+if(!h.length)return;t.classList.add('cards');t.querySelectorAll('tbody tr').forEach(function(tr){[].forEach.call(tr.children,function(td,i){if(h[i])td.setAttribute('data-label',h[i])})})});
+})();
+</script>
+</body>
+</html>

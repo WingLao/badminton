@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 455" role="img" aria-label="一週訓練負荷：高低交替">
+<title>一週訓練負荷：高低交替</title>
+<style>
+.bg{fill:#f7faf8;stroke:#d9e4df}
+.t{fill:#1f2a2e;font-family:'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif;font-size:15px}
+.m{fill:#5b6b70}.s{font-size:12.5px}.h{font-size:22px;font-weight:700}.b{font-weight:700}
+.ln{stroke:#5b6b70}.trk{fill:#e6ece9}.court{fill:#e3efe6;stroke:#1f6f5c}
+@media (prefers-color-scheme:dark){.bg{fill:#172224;stroke:#2c3b3e}.t{fill:#e6eef0}.m{fill:#9fb1b5}.ln{stroke:#9fb1b5}.trk{fill:#24312f}.court{fill:#1d3329;stroke:#7fd1a8}}
+.g{transform-box:fill-box;transform-origin:left center;animation:g 8s cubic-bezier(.2,.8,.2,1) infinite both}
+.v{transform-box:fill-box;transform-origin:center bottom;animation:g2 8s cubic-bezier(.2,.8,.2,1) infinite both}
+.f{animation:f 8s ease infinite both}
+.dash{stroke-dasharray:6 8;animation:d 1.2s linear infinite}
+.pulse{transform-box:fill-box;transform-origin:center;animation:p 1.1s ease-in-out infinite}
+@keyframes g{0%{transform:scaleX(0)}20%{transform:scaleX(1)}93%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+@keyframes g2{0%{transform:scaleY(0)}20%{transform:scaleY(1)}93%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@keyframes f{0%,12%{opacity:0}25%,93%{opacity:1}100%{opacity:0}}
+@keyframes d{to{stroke-dashoffset:-28}}
+@keyframes p{0%,100%{transform:scale(1)}30%{transform:scale(1.18)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect class="bg" x="1" y="1" width="758" height="453" rx="18"/>
+<text class="t h" x="28" y="44">一週訓練負荷：高低交替</text>
+<text class="t m s" x="28" y="68">課後 30 分鐘問：「整堂課有多累？」再乘以分鐘數</text>
+<rect class="v" x="60" y="213.0" width="58" height="117.0" rx="6" fill="#e07b2a" style="animation-delay:0.00s"/>
+<text class="t b f" x="89" y="205.0" text-anchor="middle" style="animation-delay:0.4s">450</text>
+<text class="t" x="89" y="352" text-anchor="middle">週一</text>
+<text class="t s m" x="89" y="372" text-anchor="middle">中·5×90</text>
+<rect class="v" x="152" y="142.8" width="58" height="187.2" rx="6" fill="#d1495b" style="animation-delay:0.15s"/>
+<text class="t b f" x="181" y="134.79999999999998" text-anchor="middle" style="animation-delay:0.55s">720</text>
+<text class="t" x="181" y="352" text-anchor="middle">週二</text>
+<text class="t s m" x="181" y="372" text-anchor="middle">高·8×90</text>
+<rect class="v" x="244" y="252.0" width="58" height="78.0" rx="6" fill="#9cbf1e" style="animation-delay:0.30s"/>
+<text class="t b f" x="273" y="244.0" text-anchor="middle" style="animation-delay:0.7s">300</text>
+<text class="t" x="273" y="352" text-anchor="middle">週三</text>
+<text class="t s m" x="273" y="372" text-anchor="middle">中低·4×75</text>
+<rect class="v" x="336" y="142.8" width="58" height="187.2" rx="6" fill="#d1495b" style="animation-delay:0.45s"/>
+<text class="t b f" x="365" y="134.79999999999998" text-anchor="middle" style="animation-delay:0.85s">720</text>
+<text class="t" x="365" y="352" text-anchor="middle">週四</text>
+<text class="t s m" x="365" y="372" text-anchor="middle">高·8×90</text>
+<rect class="v" x="428" y="271.5" width="58" height="58.5" rx="6" fill="#1f8a5c" style="animation-delay:0.60s"/>
+<text class="t b f" x="457" y="263.5" text-anchor="middle" style="animation-delay:1.0s">225</text>
+<text class="t" x="457" y="352" text-anchor="middle">週五</text>
+<text class="t s m" x="457" y="372" text-anchor="middle">低·3×75</text>
+<rect class="v" x="520" y="220.8" width="58" height="109.2" rx="6" fill="#d1495b" style="animation-delay:0.75s"/>
+<text class="t b f" x="549" y="212.8" text-anchor="middle" style="animation-delay:1.15s">420</text>
+<text class="t" x="549" y="352" text-anchor="middle">週六</text>
+<text class="t s m" x="549" y="372" text-anchor="middle">高·7×60</text>
+<rect class="v" x="612" y="328.0" width="58" height="2.0" rx="6" fill="#9aa8ab" style="animation-delay:0.90s"/>
+<text class="t b f" x="641" y="320" text-anchor="middle" style="animation-delay:1.2999999999999998s">0</text>
+<text class="t" x="641" y="352" text-anchor="middle">週日</text>
+<text class="t s m" x="641" y="372" text-anchor="middle">休</text>
+<rect x="440" y="84" width="292" height="40" rx="10" fill="#1f6f5c" opacity=".12"/><text class="t b" x="452" y="110" text-anchor="start" fill="#1f6f5c">負荷 AU = RPE（0–10）× 分鐘</text>
+<text class="t s b" x="28" y="410" text-anchor="start">本週總負荷 2835 AU　單調度 = 平均 ÷ 標準差 = 1.68　壓力值 = 總負荷 × 單調度 ≈ 4,755</text>
+<text class="t m s" x="28" y="434" text-anchor="start">數值為示範（按第 08 章一週課表假設 RPE 與時間）。單調度越高 = 每天越像，難易沒有交替。</text>
+
+</svg>

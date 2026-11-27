@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 525" role="img" aria-label="一分怎麼打：發球規則與回合結構">
+<title>一分怎麼打：發球規則與回合結構</title>
+<style>
+.bg{fill:#f7faf8;stroke:#d9e4df}
+.t{fill:#1f2a2e;font-family:'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif;font-size:15px}
+.m{fill:#5b6b70}.s{font-size:12.5px}.h{font-size:22px;font-weight:700}.b{font-weight:700}
+.ln{stroke:#5b6b70}.trk{fill:#e6ece9}.court{fill:#e3efe6;stroke:#1f6f5c}
+@media (prefers-color-scheme:dark){.bg{fill:#172224;stroke:#2c3b3e}.t{fill:#e6eef0}.m{fill:#9fb1b5}.ln{stroke:#9fb1b5}.trk{fill:#24312f}.court{fill:#1d3329;stroke:#7fd1a8}}
+.g{transform-box:fill-box;transform-origin:left center;animation:g 8s cubic-bezier(.2,.8,.2,1) infinite both}
+.v{transform-box:fill-box;transform-origin:center bottom;animation:g2 8s cubic-bezier(.2,.8,.2,1) infinite both}
+.f{animation:f 8s ease infinite both}
+.dash{stroke-dasharray:6 8;animation:d 1.2s linear infinite}
+.pulse{transform-box:fill-box;transform-origin:center;animation:p 1.1s ease-in-out infinite}
+@keyframes g{0%{transform:scaleX(0)}20%{transform:scaleX(1)}93%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+@keyframes g2{0%{transform:scaleY(0)}20%{transform:scaleY(1)}93%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@keyframes f{0%,12%{opacity:0}25%,93%{opacity:1}100%{opacity:0}}
+@keyframes d{to{stroke-dashoffset:-28}}
+@keyframes p{0%,100%{transform:scale(1)}30%{transform:scale(1.18)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect class="bg" x="1" y="1" width="758" height="523" rx="18"/>
+<text class="t h" x="28" y="44">一分怎麼打：發球規則與回合結構</text>
+<text class="t m s" x="28" y="68">動畫為示意球路：發短球 → 挑後場 → 殺球 → 擋網</text>
+<line x1="60" y1="300" x2="700" y2="300" class="ln" stroke-width="2"/>
+<line x1="380" y1="300" x2="380" y2="230.6" stroke="#e07b2a" stroke-width="5"/>
+<line x1="120" y1="248.5" x2="330" y2="248.5" stroke="#7a4fd0" stroke-width="2" stroke-dasharray="6 5"/>
+<text class="t s" x="120" y="268.5074626865672" text-anchor="start" fill="#7a4fd0">發球擊球瞬間：整顆球低於 1.15 m</text>
+<text class="t s m" x="388" y="224.59701492537312" text-anchor="start">1.55 m</text>
+<path d="M 280 249 Q 380 205 450 270 Q 380 40 120 100 L 530 280 Q 380 210 280 260" fill="none" stroke="#9aa8ab" stroke-width="1.5" class="dash"/>
+<g><path d="M-9 -5 L5 0 L-9 5 Z" fill="#1f6f5c"/><circle r="4" fill="#fff" stroke="#1f6f5c" stroke-width="1.5" cx="6"/><animateMotion dur="5s" repeatCount="indefinite" rotate="auto" path="M 280 249 Q 380 205 450 270 Q 380 40 120 100 L 530 280 Q 380 210 280 260"/></g>
+<text class="t s m" x="80" y="324" text-anchor="start">← 13.40 m 球場側視（比例尺相同）→</text>
+<text class="t s" x="28" y="364" text-anchor="start">男單長回合佔比</text>
+<rect class="trk" x="200" y="345" width="400" height="24" rx="5"/>
+<rect class="g" x="200" y="345" width="77.6" height="24" rx="5" fill="#2f6fd1" style="animation-delay:0.2s"/>
+<text class="t b f" x="285.6" y="363" text-anchor="start" style="animation-delay:0.5s">19.4%</text>
+<text class="t s" x="28" y="400" text-anchor="start">女單長回合佔比</text>
+<rect class="trk" x="200" y="381" width="400" height="24" rx="5"/>
+<rect class="g" x="200" y="381" width="66.0" height="24" rx="5" fill="#7a4fd0" style="animation-delay:0.5s"/>
+<text class="t b f" x="274.0" y="399" text-anchor="start" style="animation-delay:0.8s">16.5%</text>
+<text class="t s" x="28" y="436" text-anchor="start">正向擾動來自網前球</text>
+<rect class="trk" x="200" y="417" width="400" height="24" rx="5"/>
+<rect class="g" x="200" y="417" width="120.4" height="24" rx="5" fill="#1f8a5c" style="animation-delay:0.8s"/>
+<text class="t b f" x="328.4" y="435" text-anchor="start" style="animation-delay:1.1s">30.1%</text>
+<text class="t s" x="28" y="472" text-anchor="start">混雙決賽短發球</text>
+<rect class="trk" x="200" y="453" width="400" height="24" rx="5"/>
+<rect class="g" x="200" y="453" width="378.0" height="24" rx="5" fill="#e07b2a" style="animation-delay:1.0999999999999999s"/>
+<text class="t b f" x="586.0" y="471" text-anchor="start" style="animation-delay:1.4s">93–96%</text>
+<text class="t m s" x="28" y="505" text-anchor="start">資料：第 03 章（Hammes &amp; Link 2024；葉宏蔚 2025）、第 11 章長回合研究。長回合：男 13–79 秒、女 11–56 秒。</text>
+
+</svg>
