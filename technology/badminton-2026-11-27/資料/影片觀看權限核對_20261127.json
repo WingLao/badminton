@@ -84,6 +84,92 @@
         "en"
       ],
       "audience": "coach"
+    },
+    {
+      "id": "ugN5YqPhtMk",
+      "url": "https://www.youtube.com/watch?v=ugN5YqPhtMk",
+      "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+      "checked_date_macau": "2026-11-27",
+      "player_status": "OK",
+      "reason": "",
+      "has_streams": true,
+      "channel": "偷吃步",
+      "duration_seconds": 342,
+      "publish_date_raw": "2026-11-26T03:00:06-08:00",
+      "caption_languages": [],
+      "access": "free_public",
+      "original_title": "買7000元神拍卻半年不換線？實測竟輸給穿300元新線的千元拍！"
+    },
+    {
+      "id": "RfFuoeX5Q3o",
+      "url": "https://www.youtube.com/watch?v=RfFuoeX5Q3o",
+      "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+      "checked_date_macau": "2026-11-27",
+      "player_status": "OK",
+      "reason": "",
+      "has_streams": true,
+      "channel": "JigglyBean Labs",
+      "duration_seconds": 310,
+      "publish_date_raw": "2026-11-24T07:35:58-08:00",
+      "caption_languages": [
+        "en",
+        "en"
+      ],
+      "access": "free_public",
+      "original_title": "AI Learns to Play Badminton"
+    },
+    {
+      "id": "32yETdvN2oY",
+      "url": "https://www.youtube.com/watch?v=32yETdvN2oY",
+      "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+      "checked_date_macau": "2026-11-27",
+      "player_status": "OK",
+      "reason": "",
+      "has_streams": true,
+      "channel": "Trackminton: AI Badminton Analysis",
+      "duration_seconds": 300,
+      "publish_date_raw": "2026-11-25T04:40:51-08:00",
+      "caption_languages": [],
+      "access": "free_public",
+      "original_title": "TrackMinton — phân tích cầu lông bằng AI | AI Badminton Analysis"
+    },
+    {
+      "id": "1xiuxk8Fb3Q",
+      "url": "https://www.youtube.com/watch?v=1xiuxk8Fb3Q",
+      "method": "anonymous YouTube watch-page player response; no account or cookies supplied",
+      "checked_date_macau": "2026-11-27",
+      "player_status": "OK",
+      "reason": "",
+      "has_streams": true,
+      "channel": "Paul Stewart Advanced Badminton Coach",
+      "duration_seconds": 263,
+      "publish_date_raw": "2026-11-26T07:00:19-08:00",
+      "caption_languages": [
+        "ja",
+        "id",
+        "hi",
+        "es",
+        "iw",
+        "ta",
+        "bn",
+        "fr",
+        "pl",
+        "ar",
+        "ru",
+        "en",
+        "en-GB",
+        "pa",
+        "te",
+        "uk",
+        "ml",
+        "nl",
+        "it",
+        "pt",
+        "de",
+        "ko"
+      ],
+      "access": "free_public",
+      "original_title": "Ashaway Luna Strike Badminton Racket Review: Fast, Light & Responsive"
     }
   ]
 }
