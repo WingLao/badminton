@@ -680,7 +680,15 @@ def write_audit(folder: Path, date: str, items: list[dict]):
     vids = [{k: x.get(k) for k in ('id', 'url', 'method', 'checked_date_macau', 'player_status', 'reason', 'has_streams', 'channel',
                                     'duration_seconds', 'publish_date_raw', 'caption_languages', 'access')} | {'original_title': x.get('title')} for x in items]
     data = {'checked_date_macau': date, 'method': 'anonymous YouTube watch-page player response; no account or cookies supplied', 'videos': vids}
-    (folder / f'資料/影片觀看權限核對_{date.replace("-", "")}.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    out = folder / f'資料/影片觀看權限核對_{date.replace("-", "")}.json'
+    if out.exists():   # 同一天已有手寫一期的核對紀錄 → 合併，保留原有影片，不覆蓋
+        try:
+            old = json.loads(out.read_text(encoding='utf-8'))
+        except ValueError:
+            old = {}
+        new_ids = {v['id'] for v in vids}
+        data = old | {'checked_date_macau': date, 'videos': [v for v in old.get('videos', []) if v.get('id') not in new_ids] + vids}
+    out.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 
 LEARN_CSS = '''<style>

@@ -36,7 +36,7 @@ if [ "${1:-}" = "--dry-run" ]; then
 fi
 
 echo "-- 4. 提交與推送"
-git add index.html learn technology research skills updates tools assets
+git add index.html news learn technology research skills updates tools assets
 if git diff --cached --quiet; then
   echo "沒有任何變動，不需要發佈。"; exit 0
 fi
